@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+charging=$(ioreg -l -w0 | grep ExternalConnected)
+chargingornot=${charging##* }
+
+if [[ $chargingornot == "Yes" ]]; then
+  echo "#[fg=green]↑"
+else
+  echo "#[fg=red]↓"
+fi

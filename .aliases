@@ -1,0 +1,97 @@
+# Useful aliases
+
+if [[ `uname` == 'Darwin' ]]; then
+  # Use MacVim for vim
+  alias vim="mvim -v"
+
+  # Update software if any updates are available.
+  alias update="sudo softwareupdate -i -a"
+  
+  # Use new ctags
+  alias ctags="`brew --prefix`/bin/ctags"
+else
+  # Just use vim
+  alias vim="vim"
+fi
+
+# 256 colors for tmux
+alias tmux="TERM=screen-256color-bce tmux"
+
+# Enter sub directory
+alias ..="cd .."
+
+# Enhancing cat with syntax highlighting.
+alias p="pygmentize -g"
+
+# Make copying more interactive
+alias cp="cp -i"
+
+# Replaces original ls. This one uses colors and shows folders, executable
+# files, etc.
+alias ls="ls -LGaF"
+
+# Replace original rmdir. This one removes every file in the directory
+# recursively.
+alias rmdir="rm -R"
+
+# Retrieve my IP via OpenDNS.com
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+
+# Start my BetterNow tmux session
+alias bnstart="~/Documents/BetterNow/start.sh"
+
+# Pman opens a manual page as a PDF in Preview.
+pman () {
+	man -t "${1}" | open -f -a /Applications/Preview.app
+}
+
+# Count amount of characters in PDF
+pdfcc () {
+    pdftotext ${1} -enc UTF-8 - | wc -m
+}
+
+# Count amount of words in PDF
+pdfwc () {
+    pdftotext ${1} -enc UTF-8 - | tr -d '.' | wc -w
+} 
+
+# Autocomplete tmux sessions
+function tm() {
+    [[ -z "$1" ]] && { echo "usage: tm <session>" >&2; return 1; }
+    tmux has -t $1 && tmux attach -t $1 || tmux new -s $1
+}
+
+function __tmux-sessions() {
+    local expl
+    local -a sessions
+    sessions=( ${${(f)"$(command tmux list-sessions)"}/:[ $'\t']##/:} )
+    _describe -t sessions 'sessions' sessions "$@"
+}
+compdef __tmux-sessions tm
+
+# ls after cd'ing into a directory
+function cdd () {
+  cd $1
+  ls
+}
+
+# See diff before adding
+function gda () {
+  git diff $1 && ga $1
+}
+
+# Git-related aliases
+alias gb="git branch"
+alias gc="git commit"
+alias gcm="git commit -m"
+alias ga="git add"
+alias gco="git checkout"
+alias gd="git diff"
+alias gp="git push"
+alias pp="git pull && git push"
+alias gs="git status"
+alias gl="git log"
+alias gbl="git branch --list"
+alias gbd="git branch -D"
+alias last-week="git log --author=majjoha --no-commit-id --since='1 week ago' --all --no-merges"
+alias glw=last-week
