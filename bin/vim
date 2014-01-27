@@ -2,8 +2,6 @@
 
 name="`basename "$0"`"
 
-#[[ -z $@ ]] && cmd='-c :CommandT'
-
 [[ $name -eq 'vi' ]] && name=vim
 
 exec m$name -v $cmd $@
