@@ -106,3 +106,6 @@
 [submodule ".vim/bundle/vimux"]
 	path = .vim/bundle/vimux
 	url = https://github.com/benmills/vimux.git
+[submodule ".vim/bundle/fsharp-vim"]
+	path = .vim/bundle/fsharp-vim
+	url = https://github.com/kongo2002/fsharp-vim.git
