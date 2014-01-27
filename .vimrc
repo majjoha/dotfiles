@@ -7,9 +7,6 @@ set runtimepath+=~/.env/.vim
 execute pathogen#infect()
 call pathogen#helptags()
 
-source ~/.env/.vim/vimrc/settings.vim
-source ~/.env/.vim/vimrc/looks.vim
-source ~/.env/.vim/vimrc/mappings.vim
-source ~/.env/.vim/vimrc/filetypes.vim
-source ~/.env/.vim/vimrc/plugins.vim
-source ~/.env/.vim/vimrc/functions.vim
+for f in split(glob('~/.env/.vim/vimrc/*.vim'), '\n')
+  exe 'source' f
+endfor
