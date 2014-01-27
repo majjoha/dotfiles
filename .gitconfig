@@ -32,6 +32,7 @@
 	unstage = reset HEAD
 	uncommit = reset --soft HEAD^
   unpushed = log --branches --not --remotes --simplify-by-decoration --decorate --oneline
+  last-week = log --author=majjoha --no-commit-id --since='1 week ago' --all --no-merges
 [core]
 	editor = vim
   excludesfile = ~/.gitignore

@@ -70,5 +70,4 @@ alias gs="git status"
 alias gl="git log"
 alias gbl="git branch --list"
 alias gbd="git branch -D"
-alias last-week="git log --author=majjoha --no-commit-id --since='1 week ago' --all --no-merges"
-alias glw=last-week
+alias glw="git last-week"
