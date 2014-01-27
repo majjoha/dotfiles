@@ -1,5 +1,3 @@
-# Useful aliases
-
 if [[ `uname` == 'Darwin' ]]; then
   # Use MacVim for vim
   alias vim="mvim -v"
@@ -17,9 +15,6 @@ fi
 # 256 colors for tmux
 alias tmux="TERM=screen-256color-bce tmux"
 
-# Enter sub directory
-alias ..="cd .."
-
 # Enhancing cat with syntax highlighting.
 alias p="pygmentize -g"
 
@@ -36,24 +31,6 @@ alias rmdir="rm -R"
 
 # Retrieve my IP via OpenDNS.com
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-
-# Start my BetterNow tmux session
-alias bnstart="~/Documents/BetterNow/start.sh"
-
-# Pman opens a manual page as a PDF in Preview.
-pman () {
-	man -t "${1}" | open -f -a /Applications/Preview.app
-}
-
-# Count amount of characters in PDF
-pdfcc () {
-    pdftotext ${1} -enc UTF-8 - | wc -m
-}
-
-# Count amount of words in PDF
-pdfwc () {
-    pdftotext ${1} -enc UTF-8 - | tr -d '.' | wc -w
-} 
 
 # Autocomplete tmux sessions
 function tm() {
