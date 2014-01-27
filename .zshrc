@@ -65,3 +65,6 @@ fi
 #########################
 	
 export PATH=/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$PATH:/Users/Mathias/Documents/Kode/BNSub/bin:/Applications/MacVim.app:~/.env/bin
+
+# Install Homebrew Cask applications in /Applications folder.
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
