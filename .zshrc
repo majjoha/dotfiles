@@ -11,7 +11,7 @@ DISABLE_AUTO_TITLE=true
 stty -ixon
 
 # Plugins
-plugins=(git sublime rvm ruby osx heroku git-extras gem brew bundler)
+plugins=(git rvm ruby osx heroku git-extras gem brew bundler)
 
 # Path to oh-my-zsh configuration
 ZSH=$HOME/.oh-my-zsh
@@ -64,6 +64,4 @@ fi
 #     Miscellaneous     #
 #########################
 	
-export PATH=/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$PATH:/Users/Mathias/Documents/Tekstdokumenter/ITU/2.\ semester/Algoritmer\ og\ datastrukturer/Opgaver/algs4:/Users/Mathias/Documents/Kode/BNSub/bin:/Applications/MacVim.app:~/.env/bin
-
-export CLASSPATH="/etc/java/jdbc/mysql-connector-java-5.1.24-bin.jar:/etc/java/junit/junit-4.11.jar:/etc/java/gson/gson-2.2.2.jar:/etc/java/apache-commons-lang3/commons-lang3-3.1.jar:$CLASSPATH"
+export PATH=/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$PATH:/Users/Mathias/Documents/Kode/BNSub/bin:/Applications/MacVim.app:~/.env/bin
