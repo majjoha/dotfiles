@@ -10,8 +10,7 @@ This repository holds my configurations for my development environment.
 ## Installation 
 ```bash
 $ git clone --recursive https://github.com/majjoha/dotfiles.git ~/.env
-$ cd ~/.env
-$ ./script/bootstrap
+$ sudo bash ~/.env/script/bootstrap
 ```
 
 ## Updating
@@ -19,6 +18,7 @@ $ ./script/bootstrap
 $ git pull
 $ git submodule foreach git pull origin master
 ```
+
 ## Screenshots
 ### zsh
 ![image](http://f.cl.ly/items/1d0H0N3K0r101U2z0B3h/Sk%C3%A6rmbillede%202013-09-06%20kl.%2019.59.28.png)
