@@ -48,7 +48,7 @@ set wildignore+=*vendor/cache/*,*/vendor/ruby/*,*/tmp/*,*/log/*,*/.chef/checksum
 let g:gist_clip_command = 'pbcopy'
 
 " Use spring for rspec
-let g:vroom_use_spring = 1
+"let g:vroom_use_spring = 1
 
 " Use vimux and zeus for ovroom
 let g:vroom_use_vimux = 1
