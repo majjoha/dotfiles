@@ -27,6 +27,9 @@ __git_files () {
     _wanted files expl 'local files' _files     
 }
 
+# Use z
+. ~/.env/bin/z.sh
+
 ##################
 #     Prompt     #
 ##################
