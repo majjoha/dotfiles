@@ -61,8 +61,8 @@ set noswapfile
 set backspace=indent,eol,start
 
 " Set split to right or below
-set splitright
 set splitbelow
+set splitright
 
 " Completion
 set completeopt=longest,menuone
