@@ -72,3 +72,6 @@ autocmd FileType ruby map <Leader>c :!clear; ruby %<cr>
 
 " Compile and run Java file
 autocmd FileType java map <Leader>c :!javac "%:p" && java -cp "%:p:h" "%:t:r"<CR>
+
+" Run Rubocop in a tmux pane
+map <Leader>bo :call VimuxRunCommand('rubocop ' . expand('%:p'))<CR>
