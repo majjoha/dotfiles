@@ -106,3 +106,6 @@
 [submodule ".vim/bundle/fsharp-vim"]
 	path = .vim/bundle/fsharp-vim
 	url = https://github.com/kongo2002/fsharp-vim.git
+[submodule ".vim/bundle/vim-elixir"]
+	path = .vim/bundle/vim-elixir
+	url = https://github.com/elixir-lang/vim-elixir.git
