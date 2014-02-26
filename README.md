@@ -23,7 +23,7 @@ $ git submodule foreach git pull origin master
 ### zsh
 ![image](http://f.cl.ly/items/1d0H0N3K0r101U2z0B3h/Sk%C3%A6rmbillede%202013-09-06%20kl.%2019.59.28.png)
 ### vim + tmux
-![image](http://f.cl.ly/items/0M3f2c1R1G0Q3h3j083P/Sk%C3%A6rmbillede%202013-12-13%20kl.%2008.09.26.png)
+![image](http://f.cl.ly/items/1T213p1V1P0E36330P3Q/Sk%C3%A6rmbillede%202014-02-26%20kl.%2017.23.03.png)
 
 ## Bugs
 If you happen to find any issues or bugs, please let me know by
