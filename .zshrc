@@ -11,7 +11,7 @@ DISABLE_AUTO_TITLE=true
 stty -ixon
 
 # Plugins
-plugins=(git rvm ruby osx heroku git-extras gem brew bundler)
+plugins=(git ruby osx heroku git-extras gem brew bundler)
 
 # Path to oh-my-zsh configuration
 ZSH=$HOME/.oh-my-zsh
@@ -67,20 +67,18 @@ fi
 #     Miscellaneous     #
 #########################
 	
-export PATH=/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$PATH:/Users/Mathias/Documents/Kode/BNSub/bin:/Applications/MacVim.app:~/.env/bin
+#export PATH=/usr/local/bin:/usr/local/git/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:$PATH:/Users/Mathias/Documents/Kode/BNSub/bin:/Applications/MacVim.app:~/.env/bin
 
 # Install Homebrew Cask applications in /Applications folder.
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-# run this after reattaching to a detached tmux session to update the ssh-agent forwarding config
-fixssh() {
-  for key in SSH_AUTH_SOCK SSH_CONNECTION SSH_CLIENT; do
-    if (tmux show-environment | grep "^${key}" > /dev/null); then
-      value=`tmux show-environment | grep "^${key}" | sed -e "s/^[A-Z_]*=//"`
-      export ${key}="${value}"
-    fi
-  done
-}
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+#if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+export PATH=/usr/local/bin:$PATH
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
+export ZENDESK_PORT=4000
+chruby ruby-2.1.0
