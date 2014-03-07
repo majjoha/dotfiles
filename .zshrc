@@ -2,9 +2,6 @@
 #     Zsh     #
 ###############
 
-# Keep colors with tmux
-alias tmux="TERM=screen-256color-bce tmux"
-
 # Don't rename my windows in tmux
 DISABLE_AUTO_TITLE=true
 
