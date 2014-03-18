@@ -68,8 +68,11 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-export LC_CTYPE=en_US.UTF-8
+export LC_CTYPE="utf-8"
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 export ZENDESK_PORT=4000
 chruby ruby-2.1.0
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
