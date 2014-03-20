@@ -29,6 +29,8 @@ alias ls="ls -LGaF"
 # recursively.
 alias rmdir="rm -R"
 
+alias be="bundle exec"
+
 # Retrieve my IP via OpenDNS.com
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
