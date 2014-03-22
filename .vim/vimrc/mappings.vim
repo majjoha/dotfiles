@@ -6,6 +6,7 @@ nnoremap <Leader>t :OnlineThesaurusCurrentWord<CR>
 
 " Make grep (ag) easier
 noremap <Leader>f :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+nnoremap <Leader>ff :Ag<SPACE>
 
 " Use CTRL-S for saving
 noremap <C-S> :update<CR>
@@ -56,10 +57,6 @@ map <Leader>rx :call VimuxCloseRunner()<cr>
 
 " Interrupt any command running in the runner pane
 map <Leader>rs :InterruptVimTmuxRunner
-
-noremap <leader>gr :topleft :split config/routes.rb<cr>
-noremap <leader>gR :silent call ShowRoutes()<cr>
-noremap <leader>gg :topleft 100 :split Gemfile<cr>
 
 " Compile LaTeX file
 autocmd FileType tex map <Leader>c :!pdflatex %<cr>
