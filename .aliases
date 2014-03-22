@@ -30,6 +30,7 @@ alias ls="ls -LGaF"
 alias rmdir="rm -R"
 
 alias be="bundle exec"
+alias hc="~/Code/zendesk/help_center/.hc/libexec/hc"
 
 # Retrieve my IP via OpenDNS.com
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
