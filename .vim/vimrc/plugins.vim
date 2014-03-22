@@ -43,7 +43,7 @@ let g:ctrlp_show_hidden = 1
 
 " Ignore binary files
 set wildignore+=tags,*.DS_Store,*.o,*.obj,.git,*.class,*.png,*.jpg,*.jpeg,*.gif,*.ico,*.pdf,*.doc,*.docx,*.ppt,*.pptx,*.xls,*.xlsx,*.epub,*.mobi
-set wildignore+=*vendor/cache/*,*/vendor/ruby/*,*/tmp/*,*/log/*,*/.chef/checksums/*,*/.git/*,*/node_modules/*,public/assets*
+set wildignore+=*/vendor/**,*vendor/cache/*,*/vendor/ruby/*,*/tmp/*,*/log/*,*/.chef/checksums/*,*/.git/*,*/node_modules/*,public/assets*
 
 " Set gist-vim to copy to pbcopy
 let g:gist_clip_command = 'pbcopy'
