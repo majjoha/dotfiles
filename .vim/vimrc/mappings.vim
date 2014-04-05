@@ -44,7 +44,7 @@ map <Leader>b :Bufferlist<cr>
 inoremap <Leader>n <C-x><C-o>
 
 " Prompt for a command to run
-map rp :PromptVimTmuxCommand
+map <Leader>rp :PromptVimTmuxCommand
 
 " Run last command executed by RunVimTmuxCommand
 map <Leader>rl :RunLastVimTmuxCommand
@@ -75,3 +75,13 @@ map <Leader>bo :call VimuxRunCommand('rubocop ' . expand('%:p'))<CR>
 
 " Remove highlighting easily
 map <Leader><Space> :nohl<CR>
+
+" Disable arrow keys for navigation things.
+map <Left> :echo "Use h instead."<CR>
+map <Right> :echo "Use l instead."<CR>
+map <Up> :echo "Use k instead."<CR>
+map <Down> :echo "Use j instead."<CR>
+
+" Switch between paste and nopaste mode.
+map <Leader>p :set paste<CR>
+map <Leader>P :set nopaste<CR>
