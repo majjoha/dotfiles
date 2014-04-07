@@ -83,5 +83,5 @@ map <Up> :echo "Use k instead."<CR>
 map <Down> :echo "Use j instead."<CR>
 
 " Switch between paste and nopaste mode.
-map <Leader>p :set paste<CR>
+map <Leader>p :set paste<CR>i
 map <Leader>P :set nopaste<CR>
