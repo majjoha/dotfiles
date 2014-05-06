@@ -61,7 +61,7 @@ fi
 #     Miscellaneous     #
 #########################
 	
-export PATH=/usr/local/bin:~/.env/bin:$PATH
+export PATH=/usr/local/bin:~/.env/bin:/usr/local/share/npm/bin:$PATH
 
 # Install Homebrew Cask applications in /Applications folder.
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
@@ -76,3 +76,4 @@ chruby ruby-2.1.0
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+export JAVA_HOME=$(/usr/libexec/java_home)
