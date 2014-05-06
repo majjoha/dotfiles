@@ -55,6 +55,11 @@ function cdd () {
   ls
 }
 
+# Create a directory and enter it
+function mkcd () {
+  mkdir $1 && cd $1
+}
+
 # See diff before adding
 function gda () {
   git diff $1 && ga $1
