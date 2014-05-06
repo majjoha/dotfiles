@@ -52,7 +52,7 @@ set tabstop=2
 set softtabstop=2 
 
 " Share the unnamed paste buffer with the system clipboard
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 " Disable swap files creation
 set noswapfile
