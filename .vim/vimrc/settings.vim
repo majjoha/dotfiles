@@ -17,8 +17,8 @@ filetype indent on
 " Use 256 colors
 set t_Co=256
 
-set rnu
 set nu
+set rnu
 
 " Set the Terminal title
 set title
