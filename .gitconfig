@@ -35,6 +35,7 @@
   last-week = log --author=majjoha --no-commit-id --since='1 week ago' --all --no-merges
   branch-name = !"git for-each-ref --format=\"%(refname:short)\" $(git symbolic-ref HEAD)"
   zpush = !"git push -u origin `git branch-name`:majjoha/`git branch-name`"
+  preview = !"git fetch && git diff ^origin/master"
 [core]
 	editor = vim
   excludesfile = ~/.gitignore
