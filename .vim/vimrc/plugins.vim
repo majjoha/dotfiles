@@ -4,10 +4,6 @@ source ~/.env/.vim/bundle/vim-snipmate/after/plugin/snipMate.vim
 " Enable online thesaurus
 let g:online_thesaurus_map_keys = 0
 
-" Work with LaTeX in Vim
-let g:LatexBox_latexmk_options = "-pvc -pdfps"
-let g:Tex_CompileRule_pdf = 'latexmk -pdf -pvc $*'
-
 " Show hidden files in NERDTree
 let NERDTreeShowHidden=1
 let NERDTreeShowFiles=1
@@ -28,9 +24,6 @@ let g:airline_powerline_fonts=1
 " Use Airline on default
 set laststatus=2
 
-" Show ctrlp at the top of the window instead of the bottom
-let g:ctrlp_match_window_bottom = 0
-
 " Show more files
 let g:ctrlp_max_height = 20
 
@@ -47,9 +40,6 @@ let g:ctrlp_working_path_mode = 0
 " Ignore binary files
 set wildignore+=tags,*.DS_Store,*.o,*.obj,.git,*.class,*.png,*.jpg,*.jpeg,*.gif,*.ico,*.pdf,*.doc,*.docx,*.ppt,*.pptx,*.xls,*.xlsx,*.epub,*.mobi
 set wildignore+=vendor/*,vendor/bundle/*,*vendor/cache/*,*/vendor/ruby/*,*/tmp/*,*/log/*,*/.chef/checksums/*,*/.git/*,*/node_modules/*,public/assets*
-
-" Set gist-vim to copy to pbcopy
-let g:gist_clip_command = 'pbcopy'
 
 " Use vimux and zeus for ovroom
 let g:vroom_use_vimux = 1
