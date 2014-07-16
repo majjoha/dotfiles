@@ -54,7 +54,7 @@ export GREP_OPTIONS='--color=auto'
 
 # Add aliases.
 if [ -f ~/.env/.aliases ]; then
-    source ~/.env/.aliases
+  source ~/.env/.aliases
 fi
 
 #########################
