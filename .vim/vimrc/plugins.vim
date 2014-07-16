@@ -51,9 +51,6 @@ set wildignore+=vendor/*,vendor/bundle/*,*vendor/cache/*,*/vendor/ruby/*,*/tmp/*
 " Set gist-vim to copy to pbcopy
 let g:gist_clip_command = 'pbcopy'
 
-" Use spring for rspec
-"let g:vroom_use_spring = 1
-
 " Use vimux and zeus for ovroom
 let g:vroom_use_vimux = 1
 
