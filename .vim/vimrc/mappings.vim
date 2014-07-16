@@ -85,3 +85,7 @@ map <Down> :echo "Use j instead."<CR>
 " Switch between paste and nopaste mode.
 map <Leader>p :set paste<CR>i
 map <Leader>P :set nopaste<CR>
+
+" Send selection to tmux pane
+map <Leader>ssc :ConnectToTmux
+vmap <Leader>s :SendSelectionToTmux<CR>
