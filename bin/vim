@@ -1,7 +1,0 @@
-#!/bin/sh
-
-name="`basename "$0"`"
-
-[[ $name -eq 'vi' ]] && name=vim
-
-exec m$name -v $cmd $@

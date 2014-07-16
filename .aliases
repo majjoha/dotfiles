@@ -1,15 +1,9 @@
 if [[ `uname` == 'Darwin' ]]; then
-  # Use MacVim for vim
-  alias vim="mvim -v"
-
   # Update software if any updates are available.
   alias update="sudo softwareupdate -i -a"
   
   # Use new ctags
   alias ctags="`brew --prefix`/bin/ctags"
-else
-  # Just use vim
-  alias vim="vim"
 fi
 
 # 256 colors for tmux
