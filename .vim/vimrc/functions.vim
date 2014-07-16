@@ -11,4 +11,3 @@ augroup qfgrep
   autocmd!
   autocmd QuickFixCmdPost *grep* cwindow
 augroup END
-
