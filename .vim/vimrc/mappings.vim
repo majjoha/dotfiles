@@ -59,3 +59,6 @@ map <Leader>P :set nopaste<CR>
 " Send selection to tmux pane
 map <Leader>ssc :ConnectToTmux
 vmap <Leader>s :SendSelectionToTmux<CR>
+
+" Toggle Syntastic
+nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>

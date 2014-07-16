@@ -46,3 +46,6 @@ let g:vroom_use_vimux = 1
 
 " Use tmux for slime
 let g:slime_target = "tmux"
+
+" Set syntastic to passive mode to prevent Vim from being so slow
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
