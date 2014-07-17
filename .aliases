@@ -1,7 +1,7 @@
 if [[ `uname` == 'Darwin' ]]; then
   # Update software if any updates are available.
   alias update="sudo softwareupdate -i -a"
-  
+
   # Use new ctags
   alias ctags="`brew --prefix`/bin/ctags"
 fi
