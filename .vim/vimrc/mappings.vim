@@ -35,7 +35,8 @@ map <Leader>rc :vsp $MYVIMRC<cr>
 map <Leader>sc :source $MYVIMRC<cr>
 
 " Show bufferlist
-map <Leader>b :Bufferlist<cr>
+"map <Leader>b :Bufferlist<cr>
+map <Leader>b :CtrlPBuffer<cr>
 
 " Completion
 inoremap <Leader>n <C-x><C-o>
