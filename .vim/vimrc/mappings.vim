@@ -16,9 +16,6 @@ inoremap <C-S> <C-O>:update<CR>
 " Use CTRL-Q for quitting
 noremap <C-Q> :q<CR>
 
-" Use CTRL-W for closing buffers
-noremap <Leader>W :bd<CR>
-
 " Resize windows
 nmap <Leader>k <C-W>-<C-W>-
 nmap <Leader>j <C-W>+<C-W>+
@@ -35,7 +32,6 @@ map <Leader>rc :vsp $MYVIMRC<cr>
 map <Leader>sc :source $MYVIMRC<cr>
 
 " Show bufferlist
-"map <Leader>b :Bufferlist<cr>
 map <Leader>b :CtrlPBuffer<cr>
 
 " Completion
