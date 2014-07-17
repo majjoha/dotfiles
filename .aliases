@@ -56,7 +56,7 @@ function mkcd () {
 
 # See diff before adding
 function gda () {
-  git diff $1 && ga $1
+  git diff $1 && git add $1
 }
 
 # Git-related aliases
