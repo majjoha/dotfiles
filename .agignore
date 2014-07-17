@@ -1,0 +1,7 @@
+node_modules/
+gems/
+tags
+public/assets/
+.sass-cache
+tmp/
+vendor/
