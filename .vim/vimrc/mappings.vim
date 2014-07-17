@@ -62,4 +62,4 @@ map <Leader>ssc :ConnectToTmux
 vmap <Leader>s :SendSelectionToTmux<CR>
 
 " Toggle Syntastic
-nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+nnoremap <Leader>s :SyntasticCheck<CR> :SyntasticToggleMode<CR>
