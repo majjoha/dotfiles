@@ -18,7 +18,7 @@ source ~/.env/.majjoha.zsh-theme
 
 # Work with me, git
 __git_files () { 
-    _wanted files expl 'local files' _files     
+  _wanted files expl 'local files' _files     
 }
 
 # Use z
@@ -52,7 +52,6 @@ export GREP_OPTIONS='--color=auto'
 #     Aliases     #
 ###################
 
-# Add aliases.
 if [ -f ~/.env/.aliases ]; then
   source ~/.env/.aliases
 fi
