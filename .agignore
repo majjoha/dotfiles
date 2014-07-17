@@ -5,3 +5,4 @@ public/assets/
 .sass-cache
 tmp/
 vendor/
+.beam
