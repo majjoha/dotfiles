@@ -15,27 +15,30 @@
 [branch]
 	autosetupmerge = true
 [alias]
-	ds = diff --staged
-	standup = log --since '1 day ago' --oneline --author mathias@mjj.io
-	undo = reset --soft HEAD^
-	graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
-	st = status
-	di = diff
-	co = checkout
-	ci = commit
-	br = branch
-	sta = stash
-	llog = log --date=local
-	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-	type = cat-file -t
-	dump = cat-file -p
-	unstage = reset HEAD
-	uncommit = reset --soft HEAD^
-  unpushed = log --branches --not --remotes --simplify-by-decoration --decorate --oneline
-  last-week = log --author=majjoha --no-commit-id --since='1 week ago' --all --no-merges
+  br = branch
   branch-name = !"git for-each-ref --format=\"%(refname:short)\" $(git symbolic-ref HEAD)"
-  zpush = !"git push -u origin `git branch-name`:majjoha/`git branch-name`"
+  ci = commit
+  co = checkout
+  di = diff
+  ds = diff --staged
+  dump = cat-file -p
+  g = grep --break --heading --line-number
+  graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  last-week = log --author=majjoha --no-commit-id --since='1 week ago' --all --no-merges
+  llog = log --date=local
   preview = !"git fetch && git diff ^origin/master"
+  st = status
+  sta = stash
+  standup = log --since '1 day ago' --oneline --author mathias@mjj.io
+  type = cat-file -t
+  uncommit = reset --soft HEAD^
+  undo = reset --soft HEAD^
+  undo = reset HEAD~1 --mixed
+  unpushed = log --branches --not --remotes --simplify-by-decoration --decorate --oneline
+  unstage = reset HEAD
+  wip = !git add -u && git commit -m "wip"
+  zpush = !"git push -u origin `git branch-name`:majjoha/`git branch-name`"
 [core]
 	editor = vim
   excludesfile = ~/.gitignore
