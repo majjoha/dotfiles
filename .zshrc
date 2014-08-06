@@ -76,3 +76,6 @@ chruby ruby-2.1.0
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 export JAVA_HOME=$(/usr/libexec/java_home)
+
+## Docker host
+export DOCKER_HOST=192.168.42.45:2375
