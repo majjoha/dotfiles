@@ -19,3 +19,4 @@ Thumbs.db
 tags
 vendor/ruby
 dump.rdb
+vendor/cache
