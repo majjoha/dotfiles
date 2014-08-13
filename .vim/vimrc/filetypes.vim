@@ -10,7 +10,7 @@ autocmd FileType gitcommit setlocal spell spelllang=en_us
 autocmd FileType tex setlocal spell spelllang=en_us
 
 " Set text width to 80 for Markdown, LaTeX and Git commit messages.
-autocmd BufRead,BufNewFile *.md set textwidth=80
+autocmd FileType markdown set textwidth=80
 autocmd FileType gitcommit set textwidth=80
 autocmd FileType tex set textwidth=80
 
