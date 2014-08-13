@@ -26,3 +26,6 @@ function! s:DeleteBuffer()
   exec "bd" bufn ==# "" ? path : bufn
   exec "norm \<F5>"
 endfunction
+
+" Resize splits when the window is rezied
+au VimResized * exe "normal! \<c-w>="

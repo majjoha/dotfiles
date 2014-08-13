@@ -63,6 +63,3 @@ set splitright
 
 " Completion
 set completeopt=longest,menuone
-
-" Resize splits when the window is rezied
-au VimResized * exe "normal! \<c-w>="
