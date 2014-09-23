@@ -78,4 +78,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export JAVA_HOME=$(/usr/libexec/java_home)
 
 ## Docker host
-export DOCKER_HOST=192.168.42.45:2375
+export DOCKER_HOST=tcp://192.168.42.45:2375
+export MYSQL_HOST='192.168.42.45'
+export MYSQL_USERNAME='admin'
+export MYSQL_PASSWORD='123456'
