@@ -76,3 +76,9 @@
 [submodule ".vim/bundle/fsharp-vim"]
 	path = .vim/bundle/fsharp-vim
 	url = https://github.com/kongo2002/fsharp-vim.git
+[submodule ".vim/bundle/vim-surround"]
+	path = .vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule ".tmux/tmux-resurrect"]
+	path = .tmux/tmux-resurrect
+	url = https://github.com/tmux-plugins/tmux-resurrect
