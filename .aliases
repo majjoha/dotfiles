@@ -54,6 +54,9 @@ function mkcd () {
   mkdir $1 && cd $1
 }
 
+alias vmrun="/Applications/VMware\ Fusion.app/Contents/Library/vmrun"
+alias vmstart="vmrun start '$VMX' nogui"
+
 # See diff before adding
 function gda () {
   git diff $1 && git add $1
