@@ -38,6 +38,8 @@ map <Leader>b :CtrlPBuffer<cr>
 inoremap <Leader>n <C-x><C-o>
 
 " Close all other tmux panes in current window
+map <Leader>r :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
+map <Leader>R :call VimuxRunCommand("clear; rspec " . expand("%p") . ":" . line("."))<CR>
 map <Leader>rx :call VimuxCloseRunner()<cr>
 
 " Remove highlighting easily
