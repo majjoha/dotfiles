@@ -57,6 +57,8 @@ function mkcd () {
 alias vmrun="/Applications/VMware\ Fusion.app/Contents/Library/vmrun"
 alias vmstart="vmrun start '$VMX' nogui"
 
+export CC=/usr/bin/gcc
+
 # See diff before adding
 function gda () {
   git diff $1 && git add $1

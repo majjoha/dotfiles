@@ -61,6 +61,8 @@ fi
 #########################
 	
 export PATH=/usr/local/bin:~/.env/bin:/usr/local/share/npm/bin:$PATH
+export PATH=$PATH:$MYSQL
+export DYLD_LIBRARY_PATH=/Applications/mysql/lib:$DYLD_LIBRARY_PATH
 
 # Install Homebrew Cask applications in /Applications folder.
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
@@ -71,7 +73,7 @@ export LC_CTYPE="utf-8"
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 export ZENDESK_PORT=4000
-chruby ruby-2.1.0
+chruby ruby-2.1.4
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
