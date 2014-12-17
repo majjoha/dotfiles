@@ -17,8 +17,8 @@ source $ZSH/oh-my-zsh.sh
 source ~/.env/.majjoha.zsh-theme
 
 # Work with me, git
-__git_files () { 
-  _wanted files expl 'local files' _files     
+__git_files () {
+  _wanted files expl 'local files' _files
 }
 
 # Use z
@@ -59,7 +59,7 @@ fi
 #########################
 #     Miscellaneous     #
 #########################
-	
+
 export PATH=/usr/local/bin:~/.env/bin:/usr/local/share/npm/bin:$PATH
 export PATH=$PATH:$MYSQL
 export DYLD_LIBRARY_PATH=/Applications/mysql/lib:$DYLD_LIBRARY_PATH
@@ -78,6 +78,9 @@ chruby ruby-2.1.4
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 export JAVA_HOME=$(/usr/libexec/java_home)
+
+export PATH="$HOME/Library/Haskell/bin:$PATH"
+export PATH="$HOME/.cabal/bin:$PATH"
 
 ## Docker host
 export DOCKER_HOST=tcp://192.168.42.45:2375
