@@ -1,9 +1,6 @@
 " Map leader key to ,
 let mapleader = ","
 
-" Look up a synonym online
-nnoremap <Leader>t :OnlineThesaurusCurrentWord<CR>
-
 " Make grep (ag) easier
 noremap <Leader>f :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 nnoremap <Leader>ff :Ag<SPACE>
@@ -37,7 +34,7 @@ map <Leader>b :CtrlPBuffer<cr>
 " Completion
 inoremap <Leader>n <C-x><C-o>
 
-" Close all other tmux panes in current window
+" Run current spec in tmux pane
 map <Leader>r :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
 map <Leader>R :call VimuxRunCommand("clear; rspec " . expand("%p") . ":" . line("."))<CR>
 map <Leader>rx :call VimuxCloseRunner()<cr>
@@ -45,11 +42,8 @@ map <Leader>rx :call VimuxCloseRunner()<cr>
 " Remove highlighting easily
 map <Leader><Space> :nohl<CR>
 
-" Disable arrow keys for navigation things.
-map <Left> :echo "Use h instead."<CR>
-map <Right> :echo "Use l instead."<CR>
-map <Up> :echo "Use k instead."<CR>
-map <Down> :echo "Use j instead."<CR>
+" Disable spelling
+map <Leader>ds :setlocal nospell<CR>
 
 " Switch between paste and nopaste mode.
 map <Leader>p :set paste<CR>i
@@ -58,6 +52,3 @@ map <Leader>P :set nopaste<CR>
 " Send selection to tmux pane
 map <Leader>ssc :ConnectToTmux
 vmap <Leader>s :SendSelectionToTmux<CR>
-
-" Toggle Syntastic
-nnoremap <Leader>s :SyntasticCheck<CR> :SyntasticToggleMode<CR>
