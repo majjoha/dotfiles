@@ -1,25 +1,38 @@
 " Associate *.curly files with HTML
-au BufRead,BufNewFile *.curly setfiletype html
-
-" Associate *.md files with Markdown files
-au BufRead,BufNewFile *.md set filetype=markdown
+augroup associate_file_types
+  autocmd!
+  autocmd BufRead,BufNewFile *.curly setfiletype html
+  autocmd BufRead,BufNewFile *.md set filetype=markdown
+augroup END
 
 " Use spell checker for Markdown files and Git commit messages
-autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
-autocmd FileType gitcommit setlocal spell spelllang=en_us
-autocmd FileType tex setlocal spell spelllang=en_us
+augroup spell_checking
+  autocmd!
+  autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
+  autocmd FileType gitcommit setlocal spell spelllang=en_us
+  autocmd FileType tex setlocal spell spelllang=en_us
+augroup END
 
 " Set text width to 80 for Markdown, LaTeX and Git commit messages.
-autocmd FileType markdown set textwidth=80
-autocmd FileType gitcommit set textwidth=80
-autocmd FileType tex set textwidth=80
+augroup eighty_columns
+  autocmd!
+  autocmd FileType markdown set textwidth=80
+  autocmd FileType gitcommit set textwidth=80
+  autocmd FileType tex set textwidth=80
+augroup END
 
 " Turn completion on for the following file types
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
-autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+augroup code_completion
+  autocmd!
+  autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+  autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+  autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+  autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+augroup END
 
-autocmd FileType make setlocal noexpandtab
+augroup makefiles
+  autocmd!
+  autocmd FileType make setlocal noexpandtab
+augroup END
