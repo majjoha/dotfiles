@@ -31,9 +31,6 @@ map <Leader>sc :source $MYVIMRC<cr>
 " Show bufferlist
 map <Leader>b :CtrlPBuffer<cr>
 
-" Completion
-inoremap <Leader>n <C-x><C-o>
-
 " Run current spec in tmux pane
 map <Leader>r :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
 map <Leader>R :call VimuxRunCommand("clear; rspec " . expand("%p") . ":" . line("."))<CR>
