@@ -1,16 +1,10 @@
 if [[ `uname` == 'Darwin' ]]; then
-  # Update software if any updates are available.
-  alias update="sudo softwareupdate -i -a"
-
   # Use new ctags
   alias ctags="`brew --prefix`/bin/ctags"
 fi
 
 # 256 colors for tmux
 alias tmux="TERM=screen-256color-bce tmux"
-
-# Enhancing cat with syntax highlighting.
-alias p="pygmentize -g"
 
 # Make copying more interactive
 alias cp="cp -i"
@@ -24,12 +18,13 @@ alias ls="ls -LGaF"
 alias rmdir="rm -R"
 
 alias be="bundle exec"
-alias hc="~/Code/zendesk/help_center/.hc/libexec/hc"
 
-# Retrieve my IP via OpenDNS.com
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+# Create a directory and enter it
+function mkcd () {
+  mkdir $1 && cd $1
+}
 
-# Autocomplete tmux sessions
+# Tab completion for tmux sessions
 function tm() {
     [[ -z "$1" ]] && { echo "usage: tm <session>" >&2; return 1; }
     tmux has -t $1 && tmux attach -t $1 || tmux new -s $1
@@ -43,26 +38,20 @@ function __tmux-sessions() {
 }
 compdef __tmux-sessions tm
 
-# ls after cd'ing into a directory
-function cdd () {
-  cd $1
-  ls
+# Tab completion for Ag + ctags
+# See http://robots.thoughtbot.com/silver-searcher-tab-completion-with-exuberant-ctags
+_ag() {
+  if (( CURRENT == 2 )); then
+    compadd $(cut -f 1 .git/tags tmp/tags 2>/dev/null | grep -v '!_TAG')
+  fi
 }
 
-# Create a directory and enter it
-function mkcd () {
-  mkdir $1 && cd $1
-}
+compdef _ag ag
 
 alias vmrun="/Applications/VMware\ Fusion.app/Contents/Library/vmrun"
 alias vmstart="vmrun start '$VMX' nogui"
 
 export CC=/usr/bin/gcc
-
-# See diff before adding
-function gda () {
-  git diff $1 && git add $1
-}
 
 # Git-related aliases
 alias gb="git branch"
