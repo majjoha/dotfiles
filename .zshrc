@@ -72,7 +72,6 @@ export LC_ALL=en_US.UTF-8
 export LC_CTYPE="utf-8"
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
-export ZENDESK_PORT=4000
 chruby ruby-2.1.4
 
 ### Added by the Heroku Toolbelt
@@ -84,6 +83,8 @@ export PATH="$HOME/.cabal/bin:$PATH"
 
 ## Docker host
 export DOCKER_HOST=tcp://192.168.42.45:2375
+export MYSQL_URL="mysql://admin:123456@192.168.42.45:3306/zendesk_development"
 export MYSQL_HOST='192.168.42.45'
 export MYSQL_USERNAME='admin'
 export MYSQL_PASSWORD='123456'
+source $HOME/Code/zendesk/docker-images/dockmaster/zdi.sh
