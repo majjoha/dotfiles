@@ -52,3 +52,8 @@ vmap <Leader>s :SendSelectionToTmux<CR>
 
 " Open work notes
 map <Leader>on :vs ~/Code/zendesk/notes.md<CR>
+
+" Insert current date
+map <Leader>cd  "=strftime("%Y-%m-%d")<CR>P
+
+inoremap <Leader>c <C-x><C-o>
