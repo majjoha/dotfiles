@@ -60,6 +60,7 @@ fi
 #     Miscellaneous     #
 #########################
 
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH=/usr/local/bin:~/.env/bin:/usr/local/share/npm/bin:$PATH
 export PATH=$PATH:$MYSQL
 export DYLD_LIBRARY_PATH=/Applications/mysql/lib:$DYLD_LIBRARY_PATH
@@ -88,3 +89,6 @@ export MYSQL_HOST='192.168.42.45'
 export MYSQL_USERNAME='admin'
 export MYSQL_PASSWORD='123456'
 source $HOME/Code/zendesk/docker-images/dockmaster/zdi.sh
+
+# OPAM configuration
+. /Users/mathias/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
