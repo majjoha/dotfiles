@@ -1,0 +1,6 @@
+[read-line]
+C-p: complete-bar-prev
+C-n: complete-bar-next
+C-a: complete-bar
+C-w: kill-prev-word
+C-d: kill-next-word

@@ -1,0 +1,13 @@
+#require "utop";;
+
+(* Added by OPAM. *)
+let () =
+  try Topdirs.dir_directory (Sys.getenv "OCAML_TOPLEVEL_PATH")
+  with Not_found -> ()
+;;
+
+let () =
+  let open React in
+  let open LTerm_text in
+    UTop.prompt := S.const (eval [S "λ "])
+;;
