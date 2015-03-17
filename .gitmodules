@@ -58,9 +58,6 @@
 [submodule ".vim/bundle/vim-surround"]
 	path = .vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule ".tmux/tmux-resurrect"]
-	path = .tmux/tmux-resurrect
-	url = https://github.com/tmux-plugins/tmux-resurrect
 [submodule ".vim/bundle/splitjoin.vim"]
 	path = .vim/bundle/splitjoin.vim
 	url = https://github.com/AndrewRadev/splitjoin.vim.git
