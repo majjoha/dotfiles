@@ -6,9 +6,6 @@ fi
 # 256 colors for tmux
 alias tmux="TERM=screen-256color-bce tmux"
 
-# Make copying more interactive
-alias cp="cp -i"
-
 # Replaces original ls. This one uses colors and shows folders, executable
 # files, etc.
 alias ls="ls -LGaF"
@@ -18,10 +15,6 @@ alias ls="ls -LGaF"
 alias rmdir="rm -R"
 
 alias be="bundle exec"
-
-function cfdiff() {
-  zsh -c 'vimdiff $1 <(clang-format --style=google $1)'
-}
 
 # Create a directory and enter it
 function mkcd () {
@@ -49,13 +42,12 @@ _ag() {
     compadd $(cut -f 1 .git/tags tmp/tags 2>/dev/null | grep -v '!_TAG')
   fi
 }
-
 compdef _ag ag
 
 alias vmrun="/Applications/VMware\ Fusion.app/Contents/Library/vmrun"
 alias vmstart="vmrun start '$VMX' nogui"
 
-export CC=/usr/bin/gcc
+# export CC=/usr/bin/gcc
 
 # Git-related aliases
 alias gb="git branch"
