@@ -28,11 +28,6 @@ __git_files () {
 #     Prompt     #
 ##################
 
-# Apply OSX settings
-if [[ $(uname -s) == "Darwin" ]]; then
-  source ~/.env/.osx
-fi
-
 # Use vim as default editor
 export EDITOR="vim"
 export VISUAL="vim"
@@ -73,7 +68,7 @@ export LC_ALL=en_US.UTF-8
 export LC_CTYPE="utf-8"
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
-chruby ruby-2.1.4
+chruby ruby-2.1.5
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
