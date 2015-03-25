@@ -29,14 +29,8 @@ set incsearch
 " Auto read when a file is changed from the outside
 set autoread
 
-" Set the cursor to always be in the middle
-set scrolloff=999
-
 " No annoying sound on errors
-set noerrorbells
-set novisualbell
-set t_vb=
-set tm=500
+set noeb vb t_vb=
 
 " Set UTF-8 as standard encoding
 set encoding=utf-8
