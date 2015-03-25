@@ -56,4 +56,8 @@ map <Leader>on :vs ~/Code/zendesk/notes.md<CR>
 " Insert current date
 map <Leader>cd  "=strftime("%Y-%m-%d")<CR>P
 
+" Open completion menu
 inoremap <Leader>c <C-x><C-o>
+
+" Open vertical split
+map <Leader>v :vsp<CR>
