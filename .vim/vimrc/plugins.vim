@@ -44,7 +44,3 @@ set wildignore+=vendor/*,vendor/bundle/*,*vendor/cache/*,*/vendor/ruby/*,*/tmp/*
 
 " Use tmux for slime
 let g:slime_target = "tmux"
-
-" Integration with Merlin
-let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-execute "set rtp+=" . g:opamshare . "/merlin/vim"
