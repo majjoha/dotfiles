@@ -22,7 +22,7 @@ __git_files () {
 }
 
 # Use z
-. ~/.env/bin/z.sh
+. ~/.env/bin/z/z.sh
 
 ##################
 #     Prompt     #
@@ -72,7 +72,7 @@ chruby ruby-2.1.5
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-export JAVA_HOME=$(/usr/libexec/java_home)
+# export JAVA_HOME=$(/usr/libexec/java_home)
 
 export PATH="$HOME/Library/Haskell/bin:$PATH"
 export PATH="$HOME/.cabal/bin:$PATH"
