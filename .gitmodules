@@ -85,3 +85,6 @@
 [submodule ".vim/bundle/lightline.vim"]
 	path = .vim/bundle/lightline.vim
 	url = git@github.com:itchyny/lightline.vim.git
+[submodule "bin/z"]
+	path = bin/z
+	url = https://github.com/rupa/z.git
