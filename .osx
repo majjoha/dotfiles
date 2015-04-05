@@ -2,7 +2,7 @@
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Disable Notification Center
-#launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
+launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
 
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
