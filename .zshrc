@@ -89,3 +89,6 @@ source $HOME/Code/zendesk/docker-images/dockmaster/zdi.sh
 
 # OPAM configuration
 . /Users/mathias/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
