@@ -46,10 +46,6 @@ map <Leader>ds :setlocal nospell<CR>
 map <Leader>p :set paste<CR>i
 map <Leader>P :set nopaste<CR>
 
-" Send selection to tmux pane
-map <Leader>ssc :ConnectToTmux
-vmap <Leader>s :SendSelectionToTmux<CR>
-
 " Open work notes
 map <Leader>on :vs ~/Code/zendesk/notes.md<CR>
 
