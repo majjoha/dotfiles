@@ -40,12 +40,6 @@
 [submodule ".vim/bundle/vim-elixir"]
 	path = .vim/bundle/vim-elixir
 	url = https://github.com/elixir-lang/vim-elixir.git
-[submodule ".vim/bundle/timl"]
-	path = .vim/bundle/timl
-	url = https://github.com/tpope/timl.git
-[submodule ".vim/bundle/tslime2.vim"]
-	path = .vim/bundle/tslime2.vim
-	url = https://github.com/sjl/tslime2.vim.git
 [submodule ".vim/bundle/vim-addon-mw-utils"]
 	path = .vim/bundle/vim-addon-mw-utils
 	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
