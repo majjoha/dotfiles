@@ -19,6 +19,10 @@ nmap <Leader>j <C-W>+<C-W>+
 nmap <Leader>h <C-W>><C-W>>
 nmap <Leader>l <C-W><<C-W><
 
+" Navigate screen lines instead of file lines
+nmap k gk
+nmap j gj
+
 " Toggle NERDTree
 map <Leader>d :NERDTreeToggle<CR>
 

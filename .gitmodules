@@ -46,9 +46,6 @@
 [submodule ".vim/bundle/ctrlp-py-matcher"]
 	path = .vim/bundle/ctrlp-py-matcher
 	url = https://github.com/FelikZ/ctrlp-py-matcher.git
-[submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
 [submodule ".vim/bundle/vim-javascript"]
 	path = .vim/bundle/vim-javascript
 	url = git@github.com:pangloss/vim-javascript.git
@@ -61,3 +58,6 @@
 [submodule ".vim/bundle/ctrlp.vim"]
 	path = .vim/bundle/ctrlp.vim
 	url = git@github.com:ctrlpvim/ctrlp.vim.git
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = git@github.com:scrooloose/nerdtree.git
