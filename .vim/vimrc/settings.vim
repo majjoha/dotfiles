@@ -57,3 +57,6 @@ set splitright
 
 " Completion
 set completeopt=longest,menuone
+
+" Set mouse to help others who aren't familiar with vim
+set mouse=a
