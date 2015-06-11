@@ -61,3 +61,6 @@ inoremap <Leader>c <C-x><C-o>
 
 " Open vertical split
 map <Leader>v :vsp<CR>
+
+" Make
+map <Leader>m :make<CR>
