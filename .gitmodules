@@ -55,9 +55,6 @@
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
 	url = git@github.com:scrooloose/nerdtree.git
-[submodule ".vim/bundle/vim-webdevicons"]
-	path = .vim/bundle/vim-webdevicons
-	url = git@github.com:ryanoasis/vim-webdevicons.git
 [submodule "bin/fzf"]
 	path = bin/fzf
 	url = git@github.com:junegunn/fzf.git
