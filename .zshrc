@@ -76,16 +76,20 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 export PATH="$HOME/Library/Haskell/bin:$PATH"
 export PATH="$HOME/.cabal/bin:$PATH"
+export PATH="$HOME/.npm:$PATH"
+export PATH="$HOME/.nvm/bin:$PATH"
 
 ## Docker host
-export DOCKER_HOST=tcp://192.168.43.45:2375
-export MYSQL_URL="mysql://admin:123456@192.168.43.45:3306/zendesk_development"
-export MYSQL_HOST='192.168.43.45'
+export DOCKER_HOST=tcp://192.168.42.45:2375
+export MYSQL_URL="mysql://admin:123456@192.168.42.45:3306/zendesk_development"
+export MYSQL_HOST='192.168.42.45'
 export MYSQL_USERNAME='admin'
 export MYSQL_PASSWORD='123456'
 export ZENDESK_PORT=""
 export ZENDESK_HOST="zd-dev.com"
 source $HOME/Code/zendesk/docker-images/dockmaster/zdi.sh
+export MYSQL_ACCOUNT_TEST=zendesk_test
+export MYSQL_SHARD_1_TEST=zendesk_shard_1_test
 
 # OPAM configuration
 . /Users/mathias/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
@@ -93,3 +97,7 @@ source $HOME/Code/zendesk/docker-images/dockmaster/zdi.sh
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+
+# FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='ag -l -g ""'

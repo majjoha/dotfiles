@@ -1,6 +1,8 @@
 " Source Snipmate to make it work (oddly).
 source ~/.env/.vim/bundle/vim-snipmate/after/plugin/snipMate.vim
 
+let g:webdevicons_enable_airline_statusline = 0
+
 " Show hidden files in NERDTree
 let NERDTreeShowHidden=1
 let NERDTreeShowFiles=1
@@ -41,3 +43,5 @@ endif
 " Ignore binary files
 set wildignore+=tags,*.DS_Store,*.o,*.obj,.git,*.class,*.png,*.jpg,*.jpeg,*.gif,*.ico,*.pdf,*.doc,*.docx,*.ppt,*.pptx,*.xls,*.xlsx,*.epub,*.mobi
 set wildignore+=vendor/*,vendor/bundle/*,*vendor/cache/*,*/vendor/ruby/*,*/tmp/*,*/log/*,*/.chef/checksums/*,*/.git/*,*/node_modules/*,public/assets*
+
+set rtp+=~/.env/bin/fzf

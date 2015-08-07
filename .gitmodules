@@ -43,9 +43,6 @@
 [submodule ".vim/bundle/base16-vim"]
 	path = .vim/bundle/base16-vim
 	url = https://github.com/chriskempson/base16-vim.git
-[submodule ".vim/bundle/ctrlp-py-matcher"]
-	path = .vim/bundle/ctrlp-py-matcher
-	url = https://github.com/FelikZ/ctrlp-py-matcher.git
 [submodule ".vim/bundle/vim-javascript"]
 	path = .vim/bundle/vim-javascript
 	url = git@github.com:pangloss/vim-javascript.git
@@ -55,9 +52,12 @@
 [submodule "bin/z"]
 	path = bin/z
 	url = https://github.com/rupa/z.git
-[submodule ".vim/bundle/ctrlp.vim"]
-	path = .vim/bundle/ctrlp.vim
-	url = git@github.com:ctrlpvim/ctrlp.vim.git
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
 	url = git@github.com:scrooloose/nerdtree.git
+[submodule ".vim/bundle/vim-webdevicons"]
+	path = .vim/bundle/vim-webdevicons
+	url = git@github.com:ryanoasis/vim-webdevicons.git
+[submodule "bin/fzf"]
+	path = bin/fzf
+	url = git@github.com:junegunn/fzf.git
