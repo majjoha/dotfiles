@@ -62,18 +62,12 @@ map <Leader>rx :call VimuxCloseRunner()<cr>
 " Remove highlighting easily
 map <Leader><Space> :nohl<CR>
 
-" Disable spelling
-map <Leader>ds :setlocal nospell<CR>
-
 " Switch between paste and nopaste mode.
 map <Leader>p :set paste<CR>i
 map <Leader>P :set nopaste<CR>
 
 " Open work notes
 map <Leader>on :vs ~/Code/zendesk/notes.md<CR>
-
-" Insert current date
-map <Leader>cd  "=strftime("%Y-%m-%d")<CR>P
 
 " Open completion menu
 inoremap <Leader>c <C-x><C-o>
