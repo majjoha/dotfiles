@@ -1,5 +1,11 @@
-" Source Snipmate to make it work (oddly).
-source ~/.env/.vim/bundle/vim-snipmate/after/plugin/snipMate.vim
+" Set UltiSnipsSnippetDirectories to an empty array in order to use snippets
+" for snipMate instead of UltiSnips by default.
+let g:UltiSnipsSnippetDirectories=[]
+
+let g:UltiSnipsExpandTrigger="<tab>"
+
+" Mimic behavior from snipMate.
+let g:UltiSnipsJumpForwardTrigger="<tab>"
 
 " Show hidden files in NERDTree
 let NERDTreeShowHidden=1
