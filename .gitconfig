@@ -25,12 +25,12 @@
   g = grep --break --heading --line-number
   graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-  last-week = log --author=majjoha --no-commit-id --since='1 week ago' --all --no-merges
+  last-week = log --since='1 week ago' --oneline --author mathias@mjj.io --no-merges
   llog = log --date=local
   preview = !"git fetch && git diff ^origin/master"
   st = status
   sta = stash
-  standup = log --since '1 day ago' --oneline --author mathias@mjj.io
+  standup = log --since '1 day ago' --oneline --author mathias@mjj.io --no-merges
   type = cat-file -t
   uncommit = reset --soft HEAD^
   undo = reset --soft HEAD^
