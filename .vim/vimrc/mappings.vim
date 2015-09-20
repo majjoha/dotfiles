@@ -55,8 +55,8 @@ nnoremap <silent> <Leader>b :call fzf#run({
 map <C-p> :FZF<CR>
 
 " Run current spec in tmux pane
-map <Leader>r :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
-map <Leader>R :call VimuxRunCommand("clear; rspec " . expand("%p") . ":" . line("."))<CR>
+map <Leader>r :call VimuxRunCommand("clear; bundle exec rspec " . bufname("%"))<CR>
+map <Leader>R :call VimuxRunCommand("clear; bundle exec rspec " . expand("%p") . ":" . line("."))<CR>
 map <Leader>rx :call VimuxCloseRunner()<cr>
 
 " Remove highlighting easily
