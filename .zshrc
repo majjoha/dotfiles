@@ -78,6 +78,7 @@ export PATH="$HOME/Library/Haskell/bin:$PATH"
 export PATH="$HOME/.cabal/bin:$PATH"
 export PATH="$HOME/.npm:$PATH"
 export PATH="$HOME/.nvm/bin:$PATH"
+export PATH="./node_modules/.bin:$PATH"
 
 ## Docker host
 export DOCKER_HOST=tcp://192.168.42.45:2375
@@ -90,14 +91,19 @@ export ZENDESK_HOST="zd-dev.com"
 source $HOME/Code/zendesk/docker-images/dockmaster/zdi.sh
 export MYSQL_ACCOUNT_TEST=zendesk_test
 export MYSQL_SHARD_1_TEST=zendesk_shard_1_test
+export MYSQL_ID_SERVER_TEST=zendesk_test
 
 # OPAM configuration
 . /Users/mathias/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag -l -g ""'
+
+# Autocompletion for Rust via Racer
+export RUST_SRC_PATH=$HOME/Dropbox/Kode/Rust/rust/src
