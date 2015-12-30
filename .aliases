@@ -22,7 +22,7 @@ function mkcd () {
 }
 
 # Use Neovim for now
-alias vim="neovim"
+alias vim="nvim"
 
 # Tab completion for tmux sessions
 function tm() {
