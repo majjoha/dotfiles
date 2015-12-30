@@ -1,5 +1,5 @@
 " Map leader key to ,
-let mapleader = ","
+let mapleader = "\<Space>"
 
 " Make grep (ag) easier
 noremap <Leader>f :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
