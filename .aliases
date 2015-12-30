@@ -21,6 +21,9 @@ function mkcd () {
   mkdir $1 && cd $1
 }
 
+# Use Neovim for now
+alias vim="neovim"
+
 # Tab completion for tmux sessions
 function tm() {
     [[ -z "$1" ]] && { echo "usage: tm <session>" >&2; return 1; }
