@@ -48,5 +48,7 @@
 	default = upstream
 [rerere]
 	enabled = true
+[commit]
+  template = ~/.gitmessage
 [heroku]
 	account = personal

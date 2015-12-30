@@ -1,0 +1,11 @@
+Capitalized, short (50 characters or less) summary.
+
+More detailed explanatory text, if necessary. Explain the problem that this
+commit is solving. Focus on why you are making this change as opposed to how
+(the code explains that). Are there side effects, or other unintuitive
+consequences of this change? Here's the place to explain them.
+
+If you use an issue tracker, put references to them at the bottom, like this:
+
+Resolves: #123
+See also: #456, #789
