@@ -20,3 +20,4 @@ tags
 vendor/ruby
 dump.rdb
 vendor/cache
+.vim/spell
