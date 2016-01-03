@@ -1,8 +1,11 @@
 " Map leader key to ,
-let mapleader = "\<Space>"
+nmap <space> <leader>
+
+" Easily escape from :term
+tnoremap <Esc> <C-\><C-n>
 
 " Make grep (ag) easier
-noremap <Leader>f :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+nnoremap <Leader>f :Ag <cword><CR>
 nnoremap <Leader>ff :Ag<SPACE>
 
 " Use CTRL-S for saving
@@ -52,19 +55,14 @@ nnoremap <silent> <Leader>b :call fzf#run({
 \ })<CR>
 
 " Show FZF
-map <C-p> :FZF<CR>
+map <Leader>p :FZF<CR>
 
-" Run current spec in tmux pane
-map <Leader>r :call VimuxRunCommand("clear; bundle exec rspec " . bufname("%"))<CR>
-map <Leader>R :call VimuxRunCommand("clear; bundle exec rspec " . expand("%p") . ":" . line("."))<CR>
-map <Leader>rx :call VimuxCloseRunner()<cr>
+" Run current spec in terminal window
+nmap <Leader>r :call neoterm#test#run('file')<cr>
+nmap <Leader>rx :call neoterm#close()<cr>
 
 " Remove highlighting easily
 map <Leader><Space> :nohl<CR>
-
-" Switch between paste and nopaste mode.
-map <Leader>p :set paste<CR>i
-map <Leader>P :set nopaste<CR>
 
 " Open work notes
 map <Leader>on :vs ~/Code/zendesk/notes.md<CR>
@@ -77,3 +75,7 @@ map <Leader>v :vsp<CR>
 
 " Make
 map <Leader>m :make<CR>
+
+" Mappings for Git
+nmap <Leader>gs :Gstatus<CR>
+nmap <Leader>gb :Gblame<CR>

@@ -26,7 +26,14 @@ let g:lightline = {
 
 " Ignore binary files
 set wildignore+=tags,*.DS_Store,*.o,*.obj,.git,*.class,*.png,*.jpg,*.jpeg,*.gif,*.ico,*.pdf,*.doc,*.docx,*.ppt,*.pptx,*.xls,*.xlsx,*.epub,*.mobi
-set wildignore+=vendor/*,vendor/bundle/*,*vendor/cache/*,*/vendor/ruby/*,*/tmp/*,*/log/*,*/.chef/checksums/*,*/.git/*,*/node_modules/*,public/assets*
+set wildignore+=vendor/*,vendor/bundle/*,*vendor/cache/*,*/vendor/ruby/*,*/tmp/*,*/log/*,*/.chef/checksums/*,*/node_modules/*,public/assets*
 
 " FZF
 set rtp+=~/.env/bin/fzf
+
+" Run Neomake on save
+autocmd! BufWritePost * Neomake
+let g:neomake_javascript_enabled_makers = ['standard', 'flow']
+
+" Allow JSX in normal JS files
+let g:jsx_ext_required = 0
