@@ -14,6 +14,8 @@
 	user = majjoha
 [branch]
 	autosetupmerge = true
+[init]
+  templatedir = ~/.git_template
 [alias]
   br = branch
   branch-name = !"git for-each-ref --format=\"%(refname:short)\" $(git symbolic-ref HEAD)"
