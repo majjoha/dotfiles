@@ -97,7 +97,7 @@ export MYSQL_ID_SERVER_TEST=zendesk_test
 . /Users/mathias/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+. $NVM_DIR/nvm.sh
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
