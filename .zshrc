@@ -68,7 +68,7 @@ export LC_ALL=en_US.UTF-8
 export LC_CTYPE="utf-8"
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
-chruby ruby-2.1.5
+chruby ruby-2.3.0
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"

@@ -42,7 +42,7 @@
   wip = !git add -u && git commit -m "wip"
   zpush = !"git push -u origin `git branch-name`:majjoha/`git branch-name`"
 [core]
-	editor = vim
+	editor = nvim
   excludesfile = ~/.gitignore
 [apply]
 	whitespace = nowarn
