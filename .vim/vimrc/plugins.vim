@@ -7,6 +7,9 @@ let g:UltiSnipsExpandTrigger="<tab>"
 " Mimic behavior from snipMate.
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 
+" Set path for private snippets
+let g:UltiSnipsSnippetsDir="~/.env/.vim/snippets"
+
 " Show hidden files in NERDTree
 let NERDTreeShowHidden=1
 let NERDTreeShowFiles=1
@@ -37,3 +40,6 @@ let g:neomake_javascript_enabled_makers = ['standard', 'flow']
 
 " Allow JSX in normal JS files
 let g:jsx_ext_required = 0
+
+" Hide noise from NERDTree
+let NERDTreeMinimalUI = 1
