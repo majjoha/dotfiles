@@ -1,6 +1,9 @@
 " Set runtimepath
 set runtimepath+=~/.env/.vim
 
+" Initialize pathogen
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+
 execute pathogen#infect()
 call pathogen#helptags()
 
