@@ -57,8 +57,9 @@ fi
 
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH=/usr/local/bin:~/.env/bin:/usr/local/share/npm/bin:$PATH
+export MYSQL=/usr/local/mysql/bin
 export PATH=$PATH:$MYSQL
-export DYLD_LIBRARY_PATH=/Applications/mysql/lib:$DYLD_LIBRARY_PATH
+export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
 # Install Homebrew Cask applications in /Applications folder.
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
