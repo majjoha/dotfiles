@@ -1,8 +1,11 @@
-" Map leader key to ,
+" Map leader key to space
 nmap <space> <leader>
+vmap <space> <leader>
 
-" Easily escape from :term
-tnoremap <Esc> <C-\><C-n>
+" Easily escape from :term, but only for Neovim
+if has('nvim')
+  " tnoremap <Esc> <C-\><C-n>
+endif
 
 " Make grep (ag) easier
 nnoremap <Leader>f :Ag <cword><CR>
@@ -15,6 +18,7 @@ inoremap <C-S> <C-O>:update<CR>
 
 " Use CTRL-Q for quitting
 noremap <C-Q> :q<CR>
+noremap <Leader>q :q<CR>
 
 " Resize windows
 nmap <Leader>k <C-W>-<C-W>-
@@ -79,3 +83,11 @@ map <Leader>m :make<CR>
 " Mappings for Git
 nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gb :Gblame<CR>
+nmap <Leader>gd :Gvdiff<CR>
+
+" Set mappings for sending content to REPL
+nnoremap <silent> <Leader>tt :TREPLSend<cr>
+vnoremap <silent> <Leader>tt :TREPLSend<cr>
+
+" Sort values
+vnoremap <Leader>ss d:execute 'normal i' . join(sort(split(getreg('"'))), ' ')<CR>
