@@ -33,7 +33,9 @@ set autoread
 set noeb vb t_vb=
 
 " Set UTF-8 as standard encoding
-set encoding=utf-8
+if !has('nvim')
+  set encoding=utf-8
+endif
 
 " Use spaces instead of tabs
 set expandtab
@@ -60,3 +62,12 @@ set completeopt=longest,menuone
 
 " Set mouse to help others who aren't familiar with vim
 set mouse=a
+
+" Allow per project .vimrc
+set exrc
+
+" Use round number for indenting
+set shiftround
+
+" Use _ for word separator too
+set iskeyword-=_
