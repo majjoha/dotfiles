@@ -43,9 +43,6 @@
 [submodule ".vim/bundle/neoterm"]
 	path = .vim/bundle/neoterm
 	url = https://github.com/kassio/neoterm.git
-[submodule ".vim/bundle/ag.nvim"]
-	path = .vim/bundle/ag.nvim
-	url = https://github.com/Numkil/ag.nvim.git
 [submodule ".vim/bundle/neomake"]
 	path = .vim/bundle/neomake
 	url = https://github.com/benekastah/neomake.git
@@ -55,3 +52,6 @@
 [submodule ".vim/bundle/vim-pathogen"]
 	path = .vim/bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
+[submodule ".vim/bundle/fzf.vim"]
+	path = .vim/bundle/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
