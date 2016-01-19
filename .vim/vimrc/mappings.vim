@@ -8,8 +8,8 @@ if has('nvim')
 endif
 
 " Make grep (ag) easier
-nnoremap <Leader>f :Ag <cword><CR>
-nnoremap <Leader>ff :Ag<SPACE>
+nnoremap <silent><Leader>f :Ag <C-R><C-W><CR>
+nnoremap <Leader>ff :Ag<CR>
 
 " Use CTRL-S for saving
 noremap <C-S> :update<CR>
@@ -84,6 +84,8 @@ map <Leader>m :make<CR>
 nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gb :Gblame<CR>
 nmap <Leader>gd :Gvdiff<CR>
+nmap <Leader>gc :Gcommit<CR>
+nmap <Leader>bc :Commits<CR>
 
 " Set mappings for sending content to REPL
 nnoremap <silent> <Leader>tt :TREPLSend<cr>
