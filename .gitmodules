@@ -37,9 +37,6 @@
 [submodule ".vim/bundle/ultisnips"]
 	path = .vim/bundle/ultisnips
 	url = git@github.com:SirVer/ultisnips.git
-[submodule ".vim/bundle/lightline.vim"]
-	path = .vim/bundle/lightline.vim
-	url = https://github.com/itchyny/lightline.vim.git
 [submodule ".vim/bundle/neoterm"]
 	path = .vim/bundle/neoterm
 	url = https://github.com/kassio/neoterm.git
@@ -55,3 +52,12 @@
 [submodule ".vim/bundle/fzf.vim"]
 	path = .vim/bundle/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
+[submodule ".vim/bundle/lightline.vim"]
+	path = .vim/bundle/lightline.vim
+	url = https://github.com/itchyny/lightline.vim.git
+[submodule ".vim/bundle/seoul256.vim"]
+	path = .vim/bundle/seoul256.vim
+	url = https://github.com/junegunn/seoul256.vim.git
+[submodule ".vim/bundle/vim-projectionist"]
+	path = .vim/bundle/vim-projectionist
+	url = https://github.com/tpope/vim-projectionist.git
