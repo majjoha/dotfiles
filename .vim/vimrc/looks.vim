@@ -1,6 +1,6 @@
 " Set theme
 set background=dark
-colorscheme base16-ocean
+colorscheme seoul256 " base16-ocean
 
 " Set cursor to be colored
 set cursorline
