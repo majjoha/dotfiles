@@ -2,11 +2,6 @@
 nmap <space> <leader>
 vmap <space> <leader>
 
-" Easily escape from :term, but only for Neovim
-if has('nvim')
-  " tnoremap <Esc> <C-\><C-n>
-endif
-
 " Make grep (ag) easier
 nnoremap <silent><Leader>f :Ag <C-R><C-W><CR>
 nnoremap <Leader>ff :Ag<CR>
@@ -39,24 +34,7 @@ map <Leader>rc :vsp $MYVIMRC<cr>
 " Source vimrc
 map <Leader>sc :source $MYVIMRC<cr>
 
-" Show bufferlist
-function! s:buflist()
-  redir => ls
-  silent ls
-  redir END
-  return split(ls, '\n')
-endfunction
-
-function! s:bufopen(e)
-  execute 'buffer' matchstr(a:e, '^[ 0-9]*')
-endfunction
-
-nnoremap <silent> <Leader>b :call fzf#run({
-\   'source':  reverse(<sid>buflist()),
-\   'sink':    function('<sid>bufopen'),
-\   'options': '+m',
-\   'down':    len(<sid>buflist()) + 2
-\ })<CR>
+nnoremap <silent> <Leader>bb :Buffers<cr>
 
 " Show FZF
 map <Leader>p :FZF<CR>
@@ -65,27 +43,26 @@ map <Leader>p :FZF<CR>
 nmap <Leader>r :call neoterm#test#run('file')<cr>
 nmap <Leader>rx :call neoterm#close()<cr>
 
+" Run Flow in terminal
+nmap <Leader>rf :T clear && flow check<CR>
+
 " Remove highlighting easily
 map <Leader><Space> :nohl<CR>
 
 " Open work notes
 map <Leader>on :vs ~/Code/zendesk/notes.md<CR>
 
-" Open completion menu
-inoremap <Leader>c <C-x><C-o>
-
 " Open vertical split
 map <Leader>v :vsp<CR>
 
-" Make
-map <Leader>m :make<CR>
-
 " Mappings for Git
-nmap <Leader>gs :Gstatus<CR>
-nmap <Leader>gb :Gblame<CR>
-nmap <Leader>gd :Gvdiff<CR>
-nmap <Leader>gc :Gcommit<CR>
 nmap <Leader>bc :Commits<CR>
+nmap <Leader>gb :Gblame<CR>
+nmap <Leader>gc :Gcommit<CR>
+nmap <Leader>gcb :Git checkout -b<space>
+nmap <Leader>gd :Gvdiff<CR>
+nmap <Leader>gr :Git rebase -i origin/master<CR>
+nmap <Leader>gs :Gstatus<CR>
 
 " Set mappings for sending content to REPL
 nnoremap <silent> <Leader>tt :TREPLSend<cr>
@@ -93,3 +70,8 @@ vnoremap <silent> <Leader>tt :TREPLSend<cr>
 
 " Sort values
 vnoremap <Leader>ss d:execute 'normal i' . join(sort(split(getreg('"'))), ' ')<CR>
+
+" Open alternate file
+nmap <Leader>a :A<cr>
+nmap <Leader>er :Erecord<space>
+nmap <Leader>et :execute 'Etest '.expand("%:r")<cr>
