@@ -58,3 +58,9 @@ augroup encrypted
   " readable text in Vim.
   autocmd BufWritePost *.gpg u
 augroup END
+
+augroup racket
+  autocmd!
+  " Associate .rkt files with Scheme
+  autocmd BufReadPost *.rkt,*.rktl set filetype=scheme
+augroup END
