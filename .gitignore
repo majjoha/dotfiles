@@ -21,3 +21,6 @@ vendor/ruby
 dump.rdb
 vendor/cache
 .vim/spell
+
+# Projectionist configuration
+.projections.json
