@@ -27,7 +27,7 @@ let NERDTreeMinimalUI = 1
 set laststatus=2
 
 let g:lightline = {
-  \ 'colorscheme': 'seoul256',
+  \ 'colorscheme': '16color',
   \ 'active': {
   \   'left': [ [ 'mode'],
   \             [ 'fugitive', 'relativepath', 'modified' ] ]
@@ -60,10 +60,16 @@ set wildignore+=vendor/*,vendor/bundle/*,*vendor/cache/*,*/vendor/ruby/*,*/tmp/*
 " FZF
 set rtp+=~/.env/bin/fzf
 
+" Redefine :Ag command to fix colors
+autocmd VimEnter * command! -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>, '--color-path "1;33" --color-line-number "1;33"',
+  \ fzf#vim#default_layout)
+
 " Run Neomake on save
 autocmd! BufWritePost * Neomake
 let g:neomake_javascript_enabled_makers = ['standard', 'flow']
 
+" Redefine representation of warnings and errors
 let g:neomake_warning_sign = {
   \ 'text': '~',
   \ }
@@ -71,9 +77,6 @@ let g:neomake_warning_sign = {
 let g:neomake_error_sign = {
   \ 'text': '×',
   \ }
-
-" Allow JSX in normal JS files
-let g:jsx_ext_required = 0
 
 " Auto-clean Fugitive buffers. Taken from:
 " http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/
