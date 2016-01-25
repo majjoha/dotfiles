@@ -64,3 +64,9 @@ augroup racket
   " Associate .rkt files with Scheme
   autocmd BufReadPost *.rkt,*.rktl set filetype=scheme
 augroup END
+
+augroup css
+  autocmd!
+  " Comb CSS on save
+  autocmd BufWritePre,FileWritePre *.css,*.less,*.scss,*.sass silent! :CSScomb
+augroup END
