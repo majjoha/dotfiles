@@ -34,6 +34,7 @@ map <Leader>rc :vsp $MYVIMRC<cr>
 " Source vimrc
 map <Leader>sc :source $MYVIMRC<cr>
 
+" Search through buffers
 nnoremap <silent> <Leader>bb :Buffers<cr>
 
 " Show FZF
@@ -63,15 +64,24 @@ nmap <Leader>gcb :Git checkout -b<space>
 nmap <Leader>gd :Gvdiff<CR>
 nmap <Leader>gr :Git rebase -i origin/master<CR>
 nmap <Leader>gs :Gstatus<CR>
+nmap <Leader>gg :Git<space>
 
 " Set mappings for sending content to REPL
 nnoremap <silent> <Leader>tt :TREPLSend<cr>
 vnoremap <silent> <Leader>tt :TREPLSend<cr>
 
+" Toggle comments
+nnoremap <Leader>/ :Commentary<cr>
+vnoremap <Leader>/ :Commentary<cr>
+
 " Sort values
 vnoremap <Leader>ss d:execute 'normal i' . join(sort(split(getreg('"'))), ' ')<CR>
 
-" Open alternate file
+" Open alternate file via vim-projectionist
 nmap <Leader>a :A<cr>
 nmap <Leader>er :Erecord<space>
-nmap <Leader>et :execute 'Etest '.expand("%:r")<cr>
+nmap <Leader>es :Eschema<space>
+
+" Define path expansion for various file types
+au BufEnter *.rb nmap <Leader>et :execute 'Etest '.expand("%:r")<cr>
+au BufEnter *.js nmap <Leader>et :execute 'Etest '.expand("%:p:h")<cr>
