@@ -43,9 +43,6 @@
 [submodule ".vim/bundle/neomake"]
 	path = .vim/bundle/neomake
 	url = https://github.com/benekastah/neomake.git
-[submodule ".vim/bundle/yajs.vim"]
-	path = .vim/bundle/yajs.vim
-	url = git@github.com:othree/yajs.vim.git
 [submodule ".vim/bundle/vim-pathogen"]
 	path = .vim/bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
@@ -55,9 +52,12 @@
 [submodule ".vim/bundle/lightline.vim"]
 	path = .vim/bundle/lightline.vim
 	url = https://github.com/itchyny/lightline.vim.git
-[submodule ".vim/bundle/seoul256.vim"]
-	path = .vim/bundle/seoul256.vim
-	url = https://github.com/junegunn/seoul256.vim.git
 [submodule ".vim/bundle/vim-projectionist"]
 	path = .vim/bundle/vim-projectionist
 	url = https://github.com/tpope/vim-projectionist.git
+[submodule ".vim/bundle/vim-csscomb"]
+	path = .vim/bundle/vim-csscomb
+	url = git@github.com:csscomb/vim-csscomb.git
+[submodule ".vim/bundle/yajs.vim"]
+	path = .vim/bundle/yajs.vim
+	url = https://github.com/othree/yajs.vim.git
