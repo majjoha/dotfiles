@@ -27,12 +27,12 @@
   g = grep --break --heading --line-number
   graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-  last-week = log --since='1 week ago' --oneline --author mathias@mjj.io --no-merges
+  last-week = shortlog --since='1 week ago' --author=mathias@mjj.io --no-merges
   llog = log --date=local
   preview = !"git fetch && git diff ^origin/master"
   st = status
   sta = stash
-  standup = log --since '1 day ago' --oneline --author mathias@mjj.io --no-merges
+  standup = shortlog --since=yesterday --no-merges --author=mathias@mjj.io
   type = cat-file -t
   uncommit = reset --soft HEAD^
   undo = reset --soft HEAD^
@@ -41,6 +41,7 @@
   unstage = reset HEAD
   wip = !git add -u && git commit -m "wip"
   zpush = !"git push -u origin `git branch-name`:majjoha/`git branch-name`"
+  pr = !"git-pr"
 [core]
 	editor = nvim
   excludesfile = ~/.gitignore
