@@ -65,6 +65,7 @@ nmap <Leader>gd :Gvdiff<CR>
 nmap <Leader>gr :Git rebase -i origin/master<CR>
 nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gg :Git<space>
+nmap <Leader>gpr :!git pr<cr>
 
 " Set mappings for sending content to REPL
 nnoremap <silent> <Leader>tt :TREPLSend<cr>
