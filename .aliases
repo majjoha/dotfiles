@@ -25,6 +25,11 @@ function mkcd () {
 alias vim="nvim"
 alias v="nvim"
 
+# Change directory, and open vim
+function zv () {
+  z $1 && v
+}
+
 # Tab completion for tmux sessions
 function tm() {
     [[ -z "$1" ]] && { echo "usage: tm <session>" >&2; return 1; }
