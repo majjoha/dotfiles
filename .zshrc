@@ -73,7 +73,6 @@ chruby ruby-2.3.0
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-# export JAVA_HOME=$(/usr/libexec/java_home)
 
 export PATH="$HOME/Library/Haskell/bin:$PATH"
 export PATH="$HOME/.cabal/bin:$PATH"
