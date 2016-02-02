@@ -1,14 +1,19 @@
-" Set UltiSnipsSnippetDirectories to an empty array in order to use snippets
-" for snipMate instead of UltiSnips by default.
-let g:UltiSnipsSnippetDirectories=[]
+" Disable default snippets
+let g:neosnippet#disable_runtime_snippets = {
+\   '_' : 1,
+\ }
 
-let g:UltiSnipsExpandTrigger="<tab>"
+" Enable compatibility with snipmate
+let g:neosnippet#enable_snipmate_compatibility = 1
 
-" Mimic behavior from snipMate.
-let g:UltiSnipsJumpForwardTrigger="<tab>"
+" Tell Neosnippet about the other snippets
+let g:neosnippet#snippets_directory = []
+let g:neosnippet#snippets_directory += ['~/.env/.vim/bundle/vim-snippets/snippets']
+let g:neosnippet#snippets_directory += ['~/.env/.vim/snippets']
 
-" Set path for private snippets
-let g:UltiSnipsSnippetsDir="~/.env/.vim/snippets"
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 " Show hidden files in NERDTree
 let NERDTreeShowHidden=1
@@ -42,7 +47,7 @@ let g:lightline = {
   \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
   \ },
   \ 'separator': { 'left': '', 'right': '' },
-  \ 'subseparator': { 'left': '|', 'right': '' }
+  \ 'subseparator': { 'left': '│', 'right': '' }
   \ }
 
 function! LightLineFugitive()
@@ -54,8 +59,9 @@ function! LightLineFugitive()
 endfunction
 
 " Ignore binary files
-set wildignore+=tags,*.DS_Store,*.o,*.obj,.git,*.class,*.png,*.jpg,*.jpeg,*.gif,*.ico,*.pdf,*.doc,*.docx,*.ppt,*.pptx,*.xls,*.xlsx,*.epub,*.mobi
-set wildignore+=vendor/*,vendor/bundle/*,*vendor/cache/*,*/vendor/ruby/*,*/tmp/*,*/log/*,*/.chef/checksums/*,*/node_modules/*,public/assets*
+" TODO: Can we perhaps live without the following?
+" set wildignore+=tags,*.DS_Store,*.o,*.obj,.git,*.class,*.png,*.jpg,*.jpeg,*.gif,*.ico,*.pdf,*.doc,*.docx,*.ppt,*.pptx,*.xls,*.xlsx,*.epub,*.mobi
+" set wildignore+=vendor/*,vendor/bundle/*,*vendor/cache/*,*/vendor/ruby/*,*/tmp/*,*/log/*,*/.chef/checksums/*,*/node_modules/*,public/assets*
 
 " FZF
 set rtp+=~/.env/bin/fzf

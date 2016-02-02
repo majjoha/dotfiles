@@ -1,0 +1,27 @@
+snippet f
+	${1} (${2}) {
+		${3}
+	}
+snippet con
+	const ${1} = ${2} => ${3}
+snippet cn
+	const ${1} = ${2}
+snippet imp
+	import ${1} from '${2}'
+snippet exp
+	export ${1}
+snippet expd
+  export default `substitute(Filename(), '^.', '\u&', '')`
+snippet cl
+	console.log(${1})
+snippet d
+	debugger
+snippet sw
+  switch (${1}) {
+    case ${2}:
+      ${3}
+    default:
+      ${4}
+  }
+snippet r
+  return
