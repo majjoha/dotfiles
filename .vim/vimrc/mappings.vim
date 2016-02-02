@@ -86,3 +86,9 @@ nmap <Leader>es :Eschema<space>
 " Define path expansion for various file types
 au BufEnter *.rb nmap <Leader>et :execute 'Etest '.expand("%:r")<cr>
 au BufEnter *.js nmap <Leader>et :execute 'Etest '.expand("%:p:h")<cr>
+
+" Easily open snippets
+nmap <Leader>os :NeoSnippetEdit -split -vertical<cr>
+
+" Split window with terminal
+nmap <Leader>tv :vsp<cr>:term<cr>
