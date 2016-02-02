@@ -68,6 +68,3 @@ set exrc
 
 " Use round number for indenting
 set shiftround
-
-" Use _ for word separator too
-set iskeyword-=_
