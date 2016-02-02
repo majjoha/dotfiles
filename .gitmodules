@@ -34,9 +34,6 @@
 [submodule "bin/fzf"]
 	path = bin/fzf
 	url = git@github.com:junegunn/fzf.git
-[submodule ".vim/bundle/ultisnips"]
-	path = .vim/bundle/ultisnips
-	url = git@github.com:SirVer/ultisnips.git
 [submodule ".vim/bundle/neoterm"]
 	path = .vim/bundle/neoterm
 	url = https://github.com/kassio/neoterm.git
@@ -61,3 +58,9 @@
 [submodule ".vim/bundle/yajs.vim"]
 	path = .vim/bundle/yajs.vim
 	url = https://github.com/othree/yajs.vim.git
+[submodule ".vim/bundle/vim-colors_ateiler-schemes"]
+	path = .vim/bundle/vim-colors_ateiler-schemes
+	url = https://github.com/atelierbram/vim-colors_atelier-schemes.git
+[submodule ".vim/bundle/neosnippet.vim"]
+	path = .vim/bundle/neosnippet.vim
+	url = https://github.com/Shougo/neosnippet.vim.git
