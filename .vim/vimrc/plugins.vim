@@ -71,6 +71,11 @@ autocmd VimEnter * command! -nargs=* Ag
   \ call fzf#vim#ag(<q-args>, '--color-path "1;33" --color-line-number "1;33"',
   \ fzf#vim#default_layout)
 
+" Display number of results inline
+if has('nvim')
+  let $FZF_DEFAULT_OPTS .= ' --inline-info'
+endif
+
 " Run Neomake on save
 autocmd! BufWritePost * Neomake
 let g:neomake_javascript_enabled_makers = ['standard', 'flow']
@@ -92,7 +97,8 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " Set up tests for RSpec in Docker
 function! neoterm#test#rspec#run(scope)
-  let command = 'zdi knowledge_api -d run bundle exec rspec'
+  let command = match(expand('%:p'), 'knowledge_api') == -1 ?
+    \ 'bundle exec rspec' : 'zdi knowledge_api -d run bundle exec rspec'
 
   if a:scope == 'file'
     let command .= ' ' . expand('%')
