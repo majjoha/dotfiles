@@ -64,3 +64,6 @@
 [submodule ".vim/bundle/neosnippet.vim"]
 	path = .vim/bundle/neosnippet.vim
 	url = https://github.com/Shougo/neosnippet.vim.git
+[submodule ".vim/bundle/rainbow_parentheses.vim"]
+	path = .vim/bundle/rainbow_parentheses.vim
+	url = https://github.com/junegunn/rainbow_parentheses.vim.git
