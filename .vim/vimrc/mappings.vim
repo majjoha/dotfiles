@@ -10,6 +10,7 @@ nnoremap <Leader>ff :Ag<CR>
 noremap <C-S> :update<CR>
 vnoremap <C-S> <C-C>:update<CR>
 inoremap <C-S> <C-O>:update<CR>
+noremap <Leader>s :update<CR>
 
 " Use CTRL-Q for quitting
 noremap <C-Q> :q<CR>
