@@ -68,3 +68,8 @@ set exrc
 
 " Use round number for indenting
 set shiftround
+
+" Use different cursors for insert and normal mode
+if has('nvim')
+  let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+endif
