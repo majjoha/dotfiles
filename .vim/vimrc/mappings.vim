@@ -41,6 +41,9 @@ nnoremap <silent> <Leader>bb :Buffers<cr>
 " Show FZF
 map <Leader>p :FZF<CR>
 
+" Search through commands
+nmap <Leader>c :Commands<CR>
+
 " Run current spec in terminal window
 nmap <Leader>r :call neoterm#test#run('file')<cr>
 nmap <Leader>rx :call neoterm#close()<cr>
@@ -67,6 +70,7 @@ nmap <Leader>gr :Git rebase -i origin/master<CR>
 nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gg :Git<space>
 nmap <Leader>gpr :!git pr<cr>
+nmap <Leader>gpp :Git pull<cr>
 
 " Set mappings for sending content to REPL
 nnoremap <silent> <Leader>tt :TREPLSend<cr>
