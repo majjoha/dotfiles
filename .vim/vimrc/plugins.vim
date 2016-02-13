@@ -82,13 +82,13 @@ let g:neomake_javascript_enabled_makers = ['standard', 'flow']
 
 " Redefine representation of warnings and errors
 let g:neomake_error_sign = {
-  \ 'text': '✕',
-  \ 'texthl': 'ErrorMsg'
+  \ 'text': '●',
+  \ 'texthl': 'DiffDelete'
   \ }
 
 let g:neomake_warning_sign = {
-  \ 'text': '✕',
-  \ 'texthl': 'ErrorMsg'
+  \ 'text': '●',
+  \ 'texthl': 'DiffDelete'
   \ }
 
 " Auto-clean Fugitive buffers. Taken from:
@@ -116,3 +116,5 @@ aug neoterm_test_rspec
         \   call neoterm#test#libs#add('rspec') |
         \ endif
 aug END
+
+let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
