@@ -74,5 +74,5 @@ augroup END
 " Activation based on file type
 augroup rainbow_lisp
   autocmd!
-  autocmd FileType lisp,clojure,scheme RainbowParentheses
+  autocmd FileType lisp,clojure,scheme,javascript RainbowParentheses
 augroup END
