@@ -1,6 +1,6 @@
 " Set theme
 set background=dark
-colorscheme base16-ateliersulphurpool " base16-ocean
+colorscheme base16-ocean " base16-ateliersulphurpool
 
 " Set cursor to be colored
 set cursorline
