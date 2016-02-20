@@ -24,3 +24,6 @@ vendor/cache
 
 # Projectionist configuration
 .projections.json
+
+# Ignore per project .exrc
+.exrc
