@@ -56,6 +56,7 @@ compdef _ag ag
 # Git-related aliases
 alias gb="git branch"
 alias gc="git commit"
+alias gcl="git clone"
 alias gcm="git commit -m"
 alias ga="git add"
 alias gco="git checkout"
