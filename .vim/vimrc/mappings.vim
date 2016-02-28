@@ -97,3 +97,5 @@ nmap <Leader>os :NeoSnippetEdit -split -vertical<cr>
 
 " Split window with terminal
 nmap <Leader>tv :vsp<cr>:term<cr>
+
+let @e='yy/def initialize/(%pyiwO@pA =a pjdd  '
