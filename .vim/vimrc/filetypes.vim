@@ -1,10 +1,3 @@
-" Associate *.curly files with HTML
-augroup associate_file_types
-  autocmd!
-  autocmd BufRead,BufNewFile *.curly setfiletype html
-  autocmd BufRead,BufNewFile *.md set filetype=markdown
-augroup END
-
 " Use spell checker for Markdown files and Git commit messages
 augroup spell_checking
   autocmd!
