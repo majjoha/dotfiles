@@ -6,3 +6,5 @@ public/assets/
 tmp/
 vendor/
 .beam
+*.ibc
+*.idr~
