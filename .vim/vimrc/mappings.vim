@@ -2,6 +2,8 @@
 nmap <space> <leader>
 vmap <space> <leader>
 
+let maplocalleader = "-"
+
 " Make grep (ag) easier
 nnoremap <silent><Leader>f :Ag <C-R><C-W><CR>
 nnoremap <Leader>ff :Ag<CR>
@@ -99,3 +101,18 @@ nmap <Leader>os :NeoSnippetEdit -split -vertical<cr>
 nmap <Leader>tv :vsp<cr>:term<cr>
 
 let @e='yy/def initialize/(%pyiwO@pA =a pjdd  '
+
+" Switching background quickly
+function! ToggleBackground()
+  let &background = (&background == "dark"? "light" : "dark")
+  if (&background == "dark")
+    let g:lightline.colorscheme = '16color'
+  else
+    let g:lightline.colorscheme = 'PaperColor_light'
+  endif
+
+  call lightline#init()
+  call lightline#colorscheme()
+  call lightline#update()
+endfunction
+map <Leader>bg :call ToggleBackground()<cr>
