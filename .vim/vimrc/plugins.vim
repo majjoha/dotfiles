@@ -23,7 +23,7 @@ let NERDTreeShowFiles=1
 let NERDTreeHighlightCursorline=1
 
 " Don't display these kind of files
-let NERDTreeIgnore=['\.class$','\.o$','^\.git$','\.DS_Store','\.aux']
+let NERDTreeIgnore=['\.class$','\.o$','^\.git$','\.DS_Store','\.aux','.idr\~','.ibc']
 
 " Hide noise from NERDTree
 let NERDTreeMinimalUI = 1
@@ -58,11 +58,6 @@ function! LightLineFugitive()
   return ''
 endfunction
 
-" Ignore binary files
-" TODO: Can we perhaps live without the following?
-" set wildignore+=tags,*.DS_Store,*.o,*.obj,.git,*.class,*.png,*.jpg,*.jpeg,*.gif,*.ico,*.pdf,*.doc,*.docx,*.ppt,*.pptx,*.xls,*.xlsx,*.epub,*.mobi
-" set wildignore+=vendor/*,vendor/bundle/*,*vendor/cache/*,*/vendor/ruby/*,*/tmp/*,*/log/*,*/.chef/checksums/*,*/node_modules/*,public/assets*
-
 " FZF
 set rtp+=~/.env/bin/fzf
 
@@ -71,13 +66,16 @@ autocmd VimEnter * command! -nargs=* Ag
   \ call fzf#vim#ag(<q-args>, '--color-path "1;33" --color-line-number "1;33"',
   \ fzf#vim#default_layout)
 
+" [Buffers] Jump to the existing window if possible
+let g:fzf_buffers_jump = 1
+
 " Display number of results inline
 if has('nvim')
   let $FZF_DEFAULT_OPTS .= ' --inline-info'
 endif
 
-" Run Neomake on save
-autocmd! BufWritePost * Neomake
+" Run Neomake on save, and enter
+autocmd! BufEnter,BufWritePost * Neomake
 
 " Redefine representation of warnings and errors
 let g:neomake_error_sign = {
