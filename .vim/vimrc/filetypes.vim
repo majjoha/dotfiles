@@ -32,26 +32,6 @@ augroup makefiles
   autocmd FileType make setlocal noexpandtab
 augroup END
 
-augroup encrypted
-  autocmd!
-  " Disable viminfo, swapfiles, undofiles, etc.
-  autocmd BufReadPre,FileReadPre *.gpg set viminfo=
-  autocmd BufReadPre,FileReadPre *.gpg set noswapfile noundofile nobackup
-  autocmd BufRead,BufNewFile *.gpg set textwidth=80
-  autocmd BufRead,BufNewFile *.gpg setlocal spell spelllang=en_us
-  autocmd BufRead,BufNewFile *.gpg set filetype=markdown
-
-  " Decrypt the file after the buffer is read.
-  autocmd BufReadPost *.gpg :%!gpg --decrypt 2> /dev/null
-
-  " Encrypt the contents of the file before writing it.
-  autocmd BufWritePre *.gpg :%!gpg -ae --default-recipient-self
-
-  " Undo the encryption after writing the file, so we can still see the
-  " readable text in Vim.
-  autocmd BufWritePost *.gpg u
-augroup END
-
 augroup racket
   autocmd!
   " Associate .rkt files with Scheme
