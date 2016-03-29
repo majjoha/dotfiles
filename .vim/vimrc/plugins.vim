@@ -35,7 +35,10 @@ let g:lightline = {
   \ 'colorscheme': '16color',
   \ 'active': {
   \   'left': [ [ 'mode'],
-  \             [ 'fugitive', 'relativepath', 'modified' ] ]
+  \             [ 'fugitive' ],
+  \             [ 'relativepath', 'modified' ] ],
+  \   'right': [ [ 'percent', 'lineinfo' ],
+  \              [ 'filetype' ] ]
   \ },
   \ 'component': {
   \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}'
@@ -46,8 +49,7 @@ let g:lightline = {
   \ 'component_visible_condition': {
   \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
   \ },
-  \ 'separator': { 'left': '', 'right': '' },
-  \ 'subseparator': { 'left': '│', 'right': '' }
+  \ 'subseparator': { 'left': '│', 'right': "" }
   \ }
 
 function! LightLineFugitive()
