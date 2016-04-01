@@ -49,6 +49,20 @@ let g:lightline = {
   \ 'component_visible_condition': {
   \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
   \ },
+  \ 'mode_map': {
+  \   'n' : 'N',
+  \   'i' : 'I',
+  \   'R' : 'R',
+  \   'v' : 'V',
+  \   'V' : 'V',
+  \   "\<C-v>": 'V',
+  \   'c' : 'C',
+  \   's' : 'S',
+  \   'S' : 'S',
+  \   "\<C-s>": 'S',
+  \   't': 'T',
+  \   '?': ''
+  \ },
   \ 'subseparator': { 'left': '│', 'right': "" }
   \ }
 
