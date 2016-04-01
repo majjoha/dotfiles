@@ -2,7 +2,7 @@
 nmap <space> <leader>
 vmap <space> <leader>
 
-let maplocalleader = "-"
+let maplocalleader = ","
 
 " Make grep (ag) easier
 nnoremap <silent><Leader>f :Ag <C-R><C-W><CR>
@@ -30,6 +30,7 @@ nmap j gj
 
 " Toggle NERDTree
 map <Leader>d :NERDTreeToggle<CR>
+map <Leader>w :NERDTreeFind<CR>
 
 " Edit vimrc
 map <Leader>rc :vsp $MYVIMRC<cr>
@@ -54,7 +55,7 @@ nmap <Leader>rx :call neoterm#close()<cr>
 nmap <Leader>rf :T clear && flow check<CR>
 
 " Remove highlighting easily
-map <Leader><Space> :nohl<CR>
+map <Leader><Space> :let @/ = ""<CR>
 
 " Open work notes
 map <Leader>on :vs ~/Code/zendesk/notes.md<CR>
@@ -116,3 +117,6 @@ function! ToggleBackground()
   call lightline#update()
 endfunction
 map <Leader>bg :call ToggleBackground()<cr>
+
+" Edit new file
+nmap <Leader>ee :enew<CR>
