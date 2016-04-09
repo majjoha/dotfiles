@@ -5,6 +5,7 @@ augroup spell_checking
   autocmd FileType gitcommit setlocal spell spelllang=en_us
   autocmd FileType tex setlocal spell spelllang=en_us
   autocmd FileType plaintex setlocal spell spelllang=en_us
+  autocmd FileType vimwiki setlocal spell spelllang=en_us
 augroup END
 
 " Set text width to 80 for Markdown, LaTeX and Git commit messages.
@@ -14,6 +15,7 @@ augroup eighty_columns
   autocmd FileType gitcommit set textwidth=80
   autocmd FileType tex set textwidth=80
   autocmd FileType plaintex set textwidth=80
+  autocmd FileType vimwiki set textwidth=80
 augroup END
 
 " Turn completion on for the following file types
