@@ -28,9 +28,6 @@
 [submodule "bin/z"]
 	path = bin/z
 	url = https://github.com/rupa/z.git
-[submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
-	url = git@github.com:scrooloose/nerdtree.git
 [submodule "bin/fzf"]
 	path = bin/fzf
 	url = git@github.com:junegunn/fzf.git
@@ -73,3 +70,9 @@
 [submodule ".vim/bundle/splitjoin.vim"]
 	path = .vim/bundle/splitjoin.vim
 	url = git@github.com:AndrewRadev/splitjoin.vim.git
+[submodule ".vim/bundle/vimwiki"]
+	path = .vim/bundle/vimwiki
+	url = https://github.com/vimwiki/vimwiki.git
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
