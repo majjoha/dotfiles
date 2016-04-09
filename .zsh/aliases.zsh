@@ -10,10 +10,6 @@ alias tmux="TERM=screen-256color-bce tmux"
 # files, etc.
 alias ls="ls -LGaF"
 
-# Replace original rmdir. This one removes every file in the directory
-# recursively.
-alias rmdir="rm -R"
-
 alias be="bundle exec"
 
 # Create a directory and enter it
@@ -36,15 +32,15 @@ function zv () {
 
 # Tab completion for tmux sessions
 function tm() {
-    [[ -z "$1" ]] && { echo "usage: tm <session>" >&2; return 1; }
-    tmux has -t $1 && tmux attach -t $1 || tmux new -s $1
+  [[ -z "$1" ]] && { echo "usage: tm <session>" >&2; return 1; }
+  tmux has -t $1 && tmux attach -t $1 || tmux new -s $1
 }
 
 function __tmux-sessions() {
-    local expl
-    local -a sessions
-    sessions=( ${${(f)"$(command tmux list-sessions)"}/:[ $'\t']##/:} )
-    _describe -t sessions 'sessions' sessions "$@"
+  local expl
+  local -a sessions
+  sessions=( ${${(f)"$(command tmux list-sessions)"}/:[ $'\t']##/:} )
+  _describe -t sessions 'sessions' sessions "$@"
 }
 compdef __tmux-sessions tm
 
