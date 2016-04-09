@@ -83,9 +83,8 @@ function! LightLineFugitive()
     return ''
   endif
   if exists("*fugitive#head")
-    let dirty = str2nr(system("git status --porcelain \| wc -l")) > 0 ? '*' : ''
     let _ = fugitive#head()
-    return strlen(_) ? ' '._ .dirty : ''
+    return strlen(_) ? ' '._ : ''
   endif
   return ''
 endfunction
