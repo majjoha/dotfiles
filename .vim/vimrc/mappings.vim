@@ -52,7 +52,7 @@ nmap <Leader>c :Commands<CR>
 nmap <Leader>sf :Filetypes<CR>
 
 " Run current spec in terminal window
-nmap <Leader>r :call neoterm#test#run('file')<cr>
+nmap <Leader>rt :call neoterm#test#run('file')<cr>
 nmap <Leader>rx :call neoterm#close()<cr>
 
 " Run Flow in terminal
