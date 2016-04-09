@@ -30,7 +30,7 @@ nmap j gj
 
 " Toggle NERDTree
 map <Leader>d :NERDTreeToggle<CR>
-map <Leader>w :NERDTreeFind<CR>
+map <Leader>wd :NERDTreeFind<CR>
 
 " Edit vimrc
 map <Leader>rc :vsp $MYVIMRC<cr>
@@ -46,6 +46,9 @@ map <Leader>p :FZF<CR>
 
 " Search through commands
 nmap <Leader>c :Commands<CR>
+
+" Search through file types
+nmap <Leader>sf :Filetypes<CR>
 
 " Run current spec in terminal window
 nmap <Leader>r :call neoterm#test#run('file')<cr>
@@ -68,6 +71,12 @@ nmap <Leader>bc :Commits<CR>
 nmap <Leader>gb :Gblame<CR>
 nmap <Leader>gc :Gcommit<CR>
 nmap <Leader>gcb :Git checkout -b<space>
+nmap <Leader>gco :call fzf#run({
+  \  'source': 'git branch \| sed "s/.* //"',
+  \  'sink': ':!git checkout ',
+  \  'options': '+m --prompt="Branch> "',
+  \  'down': '~40%'
+  \})<CR><cr>
 nmap <Leader>gd :Gvdiff<CR>
 nmap <Leader>gr :Git rebase -i origin/master<CR>
 nmap <Leader>gs :Gstatus<CR>
