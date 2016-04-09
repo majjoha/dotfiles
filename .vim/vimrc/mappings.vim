@@ -17,6 +17,7 @@ noremap <Leader>s :update<CR>
 " Use CTRL-Q for quitting
 noremap <C-Q> :q<CR>
 noremap <Leader>q :q<CR>
+tnoremap <C-Q> <C-\><C-n>:q<CR>
 
 " Resize windows
 nmap <Leader>k <C-W>-<C-W>-
