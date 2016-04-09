@@ -2,9 +2,6 @@
 set background=dark
 colorscheme base16-ocean
 
-" Set cursor to be colored
-set cursorline
-
 " Set relative line numbering
 set nu
 set rnu

@@ -10,3 +10,6 @@ call pathogen#helptags()
 for f in split(glob('~/.env/.vim/vimrc/*.vim'), '\n')
   exe 'source' f
 endfor
+
+" Color current line number
+hi CursorLineNr ctermfg=13
