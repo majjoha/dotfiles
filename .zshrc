@@ -6,5 +6,5 @@ source $ZSH/oh-my-zsh.sh
 
 source ~/.env/.zsh/prompt.zsh
 source ~/.env/.zsh/env.zsh
-source ~/.env/.zsh/aliases.zsh
 source ~/.env/.zsh/externals.zsh
+source ~/.env/.zsh/aliases.zsh
