@@ -52,8 +52,12 @@ nmap <Leader>c :Commands<CR>
 nmap <Leader>sf :Filetypes<CR>
 
 " Run current spec in terminal window
+function! NeotermClearClose()
+  call neoterm#clear()
+  call neoterm#close()
+endfunction
 nmap <Leader>rt :call neoterm#test#run('file')<cr>
-nmap <Leader>rx :call neoterm#close()<cr>
+nmap <Leader>rx :call NeotermClearClose()<cr>
 
 " Run Flow in terminal
 nmap <Leader>rf :T clear && flow check<CR>
