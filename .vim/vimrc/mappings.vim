@@ -88,6 +88,7 @@ nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gg :Git<space>
 nmap <Leader>gpr :!git pr<cr>
 nmap <Leader>gpp :Git pull<cr>
+au FileType gitcommit nnoremap <buffer><silent> ca :<C-U>Gcommit --amend<CR>
 
 " Set mappings for sending content to REPL
 nnoremap <silent> <Leader>tt :TREPLSend<cr>
