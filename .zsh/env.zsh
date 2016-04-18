@@ -22,6 +22,9 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LC_CTYPE="utf-8"
 
+# Set text width of `man` entries to 80. 
+export MANWIDTH=80
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
