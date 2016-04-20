@@ -175,3 +175,6 @@ aug neoterm_test_rspec
 aug END
 
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
+
+" Export vimwiki to HTML automatically
+let g:vimwiki_list = [{'path_html': '~/.vimwiki_html/', 'auto_export': 1}]
