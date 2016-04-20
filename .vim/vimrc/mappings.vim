@@ -66,7 +66,7 @@ nmap <Leader>rf :T clear && flow check<CR>
 map <Leader><Space> :let @/ = ""<CR>
 
 " Open work notes
-map <Leader>on :vs ~/Code/zendesk/notes.md<CR>
+map <Leader>on :vs ~/vimwiki/Todo.wiki<CR>
 
 " Open vertical split
 map <Leader>v :vsp<CR>
@@ -88,7 +88,7 @@ nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gg :Git<space>
 nmap <Leader>gpr :!git pr<cr>
 nmap <Leader>gpp :Git pull<cr>
-au FileType gitcommit nnoremap <buffer><silent> ca :<C-U>Gcommit --amend<CR>
+nmap <Leader>gl :vs<CR>:terminal tig<CR>
 au FileType gitcommit nnoremap <buffer><silent> cs :<C-U>Git stash<CR>
 
 " Set mappings for sending content to REPL
