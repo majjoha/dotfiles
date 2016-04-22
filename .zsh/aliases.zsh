@@ -53,6 +53,10 @@ _ag() {
 }
 compdef _ag ag
 
+# Tab completion for chruby
+_chruby() { compadd $(chruby | tr -d '* ') }
+compdef _chruby chruby
+
 # Git-related aliases
 alias gb="git branch"
 alias gc="git commit"
