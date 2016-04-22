@@ -177,4 +177,9 @@ aug END
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 
 " Export vimwiki to HTML automatically
-let g:vimwiki_list = [{'path_html': '~/.vimwiki_html/', 'auto_export': 1}]
+let g:vimwiki_list = [{
+  \ 'path_html': '~/.vimwiki_html/',
+  \ 'auto_export': 1,
+  \ 'nested_syntaxes': {'ruby': 'ruby', 'js': 'javascript'},
+  \ 'template_path': '~/.vimwiki_html/',
+  \ 'template_default': 'default'}]
