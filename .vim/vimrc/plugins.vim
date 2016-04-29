@@ -183,3 +183,6 @@ let g:vimwiki_list = [{
   \ 'nested_syntaxes': {'ruby': 'ruby', 'js': 'javascript'},
   \ 'template_path': '~/.vimwiki_html/',
   \ 'template_default': 'default'}]
+
+" Allow vim-surround to reindent code
+let b:surround_indent = 1
