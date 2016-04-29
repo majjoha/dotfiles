@@ -49,5 +49,23 @@ augroup END
 " Activation based on file type
 augroup rainbow_lisp
   autocmd!
-  autocmd FileType lisp,clojure,scheme,javascript RainbowParentheses
+  autocmd FileType lisp,clojure,scheme,javascript,ruby RainbowParentheses
+augroup END
+
+augroup last_modified
+  autocmd!
+  " If buffer modified, update any 'Last modified: ' in the first 20 lines.
+  " 'Last modified: ' can have up to 10 characters before (they are retained).
+  " Restores cursor and window position using save_cursor variable.
+  function! LastModified()
+    if &modified
+      let save_cursor = getpos(".")
+      let n = min([line("$"), line("$")])
+      keepjumps exe '1,' . n . 's#^\(.\{,10}Last modified: \).*#\1' .
+        \ strftime('%A, %b %d, %Y, %H:%M.') . '#e'
+      call histdel('search', -1)
+      call setpos('.', save_cursor)
+    endif
+  endfun
+  autocmd BufWritePre *.wiki call LastModified()
 augroup END
