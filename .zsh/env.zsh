@@ -22,6 +22,9 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LC_CTYPE="utf-8"
 
+# Disallow tracking in Homebrew
+export HOMEBREW_NO_ANALYTICS=1
+
 # Set text width of `man` entries to 80. 
 # https://wiki.archlinux.org/index.php/Man_page#Dynamic_page_width
 export MANWIDTH=80
