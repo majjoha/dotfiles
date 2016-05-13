@@ -25,6 +25,9 @@ nmap <Leader>j <C-W>+<C-W>+
 nmap <Leader>h <C-W>><C-W>>
 nmap <Leader>l <C-W><<C-W><
 
+" Maximize current window
+nmap <Leader>wf <C-W>o
+
 " Navigate screen lines instead of file lines
 nmap k gk
 nmap j gj
@@ -58,9 +61,6 @@ function! NeotermClearClose()
 endfunction
 nmap <Leader>rt :call neoterm#test#run('file')<cr>
 nmap <Leader>rx :call NeotermClearClose()<cr>
-
-" Run Flow in terminal
-nmap <Leader>rf :T clear && flow check<CR>
 
 " Remove highlighting easily
 map <Leader><Space> :let @/ = ""<CR>
@@ -99,13 +99,8 @@ vnoremap <silent> <Leader>tt :TREPLSend<cr>
 nnoremap <Leader>/ :Commentary<cr>
 vnoremap <Leader>/ :Commentary<cr>
 
-" Sort values
-vnoremap <Leader>ss d:execute 'normal i' . join(sort(split(getreg('"'))), ' ')<CR>
-
 " Open alternate file via vim-projectionist
 nmap <Leader>a :A<cr>
-nmap <Leader>er :Erecord<space>
-nmap <Leader>es :Eschema<space>
 
 " Define path expansion for various file types
 au BufEnter *.rb nmap <Leader>et :execute 'Etest '.expand("%:r")<cr>
@@ -116,8 +111,7 @@ nmap <Leader>os :NeoSnippetEdit -split -vertical<cr>
 
 " Split window with terminal
 nmap <Leader>tv :vsp<cr>:term<cr>
-
-let @e='yy/def initialize/(%pyiwO@pA =a pjdd  '
+nmap <Leader>ts :sp<cr>:term<cr>
 
 " Switching background quickly
 function! ToggleBackground()
