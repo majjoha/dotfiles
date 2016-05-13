@@ -54,9 +54,9 @@ augroup END
 
 augroup last_modified
   autocmd!
-  " If buffer modified, update any 'Last modified: ' in the first 20 lines.
+  " If buffer modified, update any 'Last modified: ' paragraph.
   " 'Last modified: ' can have up to 10 characters before (they are retained).
-  " Restores cursor and window position using save_cursor variable.
+  " Restores cursor, and window position using save_cursor variable.
   function! LastModified()
     if &modified
       let save_cursor = getpos(".")
