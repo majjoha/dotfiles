@@ -135,7 +135,7 @@ if has('nvim')
 endif
 
 " Run Neomake on save, and enter
-" autocmd! BufEnter,BufWritePost * Neomake
+autocmd! BufEnter,BufWritePost * Neomake
 
 " Redefine representation of warnings and errors
 let g:neomake_error_sign = {
