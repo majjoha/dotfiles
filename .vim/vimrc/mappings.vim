@@ -127,6 +127,3 @@ function! ToggleBackground()
   call lightline#update()
 endfunction
 map <Leader>bg :call ToggleBackground()<cr>
-
-" Edit new file
-nmap <Leader>ee :enew<CR>
