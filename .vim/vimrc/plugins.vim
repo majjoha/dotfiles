@@ -152,20 +152,6 @@ let g:neomake_warning_sign = {
 " http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
-" Set up tests for RSpec in Docker
-function! neoterm#test#rspec#run(scope)
-  let command = match(expand('%:p'), 'knowledge_api') == -1 ?
-    \ 'bundle exec rspec' : 'zdi knowledge_api -d run bundle exec rspec'
-
-  if a:scope == 'file'
-    let command .= ' ' . expand('%')
-  elseif a:scope == 'current'
-    let command .= ' ' . expand('%') . ':' . line('.')
-  endif
-
-  return command
-endfunction
-
 aug neoterm_test_rspec
   au VimEnter,BufRead,BufNewFile *_spec.rb,*_feature.rb call neoterm#test#libs#add('rspec')
   au VimEnter *
@@ -180,7 +166,7 @@ let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 let g:vimwiki_list = [{
   \ 'path_html': '~/.vimwiki_html/',
   \ 'auto_export': 1,
-  \ 'nested_syntaxes': {'ruby': 'ruby', 'js': 'javascript'},
+  \ 'nested_syntaxes': {'ruby': 'ruby', 'js': 'javascript', 'sh': 'sh'},
   \ 'template_path': '~/.vimwiki_html/',
   \ 'template_default': 'default'}]
 
