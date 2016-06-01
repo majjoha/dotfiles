@@ -58,9 +58,6 @@
 [submodule ".vim/bundle/rainbow_parentheses.vim"]
 	path = .vim/bundle/rainbow_parentheses.vim
 	url = https://github.com/junegunn/rainbow_parentheses.vim.git
-[submodule ".vim/bundle/elm-vim"]
-	path = .vim/bundle/elm-vim
-	url = https://github.com/ElmCast/elm-vim.git
 [submodule ".vim/bundle/idris-vim"]
 	path = .vim/bundle/idris-vim
 	url = https://github.com/idris-hackers/idris-vim.git
@@ -76,9 +73,6 @@
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule ".vim/bundle/papercolor-theme"]
-	path = .vim/bundle/papercolor-theme
-	url = https://github.com/NLKNguyen/papercolor-theme.git
 [submodule ".vim/bundle/rust.vim"]
 	path = .vim/bundle/rust.vim
 	url = https://github.com/rust-lang/rust.vim.git
