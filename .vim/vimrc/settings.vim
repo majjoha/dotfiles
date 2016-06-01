@@ -66,6 +66,9 @@ set mouse=a
 " Allow per project .vimrc
 set exrc
 
+" Disable shell execution, and write options
+set secure
+
 " Use round number for indenting
 set shiftround
 
