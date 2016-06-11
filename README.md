@@ -1,11 +1,5 @@
-# dotfiles
+# 💻 `dotfiles`
 This repository holds my configurations for my development environment.
-
-* [Installation](#installation)
-* [Updating](#updating)
-* [Screenshots](#screenshots)
-* [Bugs](#bugs)
-* [Thanks](#thanks)
 
 ## Installation
 ```bash
@@ -21,9 +15,9 @@ $ git submodule foreach git pull origin master
 
 ## Screenshots
 ### zsh
-![image](http://f.cl.ly/items/2k433J1C1n46050Z2G3V/Screen%20Shot%202014-12-17%20at%2015.24.49.png)
-### vim + tmux
-![image](http://f.cl.ly/items/3A0B2B1z1E0V0Q2m3C2e/Screen%20Shot%202014-12-17%20at%2015.24.01.png)
+![image](https://s3.amazonaws.com/f.cl.ly/items/2k0v29110D1J1x1m1N2u/Screen%20Shot%202016-06-11%20at%2023.26.30.png?v=516c3022)
+### Neovim
+![image](https://s3.amazonaws.com/f.cl.ly/items/3Y2C3W1b2T2D1s0N2L0m/Screen%20Shot%202016-06-11%20at%2023.42.21.png?v=179f7ec0)
 
 ## Bugs
 If you happen to find any issues or bugs, please let me know by
