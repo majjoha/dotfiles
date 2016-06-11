@@ -60,6 +60,7 @@ function! NeotermClearClose()
   call neoterm#close()
 endfunction
 nmap <Leader>rt :call neoterm#test#run('file')<cr>
+nmap <Leader>rl :call neoterm#test#run('current')<cr>
 nmap <Leader>rx :call NeotermClearClose()<cr>
 
 " Remove highlighting easily
