@@ -11,6 +11,8 @@
 	ui = auto
 [credential]
 	helper = osxkeychain
+[diff]
+	compactionHeuristic = true
 [github]
 	user = majjoha
 [branch]
