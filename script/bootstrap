@@ -5,7 +5,7 @@ cd $HOME/.env && git submodule init && git submodule update && cd $HOME
 
 # Configure OSX-specific settings.
 if [[ $(uname -s) == "Darwin" ]]; then
-  source ~/.env/.osx
+  source ~/.env/.macos
 fi
 
 # Symlink entire dotfiles repository.
