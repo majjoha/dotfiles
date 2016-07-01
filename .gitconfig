@@ -17,6 +17,8 @@
 	user = majjoha
 [branch]
 	autosetupmerge = true
+[submodule]
+	fetchJobs = 4
 [status]
   branch = 1
   short = 1
