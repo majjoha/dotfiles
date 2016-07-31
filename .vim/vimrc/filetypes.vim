@@ -69,3 +69,9 @@ augroup last_modified
   endfun
   autocmd BufWritePre *.wiki call LastModified()
 augroup END
+
+" Fix Ruby docs in Neovim
+augroup ruby_docs
+  autocmd!
+  autocmd FileType ruby nmap K :execute ':term ri '.expand("<cword>")<cr>
+augroup END
