@@ -38,8 +38,8 @@ man() {
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-export PATH="$HOME/Library/Haskell/bin:$PATH"
-export PATH="$HOME/.cabal/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.npm:$PATH"
 export PATH="$HOME/.nvm/bin:$PATH"
 export PATH="./node_modules/.bin:$PATH"
