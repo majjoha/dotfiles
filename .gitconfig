@@ -54,7 +54,7 @@
 	editor = nvim
   excludesfile = ~/.gitignore
 [apply]
-	whitespace = nowarn
+	whitespace = warn
 [push]
 	default = upstream
 [rerere]
