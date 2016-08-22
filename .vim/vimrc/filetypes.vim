@@ -18,6 +18,11 @@ augroup eighty_columns
   autocmd FileType vimwiki set textwidth=80
 augroup END
 
+augroup markdown
+  autocmd!
+  autocmd FileType markdown nnoremap K :silent !open dict:///<cword><cr>
+augroup END
+
 " Turn completion on for the following file types
 augroup code_completion
   autocmd!
