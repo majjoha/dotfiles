@@ -30,6 +30,16 @@ function zv () {
   z $1 && v
 }
 
+# Download video from dr.dk/tv
+# 1. Open Safari. Go to "Develop", select "User Agent", and "Safari - iOS 9.3 -
+# iPhone".
+# 2. Find video on http://dr.dk/tv.
+# 3. Right-click, and choose "Copy video address".
+# 4. Pass video address as $1, and file name (e.g. file.mp4) as $2.
+function dldr () {
+  ffmpeg -i $1 -c copy -absf aac_adtstoasc $2
+}
+
 # Tab completion for tmux sessions
 function tm() {
   [[ -z "$1" ]] && { echo "usage: tm <session>" >&2; return 1; }
