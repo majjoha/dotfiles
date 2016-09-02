@@ -1,10 +1,6 @@
 " Set theme
 colorscheme base16-eighties
-if $ITERM_PROFILE == "Light"
-  set background=light
-else
-  set background=dark
-endif
+set background=dark
 
 " Set relative line numbering
 set nu
