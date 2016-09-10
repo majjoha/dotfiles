@@ -34,6 +34,7 @@ nmap j gj
 
 " Toggle NERDTree
 map <Leader>d :NERDTreeToggle<CR>
+map <Leader>D :NERDTreeFocus<CR>
 map <Leader>wd :NERDTreeFind<CR>
 
 " Edit vimrc
