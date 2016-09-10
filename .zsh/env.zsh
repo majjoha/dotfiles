@@ -22,6 +22,8 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LC_CTYPE="utf-8"
 
+export TERM=xterm-256color
+
 # Disallow tracking in Homebrew
 export HOMEBREW_NO_ANALYTICS=1
 
