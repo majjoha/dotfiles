@@ -119,7 +119,7 @@ nmap <Leader>ts :sp<cr>:term<cr>
 function! ToggleBackground()
   let &background = (&background == "dark"? "light" : "dark")
   if (&background == "dark")
-    let g:lightline.colorscheme = 'seoul256'
+    let g:lightline.colorscheme = '16color'
   else
     let g:lightline.colorscheme = 'PaperColor_light'
   endif
