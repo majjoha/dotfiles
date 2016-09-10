@@ -1,0 +1,5 @@
+set main-view = \
+  date:default \
+  author:width=25 \
+  id:yes,color \
+  commit-title:yes,refs=yes
