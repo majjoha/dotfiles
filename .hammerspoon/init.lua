@@ -49,7 +49,8 @@ end)
 local charsToApps = {
   c = "Google Chrome",
   n = "Notes",
-  t = "iTerm"
+  t = "iTerm",
+  p = "1Password 5"
 }
 for key, app in pairs(charsToApps) do
   hs.hotkey.bind(hyper, key, function()
