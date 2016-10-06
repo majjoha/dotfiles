@@ -1,7 +1,7 @@
 [user]
 	name = "Mathias Jean Johansen"
 	email = mathias@mjj.io
-	signingkey = 61C20226
+	signingkey = 40EEE6ED
 [color]
 	ui = true
 	branch = auto
