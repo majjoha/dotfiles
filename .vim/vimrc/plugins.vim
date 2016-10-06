@@ -28,6 +28,10 @@ let NERDTreeIgnore=['\.class$','\.o$','^\.git$','\.DS_Store','\.aux','.idr\~','.
 " Hide noise from NERDTree
 let NERDTreeMinimalUI = 1
 
+" Change default arrows
+let g:NERDTreeDirArrowExpandable = '→'
+let g:NERDTreeDirArrowCollapsible = '↓'
+
 " Set statusline
 set laststatus=2
 
