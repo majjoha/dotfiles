@@ -45,17 +45,3 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.npm:$PATH"
 export PATH="$HOME/.nvm/bin:$PATH"
 export PATH="./node_modules/.bin:$PATH"
-
-## Docker host
-export DOCKER_HOST=tcp://192.168.42.45:2375
-export MYSQL_URL="mysql://admin:123456@192.168.42.45:3306/zendesk_development"
-export MYSQL_HOST='192.168.42.45'
-export MYSQL_USERNAME='admin'
-export MYSQL_PASSWORD='123456'
-export ZENDESK_PORT=""
-export ZENDESK_HOST="zd-dev.com"
-export MYSQL_ACCOUNT_TEST=zendesk_test
-export MYSQL_SHARD_1_TEST=zendesk_shard_1_test
-export MYSQL_ID_SERVER_TEST=zendesk_test
-
-export FZF_DEFAULT_COMMAND='ag -l -g ""'
