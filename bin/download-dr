@@ -1,0 +1,34 @@
+#!/usr/bin/env ruby
+
+require "json"
+require "open-uri"
+
+class DownloadDR
+  def initialize
+    @html = open(ARGV[0], "User-Agent" => String(DATA)).read
+    @json = open(/"VideoResource","Uri"\:"(#{URL})",/.match(html)[1]).read
+  end
+
+  def run
+    `ffmpeg -i #{fetch_url} -c copy -absf aac_adtstoasc #{ARGV[1]}`
+  end
+
+  private
+
+  attr_accessor :html, :json
+
+  URL = 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)'
+
+  def fetch_url
+    JSON.parse(json)
+      .fetch('Links')
+      .find {|element| element.fetch('Target') == 'HLS'}
+      .fetch('Uri')
+  end
+end
+
+DownloadDR.new.run
+
+__END__
+
+Mozilla/5.0 (iPhone; CPU iPhone OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25
