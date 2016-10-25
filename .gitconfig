@@ -47,6 +47,7 @@
   undo = reset HEAD~1 --mixed
   unpushed = log --branches --not --remotes --simplify-by-decoration --decorate --oneline
   unstage = reset HEAD
+  web = instaweb
   wip = !git add -u && git commit -m "wip"
   zpush = !"git push -u origin `git branch-name`:majjoha/`git branch-name`"
   pr = !"git-pr"
@@ -61,5 +62,7 @@
 	enabled = true
 [commit]
   template = ~/.gitmessage
+[instaweb]
+  httpd = webrick
 [heroku]
 	account = personal
