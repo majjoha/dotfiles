@@ -40,6 +40,9 @@ man() {
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+# Set path to Rust source code
+export RUST_SRC_PATH=/Users/mathias/Dropbox/Kode/Rust/rust/src
+
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.npm:$PATH"
