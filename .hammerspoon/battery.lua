@@ -7,7 +7,7 @@ local logger = hs.logger.new('battery', 'debug')
 local mod = {}
 
 local state = {
-  min = 10,
+  min = 5,
   remaining = 0
 }
 
