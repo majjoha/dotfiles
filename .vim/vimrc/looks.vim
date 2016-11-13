@@ -1,5 +1,5 @@
 " Set theme
-colorscheme base16-eighties
+colorscheme base16-grayscale
 set background=dark
 
 " Set relative line numbering
