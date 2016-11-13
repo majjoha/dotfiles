@@ -121,7 +121,7 @@ function! ToggleBackground()
   if (&background == "dark")
     let g:lightline.colorscheme = '16color'
   else
-    let g:lightline.colorscheme = 'PaperColor_light'
+    let g:lightline.colorscheme = 'Tomorrow'
   endif
 
   call lightline#init()
