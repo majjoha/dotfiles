@@ -29,5 +29,5 @@ vendor/cache
 # Ignore per project .exrc
 .exrc
 
-" Ignore byebug history
+# Ignore byebug history
 .byebug_history
