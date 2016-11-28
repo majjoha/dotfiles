@@ -129,3 +129,5 @@ function! ToggleBackground()
   call lightline#update()
 endfunction
 map <Leader>bg :call ToggleBackground()<cr>
+
+nmap zl :!open dict://<cword><cr>
