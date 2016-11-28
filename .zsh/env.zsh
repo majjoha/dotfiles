@@ -9,11 +9,17 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 # Tell grep to highlight matches
 export GREP_OPTIONS='--color=auto'
 
+export MYSQL=/usr/local/mysql/bin
+export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH=/usr/local/bin:~/.env/bin:/usr/local/share/npm/bin:$PATH
-export MYSQL=/usr/local/mysql/bin
+export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.npm:$PATH"
+export PATH="$HOME/.nvm/bin:$PATH"
+export PATH="./node_modules/.bin:$PATH"
 export PATH=$PATH:$MYSQL
-export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
 # Install Homebrew Cask applications in /Applications folder.
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
@@ -37,14 +43,5 @@ man() {
   man "$@"
 }
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
 # Set path to Rust source code
 export RUST_SRC_PATH=/Users/mathias/Dropbox/Kode/Rust/rust/src
-
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$HOME/.npm:$PATH"
-export PATH="$HOME/.nvm/bin:$PATH"
-export PATH="./node_modules/.bin:$PATH"
