@@ -1,24 +1,24 @@
 [user]
-	name = "Mathias Jean Johansen"
-	email = mathias@mjj.io
-	signingkey = 40EEE6ED
+  name = "Mathias Jean Johansen"
+  email = mathias@mjj.io
+  signingkey = 40EEE6ED
 [color]
-	ui = true
-	branch = auto
-	diff = auto
-	interactive = auto
-	status = auto
-	ui = auto
+  ui = true
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+  ui = auto
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 [diff]
-	compactionHeuristic = true
+  compactionHeuristic = true
 [github]
-	user = majjoha
+  user = majjoha
 [branch]
-	autosetupmerge = true
+  autosetupmerge = true
 [submodule]
-	fetchJobs = 4
+  fetchJobs = 4
 [status]
   branch = 1
   short = 1
@@ -52,17 +52,17 @@
   zpush = !"git push -u origin `git branch-name`:majjoha/`git branch-name`"
   pr = !"git-pr"
 [core]
-	editor = nvim
+  editor = nvim
   excludesfile = ~/.gitignore
 [apply]
-	whitespace = warn
+  whitespace = warn
 [push]
-	default = upstream
+  default = upstream
 [rerere]
-	enabled = true
+  enabled = true
 [commit]
   template = ~/.gitmessage
 [instaweb]
   httpd = webrick
 [heroku]
-	account = personal
+  account = personal
