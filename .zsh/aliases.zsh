@@ -1,8 +1,3 @@
-if [[ `uname` == 'Darwin' ]]; then
-  # Use new ctags
-  alias ctags="`brew --prefix`/bin/ctags"
-fi
-
 # 256 colors for tmux
 alias tmux="TERM=screen-256color-bce tmux"
 
