@@ -76,3 +76,8 @@ set shiftround
 if has('nvim')
   let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 endif
+
+" Show the effects of a command incrementally, as you type
+if has('nvim')
+  set inccommand=split
+endif
