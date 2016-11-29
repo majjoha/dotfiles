@@ -2,12 +2,27 @@
 export EDITOR="vim"
 export VISUAL="vim"
 
+export TERM=xterm-256color
+
 # Enabling coloring in the command line prompt
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 # Tell grep to highlight matches
 export GREP_OPTIONS='--color=auto'
+
+# Set text width of `man` entries to 80. 
+export MANWIDTH=80
+
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LC_CTYPE="utf-8"
+
+# Install Homebrew Cask applications in /Applications folder.
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# Disallow tracking in Homebrew
+export HOMEBREW_NO_ANALYTICS=1
 
 export MYSQL=/usr/local/mysql/bin
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
@@ -20,28 +35,6 @@ export PATH="$HOME/.npm:$PATH"
 export PATH="$HOME/.nvm/bin:$PATH"
 export PATH="./node_modules/.bin:$PATH"
 export PATH=$PATH:$MYSQL
-
-# Install Homebrew Cask applications in /Applications folder.
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-export LC_CTYPE="utf-8"
-
-export TERM=xterm-256color
-
-# Disallow tracking in Homebrew
-export HOMEBREW_NO_ANALYTICS=1
-
-# Set text width of `man` entries to 80. 
-# https://wiki.archlinux.org/index.php/Man_page#Dynamic_page_width
-export MANWIDTH=80
-man() {
-  local width=$(tput cols)
-  [ $width -gt $MANWIDTH ] && width=$MANWIDTH
-  env MANWIDTH=$width \
-  man "$@"
-}
 
 # Set path to Rust source code
 export RUST_SRC_PATH=/Users/mathias/Dropbox/Kode/Rust/rust/src
