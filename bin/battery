@@ -11,7 +11,7 @@
 #
 # Modified by https://github.com/majjoha
 
-battery="$(pmset -g 'batt' | tr '\n' ';' | awk '{print $7}' | tr -d ';')"
+battery="$(pmset -g 'batt' | tr '\n' ';' | awk '{print $8}' | tr -d ';')"
 
 if [[ $battery -le 10 ]]; then
   echo "#[fg=red]#[blink]♥#[noblink] $battery"
