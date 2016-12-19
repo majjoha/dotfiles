@@ -1,4 +1,0 @@
-$if ocaml
-"\C-o": "()\C-b"
-"\C-n": ";;\n"
-$endif
