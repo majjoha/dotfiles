@@ -11,7 +11,7 @@ let g:neosnippet#snippets_directory = []
 let g:neosnippet#snippets_directory += ['~/.env/.vim/bundle/vim-snippets/snippets']
 let g:neosnippet#snippets_directory += ['~/.env/.vim/snippets']
 
-" SuperTab like snippets behavior.
+" Mimic SuperTab snippets behavior
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
@@ -29,11 +29,8 @@ let NERDTreeIgnore=['\.class$','\.o$','^\.git$','\.DS_Store','\.aux','.idr\~','.
 let NERDTreeMinimalUI = 1
 
 " Change default arrows
-let g:NERDTreeDirArrowExpandable = '→'
-let g:NERDTreeDirArrowCollapsible = '↓'
-
-" Set statusline
-set laststatus=2
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
 
 let g:lightline = {
   \ 'colorscheme': '16color',
@@ -123,7 +120,7 @@ function! LightLineFilename()
 endfunction
 
 " FZF
-set rtp+=~/.env/bin/fzf
+set rtp+=/usr/local/opt/fzf
 
 " Redefine :Ag command to fix colors
 autocmd VimEnter * command! -nargs=* Ag
@@ -143,12 +140,12 @@ autocmd! BufEnter,BufWritePost * Neomake
 
 " Redefine representation of warnings and errors
 let g:neomake_error_sign = {
-  \ 'text': '●',
+  \ 'text': '▌',
   \ 'texthl': 'DiffDelete'
   \ }
 
 let g:neomake_warning_sign = {
-  \ 'text': '●',
+  \ 'text': '▌',
   \ 'texthl': 'DiffDelete'
   \ }
 
@@ -165,14 +162,6 @@ aug neoterm_test_rspec
 aug END
 
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
-
-" Export vimwiki to HTML automatically
-let g:vimwiki_list = [{
-  \ 'path_html': '~/.vimwiki_html/',
-  \ 'auto_export': 1,
-  \ 'nested_syntaxes': {'ruby': 'ruby', 'js': 'javascript', 'sh': 'sh'},
-  \ 'template_path': '~/.vimwiki_html/',
-  \ 'template_default': 'default'}]
 
 " Allow vim-surround to reindent code
 let b:surround_indent = 1
