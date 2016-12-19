@@ -4,6 +4,11 @@ export VISUAL="vim"
 
 export TERM=xterm-256color
 
+# Save a lot of history
+export HISTSIZE=20000
+export SAVEHIST=20000
+export HISTFILE=~/.zsh_history
+
 # Enabling coloring in the command line prompt
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
