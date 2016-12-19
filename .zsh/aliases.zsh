@@ -1,6 +1,3 @@
-# 256 colors for tmux
-alias tmux="TERM=screen-256color-bce tmux"
-
 # Replaces original ls. This one uses colors and shows folders, executable
 # files, etc.
 alias ls="ls -LGaF"
@@ -53,20 +50,18 @@ _chruby() { compadd $(chruby | tr -d '* ') }
 compdef _chruby chruby
 
 # Git-related aliases
+alias ga="git add"
 alias gb="git branch"
+alias gbd="git branch -D"
+alias gbl="git branch --list"
 alias gc="git commit"
 alias gcl="git clone"
 alias gcm="git commit -m"
-alias ga="git add"
 alias gco="git checkout"
 alias gd="git diff"
-alias gp="git pull"
-alias pp="git pull && git push"
-alias gs="git status"
 alias gl="git log"
-alias gbl="git branch --list"
-alias gbd="git branch -D"
 alias glw="git last-week"
-alias gdm="git branch --merged | grep -v "\*" | xargs -n 1 git branch -d "
-alias gsu="git submodule foreach git pull origin master"
+alias gp="git pull"
+alias gs="git status"
 alias gsa="git submodule add"
+alias gsu="git submodule foreach git pull origin master"
