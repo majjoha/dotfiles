@@ -2,6 +2,7 @@
 nmap <space> <leader>
 vmap <space> <leader>
 
+" Set local leader to comma
 let maplocalleader = ","
 
 " Make grep (ag) easier
@@ -12,11 +13,9 @@ nnoremap <Leader>ff :Ag<CR>
 noremap <C-S> :update<CR>
 vnoremap <C-S> <C-C>:update<CR>
 inoremap <C-S> <C-O>:update<CR>
-noremap <Leader>s :update<CR>
 
 " Use CTRL-Q for quitting
 noremap <C-Q> :q<CR>
-noremap <Leader>q :q<CR>
 tnoremap <C-Q> <C-\><C-n>:q<CR>
 
 " Resize windows
@@ -27,6 +26,10 @@ nmap <Leader>l <C-W><<C-W><
 
 " Maximize current window
 nmap <Leader>wf <C-W>o
+
+" Keep selection when indenting/outdenting
+vnoremap > >gv
+vnoremap < <gv
 
 " Navigate screen lines instead of file lines
 nmap k gk
@@ -49,9 +52,6 @@ nnoremap <silent> <Leader>bb :Buffers<cr>
 " Show FZF
 map <Leader>p :FZF<CR>
 
-" Search through commands
-nmap <Leader>c :Commands<CR>
-
 " Search through file types
 nmap <Leader>sf :Filetypes<CR>
 
@@ -66,9 +66,6 @@ nmap <Leader>rx :call NeotermClearClose()<cr>
 
 " Remove highlighting easily
 map <Leader><Space> :let @/ = ""<CR>
-
-" Open work notes
-map <Leader>on :vs ~/vimwiki/Todo.wiki<CR>
 
 " Open vertical split
 map <Leader>v :vsp<CR>
@@ -130,4 +127,4 @@ function! ToggleBackground()
 endfunction
 map <Leader>bg :call ToggleBackground()<cr>
 
-nmap zl :!open dict://<cword><cr>
+inoremap <C-@> <c-x><c-o>
