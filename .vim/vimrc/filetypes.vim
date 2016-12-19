@@ -1,37 +1,28 @@
-" Use spell checker for Markdown files and Git commit messages
+" Use spell checker for Markdown, LaTeX, and Git commit messages
 augroup spell_checking
   autocmd!
   autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
   autocmd FileType gitcommit setlocal spell spelllang=en_us
   autocmd FileType tex setlocal spell spelllang=en_us
   autocmd FileType plaintex setlocal spell spelllang=en_us
-  autocmd FileType vimwiki setlocal spell spelllang=en_us
 augroup END
 
-" Set text width to 80 for Markdown, LaTeX and Git commit messages.
+" Set text width to 80 for Markdown, LaTeX and Git commit messages
 augroup eighty_columns
   autocmd!
   autocmd FileType markdown set textwidth=80
   autocmd FileType gitcommit set textwidth=80
   autocmd FileType tex set textwidth=80
   autocmd FileType plaintex set textwidth=80
-  autocmd FileType vimwiki set textwidth=80
 augroup END
 
-augroup markdown
+" Enable Dictionary.app lookups from Markdown, LaTex, and Git commit messages
+augroup dictionary
   autocmd!
   autocmd FileType markdown nnoremap K :silent !open dict:///<cword><cr>
-augroup END
-
-" Turn completion on for the following file types
-augroup code_completion
-  autocmd!
-  autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-  autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-  autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-  autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
-  autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-  autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+  autocmd FileType gitcommit nnoremap K :silent !open dict:///<cword><cr>
+  autocmd FileType tex nnoremap K :silent !open dict:///<cword><cr>
+  autocmd FileType plaintex nnoremap K :silent !open dict:///<cword><cr>
 augroup END
 
 augroup makefiles
@@ -39,13 +30,13 @@ augroup makefiles
   autocmd FileType make setlocal noexpandtab
 augroup END
 
+" Associate *.rkt files with Scheme
 augroup racket
   autocmd!
-  " Associate .rkt files with Scheme
   autocmd BufReadPost *.rkt,*.rktl set filetype=scheme
 augroup END
 
-" Activation based on file type
+" Enable rainbow parentheses for Lisp, Clojure, JavaScript, and Ruby
 augroup rainbow_lisp
   autocmd!
   autocmd FileType lisp,clojure,scheme,javascript,ruby RainbowParentheses
