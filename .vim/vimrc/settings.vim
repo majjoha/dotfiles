@@ -58,7 +58,7 @@ set splitbelow
 set splitright
 
 " Completion
-set completeopt=longest,menuone
+set completeopt=longest,menuone,preview
 
 " Set mouse to help others who aren't familiar with vim
 set mouse=a
@@ -72,12 +72,10 @@ set secure
 " Use round number for indenting
 set shiftround
 
-" Use different cursors for insert and normal mode
 if has('nvim')
+  " Use different cursors for insert and normal mode
   let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-endif
 
-" Show the effects of a command incrementally, as you type
-if has('nvim')
-  set inccommand=split
+  " Show the effects of a command incrementally as you type
+  set inccommand=nosplit
 endif
