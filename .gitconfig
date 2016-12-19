@@ -2,6 +2,19 @@
   name = "Mathias Jean Johansen"
   email = mathias@mjj.io
   signingkey = 40EEE6ED
+[github]
+  user = majjoha
+[heroku]
+  account = personal
+[core]
+  editor = nvim
+  excludesfile = ~/.gitignore
+[commit]
+  template = ~/.gitmessage
+[init]
+  templatedir = ~/.git_template
+[credential]
+  helper = osxkeychain
 [color]
   ui = true
   branch = auto
@@ -9,12 +22,8 @@
   interactive = auto
   status = auto
   ui = auto
-[credential]
-  helper = osxkeychain
 [diff]
   compactionHeuristic = true
-[github]
-  user = majjoha
 [branch]
   autosetupmerge = true
 [submodule]
@@ -22,47 +31,29 @@
 [status]
   branch = 1
   short = 1
-[init]
-  templatedir = ~/.git_template
-[alias]
-  br = branch
-  branch-name = !"git for-each-ref --format=\"%(refname:short)\" $(git symbolic-ref HEAD)"
-  ci = commit
-  co = checkout
-  di = diff
-  ds = diff --staged
-  dump = cat-file -p
-  g = grep --break --heading --line-number
-  graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-  last-week = shortlog --since='1 week ago' --author=mathias@mjj.io --no-merges
-  llog = log --date=local
-  preview = !"git fetch && git diff ^origin/master"
-  st = status
-  sta = stash
-  standup = shortlog --since=yesterday --no-merges --author=mathias@mjj.io
-  type = cat-file -t
-  uncommit = reset --soft HEAD^
-  undo = reset --soft HEAD^
-  undo = reset HEAD~1 --mixed
-  unpushed = log --branches --not --remotes --simplify-by-decoration --decorate --oneline
-  unstage = reset HEAD
-  web = instaweb
-  wip = !git add -u && git commit -m "wip"
-  zpush = !"git push -u origin `git branch-name`:majjoha/`git branch-name`"
-  pr = !"git-pr"
-[core]
-  editor = nvim
-  excludesfile = ~/.gitignore
 [apply]
   whitespace = warn
 [push]
   default = upstream
 [rerere]
   enabled = true
-[commit]
-  template = ~/.gitmessage
 [instaweb]
   httpd = webrick
-[heroku]
-  account = personal
+[alias]
+  br = branch
+  branch-name = !"git for-each-ref --format=\"%(refname:short)\" $(git symbolic-ref HEAD)"
+  ci = commit
+  co = checkout
+  graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  last-week = shortlog --since='1 week ago' --author=mathias@mjj.io --no-merges
+  preview = !"git fetch && git diff ^origin/master"
+  st = status
+  standup = shortlog --since=yesterday --no-merges --author=mathias@mjj.io
+  undo = reset --soft HEAD^
+  unpushed = log --branches --not --remotes --simplify-by-decoration --decorate --oneline
+  unstage = reset HEAD
+  web = instaweb
+  wip = !git add -u && git commit -m "wip"
+  zpush = !"git push -u origin `git branch-name`:majjoha/`git branch-name`"
+  pr = !"git-pr"
