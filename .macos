@@ -18,10 +18,10 @@ defaults write com.apple.screencapture type -string "png"
 # Enable subpixel font rendering on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
-# Finder: show status bar
+# Show status bar in Finder
 defaults write com.apple.finder ShowStatusBar -bool true
 
-# Automatically hide and show the Dock
+# Automatically hide, and show the Dock
 defaults write com.apple.dock autohide -bool true
 
 # Only use UTF-8 in Terminal.app
