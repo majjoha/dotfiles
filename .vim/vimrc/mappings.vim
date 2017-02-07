@@ -127,4 +127,4 @@ function! ToggleBackground()
 endfunction
 map <Leader>bg :call ToggleBackground()<cr>
 
-inoremap <C-@> <c-x><c-o>
+inoremap <C-Space> <c-x><c-o>
