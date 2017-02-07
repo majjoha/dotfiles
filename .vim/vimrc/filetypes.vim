@@ -47,3 +47,11 @@ augroup ruby_docs
   autocmd!
   autocmd FileType ruby nmap K :execute ':term ri '.expand("<cword>")<cr>
 augroup END
+
+" Various mappings for Go development
+augroup go
+  autocmd!
+  autocmd FileType go nmap K :GoDoc<cr>
+  autocmd FileType go setlocal omnifunc=go#complete#Complete
+  autocmd FileType go set completeopt-=preview
+augroup END
