@@ -39,7 +39,11 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.npm:$PATH"
 export PATH="$HOME/.nvm/bin:$PATH"
 export PATH="./node_modules/.bin:$PATH"
+export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$MYSQL
 
 # Set path to Rust source code
 export RUST_SRC_PATH=/Users/mathias/Dropbox/Kode/Rust/rust/src
+
+# Set GOPATH
+export GOPATH=$HOME/Dropbox/Kode/Go
