@@ -21,6 +21,9 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 # Show status bar in Finder
 defaults write com.apple.finder ShowStatusBar -bool true
 
+# Show file extensions in Finder
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
 # Automatically hide, and show the Dock
 defaults write com.apple.dock autohide -bool true
 
@@ -38,3 +41,41 @@ defaults write com.apple.CrashReporter DialogType none
 
 # Avoid creating .DS_Store files on USB volumes
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
+# Enable full keyboard access for all controls
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+# Disable auto-correct
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Keep folders on top when sorting by name
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
+
+# Set $HOME as the default location for new Finder windows
+# For other paths, use `PfLo` and `file:///full/path/here/`
+defaults write com.apple.finder NewWindowTarget -string "PfDe"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/
+
+# Set appearance for buttons, menus, and windows to graphite
+defaults write -g AppleAquaColorVariant -int 6
+
+# Set highlight color to graphite
+defaults write NSGlobalDomain AppleHighlightColor -string "0.847059 0.847059 0.862745"
+
+# Use dark menu bar and Dock
+defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
+
+# Set size for Dock
+defaults write com.apple.dock tilesize -int 36
+defaults write com.apple.dock largesize -int 50
+
+# Require password immediately after sleep or screen saver begins
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+# Set a fast keyboard repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 2
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
+
+# Set sidebar icon size to medium
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
