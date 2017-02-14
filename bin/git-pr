@@ -1,4 +1,5 @@
 #!/bin/sh
-url="$(git config --get remote.origin.url | cut -c 5- | sed 's/.\{4\}$//' | sed 's/:/\//')"
+url="$(git config --get remote.origin.url)"
+branch=`git branch-name`
 
-open https://$url/compare/majjoha/`git branch-name`?expand=1
+open "$url/compare/majjoha/$branch?expand=1"

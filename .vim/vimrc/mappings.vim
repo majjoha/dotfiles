@@ -52,6 +52,9 @@ nnoremap <silent> <Leader>bb :Buffers<cr>
 " Show FZF
 map <Leader>p :FZF<CR>
 
+" Search through commands
+map <Leader>c :Commands<CR>
+
 " Search through file types
 nmap <Leader>sf :Filetypes<CR>
 
