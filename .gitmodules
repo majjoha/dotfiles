@@ -7,9 +7,6 @@
 [submodule ".vim/bundle/neosnippet.vim"]
 	path = .vim/bundle/neosnippet.vim
 	url = https://github.com/Shougo/neosnippet.vim.git
-[submodule ".vim/bundle/rainbow_parentheses.vim"]
-	path = .vim/bundle/rainbow_parentheses.vim
-	url = https://github.com/junegunn/rainbow_parentheses.vim.git
 [submodule ".vim/bundle/idris-vim"]
 	path = .vim/bundle/idris-vim
 	url = https://github.com/idris-hackers/idris-vim.git
@@ -58,9 +55,6 @@
 [submodule ".vim/bundle/yajs.vim"]
 	path = .vim/bundle/yajs.vim
 	url = git@github.com:othree/yajs.vim.git
-[submodule ".vim/bundle/elm-vim"]
-	path = .vim/bundle/elm-vim
-	url = https://github.com/ElmCast/elm-vim.git
 [submodule "bin/z"]
 	path = bin/z
 	url = git@github.com:rupa/z.git
@@ -76,3 +70,9 @@
 [submodule ".vim/bundle/vim-go"]
 	path = .vim/bundle/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule ".vim/bundle/omnisharp-vim"]
+	path = .vim/bundle/omnisharp-vim
+	url = https://github.com/OmniSharp/omnisharp-vim.git
+[submodule ".vim/bundle/vim-dispatch"]
+	path = .vim/bundle/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch.git
