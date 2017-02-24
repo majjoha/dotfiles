@@ -23,7 +23,7 @@ let NERDTreeShowFiles=1
 let NERDTreeHighlightCursorline=1
 
 " Don't display these kind of files
-let NERDTreeIgnore=['\.class$','\.o$','^\.git$','\.DS_Store','\.aux','.idr\~','.ibc']
+let NERDTreeIgnore=['\.class$','\.o$','^\.git$','\.DS_Store','\.aux','.idr\~','.ibc','.prefab', '.meta']
 
 " Hide noise from NERDTree
 let NERDTreeMinimalUI = 1
@@ -122,21 +122,13 @@ endfunction
 " FZF
 set rtp+=/usr/local/opt/fzf
 
-" Redefine :Ag command to fix colors
-autocmd VimEnter * command! -nargs=* Ag
-  \ call fzf#vim#ag(<q-args>, '--color-path "1;33" --color-line-number "1;33"',
-  \ fzf#vim#default_layout)
-
-" [Buffers] Jump to the existing window if possible
+" Jump to the existing window if possible
 let g:fzf_buffers_jump = 1
 
 " Display number of results inline
 if has('nvim')
   let $FZF_DEFAULT_OPTS .= ' --inline-info'
 endif
-
-" Run Neomake on save, and enter
-autocmd! BufEnter,BufWritePost * Neomake
 
 " Redefine representation of warnings and errors
 let g:neomake_error_sign = {
@@ -148,20 +140,6 @@ let g:neomake_warning_sign = {
   \ 'text': '▌',
   \ 'texthl': 'DiffDelete'
   \ }
-
-" Auto-clean Fugitive buffers. Taken from:
-" http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/
-autocmd BufReadPost fugitive://* set bufhidden=delete
-
-aug neoterm_test_rspec
-  au VimEnter,BufRead,BufNewFile *_spec.rb,*_feature.rb call neoterm#test#libs#add('rspec')
-  au VimEnter *
-        \ if filereadable('spec/spec_helper.rb') |
-        \   call neoterm#test#libs#add('rspec') |
-        \ endif
-aug END
-
-let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 
 " Allow vim-surround to reindent code
 let b:surround_indent = 1
