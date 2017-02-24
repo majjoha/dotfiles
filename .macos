@@ -1,52 +1,26 @@
-# Disable the "Are you sure you want to open this application?" dialog
-defaults write com.apple.LaunchServices LSQuarantine -bool false
+########
+# Dock #
+########
 
-# Disable Notification Center
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
+# Automatically hide, and show the Dock
+defaults write com.apple.dock autohide -bool true
 
-# Trackpad: enable tap to click for this user and for the login screen
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+# Set size for Dock
+defaults write com.apple.dock tilesize -int 36
+defaults write com.apple.dock largesize -int 50
 
-# Save screenshots to the desktop
-defaults write com.apple.screencapture location -string "$HOME/Desktop"
+# Show indicator lights for open applications in the Dock
+defaults write com.apple.dock show-process-indicators -bool true
 
-# Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
-defaults write com.apple.screencapture type -string "png"
-
-# Enable subpixel font rendering on non-Apple LCDs
-defaults write NSGlobalDomain AppleFontSmoothing -int 2
+##########
+# Finder #
+##########
 
 # Show status bar in Finder
 defaults write com.apple.finder ShowStatusBar -bool true
 
 # Show file extensions in Finder
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-
-# Automatically hide, and show the Dock
-defaults write com.apple.dock autohide -bool true
-
-# Only use UTF-8 in Terminal.app
-defaults write com.apple.terminal StringEncodings -array 4
-
-# Empty Trash securely by default
-defaults write com.apple.finder EmptyTrashSecurely -bool true
-
-# Show indicator lights for open applications in the Dock
-defaults write com.apple.dock show-process-indicators -bool true
-
-# Disable crash reporter dialog
-defaults write com.apple.CrashReporter DialogType none
-
-# Avoid creating .DS_Store files on USB volumes
-defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
-
-# Enable full keyboard access for all controls
-defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
-
-# Disable auto-correct
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Keep folders on top when sorting by name
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
@@ -55,6 +29,13 @@ defaults write com.apple.finder _FXSortFoldersFirst -bool true
 # For other paths, use `PfLo` and `file:///full/path/here/`
 defaults write com.apple.finder NewWindowTarget -string "PfDe"
 defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/
+
+# Empty Trash securely by default
+defaults write com.apple.finder EmptyTrashSecurely -bool true
+
+##############
+# Appearance #
+##############
 
 # Set appearance for buttons, menus, and windows to graphite
 defaults write -g AppleAquaColorVariant -int 6
@@ -65,17 +46,109 @@ defaults write NSGlobalDomain AppleHighlightColor -string "0.847059 0.847059 0.8
 # Use dark menu bar and Dock
 defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 
-# Set size for Dock
-defaults write com.apple.dock tilesize -int 36
-defaults write com.apple.dock largesize -int 50
+# Set sidebar icon size to medium
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 
-# Require password immediately after sleep or screen saver begins
-defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0
+#########
+# Input #
+#########
+
+# Enable tap to click for this user, and for the login screen
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Set a fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 2
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
-# Set sidebar icon size to medium
-defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
+# Enable full keyboard access for all controls
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+#################
+# Miscellaneous #
+#################
+
+# Disable Notification Center
+launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
+
+# Disable the "Are you sure you want to open this application?" dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+# Save screenshots to the desktop
+defaults write com.apple.screencapture location -string "$HOME/Desktop"
+
+# Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
+defaults write com.apple.screencapture type -string "png"
+
+# Enable subpixel font rendering on non-Apple LCDs
+defaults write NSGlobalDomain AppleFontSmoothing -int 2
+
+# Only use UTF-8 in Terminal.app
+defaults write com.apple.terminal StringEncodings -array 4
+
+# Disable crash reporter dialog
+defaults write com.apple.CrashReporter DialogType none
+
+# Avoid creating .DS_Store files on USB volumes
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
+# Disable auto-correct
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Require password immediately after sleep or screen saver begins
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+################
+# Transmission #
+################
+
+# Enable IP block list
+defaults write org.m0k.transmission BlocklistNew -bool true
+defaults write org.m0k.transmission BlocklistURL -string "http://john.bitsurge.net/public/biglist.p2p.gz"
+defaults write org.m0k.transmission BlocklistAutoUpdate -bool true
+
+# Trash original torrent files
+defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
+
+#############################
+# Safari Technology Preview #
+#############################
+
+# Show full website address in Smart Search Field
+defaults write com.apple.SafariTechnologyPreview ShowFullURLInSmartSearchField -int 1
+
+# Disallow websites from sending push notifications
+defaults write com.apple.SafariTechnologyPreview CanPromptForPushNotifications -int 0
+
+# Ask websites not to track me
+defaults write com.apple.SafariTechnologyPreview SendDoNotTrackHTTPHeader -int 1
+
+# Suppress search suggestions
+defaults write com.apple.SafariTechnologyPreview SuppressSearchSuggestions -int 1
+
+# Start new windows, and tabs with the empty page
+defaults write com.apple.SafariTechnologyPreview NewTabBehavior -int 1
+defaults write com.apple.SafariTechnologyPreview NewWindowBehavior -int 1
+
+# Set homepage to about:blank
+defaults write com.apple.SafariTechnologyPreview HomePage -string 'about:blank'
+
+# Save downloded files to ~/Downloads
+defaults write com.apple.SafariTechnologyPreview DownloadsPath -string '~/Downloads'
+
+# Remove downloads list items upon successful download
+defaults write com.apple.SafariTechnologyPreview DownloadsClearingPolicy -int 2
+
+# Prevent Safari from opening "safe" files automatically after downloading
+defaults write com.apple.SafariTechnologyPreview AutoOpenSafeDownloads -bool false
+
+# Remove history items after one year
+defaults write com.apple.SafariTechnologyPreview HistoryAgeInDaysLimit -int 365
+
+# Hide favorites bar
+deaults write com.apple.SafariTechnologyPreview ShowFavoritesBar -bool false
+
+# Hide status bar
+defaults write com.apple.SafariTechnologyPreview ShowStatusBar -bool false
