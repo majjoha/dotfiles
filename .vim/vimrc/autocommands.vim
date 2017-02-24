@@ -64,7 +64,7 @@ augroup END
 " Set :help as keywordprg instead of man
 augroup vim
   autocmd!
-  au FileType vim setlocal keywordprg=:help
+  autocmd FileType vim setlocal keywordprg=:help
 augroup END
 
 " Configurations for working with C# in Unity
@@ -109,7 +109,7 @@ augroup neomake
 augroup END
 
 " Use RSpec if a spec_helper.rb file is available
-aug neoterm_test_rspec
+augroup neoterm_test_rspec
   autocmd!
   autocmd VimEnter,BufRead,BufNewFile *_spec.rb,*_feature.rb
     \ call neoterm#test#libs#add('rspec')
@@ -117,4 +117,4 @@ aug neoterm_test_rspec
     \ if filereadable('spec/spec_helper.rb') |
     \   call neoterm#test#libs#add('rspec') |
     \ endif
-aug END
+augroup END
