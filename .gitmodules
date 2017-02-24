@@ -58,9 +58,6 @@
 [submodule "bin/z"]
 	path = bin/z
 	url = git@github.com:rupa/z.git
-[submodule ".oh-my-zsh"]
-	path = .oh-my-zsh
-	url = git@github.com:robbyrussell/oh-my-zsh.git
 [submodule ".vim/bundle/neomake"]
 	path = .vim/bundle/neomake
 	url = git@github.com:neomake/neomake.git

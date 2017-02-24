@@ -22,6 +22,15 @@ function zv () {
   z $1 && v
 }
 
+# Go up one directory
+alias ..='cd ..'
+
+# Go up two directories
+alias ...='cd ../..'
+
+# Go up three directories
+alias ....='cd ../../..'
+
 # Tab completion for tmux sessions
 function tm() {
   [[ -z "$1" ]] && { echo "usage: tm <session>" >&2; return 1; }
