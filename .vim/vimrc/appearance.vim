@@ -12,10 +12,6 @@ set colorcolumn=80
 " Set statusline
 set laststatus=2
 
-" Assume fast terminal
-set ttyfast
-set lazyredraw
-
 " Blend vertical separator, and line numbers
 set fillchars=vert:\ 
 
