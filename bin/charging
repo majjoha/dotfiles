@@ -1,8 +1,7 @@
 #!/usr/bin/env sh
-charging=$(ioreg -l -w0 | grep ExternalConnected)
-chargingornot=${charging##* }
+charging=$(ioreg -l -w0 | grep ExternalConnected | sed 's:.*= ::')
 
-if [[ $chargingornot == "Yes" ]]; then
+if [[ $charging == "Yes" ]]; then
   echo "#[fg=green]↑"
 else
   echo "#[fg=red]↓"
