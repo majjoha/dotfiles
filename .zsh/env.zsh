@@ -27,7 +27,7 @@ export LC_CTYPE="utf-8"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # Set GOPATH
-if [ "$HOSTNAME" = "libris" ]; then
+if [ $(hostname) = "libris" ]; then
   export GOPATH=$HOME/Dropbox/Kode/Go
 else
   export GOPATH=$HOME/work
