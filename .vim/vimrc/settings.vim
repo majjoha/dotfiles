@@ -72,6 +72,16 @@ set secure
 " Use round number for indenting
 set shiftround
 
+" Ignore case, so `foo` matches foo, Foo, and FOO
+set ignorecase
+
+" Adjust case of match depending on the typed text
+set infercase
+
+" Assume fast terminal
+set ttyfast
+set lazyredraw
+
 if has('nvim')
   " Use different cursors for insert and normal mode
   let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
