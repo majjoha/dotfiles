@@ -9,23 +9,17 @@ let maplocalleader = ","
 nnoremap <silent><Leader>f :Ag <C-R><C-W><CR>
 nnoremap <Leader>ff :Ag<CR>
 
-" Use CTRL-S for saving
+" Use Control-S for saving
 noremap <C-S> :update<CR>
 vnoremap <C-S> <C-C>:update<CR>
 inoremap <C-S> <C-O>:update<CR>
 
-" Use CTRL-Q for quitting
+" Use Control-Q for quitting
 noremap <C-Q> :q<CR>
 tnoremap <C-Q> <C-\><C-n>:q<CR>
 
-" Resize windows
-nmap <Leader>k <C-W>-<C-W>-
-nmap <Leader>j <C-W>+<C-W>+
-nmap <Leader>h <C-W>><C-W>>
-nmap <Leader>l <C-W><<C-W><
-
 " Maximize current window
-nmap <Leader>wf <C-W>o
+nmap <Leader>mw <C-W>o
 
 " Keep selection when indenting/outdenting
 vnoremap > >gv
@@ -38,7 +32,7 @@ nmap j gj
 " Toggle NERDTree
 map <Leader>d :NERDTreeToggle<CR>
 map <Leader>D :NERDTreeFocus<CR>
-map <Leader>wd :NERDTreeFind<CR>
+map <Leader>fd :NERDTreeFind<CR>
 
 " Edit vimrc
 map <Leader>rc :vsp $MYVIMRC<cr>
@@ -67,7 +61,7 @@ nmap <Leader>rt :call neoterm#test#run('file')<cr>
 nmap <Leader>rl :call neoterm#test#run('current')<cr>
 nmap <Leader>rx :call NeotermClearClose()<cr>
 
-" Remove highlighting easily
+" Remove highlighting
 map <Leader><Space> :let @/ = ""<CR>
 
 " Open vertical split
@@ -91,22 +85,10 @@ nmap <Leader>gg :Git<space>
 nmap <Leader>gpr :!git pr<cr>
 nmap <Leader>gpp :Git pull<cr>
 nmap <Leader>gl :vs<CR>:terminal tig<CR>
-au FileType gitcommit nnoremap <buffer><silent> cs :<C-U>Git stash<CR>
-
-" Set mappings for sending content to REPL
-nnoremap <silent> <Leader>tt :TREPLSend<cr>
-vnoremap <silent> <Leader>tt :TREPLSend<cr>
 
 " Toggle comments
 nnoremap <Leader>/ :Commentary<cr>
 vnoremap <Leader>/ :Commentary<cr>
-
-" Open alternate file via vim-projectionist
-nmap <Leader>a :A<cr>
-
-" Define path expansion for various file types
-au BufEnter *.rb nmap <Leader>et :execute 'Etest '.expand("%:r")<cr>
-au BufEnter *.js nmap <Leader>et :execute 'Etest '.expand("%:p:h")<cr>
 
 " Easily open snippets
 nmap <Leader>os :NeoSnippetEdit -split -vertical<cr>
@@ -130,4 +112,5 @@ function! ToggleBackground()
 endfunction
 map <Leader>bg :call ToggleBackground()<cr>
 
+" Enable completion menu
 inoremap <C-Space> <c-x><c-o>
