@@ -59,6 +59,9 @@ augroup go
   autocmd FileType go nmap K :GoDoc<cr>
   autocmd FileType go setlocal omnifunc=go#complete#Complete
   autocmd FileType go set completeopt-=preview
+  autocmd FileType go setlocal spell spelllang=en_us
+  autocmd FileType go nmap <C-]> :GoDef<cr>
+  autocmd FileType go nmap <C-t> :GoDefPop<cr>
 augroup END
 
 " Set :help as keywordprg instead of man
