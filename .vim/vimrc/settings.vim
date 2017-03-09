@@ -75,6 +75,9 @@ set shiftround
 " Ignore case, so `foo` matches foo, Foo, and FOO
 set ignorecase
 
+" But Foo should only match Foo
+set smartcase
+
 " Adjust case of match depending on the typed text
 set infercase
 
