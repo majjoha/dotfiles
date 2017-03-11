@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 #
 # Works best with blinking text: the last heart will blink when you have less
 # than 25% of your battery life remaining.
