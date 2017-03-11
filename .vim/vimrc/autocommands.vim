@@ -106,10 +106,7 @@ augroup ag
 augroup END
 
 " Run Neomake on save, and enter
-augroup neomake
-  autocmd!
-  autocmd BufEnter,BufWritePost * Neomake
-augroup END
+autocmd BufEnter,BufWritePost * Neomake 
 
 " Use RSpec if a spec_helper.rb file is available
 augroup neoterm_test_rspec
