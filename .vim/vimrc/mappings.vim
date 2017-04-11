@@ -114,3 +114,6 @@ map <Leader>bg :call ToggleBackground()<cr>
 
 " Enable completion menu
 inoremap <C-Space> <c-x><c-o>
+
+" Search only in visual selection
+vnoremap / <ESC>/\%V
