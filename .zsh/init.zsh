@@ -16,6 +16,12 @@ setopt hist_ignore_all_dups
 # # Case-insensitive (all), partial-word, and then substring completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
+# Move cursor to the end of word after completing
+setopt always_to_end
+
+# Allow completion from within a word/phrase
+setopt complete_in_word
+
 # Enable menu-style completion
 zstyle ':completion:*' menu select
 
@@ -28,3 +34,6 @@ bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
 
 zstyle ':completion:*' special-dirs true
+
+# Use Emacs-style key bindings for zsh
+bindkey -e
