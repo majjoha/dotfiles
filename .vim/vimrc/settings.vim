@@ -85,6 +85,9 @@ set infercase
 set ttyfast
 set lazyredraw
 
+" Use one space instead of two when joining lines
+set nojoinspaces
+
 if has('nvim')
   " Use different cursors for insert and normal mode
   let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
