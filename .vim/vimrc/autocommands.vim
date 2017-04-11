@@ -5,7 +5,6 @@ augroup spell_checking
   autocmd FileType gitcommit setlocal spell spelllang=en_us
   autocmd FileType tex setlocal spell spelllang=en_us
   autocmd FileType plaintex setlocal spell spelllang=en_us
-  autocmd FileType go setlocal spell spelllang=en_us
 augroup END
 
 " Set text width to 80 for Markdown, LaTeX, and Git commit messages
@@ -53,17 +52,6 @@ augroup ruby_docs
   autocmd FileType ruby nmap K :execute ':term ri '.expand("<cword>")<cr>
 augroup END
 
-" Configurations for Go development
-augroup go
-  autocmd!
-  autocmd FileType go nmap K :GoDoc<cr>
-  autocmd FileType go setlocal omnifunc=go#complete#Complete
-  autocmd FileType go set completeopt-=preview
-  autocmd FileType go setlocal spell spelllang=en_us
-  autocmd FileType go nmap <C-]> :GoDef<cr>
-  autocmd FileType go nmap <C-t> :GoDefPop<cr>
-augroup END
-
 " Set :help as keywordprg instead of man
 augroup vim
   autocmd!
@@ -104,9 +92,6 @@ augroup ag
     \ call fzf#vim#ag(<q-args>, '--color-path "1;33" --color-line-number "1;33"',
     \ fzf#vim#default_layout)
 augroup END
-
-" Run Neomake on save, and enter
-autocmd BufEnter,BufWritePost * Neomake 
 
 " Use RSpec if a spec_helper.rb file is available
 augroup neoterm_test_rspec
