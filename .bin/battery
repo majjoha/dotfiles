@@ -11,10 +11,10 @@
 #
 # Modified by https://github.com/majjoha
 
-battery="$(pmset -g 'batt' | tr '\n' ';' | awk '{print $8}' | tr -d ';')"
+battery="$(pmset -g 'batt' | tr '\n' ';' | awk '{print $8}' | tr -d '%;')"
 
 if [[ $battery -le 10 ]]; then
-  echo "#[fg=red]#[blink]♥#[noblink] $battery"
+  echo "#[fg=red]#[blink]♥#[noblink]#[fg=colour250] $battery%"
 else
-  echo "#[fg=colour250]$battery"
+  echo "#[fg=colour250]$battery%"
 fi
