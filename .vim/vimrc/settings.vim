@@ -75,6 +75,9 @@ set shiftround
 " Ignore case, so `foo` matches foo, Foo, and FOO
 set ignorecase
 
+" Ignore case for files in `:cd`
+set fileignorecase
+
 " But Foo should only match Foo
 set smartcase
 
