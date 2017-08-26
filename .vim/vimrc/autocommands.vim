@@ -85,14 +85,6 @@ augroup git
   autocmd FileType gitcommit nnoremap <buffer><silent> cs :<C-U>Git stash<CR>
 augroup END
 
-" Redefine :Ag command to fix colors
-augroup ag
-  autocmd!
-  autocmd VimEnter * command! -nargs=* Ag
-    \ call fzf#vim#ag(<q-args>, '--color-path "1;33" --color-line-number "1;33"',
-    \ fzf#vim#default_layout)
-augroup END
-
 " Use RSpec if a spec_helper.rb file is available
 augroup neoterm_test_rspec
   autocmd!
