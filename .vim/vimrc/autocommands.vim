@@ -70,6 +70,12 @@ augroup cs
   autocmd BufWritePre *.cs :execute ':OmniSharpCodeFormat'
 augroup END
 
+" Configurations for working with C++
+augroup cpp
+  autocmd!
+  autocmd BufWritePre *.cpp,*.h :%!clang-format
+augroup END
+
 " Resize splits when the window is rezied
 augroup resize_splits
   autocmd!
