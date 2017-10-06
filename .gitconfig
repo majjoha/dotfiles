@@ -9,6 +9,8 @@
 [core]
   editor = nvim
   excludesfile = ~/.gitignore
+  untrackedCache = true
+  whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 [commit]
   template = ~/.gitmessage
 [init]
