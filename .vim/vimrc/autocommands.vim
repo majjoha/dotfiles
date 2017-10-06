@@ -58,22 +58,26 @@ augroup vim
   autocmd FileType vim setlocal keywordprg=:help
 augroup END
 
-" Configurations for working with C# in Unity
+" Configurations for working with C#
 augroup cs
   autocmd!
+  let g:OmniSharp_selector_ui = 'fzf'
   autocmd FileType cs setlocal ts=4 sts=4 sw=4 expandtab
-  autocmd FileType cs set completeopt-=preview
+  autocmd FileType cs setlocal completeopt-=preview
+  autocmd FileType cs setlocal noshowmatch
   autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
+  autocmd FileType cs setlocal updatetime=200
   autocmd FileType cs nmap K :OmniSharpDocumentation<cr>
+  autocmd FileType cs nmap <Leader>F :OmniSharpCodeFormat<cr>
+  autocmd FileType cs nmap <Leader>U :OmniSharpFindUsages<cr>
+  autocmd FileType cs nmap <Leader>R :OmniSharpRename<cr>
   autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
-  autocmd FileType cs set updatetime=200
-  autocmd BufWritePre *.cs :execute ':OmniSharpCodeFormat'
 augroup END
 
 " Configurations for working with C++
 augroup cpp
   autocmd!
-  autocmd BufWritePre *.cpp,*.h :%!clang-format
+  autocmd FileType cpp nmap <Leader>F :%!clang-format<cr>
 augroup END
 
 " Resize splits when the window is rezied
