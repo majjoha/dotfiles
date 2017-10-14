@@ -2,7 +2,7 @@
 charging=$(ioreg -l -w0 | grep ExternalConnected | sed 's:.*= ::')
 
 if [[ $charging == "Yes" ]]; then
-  echo "#[fg=green]↑"
+  echo "#[fg=green]↑#[fg=colour12]"
 else
-  echo "#[fg=red]↓"
+  echo "#[fg=red]↓#[fg=colour12]"
 fi
