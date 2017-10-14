@@ -117,3 +117,6 @@ inoremap <C-Space> <c-x><c-o>
 
 " Search only in visual selection
 vnoremap / <ESC>/\%V
+
+" Alternate via vim-projectionist
+nmap <Leader>a :A<CR>
