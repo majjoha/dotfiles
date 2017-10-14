@@ -7,9 +7,6 @@
 [submodule ".vim/bundle/neosnippet.vim"]
 	path = .vim/bundle/neosnippet.vim
 	url = https://github.com/Shougo/neosnippet.vim.git
-[submodule ".vim/bundle/idris-vim"]
-	path = .vim/bundle/idris-vim
-	url = https://github.com/idris-hackers/idris-vim.git
 [submodule ".vim/bundle/neoterm"]
 	path = .vim/bundle/neoterm
 	url = git@github.com:kassio/neoterm.git
@@ -22,12 +19,6 @@
 [submodule ".vim/bundle/vim-pathogen"]
 	path = .vim/bundle/vim-pathogen
 	url = git@github.com:tpope/vim-pathogen.git
-[submodule ".vim/bundle/rust.vim"]
-	path = .vim/bundle/rust.vim
-	url = git@github.com:rust-lang/rust.vim.git
-[submodule ".vim/bundle/splitjoin.vim"]
-	path = .vim/bundle/splitjoin.vim
-	url = git@github.com:AndrewRadev/splitjoin.vim.git
 [submodule ".vim/bundle/vim-commentary"]
 	path = .vim/bundle/vim-commentary
 	url = git@github.com:tpope/vim-commentary.git
@@ -67,3 +58,9 @@
 [submodule ".bin/z"]
 	path = .bin/z
 	url = https://github.com/rupa/z.git
+[submodule ".vim/bundle/vim-grammarous"]
+	path = .vim/bundle/vim-grammarous
+	url = https://github.com/rhysd/vim-grammarous.git
+[submodule ".vim/bundle/vim-projectionist"]
+	path = .vim/bundle/vim-projectionist
+	url = https://github.com/tpope/vim-projectionist.git
