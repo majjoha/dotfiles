@@ -54,6 +54,17 @@ compdef _ag ag
 _chruby() { compadd $(chruby | tr -d '* ') }
 compdef _chruby chruby
 
+# Install (one or multiple) selected application(s) using "brew search" as
+# source input
+bip() {
+  local inst=$(brew search | fzf -m)
+
+  if [[ $inst ]]; then
+    for prog in $(echo $inst);
+    do; brew install $prog; done;
+  fi
+}
+
 # Git-related aliases
 alias ga="git add"
 alias gb="git branch"
