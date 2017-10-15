@@ -46,9 +46,10 @@ augroup racket
   autocmd BufReadPost *.rkt,*.rktl set filetype=scheme
 augroup END
 
-" Fix Ruby docs in Neovim
-augroup ruby_docs
+" Configurations for Ruby
+augroup ruby
   autocmd!
+  " Fix Ruby docs in Neovim
   autocmd FileType ruby nmap K :execute ':term ri '.expand("<cword>")<cr>
 augroup END
 
@@ -61,7 +62,7 @@ augroup END
 " Configurations for working with C#
 augroup cs
   autocmd!
-  let g:OmniSharp_selector_ui = 'fzf'
+  autocmd FileType cs let g:OmniSharp_selector_ui = 'fzf'
   autocmd FileType cs setlocal ts=4 sts=4 sw=4 expandtab
   autocmd FileType cs setlocal completeopt-=preview
   autocmd FileType cs setlocal noshowmatch
