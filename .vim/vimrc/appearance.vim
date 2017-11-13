@@ -14,6 +14,3 @@ set laststatus=2
 
 " Blend vertical separator, and line numbers
 set fillchars=vert:\ 
-
-" Highlight current line number
-set highlight+=c:LineNr
