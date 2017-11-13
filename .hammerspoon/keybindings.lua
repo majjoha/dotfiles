@@ -40,6 +40,12 @@ function mod.init()
     hs.grid.set(win, { x = 0, y = 0, w = 10, h = 5 }, win:screen())
   end)
 
+  -- Center the window
+  hs.hotkey.bind(hyper, ",", function()
+    local win = hs.window.focusedWindow()
+    hs.grid.set(win, { x = 2.5, y = 0, w = 5, h = 10 }, win:screen())
+  end)
+
   -- Application hotkeys
   local charsToApps = {
     c = "Calendar",
