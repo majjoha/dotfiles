@@ -39,3 +39,4 @@ These are some of them:
 * [r00k/dotfiles](https://github.com/r00k/dotfiles)
 * [ryanb/dotfiles](https://github.com/ryanb/dotfiles)
 * [sjl/dotfiles](https://bitbucket.org/sjl/dotfiles/src)
+* [wincent/wincent](https://github.com/wincent/wincent)
