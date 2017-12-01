@@ -1,18 +1,15 @@
-set nocompatible
-filetype on
-filetype plugin on
+" Automatic, language-dependent indentation, syntax coloring and other
+" functionality
+filetype indent plugin on
 
 " Set auto indentation
-set ai
+set autoindent
 
 " Set indentation
-set si
+set smartindent
 
 " Set syntax highlighting on
 syntax on
-
-" Set file indentation on
-filetype indent on
 
 " Use 256 colors
 set t_Co=256
@@ -30,7 +27,7 @@ set incsearch
 set autoread
 
 " No annoying sound on errors
-set noeb vb t_vb=
+set noerrorbells visualbell t_vb=
 
 " Set UTF-8 as standard encoding
 if !has('nvim')
@@ -91,10 +88,10 @@ set lazyredraw
 " Use one space instead of two when joining lines
 set nojoinspaces
 
-if has('nvim')
-  " Use different cursors for insert and normal mode
-  let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+" Disable intro message
+set shortmess+=I
 
+if has('nvim')
   " Show the effects of a command incrementally as you type
   set inccommand=nosplit
 endif
