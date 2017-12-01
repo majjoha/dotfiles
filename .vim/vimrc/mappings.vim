@@ -44,22 +44,13 @@ map <Leader>sc :source $MYVIMRC<cr>
 nnoremap <silent> <Leader>bb :Buffers<cr>
 
 " Show FZF
-map <Leader>p :FZF<CR>
+map <Leader>p :Files<CR>
 
 " Search through commands
 map <Leader>c :Commands<CR>
 
 " Search through file types
 nmap <Leader>sf :Filetypes<CR>
-
-" Run current spec in terminal window
-function! NeotermClearClose()
-  call neoterm#clear()
-  call neoterm#close()
-endfunction
-nmap <Leader>rt :call neoterm#test#run('file')<cr>
-nmap <Leader>rl :call neoterm#test#run('current')<cr>
-nmap <Leader>rx :call NeotermClearClose()<cr>
 
 " Remove highlighting
 map <Leader><Space> :let @/ = ""<CR>
