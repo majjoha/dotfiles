@@ -55,9 +55,6 @@
 [submodule ".bin/z"]
 	path = .bin/z
 	url = https://github.com/rupa/z.git
-[submodule ".vim/bundle/vim-grammarous"]
-	path = .vim/bundle/vim-grammarous
-	url = https://github.com/rhysd/vim-grammarous.git
 [submodule ".vim/bundle/vim-projectionist"]
 	path = .vim/bundle/vim-projectionist
 	url = https://github.com/tpope/vim-projectionist.git
