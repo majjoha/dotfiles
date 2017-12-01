@@ -1,37 +1,3 @@
-" Disable default snippets
-let g:neosnippet#disable_runtime_snippets = {
-\   '_' : 1,
-\ }
-
-" Enable compatibility with snipmate
-let g:neosnippet#enable_snipmate_compatibility = 1
-
-" Tell Neosnippet about the other snippets
-let g:neosnippet#snippets_directory = []
-let g:neosnippet#snippets_directory += ['~/.env/.vim/bundle/vim-snippets/snippets']
-let g:neosnippet#snippets_directory += ['~/.env/.vim/snippets']
-
-" Mimic SuperTab snippets behavior
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
-" Show hidden files in NERDTree
-let NERDTreeShowHidden=1
-let NERDTreeShowFiles=1
-
-" Highlight the selected entry in the tree
-let NERDTreeHighlightCursorline=1
-
-" Don't display these kind of files
-let NERDTreeIgnore=['\.class$','\.o$','^\.git$','\.DS_Store','\.aux','.idr\~','.ibc','.prefab', '.meta']
-
-" Hide noise from NERDTree
-let NERDTreeMinimalUI = 1
-
-" Change default arrows
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
-
 let g:lightline = {
   \ 'colorscheme': '16color',
   \ 'active': {
@@ -118,31 +84,3 @@ function! LightLineFilename()
     \ expand('%') =~? 'term:\/\/' ? substitute(expand('%'), 'term:\/\/.\/\/\d*:', '', 'g') :
     \ ('' != fname ? fname : '[No Name]')
 endfunction
-
-" FZF
-set rtp+=/usr/local/opt/fzf
-
-" Jump to the existing window if possible
-let g:fzf_buffers_jump = 1
-
-" Display number of results inline
-if has('nvim')
-  let $FZF_DEFAULT_OPTS .= ' --inline-info'
-endif
-
-" Redefine representation of warnings and errors
-let g:ale_sign_error = '▌'
-let g:ale_sign_warning = '▌'
-highlight link ALEErrorSign DiffDelete
-highlight link ALEWarningSign DiffDelete
-
-let g:ale_lint_on_text_changed = 'normal' 
-
-" Allow vim-surround to reindent code
-let b:surround_indent = 1
-
-" Detect language from `spellang`
-let g:grammarous#use_vim_spelllang = 1
-
-" Use languagetool from Homebrew
-let g:grammarous#languagetool_cmd = 'languagetool'
