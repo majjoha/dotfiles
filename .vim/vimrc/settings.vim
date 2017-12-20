@@ -91,6 +91,9 @@ set nojoinspaces
 " Disable intro message
 set shortmess+=I
 
+" Delete comment character when joining commented lines
+set formatoptions+=j
+
 if has('nvim')
   " Show the effects of a command incrementally as you type
   set inccommand=nosplit
