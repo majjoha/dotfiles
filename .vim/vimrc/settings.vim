@@ -17,11 +17,8 @@ set t_Co=256
 " Set the Terminal title
 set title
 
-" Highlight search terms
-set hlsearch
-
-" dynamically as they are typed
-set incsearch
+" Highlight search terms dynamically as they are typed
+set hlsearch incsearch
 
 " Auto read when a file is changed from the outside
 set autoread
