@@ -31,8 +31,7 @@ nmap j gj
 
 " Toggle NERDTree
 map <Leader>d :NERDTreeToggle<CR>
-map <Leader>D :NERDTreeFocus<CR>
-map <Leader>fd :NERDTreeFind<CR>
+map <Leader>D :NERDTreeFind<CR>
 
 " Edit vimrc
 map <Leader>rc :vsp $MYVIMRC<cr>
@@ -100,6 +99,7 @@ function! ToggleBackground()
   call lightline#init()
   call lightline#colorscheme()
   call lightline#update()
+  source ~/.env/.vim/after/plugin/colors.vim
 endfunction
 map <Leader>bg :call ToggleBackground()<cr>
 
