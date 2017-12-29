@@ -19,11 +19,15 @@ noremap <C-Q> :q<CR>
 tnoremap <C-Q> <C-\><C-n>:q<CR>
 
 " Maximize current window
-nmap <Leader>mw <C-W>o
+nmap <Leader>mw :only<CR>
 
 " Keep selection when indenting/outdenting
 vnoremap > >gv
 vnoremap < <gv
+
+" Move lines vertically
+xnoremap J :move '<-2<CR>gv=gv
+xnoremap K :move '>+1<CR>gv=gv
 
 " Navigate screen lines instead of file lines
 nmap k gk
