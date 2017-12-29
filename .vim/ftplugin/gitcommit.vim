@@ -7,5 +7,5 @@ setlocal textwidth=80
 " Enable completion
 setlocal complete+=kspell
 
-" Enable Dictionary.app lookups
-nmap K :silent !open dict:///<cword><cr>
+" Look up commits with K
+setlocal keywordprg=:Git\ show
