@@ -8,4 +8,4 @@ setlocal textwidth=80
 setlocal complete+=kspell
 
 " Enable Dictionary.app lookups
-nmap K :silent !open dict:///<cword><cr>
+setlocal keywordprg=:!open\ dict:///\
