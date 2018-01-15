@@ -1,6 +1,6 @@
 # Use vim as default editor
-export EDITOR="vim"
-export VISUAL="vim"
+export EDITOR="nvim"
+export VISUAL="nvim"
 
 export TERM=xterm-256color
 
