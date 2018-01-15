@@ -2,9 +2,6 @@
 nmap <space> <leader>
 vmap <space> <leader>
 
-" Set local leader to comma
-let maplocalleader = ","
-
 " Make grep (ag) easier
 nnoremap <silent><Leader>f :Ag <C-R><C-W><CR>
 nnoremap <Leader>ff :Ag<CR>
