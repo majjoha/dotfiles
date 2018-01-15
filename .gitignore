@@ -23,6 +23,9 @@ dump.rdb
 vendor/cache
 .vim/spell
 
+# Ignore tmuxinator configurations
+.config/tmuxinator
+
 # Projectionist configuration
 .projections.json
 
