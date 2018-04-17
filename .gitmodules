@@ -43,9 +43,6 @@
 [submodule ".vim/bundle/auto-pairs"]
 	path = .vim/bundle/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs.git
-[submodule ".vim/bundle/omnisharp-vim"]
-	path = .vim/bundle/omnisharp-vim
-	url = https://github.com/OmniSharp/omnisharp-vim.git
 [submodule ".vim/bundle/vim-dispatch"]
 	path = .vim/bundle/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch.git
@@ -58,3 +55,6 @@
 [submodule ".vim/bundle/vim-projectionist"]
 	path = .vim/bundle/vim-projectionist
 	url = https://github.com/tpope/vim-projectionist.git
+[submodule ".vim/bundle/omnisharp-vim"]
+	path = .vim/bundle/omnisharp-vim
+	url = https://github.com/OmniSharp/omnisharp-vim.git
