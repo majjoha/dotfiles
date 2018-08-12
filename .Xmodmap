@@ -1,0 +1,7 @@
+! Remap Cmd to Ctrl in XQuartz apps
+clear Mod2
+clear control
+keycode 63 = Control_L
+keycode 67 = Control_L
+keycode 71 = Control_L
+add Control = Control_L
