@@ -91,12 +91,8 @@ nmap <Leader>ts :sp<cr>:term<cr>
 " Switching background quickly
 function! ToggleBackground()
   let &background = (&background == "dark"? "light" : "dark")
-  if (&background == "dark")
-    let g:lightline.colorscheme = '16color'
-  else
-    let g:lightline.colorscheme = 'Tomorrow'
-  endif
 
+  runtime autoload/lightline/colorscheme/16color.vim
   call lightline#init()
   call lightline#colorscheme()
   call lightline#update()
