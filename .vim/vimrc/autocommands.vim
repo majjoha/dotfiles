@@ -1,7 +1,7 @@
 augroup csharp
   autocmd!
   " Show type under cursor
-  autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
+  " autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
 augroup END
 
 augroup resize_splits
@@ -28,6 +28,6 @@ augroup END
 augroup auto_fzf
   autocmd!
   " Open FZF if vim starts without a file
-  autocmd StdinReadPre * let s:std_in=1
-  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | exe 'Files' | endif
+  " autocmd StdinReadPre * let s:std_in=1
+  " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | exe 'Files' | endif
 augroup END
