@@ -88,18 +88,6 @@ nmap <Leader>os :NeoSnippetEdit -split -vertical<cr>
 nmap <Leader>tv :vsp<cr>:term<cr>
 nmap <Leader>ts :sp<cr>:term<cr>
 
-" Switching background quickly
-function! ToggleBackground()
-  let &background = (&background == "dark"? "light" : "dark")
-
-  runtime autoload/lightline/colorscheme/16color.vim
-  call lightline#init()
-  call lightline#colorscheme()
-  call lightline#update()
-  source ~/.env/.vim/after/plugin/colors.vim
-endfunction
-map <Leader>bg :call ToggleBackground()<cr>
-
 " Enable completion menu
 inoremap <C-Space> <c-x><c-o>
 
