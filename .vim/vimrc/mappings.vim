@@ -108,3 +108,6 @@ vnoremap / <ESC>/\%V
 
 " Alternate via vim-projectionist
 nmap <Leader>a :A<CR>
+
+" Toggle Goyo
+nmap <Leader>go :Goyo<cr>
