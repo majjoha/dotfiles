@@ -1,9 +1,3 @@
-augroup csharp
-  autocmd!
-  " Show type under cursor
-  " autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
-augroup END
-
 augroup resize_splits
   autocmd!
   " Resize splits when the window is rezied
