@@ -95,3 +95,6 @@ if has('nvim')
   " Show the effects of a command incrementally as you type
   set inccommand=nosplit
 endif
+
+" Show spell suggestions in a smaller window
+set spellsuggest=15
