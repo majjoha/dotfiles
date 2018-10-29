@@ -4,7 +4,7 @@ entire setup is managed by [GNU Stow](https://www.gnu.org/software/stow/).
 
 ## Installation
 ```bash
-$ git clone --recursive https://github.com/majjoha/dotfiles.git ~/.env
+$ git clone --recursive git@github.com:majjoha/dotfiles.git ~/.env
 $ cd ~/.env && stow .
 ```
 
