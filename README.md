@@ -19,10 +19,10 @@ $ git submodule foreach git pull origin master
 
 ## Screenshots
 ### zsh
-![image](https://d26dzxoao6i3hh.cloudfront.net/items/1j463O3q1L113B1J2T2n/Screen%20Shot%202017-03-29%20at%2008.40.48.png?v=cded6fe2)
+![image](https://duaw26jehqd4r.cloudfront.net/items/2t2p2z030i2E1r1K1J1T/1.png)
 
 ### Neovim
-![image](https://d26dzxoao6i3hh.cloudfront.net/items/0y0V0j0r342O2d0E1N2M/Screen%20Shot%202017-03-29%20at%2008.41.50.png?v=50457136)
+![image](https://duaw26jehqd4r.cloudfront.net/items/2k332c3f0H1k0L0G3P42/2.png)
 
 ## Bugs
 If you happen to find any issues or bugs, please let me know by
