@@ -99,3 +99,11 @@ nmap <Leader>a :A<CR>
 
 " Toggle Goyo
 nmap <Leader>go :Goyo<cr>
+
+" Control options in menus with j and k
+inoremap <expr> j pumvisible() ? '<C-n>' : 'j'
+inoremap <expr> k pumvisible() ? '<C-p>' : 'k'
+
+" Mappings for testing
+nmap <Leader>rt :TestFile<cr>
+nmap <Leader>rl :TestNearest<cr>
