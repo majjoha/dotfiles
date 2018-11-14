@@ -3,9 +3,15 @@ snippet mod
     ${2}
   end
 snippet req
-  require ${1}
+  require "${1}"
+snippet reqr
+  require_relative "#{1}"
 snippet cla
   class ${1}
+    ${2}
+  end
+snippet defi
+  def initialize${1}
     ${2}
   end
 snippet ex
