@@ -69,6 +69,7 @@ bip() {
 
 # Git-related aliases
 alias ga="git add"
+alias gaa="git add -A"
 alias gb="git branch"
 alias gbd="git branch -D"
 alias gbl="git branch --list"
