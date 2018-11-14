@@ -61,3 +61,9 @@
 [submodule ".vim/pack/packages/start/vim-pandoc-syntax"]
 	path = .vim/pack/packages/start/vim-pandoc-syntax
 	url = https://github.com/vim-pandoc/vim-pandoc-syntax.git
+[submodule ".vim/pack/packages/start/vim-elixir"]
+	path = .vim/pack/packages/start/vim-elixir
+	url = https://github.com/elixir-editors/vim-elixir.git
+[submodule ".vim/pack/packages/start/vim-test"]
+	path = .vim/pack/packages/start/vim-test
+	url = https://github.com/janko-m/vim-test.git
