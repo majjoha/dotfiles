@@ -4,6 +4,8 @@ alias ls="ls -LGaF"
 
 alias be="bundle exec"
 
+alias p="pry"
+
 # Create a directory and enter it
 function mkcd () {
   mkdir $1 && cd $1
@@ -70,9 +72,10 @@ alias ga="git add"
 alias gb="git branch"
 alias gbd="git branch -D"
 alias gbl="git branch --list"
-alias gc="git commit"
+alias gc="git commit -v"
 alias gcl="git clone"
 alias gcm="git commit -m"
+alias gds="git status --staged"
 alias gco="git checkout"
 alias gd="git diff"
 alias gl="git log"
@@ -80,5 +83,8 @@ alias glw="git last-week"
 alias gp="git pull"
 alias gs="git status"
 alias gsa="git submodule add"
-alias gsu="git submodule foreach git pull origin master"
 alias gsrm="git-submodule-rm"
+alias gsu="git submodule foreach git pull origin master"
+
+# Rebuild Spotlight index
+alias reindex-spotlight="sudo mdutil -i on /"
