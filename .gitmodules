@@ -55,9 +55,6 @@
 [submodule ".vim/pack/packages/start/vim-pandoc"]
 	path = .vim/pack/packages/start/vim-pandoc
 	url = https://github.com/vim-pandoc/vim-pandoc.git
-[submodule ".vim/pack/packages/start/goyo.vim"]
-	path = .vim/pack/packages/start/goyo.vim
-	url = https://github.com/junegunn/goyo.vim.git
 [submodule ".vim/pack/packages/start/vim-pandoc-syntax"]
 	path = .vim/pack/packages/start/vim-pandoc-syntax
 	url = https://github.com/vim-pandoc/vim-pandoc-syntax.git
