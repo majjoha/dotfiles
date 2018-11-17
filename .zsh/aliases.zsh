@@ -56,6 +56,28 @@ compdef _ag ag
 _chruby() { compadd $(chruby | tr -d '* ') }
 compdef _chruby chruby
 
+# Tab completion for opening tmuxinator projects
+_tmuxinator() {
+  local commands projects
+  commands=(${(f)"$(tmuxinator commands zsh)"})
+  projects=(${(f)"$(tmuxinator completions start)"})
+
+  if (( CURRENT == 2 )); then
+    _describe -t commands "tmuxinator subcommands" commands
+    _describe -t projects "tmuxinator projects" projects
+  elif (( CURRENT == 3)); then
+    case $words[2] in
+      copy|debug|delete|open|start)
+        _arguments '*:projects:($projects)'
+      ;;
+    esac
+  fi
+
+  return
+}
+compdef _tmuxinator tmuxinator mux
+alias tmx="tmuxinator start"
+
 # Install (one or multiple) selected application(s) using "brew search" as
 # source input
 bip() {
