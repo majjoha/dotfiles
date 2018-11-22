@@ -61,7 +61,7 @@ map <Leader>v :vsp<CR>
 " Mappings for Git
 nmap <Leader>bc :Commits<CR>
 nmap <Leader>gb :Gblame<CR>
-nmap <Leader>gc :Gcommit<CR>
+nmap <Leader>gc :Gcommit -v<CR>
 nmap <Leader>gcb :Git checkout -b<space>
 nmap <Leader>gco :call fzf#run({
   \  'source': 'git branch \| sed "s/.* //"',
@@ -96,9 +96,6 @@ vnoremap / <ESC>/\%V
 
 " Alternate via vim-projectionist
 nmap <Leader>a :A<CR>
-
-" Toggle Goyo
-nmap <Leader>go :Goyo<cr>
 
 " Control options in menus with j and k
 inoremap <expr> j pumvisible() ? '<C-n>' : 'j'
