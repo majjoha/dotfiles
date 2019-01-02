@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# Source from https://gist.github.com/mlen/4379799
+set -e
+
+convert_to_alac() {
+  flac="$1"
+  aiff="${flac%.*}.aiff"
+  alac="${flac%.*}.m4a"
+
+  flac -s -d --force-aiff-format -o "$aiff" "$flac"
+  afconvert -f m4af -d alac "$aiff" "$alac"
+  rm "$aiff"
+}
+
+if [ $# -ne 1 ]; then
+  echo "usage: $0 dir"
+  echo "requirements: Mac OS and flac installed"
+  exit 1
+fi
+
+for file in "$1"/*.flac; do
+  echo -n "."
+  convert_to_alac "$file"
+done
+
+echo " done"
