@@ -1294,7 +1294,7 @@
 		</dict>
 	</dict>
 	<key>Default Bookmark Guid</key>
-	<string>6B5F69A3-B68C-4798-83B9-9ECDC242C202</string>
+	<string>F6C9F85C-F19C-41F2-8043-9529A6F03950</string>
 	<key>GlobalKeyMap</key>
 	<dict>
 		<key>0x19-0x60000</key>
@@ -1463,11 +1463,11 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>970 768 620 392 0 0 2560 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>864 786 928 394 0 0 2560 1417 </string>
+	<string>864 760 918 512 0 0 2560 1417 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>230 833 592 584 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>565 397 1310 832 0 0 2560 1417 </string>
+	<string>205 437 1310 832 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>78 519 1310 832 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
@@ -4275,7 +4275,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-11-23T10:46:55Z</date>
+	<date>2018-12-06T10:28:02Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>UKCrashReporterLastCrashReportDate</key>
@@ -4285,6 +4285,6 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.2.5</string>
+	<string>3.2.6</string>
 </dict>
 </plist>
