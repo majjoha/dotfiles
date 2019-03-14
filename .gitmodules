@@ -49,12 +49,6 @@
 [submodule ".vim/pack/packages/start/nerdtree"]
 	path = .vim/pack/packages/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule ".vim/pack/packages/start/vim-pandoc"]
-	path = .vim/pack/packages/start/vim-pandoc
-	url = https://github.com/vim-pandoc/vim-pandoc.git
-[submodule ".vim/pack/packages/start/vim-pandoc-syntax"]
-	path = .vim/pack/packages/start/vim-pandoc-syntax
-	url = https://github.com/vim-pandoc/vim-pandoc-syntax.git
 [submodule ".vim/pack/packages/start/vim-elixir"]
 	path = .vim/pack/packages/start/vim-elixir
 	url = https://github.com/elixir-editors/vim-elixir.git
@@ -67,3 +61,15 @@
 [submodule ".vim/pack/packages/start/base16-vim"]
 	path = .vim/pack/packages/start/base16-vim
 	url = https://github.com/majjoha/base16-vim.git
+[submodule ".vim/pack/packages/start/typescript-vim"]
+	path = .vim/pack/packages/start/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
+[submodule ".vim/pack/packages/start/vim-prettier"]
+	path = .vim/pack/packages/start/vim-prettier
+	url = https://github.com/prettier/vim-prettier.git
+[submodule ".vim/pack/packages/start/vim-pandoc-syntax"]
+	path = .vim/pack/packages/start/vim-pandoc-syntax
+	url = https://github.com/vim-pandoc/vim-pandoc-syntax.git
+[submodule ".vim/pack/packages/start/vim-pandoc"]
+	path = .vim/pack/packages/start/vim-pandoc
+	url = https://github.com/vim-pandoc/vim-pandoc.git
