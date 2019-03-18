@@ -16,7 +16,8 @@ noremap <C-Q> :q<CR>
 tnoremap <C-Q> <C-\><C-n>:q<CR>
 
 " Maximize current window
-nmap <Leader>mw :only<CR>
+nmap <Leader>mw :tab split<CR>
+nmap <Leader>cw :tabc<CR>
 
 " Keep selection when indenting/outdenting
 vnoremap > >gv
