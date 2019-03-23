@@ -16,7 +16,12 @@ noremap <C-Q> :q<CR>
 tnoremap <C-Q> <C-\><C-n>:q<CR>
 
 " Maximize current window
-nmap <Leader>mw :tab split<CR>
+function! OpenCurrentAsNewTab()
+  let l:currentPos = getcurpos()
+  tabedit %
+  call setpos(".", l:currentPos)
+endfunction
+nmap <Leader>mw :call OpenCurrentAsNewTab()<CR>
 nmap <Leader>cw :tabc<CR>
 
 " Keep selection when indenting/outdenting
