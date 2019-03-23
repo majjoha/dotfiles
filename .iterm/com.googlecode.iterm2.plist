@@ -1294,7 +1294,7 @@
 		</dict>
 	</dict>
 	<key>Default Bookmark Guid</key>
-	<string>F6C9F85C-F19C-41F2-8043-9529A6F03950</string>
+	<string>6B5F69A3-B68C-4798-83B9-9ECDC242C202</string>
 	<key>GlobalKeyMap</key>
 	<dict>
 		<key>0x19-0x60000</key>
@@ -1459,17 +1459,17 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>1759 245 720 164 0 0 2560 1440 </string>
+	<string>1759 181 720 282 0 0 2560 1417 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>970 768 620 392 0 0 2560 1417 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 126 606 469 0 0 2560 1440 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>864 949 916 423 0 0 2560 1417 </string>
+	<string>864 981 916 423 0 0 2560 1417 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>230 833 592 584 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 2560 1440 0 0 2560 1417 </string>
+	<string>0 630 1440 774 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>78 519 1310 832 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
@@ -1477,6 +1477,8 @@
 		<dict>
 			<key>ASCII Anti Aliased</key>
 			<true/>
+			<key>ASCII Ligatures</key>
+			<false/>
 			<key>Ambiguous Double Width</key>
 			<false/>
 			<key>Ansi 0 Color</key>
@@ -2088,7 +2090,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SauceCodeProNerdFontComplete-Regular 18</string>
+			<string>FuraMonoNerdFontCompleteM-Regular 18</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -2770,11 +2772,11 @@
 			<key>Name</key>
 			<string>base16-light</string>
 			<key>Non Ascii Font</key>
-			<string>Monaco 12</string>
+			<string>Hasklig-Regular 12</string>
 			<key>Non-ASCII Anti Aliased</key>
-			<true/>
+			<false/>
 			<key>Normal Font</key>
-			<string>SauceCodeProNerdFontComplete-Regular 18</string>
+			<string>FuraMonoNerdFontCompleteM-Regular 18</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -3460,7 +3462,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>FuraMonoNerdFontComplete-Regular 16</string>
+			<string>FuraMonoNerdFontCompleteM-Regular 18</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -4146,7 +4148,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>FuraMonoNerdFontComplete-Regular 16</string>
+			<string>FuraMonoNerdFontCompleteM-Regular 18</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -4279,7 +4281,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-03-14T18:00:02Z</date>
+	<date>2019-03-19T08:58:45Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>UKCrashReporterLastCrashReportDate</key>
