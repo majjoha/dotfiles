@@ -5,6 +5,8 @@ Style/StringLiterals:
   EnforcedStyle: double_quotes
 Style/LambdaCall:
   Enabled: false
+Style/SymbolArray:
+  Enabled: false
 Style/WordArray:
   Enabled: false
 Style/RegexpLiteral:
