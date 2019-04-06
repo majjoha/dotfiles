@@ -90,6 +90,7 @@ bip() {
 }
 
 # Git-related aliases
+alias gi="git init"
 alias ga="git add"
 alias gaa="git add -A"
 alias gb="git branch"
