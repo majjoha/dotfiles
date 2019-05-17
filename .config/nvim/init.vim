@@ -1,1 +1,1 @@
-/Users/mathias/.env/.vimrc
+/Users/mathias/.vimrc

@@ -4,12 +4,12 @@ entire setup is managed by [GNU Stow](https://www.gnu.org/software/stow/).
 
 ## Installation
 ```bash
-$ git clone --recursive git@github.com:majjoha/dotfiles.git ~/.env
-$ cd ~/.env && stow .
+$ git clone --recursive git@github.com:majjoha/dotfiles.git ~/.dotfiles
+$ cd ~/.dotfiles && stow .
 ```
 
-On a new machine, you might also want to run `source ~/.env/.macos` to enable a
-wide range of sensible defaults for macOS.
+On a new machine, you might also want to run `source ~/.dotfiles/.macos` to
+enable a wide range of sensible defaults for macOS.
 
 ## Updating
 ```bash

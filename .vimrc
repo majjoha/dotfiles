@@ -1,8 +1,8 @@
 " Set packpath and runtimepath
-set packpath+=~/.env/.vim
-set runtimepath+=~/.env/.vim,/usr/local/opt/fzf,~/.env/.vim/after
+set packpath+=~/.vim
+set runtimepath+=~/.vim,/usr/local/opt/fzf,~/.vim/after
 
 " Source all configuration files
-for f in split(glob('~/.env/.vim/vimrc/*.vim'), '\n')
+for f in split(glob('~/.vim/vimrc/*.vim'), '\n')
   exe 'source' f
 endfor
