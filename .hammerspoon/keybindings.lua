@@ -50,7 +50,7 @@ function mod.init()
   local charsToApps = {
     c = "Calendar",
     n = "Notes",
-    p = "1Password 6",
+    p = "1Password 7",
     r = "Readkit",
     s = "Safari Technology Preview",
     t = "iTerm"
