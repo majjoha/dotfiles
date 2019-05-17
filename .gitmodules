@@ -61,3 +61,6 @@
 [submodule ".vim/pack/packages/start/base16-vim"]
 	path = .vim/pack/packages/start/base16-vim
 	url = https://github.com/majjoha/base16-vim.git
+[submodule ".vim/pack/packages/start/swift.vim"]
+	path = .vim/pack/packages/start/swift.vim
+	url = https://github.com/keith/swift.vim.git
