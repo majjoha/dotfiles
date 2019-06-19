@@ -33,6 +33,11 @@ zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
 
+# Edit command in vim
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey "^x^x" edit-command-line
+
 zstyle ':completion:*' special-dirs true
 
 # Use Emacs-style key bindings for zsh
