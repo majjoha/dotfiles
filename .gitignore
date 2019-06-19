@@ -31,6 +31,7 @@ vendor/cache
 
 # Ignore per project .exrc
 .exrc
+.nvimrc
 
 # Ignore byebug history
 .byebug_history
