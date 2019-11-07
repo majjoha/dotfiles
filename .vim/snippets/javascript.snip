@@ -7,11 +7,17 @@ snippet con
 snippet cn
 	const ${1} = ${2}
 snippet imp
-	import ${1} from '${2}'
+	import ${1} from "${2}"
+snippet impt
+  import type { ${1} } from "${2}"
 snippet exp
 	export ${1}
 snippet expd
   export default `substitute(Filename(), '^.', '\u&', '')`
+snippet expc
+  export const ${1}
+snippet expt
+  export type ${1}
 snippet cl
 	console.log(${1})
 snippet d
@@ -29,3 +35,14 @@ snippet fl
   // @flow
 snippet ext
   extends ${1}
+snippet it
+  it("${1}", () => {
+    ${2}
+    expect(${3}).${4}
+  })
+snippet desc
+  describe("${1}", () => {
+    it("${2}", () => {
+      ${3}
+    })
+  })
