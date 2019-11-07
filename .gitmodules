@@ -49,9 +49,6 @@
 [submodule ".vim/pack/packages/start/nerdtree"]
 	path = .vim/pack/packages/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule ".vim/pack/packages/start/vim-elixir"]
-	path = .vim/pack/packages/start/vim-elixir
-	url = https://github.com/elixir-editors/vim-elixir.git
 [submodule ".vim/pack/packages/start/vim-test"]
 	path = .vim/pack/packages/start/vim-test
 	url = https://github.com/janko-m/vim-test.git
@@ -67,3 +64,6 @@
 [submodule ".vim/pack/packages/start/typescript-vim"]
 	path = .vim/pack/packages/start/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
+[submodule ".vim/pack/packages/start/vim-flow"]
+	path = .vim/pack/packages/start/vim-flow
+	url = https://github.com/flowtype/vim-flow.git
