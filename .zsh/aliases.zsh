@@ -112,3 +112,8 @@ alias gsu="git submodule foreach git pull origin master"
 
 # Rebuild Spotlight index
 alias reindex-spotlight="sudo mdutil -i on /"
+
+# Download m3u8 playlist
+function download-m3u8() {
+  ffmpeg -user_agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/601.7.8 (KHTML, like Gecko) Version/9.1.3 Safari/537.86.7" -i "$1" -c copy "$2"
+}
