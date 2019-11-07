@@ -35,3 +35,6 @@ vendor/cache
 
 # Ignore byebug history
 .byebug_history
+
+# Ignore configstore
+.config/configstore
