@@ -2,7 +2,7 @@
 let g:fzf_buffers_jump = 1
 
 " Include hidden directories when searching
-let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
+let $FZF_DEFAULT_COMMAND='rg --files --hidden'
 
 " Display number of results inline
 if has('nvim')
