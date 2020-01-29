@@ -2,9 +2,9 @@
 nmap <space> <leader>
 vmap <space> <leader>
 
-" Make grep (ag) easier
-nnoremap <silent><Leader>f :Ag <C-R><C-W><CR>
-nnoremap <Leader>ff :Ag<CR>
+" Make grep (ripgrep) easier
+nnoremap <silent><Leader>f :Rg <C-R><C-W><CR>
+nnoremap <Leader>ff :Rg<CR>
 
 " Use Control-S for saving
 noremap <C-S> :update<CR>
