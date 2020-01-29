@@ -34,9 +34,6 @@
 [submodule ".vim/pack/packages/start/vim-projectionist"]
 	path = .vim/pack/packages/start/vim-projectionist
 	url = https://github.com/tpope/vim-projectionist.git
-[submodule ".vim/pack/packages/start/vim-ruby"]
-	path = .vim/pack/packages/start/vim-ruby
-	url = https://github.com/vim-ruby/vim-ruby.git
 [submodule ".vim/pack/packages/start/vim-snippets"]
 	path = .vim/pack/packages/start/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
@@ -55,21 +52,12 @@
 [submodule ".vim/pack/packages/start/base16-vim"]
 	path = .vim/pack/packages/start/base16-vim
 	url = https://github.com/majjoha/base16-vim.git
-[submodule ".vim/pack/packages/start/swift.vim"]
-	path = .vim/pack/packages/start/swift.vim
-	url = https://github.com/keith/swift.vim.git
-[submodule ".vim/pack/packages/start/typescript-vim"]
-	path = .vim/pack/packages/start/typescript-vim
-	url = https://github.com/leafgarland/typescript-vim.git
 [submodule ".vim/pack/packages/start/vim-flow"]
 	path = .vim/pack/packages/start/vim-flow
 	url = https://github.com/flowtype/vim-flow.git
 [submodule ".vim/pack/packages/start/vim-jsx-typescript"]
 	path = .vim/pack/packages/start/vim-jsx-typescript
 	url = https://github.com/peitalin/vim-jsx-typescript.git
-[submodule ".vim/pack/packages/start/vim-javascript"]
-	path = .vim/pack/packages/start/vim-javascript
-	url = https://github.com/pangloss/vim-javascript.git
-[submodule ".vim/pack/packages/start/vim-jsx-pretty"]
-	path = .vim/pack/packages/start/vim-jsx-pretty
-	url = https://github.com/MaxMEllon/vim-jsx-pretty.git
+[submodule ".vim/pack/packages/start/vim-polyglot"]
+	path = .vim/pack/packages/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
