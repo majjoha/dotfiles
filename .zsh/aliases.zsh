@@ -6,6 +6,8 @@ alias be="bundle exec"
 
 alias p="pry"
 
+alias n="node"
+
 # Create a directory and enter it
 function mkcd () {
   mkdir $1 && cd $1
