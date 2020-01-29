@@ -43,9 +43,6 @@
 [submodule ".vim/pack/packages/start/vim-surround"]
 	path = .vim/pack/packages/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule ".vim/pack/packages/start/yajs.vim"]
-	path = .vim/pack/packages/start/yajs.vim
-	url = https://github.com/othree/yajs.vim.git
 [submodule ".vim/pack/packages/start/nerdtree"]
 	path = .vim/pack/packages/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
@@ -70,3 +67,9 @@
 [submodule ".vim/pack/packages/start/vim-jsx-typescript"]
 	path = .vim/pack/packages/start/vim-jsx-typescript
 	url = https://github.com/peitalin/vim-jsx-typescript.git
+[submodule ".vim/pack/packages/start/vim-javascript"]
+	path = .vim/pack/packages/start/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule ".vim/pack/packages/start/vim-jsx-pretty"]
+	path = .vim/pack/packages/start/vim-jsx-pretty
+	url = https://github.com/MaxMEllon/vim-jsx-pretty.git
