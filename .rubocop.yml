@@ -17,7 +17,7 @@ Layout/SpaceInsideBlockBraces:
   Enabled: false
 Layout/MultilineMethodCallIndentation:
   Enabled: false
-Layout/AlignParameters:
+Layout/ParameterAlignment:
   Enabled: false
 Documentation:
   Enabled: false
