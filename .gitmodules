@@ -19,9 +19,6 @@
 [submodule ".vim/pack/packages/start/vim-commentary"]
 	path = .vim/pack/packages/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
-[submodule ".vim/pack/packages/start/vim-dispatch"]
-	path = .vim/pack/packages/start/vim-dispatch
-	url = https://github.com/tpope/vim-dispatch.git
 [submodule ".vim/pack/packages/start/vim-endwise"]
 	path = .vim/pack/packages/start/vim-endwise
 	url = https://github.com/tpope/vim-endwise.git
@@ -64,3 +61,6 @@
 [submodule ".vim/pack/packages/start/vim-javascript"]
 	path = .vim/pack/packages/start/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
+[submodule ".vim/pack/packages/start/vim-dispatch"]
+	path = .vim/pack/packages/start/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch.git
