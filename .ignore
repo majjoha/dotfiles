@@ -8,3 +8,4 @@ vendor/
 .beam
 *.ibc
 *.idr~
+.git/
