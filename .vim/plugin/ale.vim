@@ -5,3 +5,6 @@ highlight link ALEErrorSign DiffDelete
 highlight link ALEWarningSign DiffDelete
 
 let g:ale_lint_on_text_changed = 'normal' 
+
+" Use ALE for completion
+set omnifunc=ale#completion#OmniFunc

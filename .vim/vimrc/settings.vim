@@ -52,7 +52,7 @@ set splitbelow
 set splitright
 
 " Completion
-set completeopt=longest,menuone,preview
+set completeopt=longest,menuone
 
 " Set mouse to help others who aren't familiar with vim
 set mouse=a
@@ -98,6 +98,3 @@ endif
 
 " Show spell suggestions in a smaller window
 set spellsuggest=15
-
-" Turn on omni completion
-set omnifunc=syntaxcomplete#Complete
