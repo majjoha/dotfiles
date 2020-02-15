@@ -38,3 +38,6 @@ vendor/cache
 
 # Ignore configstore
 .config/configstore
+
+# Ignore `gh` config
+.config/gh
