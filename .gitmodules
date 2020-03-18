@@ -64,3 +64,9 @@
 [submodule ".vim/pack/packages/start/vim-dispatch"]
 	path = .vim/pack/packages/start/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch.git
+[submodule ".vim/pack/packages/start/vim-rails"]
+	path = .vim/pack/packages/start/vim-rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule ".vim/pack/packages/start/switch.vim"]
+	path = .vim/pack/packages/start/switch.vim
+	url = https://github.com/AndrewRadev/switch.vim.git
