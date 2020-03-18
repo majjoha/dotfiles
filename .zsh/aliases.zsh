@@ -3,10 +3,14 @@
 alias ls="ls -LGaF"
 
 alias be="bundle exec"
-
-alias p="pry"
-
+alias dotf="tm dotfiles"
 alias n="node"
+alias p="pry"
+alias uph="sudo update-hosts"
+alias ups="update-software"
+alias upsn="update-software --native-apps"
+alias rm="trash"
+alias alac="alac-conversion . && rm *.flac"
 
 # Create a directory and enter it
 function mkcd () {
@@ -79,17 +83,6 @@ _tmuxinator() {
 }
 compdef _tmuxinator tmuxinator mux
 alias tmx="tmuxinator start"
-
-# Install (one or multiple) selected application(s) using "brew search" as
-# source input
-bip() {
-  local inst=$(brew search | fzf -m)
-
-  if [[ $inst ]]; then
-    for prog in $(echo $inst);
-    do; brew install $prog; done;
-  fi
-}
 
 # Git-related aliases
 alias gi="git init"
