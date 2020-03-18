@@ -30,7 +30,7 @@ let g:ale_fixers = {
 
 let g:ale_linters = {
 \ 'ruby': ['solargraph']
-}
+\}
 
 let g:ale_linters_ignore = {
 \ 'javascript': ['tsserver']
