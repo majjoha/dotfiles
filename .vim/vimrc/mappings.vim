@@ -88,7 +88,7 @@ nnoremap <Leader>/ :Commentary<cr>
 vnoremap <Leader>/ :Commentary<cr>
 
 " Easily open snippets
-nmap <Leader>os :NeoSnippetEdit -split -vertical<cr>
+nmap <Leader>es :NeoSnippetEdit -split -vertical<cr>
 
 " Split window with terminal
 nmap <Leader>tv :vsp<cr>:term<cr>
@@ -110,3 +110,23 @@ inoremap <expr> k pumvisible() ? '<C-p>' : 'k'
 " Mappings for testing
 nmap <Leader>rt :TestFile<cr>
 nmap <Leader>rl :TestNearest<cr>
+
+" Use ' instead of ` when navigating to the position of a mark
+nnoremap ' `
+
+" Allow the file under the cursor to be opened even if it does not exist
+map <leader>gf :e <cfile><cr>
+
+" Sort visual selection
+vnoremap <Leader>ss :!sort<CR>
+
+" Flip text segments
+nmap <Leader>sw :Switch<CR>
+
+nmap <Leader>rgc :Rails g controller<space>
+nmap <Leader>rgm :Rails g model<space>
+nmap <Leader>rec :Econtroller<cr>
+nmap <Leader>rem :Emodel<cr>
+nmap <Leader>res :Espec<cr>
+nmap <Leader>rr :Rails<space>
+nmap <Leader>rdm :Rails db migrate<cr>
