@@ -8,6 +8,7 @@ export TERM=xterm-256color
 export HISTSIZE=20000
 export SAVEHIST=20000
 export HISTFILE=~/.zsh_history
+setopt INC_APPEND_HISTORY
 
 # Enabling coloring in the command line prompt
 export CLICOLOR=1
