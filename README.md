@@ -17,17 +17,6 @@ $ git pull
 $ git submodule foreach git pull origin master
 ```
 
-## Screenshots
-### zsh
-![image](https://d3r69eeiwn2k86.cloudfront.net/items/2t2p2z030i2E1r1K1J1T/1.png)
-
-### Neovim
-![image](https://d3r69eeiwn2k86.cloudfront.net/items/2k332c3f0H1k0L0G3P42/2.png)
-
-## Bugs
-If you happen to find any issues or bugs, please let me know by
-[opening an issue](https://github.com/majjoha/dotfiles/issues).
-
 ## Thanks
 I've been heavily inspired by many of the dotfiles repositories available.
 These are some of them:
