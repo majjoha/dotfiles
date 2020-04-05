@@ -129,4 +129,4 @@ nmap <Leader>rec :Econtroller<cr>
 nmap <Leader>rem :Emodel<cr>
 nmap <Leader>res :Espec<cr>
 nmap <Leader>rr :Rails<space>
-nmap <Leader>rdm :Rails db migrate<cr>
+nmap <Leader>rdm :Rails db:migrate<cr>
