@@ -3796,7 +3796,7 @@
 		</dict>
 	</dict>
 	<key>Default Bookmark Guid</key>
-	<string>F6C9F85C-F19C-41F2-8043-9529A6F03950</string>
+	<string>6B5F69A3-B68C-4798-83B9-9ECDC242C202</string>
 	<key>GlobalKeyMap</key>
 	<dict>
 		<key>0x19-0x60000</key>
@@ -3974,9 +3974,9 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>880 726 799 448 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 2560 1440 0 0 2560 1440 </string>
+	<string>0 500 1570 917 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>343 181 1570 917 0 0 2560 1417 </string>
+	<string>0 0 2560 1440 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>364 158 1570 917 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
@@ -7449,7 +7449,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>A431DEC1-226C-4268-83FD-43A986906A82</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>124</integer>
+	<integer>238</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -8224,7 +8224,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-03-07T08:32:22Z</date>
+	<date>2020-03-31T14:35:51Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SoundForEsc</key>
