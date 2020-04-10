@@ -16,12 +16,7 @@ noremap <C-Q> :q<CR>
 tnoremap <C-Q> <C-\><C-n>:q<CR>
 
 " Maximize current window
-function! OpenCurrentAsNewTab()
-  let l:currentPos = getcurpos()
-  tabedit %
-  call setpos(".", l:currentPos)
-endfunction
-nmap <Leader>mw :call OpenCurrentAsNewTab()<CR>
+nmap <Leader>mw :call majjoha#OpenCurrentAsNewTab()<CR>
 nmap <Leader>cw :tabc<CR>
 
 " Keep selection when indenting/outdenting
@@ -116,6 +111,9 @@ nnoremap ' `
 
 " Allow the file under the cursor to be opened even if it does not exist
 map <leader>gf :e <cfile><cr>
+
+" Edit file
+nmap <Leader>ee :e<space>
 
 " Sort visual selection
 vnoremap <Leader>ss :!sort<CR>
