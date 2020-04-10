@@ -3916,6 +3916,8 @@
 	<false/>
 	<key>HideActivityIndicator</key>
 	<false/>
+	<key>HideScrollbar</key>
+	<false/>
 	<key>HideTabNumber</key>
 	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
@@ -3974,7 +3976,7 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>880 726 799 448 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 500 1570 917 0 0 2560 1417 </string>
+	<string>0 0 2560 1440 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 0 2560 1440 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -4654,6 +4656,8 @@
 			<true/>
 			<key>Use Bright Bold</key>
 			<true/>
+			<key>Use Custom Window Title</key>
+			<false/>
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Use Non-ASCII Font</key>
@@ -7449,7 +7453,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>A431DEC1-226C-4268-83FD-43A986906A82</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>238</integer>
+	<integer>278</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -8224,9 +8228,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-03-31T14:35:51Z</date>
+	<date>2020-04-09T08:41:56Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
+	<key>SeparateWindowTitlePerTab</key>
+	<true/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>StatusBarPosition</key>
@@ -8244,7 +8250,7 @@
 	<key>VisualIndicatorForEsc</key>
 	<false/>
 	<key>WindowNumber</key>
-	<false/>
+	<true/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>findMode_iTerm</key>
