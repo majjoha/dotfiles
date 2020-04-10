@@ -1,2 +1,2 @@
-" Use mix to format code
+" Use `mix` to format code
 setlocal formatprg=mix\ format\ -
