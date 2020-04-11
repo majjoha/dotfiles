@@ -2,7 +2,6 @@
 let g:switch_mapping = ""
 
 " Custom definitions
-let g:switch_custom_definitions =
-  \ [
-  \ ["be_valid", "be_invalid"]
-  \]
+let g:switch_custom_definitions = [
+\ ["be_valid", "be_invalid"]
+\]

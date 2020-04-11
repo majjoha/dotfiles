@@ -1,43 +1,43 @@
 let g:lightline = {
-  \ 'colorscheme': '16color',
-  \ 'active': {
-  \   'left': [ [ 'mode'],
-  \             [ 'fugitive' ],
-  \             [ 'relativepath', 'modified' ] ],
-  \   'right': [ [ 'percent', 'lineinfo' ],
-  \              [ ],
-  \              [ 'filetype' ] ]
-  \ },
-  \ 'component': {
-  \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}'
-  \ },
-  \ 'component_function': {
-  \   'mode': 'LightLineMode',
-  \   'fugitive': 'LightLineFugitive',
-  \   'percent': 'LightLinePercent',
-  \   'lineinfo': 'LightLineInfo',
-  \   'filetype': 'LightLineFiletype',
-  \   'relativepath': 'LightLineFilename'
-  \ },
-  \ 'component_visible_condition': {
-  \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
-  \ },
-  \ 'mode_map': {
-  \   'n' : 'N',
-  \   'i' : 'I',
-  \   'R' : 'R',
-  \   'v' : 'V',
-  \   'V' : 'V',
-  \   "\<C-v>": 'V',
-  \   'c' : 'C',
-  \   's' : 'S',
-  \   'S' : 'S',
-  \   "\<C-s>": 'S',
-  \   't': 'T',
-  \   '?': ''
-  \ },
-  \ 'subseparator': { 'left': '│', 'right': "" }
-  \ }
+\ 'colorscheme': '16color',
+\ 'active': {
+\   'left': [ [ 'mode'],
+\             [ 'fugitive' ],
+\             [ 'relativepath', 'modified' ] ],
+\   'right': [ [ 'percent', 'lineinfo' ],
+\              [ ],
+\              [ 'filetype' ] ]
+\ },
+\ 'component': {
+\   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}'
+\ },
+\ 'component_function': {
+\   'mode': 'LightLineMode',
+\   'fugitive': 'LightLineFugitive',
+\   'percent': 'LightLinePercent',
+\   'lineinfo': 'LightLineInfo',
+\   'filetype': 'LightLineFiletype',
+\   'relativepath': 'LightLineFilename'
+\ },
+\ 'component_visible_condition': {
+\   'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
+\ },
+\ 'mode_map': {
+\   'n' : 'N',
+\   'i' : 'I',
+\   'R' : 'R',
+\   'v' : 'V',
+\   'V' : 'V',
+\   "\<C-v>": 'V',
+\   'c' : 'C',
+\   's' : 'S',
+\   'S' : 'S',
+\   "\<C-s>": 'S',
+\   't': 'T',
+\   '?': ''
+\ },
+\ 'subseparator': { 'left': '│', 'right': "" }
+\ }
 
 let s:skip_filetypes = 'nerdtree\|fugitiveblame\|fzf'
 
