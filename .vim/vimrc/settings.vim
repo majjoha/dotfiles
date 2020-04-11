@@ -11,9 +11,6 @@ set smartindent
 " Set syntax highlighting on
 syntax on
 
-" Use 256 colors
-set t_Co=256
-
 " Set the Terminal title
 set title
 
@@ -25,11 +22,6 @@ set autoread
 
 " No annoying sound on errors
 set noerrorbells visualbell t_vb=
-
-" Set UTF-8 as standard encoding
-if !has('nvim')
-  set encoding=utf-8
-endif
 
 " Use spaces instead of tabs
 set expandtab
@@ -69,14 +61,14 @@ set shiftround
 " Ignore case, so `foo` matches foo, Foo, and FOO
 set ignorecase
 
-" Ignore case for files in `:cd`
-set fileignorecase
-
 " But Foo should only match Foo
 set smartcase
 
 " Adjust case of match depending on the typed text
 set infercase
+
+" Ignore case for files in `:cd`
+set fileignorecase
 
 " Assume fast terminal
 set ttyfast
@@ -101,3 +93,6 @@ set spellsuggest=15
 
 " Set path to tags
 set tags+=.git/tags;
+
+" Allow more than one unsaved buffer
+set hidden
