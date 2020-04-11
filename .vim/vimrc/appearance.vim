@@ -3,8 +3,8 @@ colorscheme base16-grayscale
 set background=dark
 
 " Set relative line numbering
-set nu
-set rnu
+set number
+set relativenumber
 
 " Set color column to 80
 set colorcolumn=80
