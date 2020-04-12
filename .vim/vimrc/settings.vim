@@ -2,7 +2,7 @@
 " functionality
 filetype indent plugin on
 
-" Set auto indentation
+" Maintain the indentation of the current line
 set autoindent
 
 " Set indentation
@@ -20,7 +20,7 @@ set hlsearch incsearch
 " Auto read when a file is changed from the outside
 set autoread
 
-" No annoying sound on errors
+" Disable sound on errors
 set noerrorbells visualbell t_vb=
 
 " Use spaces instead of tabs
@@ -33,41 +33,42 @@ set softtabstop=2
 " Share the unnamed paste buffer with the system clipboard
 set clipboard=unnamed
 
-" Disable swap files creation
+" Disable swapfiles
 set noswapfile
 
 " Delete using backspace
 set backspace=indent,eol,start
 
-" Set split to right or below
+" Open split windows below and to the right of the current window
 set splitbelow
 set splitright
 
-" Completion
+" Show the popup menu even if there is only one match and insert only the
+" longest common text of the matches
 set completeopt=longest,menuone
 
-" Set mouse to help others who aren't familiar with vim
+" Allow the mouse in all modes
 set mouse=a
 
-" Allow per project .vimrc
+" Allow per project `.vimrc`
 set exrc
 
-" Disable shell execution, and write options
+" Disable shell execution and write options
 set secure
 
-" Use round number for indenting
+" Round indent to multiple of `shiftwidth`
 set shiftround
 
-" Ignore case, so `foo` matches foo, Foo, and FOO
+" Ignore case sensitivity, so `foo` matches foo, Foo, and FOO
 set ignorecase
 
 " But Foo should only match Foo
 set smartcase
 
-" Adjust case of match depending on the typed text
+" Adjust case sensitivity of match depending on the typed text
 set infercase
 
-" Ignore case for files in `:cd`
+" Ignore case sensitivity for files in `:cd`
 set fileignorecase
 
 " Assume fast terminal
@@ -77,10 +78,10 @@ set lazyredraw
 " Use one space instead of two when joining lines
 set nojoinspaces
 
-" Disable intro message
+" Disable the intro message
 set shortmess+=I
 
-" Delete comment character when joining commented lines
+" Delete the comment character when joining commented lines
 set formatoptions+=j
 
 if has('nvim')
@@ -91,8 +92,14 @@ endif
 " Show spell suggestions in a smaller window
 set spellsuggest=15
 
-" Set path to tags
+" Look for tags in `.git/tags`
 set tags+=.git/tags;
 
 " Allow more than one unsaved buffer
 set hidden
+
+" Allow the cursor to move where there is no text in visual select mode
+set virtualedit=block
+
+" Highlight the screen line of the cursor
+set cursorline
