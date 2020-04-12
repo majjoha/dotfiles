@@ -5,6 +5,9 @@ let NERDTreeShowFiles = 1
 " Highlight the selected entry in the tree
 let NERDTreeHighlightCursorline = 1
 
+" Toggle directory nodes and open non-directory nodes with mouse clicks
+let g:NERDTreeMouseMode=3
+
 " Don't display these kind of files
 let NERDTreeIgnore = [
 \ '\.class$',
