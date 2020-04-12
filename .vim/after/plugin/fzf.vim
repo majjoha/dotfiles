@@ -14,5 +14,17 @@ autocmd! FileType fzf
 autocmd  FileType fzf set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
+" Show a preview window when searching files
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+
+" Allow `ripgrep` to search hidden files and show a preview window
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg
+  \     --column
+  \     --line-number
+  \     --no-heading
+  \     --color=always
+  \     --smart-case
+  \     --hidden '.shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)
