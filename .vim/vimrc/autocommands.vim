@@ -1,7 +1,7 @@
 " Resize splits when the window is rezied
 augroup resize_splits
   autocmd!
-  autocmd VimResized * exe "normal! \<c-w>="
+  autocmd VimResized * execute "normal! \<c-w>="
 augroup END
 
 " Auto-clean Fugitive buffers. Taken from:
@@ -14,11 +14,16 @@ augroup END
 " Remove line numbers in terminal mode and start it in insert mode
 augroup terminal_mode
   autocmd!
-  autocmd TermOpen * setlocal nonu nornu
+
+  if !has('nvim')
+    finish
+  endif
+
+  autocmd TermOpen * setlocal nonumber norelativenumber
   autocmd TermOpen * startinsert
 augroup END
 
-" Customize colors.
+" Customize colors
 " See https://gist.github.com/romainl/379904f91fa40533175dfaec4c833f2f
 augroup customize_colors
     autocmd!
