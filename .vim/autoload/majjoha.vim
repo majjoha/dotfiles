@@ -1,9 +1,4 @@
-" Maximize current window
-if exists('g:open_current_as_new_tab') || &compatible
-  finish
-endif
-let g:open_current_as_new_tab = 1
-
+" Open the current buffer in a new tab
 function majjoha#OpenCurrentAsNewTab() abort
   let l:currentPos = getcurpos()
   tabedit %
@@ -11,11 +6,6 @@ function majjoha#OpenCurrentAsNewTab() abort
 endfunction
 
 " Change color variables
-if exists('g:customize_colors') || &compatible
-  finish
-endif
-let g:customize_colors = 1
-
 function! majjoha#CustomizeColors() abort
   " Highlight current line number
   hi! CursorLineNr ctermfg=13
@@ -25,4 +15,13 @@ function! majjoha#CustomizeColors() abort
 
   " Remove background color for fold column
   hi! link FoldColumn Normal
+endfunction
+
+" Avoid opening FZF command in NERDTree
+" See https://github.com/junegunn/fzf/issues/453#issuecomment-354634207
+function! majjoha#FZFOpen(command_str) abort
+  if (expand('%') =~# 'NERD_tree' && winnr('$') > 1)
+    exe "normal! \<c-w>\<c-w>"
+  endif
+  exe 'normal! ' . a:command_str . "\<cr>"
 endfunction
