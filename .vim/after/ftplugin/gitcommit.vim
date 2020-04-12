@@ -7,5 +7,5 @@ setlocal textwidth=72
 " Enable completion
 setlocal complete+=kspell
 
-" Look up commits with K
+" Look up commits with `K`
 setlocal keywordprg=:Git\ show

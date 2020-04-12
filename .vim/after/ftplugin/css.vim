@@ -1,2 +1,2 @@
-" Include - when deleting words
+" Include `-` when deleting words
 setlocal iskeyword+=-

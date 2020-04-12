@@ -1,4 +1,4 @@
-" Include ! and ? when deleting words
+" Include `!` and `?` when deleting words
 setlocal iskeyword+=!,?
 
 " Open `ri` in a terminal
