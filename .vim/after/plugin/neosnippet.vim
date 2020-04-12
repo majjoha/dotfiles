@@ -3,7 +3,7 @@ let g:neosnippet#disable_runtime_snippets = {
 \ '_' : 1,
 \}
 
-" Enable compatibility with snipmate
+" Enable compatibility with snipMate
 let g:neosnippet#enable_snipmate_compatibility = 1
 
 " Tell Neosnippet about the other snippets
