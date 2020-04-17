@@ -44,3 +44,6 @@ vendor/cache
 
 # Ignore session files
 Session.vim
+
+# Do not store undo history
+.vim/undo
