@@ -10,11 +10,19 @@ function! majjoha#CustomizeColors() abort
   " Highlight current line number
   hi! CursorLineNr ctermfg=13
 
-  " Remove tilde character at the end of buffer
-  hi! EndOfBuffer ctermbg=bg ctermfg=bg
-
   " Remove background color for fold column
   hi! link FoldColumn Normal
+
+  " Set the color of the vertical split bar to transparent
+  hi! VertSplit ctermbg=00
+
+  " Show the current mode in a darker, non-bold font
+  hi! ModeMsg ctermfg=08 cterm=NONE
+
+  " Set the background of the status line in the current buffer to match the
+  " color column, and the status line in all inactive buffers to transparent
+  hi! StatusLine ctermbg=10
+  hi! StatusLineNC ctermbg=00
 endfunction
 
 " Avoid opening FZF command in NERDTree
@@ -24,4 +32,21 @@ function! majjoha#FZFOpen(command_str) abort
     exe "normal! \<c-w>\<c-w>"
   endif
   exe 'normal! ' . a:command_str . "\<cr>"
+endfunction
+
+" Lazy load package and call command
+let g:lazy_loaded_packages = []
+function! majjoha#LazyLoadPackageWithCommand(package, command) abort
+  if (index(g:lazy_loaded_packages, a:package) == -1)
+    let g:lazy_loaded_packages = add(g:lazy_loaded_packages, a:package)
+    execute "packadd " . a:package
+  endif
+
+  execute a:command
+endfunction
+
+function! majjoha#ShowGitBranch() abort
+  let l:branchname =
+    \ system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+  return strlen(l:branchname) > 0 ? '   '.l:branchname.' |' : ''
 endfunction
