@@ -14,3 +14,14 @@ set laststatus=2
 
 " Blend vertical separator and line numbers
 set fillchars=vert:\ 
+
+" Supress the `~` character at the end of the buffer
+if has('nvim')
+  set fillchars+=eob:\ 
+endif
+
+" Show the current mode
+set showmode
+
+" Do not display key strokes
+set noshowcmd
