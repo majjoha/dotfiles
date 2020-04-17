@@ -26,8 +26,10 @@ noremap k gk
 noremap j gj
 
 " Toggle NERDTree
-nnoremap <silent><Leader>d :NERDTreeToggle<CR>
-nnoremap <silent><Leader>D :NERDTreeFind<CR>
+nnoremap <silent><Leader>d :call
+  \ majjoha#LazyLoadPackageWithCommand("nerdtree", "NERDTreeToggle")<CR>
+nnoremap <silent><Leader>D :call
+  \ majjoha#LazyLoadPackageWithCommand("nerdtree", "NERDTreeFind")<CR>
 
 " Edit `$MYVIMRC`
 nnoremap <Leader>rc :vsp $MYVIMRC<CR>
@@ -59,6 +61,9 @@ nnoremap <silent><Leader><Space> :let @/ = ""<CR>
 " Open vertical split
 nnoremap <Leader>v :vsp<CR>
 
+" Open horizontal split
+nnoremap <Leader>x :sp<CR>
+
 " Git-related mappings
 nnoremap <silent><Space>bc :call majjoha#FZFOpen(":Commits")<CR>
 nnoremap <Leader>gb :Gblame<CR>
@@ -87,8 +92,8 @@ nmap <Leader>/ <Plug>CommentaryLine
 noremap <silent><Leader>es :NeoSnippetEdit -split -vertical<CR>
 
 " Open a terminal in a split window
-noremap <Leader>tv :vsp<CR>:term<CR>
-noremap <Leader>ts :sp<CR>:term<CR>
+nnoremap <Leader>tv :vsp<CR>:term<CR>
+nnoremap <Leader>ts :sp<CR>:term<CR>
 
 " Open completion menu
 inoremap <C-Space> <c-x><c-o>
@@ -106,6 +111,7 @@ inoremap <expr> k pumvisible() ? '<C-p>' : 'k'
 " Test-related mappings
 nnoremap <Leader>rt :TestFile<CR>
 nnoremap <Leader>rl :TestNearest<CR>
+nnoremap <Leader>rs :TestSuite<CR>
 
 " Use ' instead of ` when navigating to the position of a mark
 nnoremap ' `
@@ -134,3 +140,10 @@ nnoremap <Leader>rdm :Rails db:migrate<CR>
 " Go to the beginning and end of the line in command mode
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
+
+" Replace instances of a word under the cursor (similar to multiple cursors)
+nnoremap <C-n> *Ncgn
+
+" Save and load sessions
+nnoremap <Leader>ms :mksession!<CR>
+nnoremap <Leader>ls :source Session.vim<CR>
