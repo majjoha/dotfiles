@@ -41,3 +41,6 @@ vendor/cache
 
 # Ignore `gh` config
 .config/gh
+
+# Ignore session files
+Session.vim
