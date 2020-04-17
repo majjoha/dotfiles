@@ -10,9 +10,6 @@
 [submodule ".vim/pack/packages/start/fzf.vim"]
 	path = .vim/pack/packages/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
-[submodule ".vim/pack/packages/start/lightline.vim"]
-	path = .vim/pack/packages/start/lightline.vim
-	url = https://github.com/itchyny/lightline.vim.git
 [submodule ".vim/pack/packages/start/neosnippet.vim"]
 	path = .vim/pack/packages/start/neosnippet.vim
 	url = https://github.com/Shougo/neosnippet.vim.git
@@ -25,9 +22,6 @@
 [submodule ".vim/pack/packages/start/vim-fugitive"]
 	path = .vim/pack/packages/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule ".vim/pack/packages/start/vim-multiple-cursors"]
-	path = .vim/pack/packages/start/vim-multiple-cursors
-	url = https://github.com/terryma/vim-multiple-cursors.git
 [submodule ".vim/pack/packages/start/vim-projectionist"]
 	path = .vim/pack/packages/start/vim-projectionist
 	url = https://github.com/tpope/vim-projectionist.git
@@ -37,9 +31,6 @@
 [submodule ".vim/pack/packages/start/vim-surround"]
 	path = .vim/pack/packages/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule ".vim/pack/packages/start/nerdtree"]
-	path = .vim/pack/packages/start/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
 [submodule ".vim/pack/packages/start/vim-test"]
 	path = .vim/pack/packages/start/vim-test
 	url = https://github.com/janko-m/vim-test.git
@@ -52,9 +43,6 @@
 [submodule ".vim/pack/packages/start/vim-flow"]
 	path = .vim/pack/packages/start/vim-flow
 	url = https://github.com/flowtype/vim-flow.git
-[submodule ".vim/pack/packages/start/vim-jsx-typescript"]
-	path = .vim/pack/packages/start/vim-jsx-typescript
-	url = https://github.com/peitalin/vim-jsx-typescript.git
 [submodule ".vim/pack/packages/start/vim-polyglot"]
 	path = .vim/pack/packages/start/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
@@ -64,9 +52,9 @@
 [submodule ".vim/pack/packages/start/vim-rails"]
 	path = .vim/pack/packages/start/vim-rails
 	url = https://github.com/tpope/vim-rails.git
-[submodule ".vim/pack/packages/start/switch.vim"]
-	path = .vim/pack/packages/start/switch.vim
-	url = https://github.com/AndrewRadev/switch.vim.git
 [submodule ".vim/pack/packages/start/vim-mkdir"]
 	path = .vim/pack/packages/start/vim-mkdir
 	url = https://github.com/pbrisbin/vim-mkdir.git
+[submodule ".vim/pack/packages/opt/nerdtree"]
+	path = .vim/pack/packages/opt/nerdtree
+	url = https://github.com/preservim/nerdtree.git
