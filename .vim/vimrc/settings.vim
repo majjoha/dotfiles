@@ -101,5 +101,6 @@ set hidden
 " Allow the cursor to move where there is no text in visual select mode
 set virtualedit=block
 
-" Highlight the screen line of the cursor
-set cursorline
+" Store undo history
+set undofile
+set undodir=~/.vim/undo
