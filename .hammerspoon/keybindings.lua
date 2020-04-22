@@ -49,6 +49,7 @@ function mod.init()
   -- Application hotkeys
   local charsToApps = {
     c = "Calendar",
+    d = "Discord",
     n = "Notes",
     p = "1Password 7",
     r = "Readkit",
