@@ -18,7 +18,8 @@ let NERDTreeIgnore = [
 \ '.idr\~',
 \ '.ibc',
 \ '.prefab',
-\ '.meta'
+\ '.meta',
+\ '.beam'
 \]
 
 " Hide noise from NERDTree
