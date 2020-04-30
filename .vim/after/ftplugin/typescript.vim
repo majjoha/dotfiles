@@ -2,4 +2,4 @@
 setlocal formatoptions-=o
 
 " Use ALE to move to definitions
-nnoremap <C-[> :ALEGoToDefinition<CR>
+nnoremap <C-]> :ALEGoToDefinition<CR>
