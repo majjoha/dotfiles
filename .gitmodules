@@ -37,9 +37,6 @@
 [submodule ".vim/pack/packages/start/splitjoin.vim"]
 	path = .vim/pack/packages/start/splitjoin.vim
 	url = https://github.com/AndrewRadev/splitjoin.vim.git
-[submodule ".vim/pack/packages/start/base16-vim"]
-	path = .vim/pack/packages/start/base16-vim
-	url = https://github.com/majjoha/base16-vim.git
 [submodule ".vim/pack/packages/start/vim-flow"]
 	path = .vim/pack/packages/start/vim-flow
 	url = https://github.com/flowtype/vim-flow.git
@@ -52,9 +49,6 @@
 [submodule ".vim/pack/packages/start/vim-rails"]
 	path = .vim/pack/packages/start/vim-rails
 	url = https://github.com/tpope/vim-rails.git
-[submodule ".vim/pack/packages/start/vim-mkdir"]
-	path = .vim/pack/packages/start/vim-mkdir
-	url = https://github.com/pbrisbin/vim-mkdir.git
 [submodule ".vim/pack/packages/opt/nerdtree"]
 	path = .vim/pack/packages/opt/nerdtree
 	url = https://github.com/preservim/nerdtree.git
