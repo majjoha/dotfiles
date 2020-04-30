@@ -16,6 +16,7 @@ let g:ale_set_balloons = 1
 let g:ale_fix_on_save = 1
 
 " Use ALE for completion
+let g:ale_completion_enabled = 1
 set omnifunc=ale#completion#OmniFunc
 
 let g:ale_fixers = {
