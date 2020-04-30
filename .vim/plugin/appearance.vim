@@ -1,5 +1,5 @@
 " Set theme
-colorscheme base16-grayscale
+let g:colors_name = "base16"
 set background=dark
 
 " Enable relative line numbering

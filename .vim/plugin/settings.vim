@@ -1,12 +1,5 @@
-" Automatic, language-dependent indentation, syntax coloring and other
-" functionality
-filetype indent plugin on
-
 " Maintain the indentation of the current line
 set autoindent
-
-" Set indentation
-set smartindent
 
 " Set syntax highlighting on
 syntax on

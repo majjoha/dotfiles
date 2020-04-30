@@ -38,25 +38,25 @@ nnoremap <Leader>rc :vsp $MYVIMRC<CR>
 nnoremap <Leader>sc :source $MYVIMRC<CR>
 
 " Search the contents of the files in the current directory
-nnoremap <silent><Space>f :call majjoha#FZFOpen(":Rg")<CR>
+nnoremap <silent><Leader>f :call majjoha#FZFOpen(":Rg")<CR>
 
 " Search buffers
-nnoremap <silent><Space>bb :call majjoha#FZFOpen(":Buffers")<CR>
+nnoremap <silent><Leader>bb :call majjoha#FZFOpen(":Buffers")<CR>
 
 " Show files
-nnoremap <silent><Space>p :call majjoha#FZFOpen(":Files")<CR>
+nnoremap <silent><Leader>p :call majjoha#FZFOpen(":Files")<CR>
 
 " Search commands
-nnoremap <silent><Space>c :call majjoha#FZFOpen(":Commands")<CR>
+nnoremap <silent><Leader>cc :call majjoha#FZFOpen(":Commands")<CR>
 
 " Search file types
-nnoremap <silent><Space>sf :call majjoha#FZFOpen(":Filetypes")<CR>
+nnoremap <silent><Leader>sf :call majjoha#FZFOpen(":Filetypes")<CR>
 
 " Search help files
-nnoremap <silent><Space>h :call majjoha#FZFOpen(":Help")<CR>
+nnoremap <silent><Leader>h :call majjoha#FZFOpen(":Help")<CR>
 
 " Remove search highlighting
-nnoremap <silent><Leader><Space> :let @/ = ""<CR>
+nnoremap <silent><Leader><Leader> :let @/ = ""<CR>
 
 " Open vertical split
 nnoremap <Leader>v :vsp<CR>
@@ -65,7 +65,7 @@ nnoremap <Leader>v :vsp<CR>
 nnoremap <Leader>x :sp<CR>
 
 " Git-related mappings
-nnoremap <silent><Space>bc :call majjoha#FZFOpen(":Commits")<CR>
+nnoremap <silent><Leader>bc :call majjoha#FZFOpen(":Commits")<CR>
 nnoremap <Leader>gb :Gblame<CR>
 nnoremap <Leader>gc :Gcommit -v<CR>
 nnoremap <Leader>gcb :Git checkout -b<Space>
@@ -147,3 +147,11 @@ nnoremap <C-n> *Ncgn
 " Save and load sessions
 nnoremap <Leader>ms :mksession!<CR>
 nnoremap <Leader>ls :source Session.vim<CR>
+
+" Use <Esc> to return to normal mode in terminals unless the terminal is
+" running FZF
+tnoremap <expr> <Esc> (&filetype == "fzf") ? "<Esc>" : "<c-\><c-n>"
+
+" Emacs-style navigation in insert mode
+imap <C-e> <C-o>$
+imap <C-a> <C-o>^
