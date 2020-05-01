@@ -1,3 +1,8 @@
+" Skip if Neosnippet is not loaded
+if !exists("g:loaded_neosnippet")
+  finish
+endif
+
 " Disable default snippets
 let g:neosnippet#disable_runtime_snippets = {
 \ '_' : 1,

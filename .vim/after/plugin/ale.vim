@@ -1,3 +1,8 @@
+" Skip if ALE is not loaded
+if !exists("g:loaded_ale")
+  finish
+endif
+
 " Redefine representation of warnings and errors
 let g:ale_sign_error = '▍'
 let g:ale_sign_warning = '▍'
