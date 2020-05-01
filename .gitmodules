@@ -31,9 +31,6 @@
 [submodule ".vim/pack/packages/start/vim-surround"]
 	path = .vim/pack/packages/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule ".vim/pack/packages/start/vim-test"]
-	path = .vim/pack/packages/start/vim-test
-	url = https://github.com/janko-m/vim-test.git
 [submodule ".vim/pack/packages/start/splitjoin.vim"]
 	path = .vim/pack/packages/start/splitjoin.vim
 	url = https://github.com/AndrewRadev/splitjoin.vim.git
@@ -52,3 +49,6 @@
 [submodule ".vim/pack/packages/opt/nerdtree"]
 	path = .vim/pack/packages/opt/nerdtree
 	url = https://github.com/preservim/nerdtree.git
+[submodule ".vim/pack/packages/start/vim-test"]
+	path = .vim/pack/packages/start/vim-test
+	url = https://github.com/vim-test/vim-test.git
