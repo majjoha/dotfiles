@@ -1,17 +1,28 @@
-" Maintain the indentation of the current line
-set autoindent
+" Neovim already has these defaults but set them when using Vim
+if !has('nvim')
+  " Set syntax highlighting on
+  syntax on
 
-" Set syntax highlighting on
-syntax on
+  " Maintain the indentation of the current line
+  set autoindent
+
+  " Delete using backspace
+  set backspace=indent,eol,start
+
+  " Highlight search terms dynamically as they are typed
+  set hlsearch incsearch
+
+  " Auto read when a file is changed from the outside
+  set autoread
+endif
+
+if has('nvim')
+  " Show the effects of a command incrementally as you type
+  set inccommand=nosplit
+endif
 
 " Set the Terminal title
 set title
-
-" Highlight search terms dynamically as they are typed
-set hlsearch incsearch
-
-" Auto read when a file is changed from the outside
-set autoread
 
 " Disable sound on errors
 set noerrorbells visualbell t_vb=
@@ -28,9 +39,6 @@ set clipboard=unnamed
 
 " Disable swapfiles
 set noswapfile
-
-" Delete using backspace
-set backspace=indent,eol,start
 
 " Open split windows below and to the right of the current window
 set splitbelow
@@ -76,11 +84,6 @@ set shortmess+=I
 
 " Delete the comment character when joining commented lines
 set formatoptions+=j
-
-if has('nvim')
-  " Show the effects of a command incrementally as you type
-  set inccommand=nosplit
-endif
 
 " Show spell suggestions in a smaller window
 set spellsuggest=15
