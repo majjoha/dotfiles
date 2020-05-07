@@ -31,6 +31,9 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications --require-sha"
 # Disallow tracking in Homebrew
 export HOMEBREW_NO_ANALYTICS=1
 
+# Brew coffee instead of beer
+export HOMEBREW_INSTALL_BADGE="☕️"
+
 export MYSQL=/usr/local/mysql/bin
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
