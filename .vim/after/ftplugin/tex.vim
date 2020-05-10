@@ -1,6 +1,9 @@
 " Use spell checker
 setlocal spell spelllang=en_us
 
+" Use thesaurus
+setlocal thesaurus+=~/.vim/thesaurus/thesaurus.txt
+
 " Set text width to 80
 setlocal textwidth=80
 
@@ -8,4 +11,4 @@ setlocal textwidth=80
 setlocal complete+=kspell
 
 " Enable Dictionary.app lookups
-setlocal keywordprg=:!open\ dict:///\
+setlocal keywordprg=:silent\ !open\ dict:///\
