@@ -3,7 +3,10 @@
 alias ls="ls -LGaF"
 
 alias be="bundle exec"
-alias dotf="tm dotfiles"
+alias bi="brew install"
+alias bci="brew cask install"
+alias bs="brew search"
+alias dotf="tmx dotfiles"
 alias n="node"
 alias p="pry"
 alias uph="sudo update-hosts"
@@ -12,6 +15,7 @@ alias upsn="update-software --native-apps"
 alias rm="trash"
 alias alac="alac-conversion . && rm *.flac"
 alias es="v ~/Library/Preferences/espanso/default.yml -c ':$' && espanso restart"
+alias wk="tmx wiki"
 
 # Create a directory and enter it
 function mkcd () {
