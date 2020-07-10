@@ -11,6 +11,7 @@
   excludesfile = ~/.gitignore
   untrackedCache = true
   whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+  pager = delta --color-only --syntax-theme 'none' --commit-style plain --file-style plain
 [commit]
   template = ~/.gitmessage
 [init]
@@ -37,6 +38,8 @@
   whitespace = warn
 [push]
   default = upstream
+[pull]
+  rebase = false
 [rerere]
   enabled = true
 [instaweb]
@@ -59,3 +62,11 @@
   wip = !git add -u && git commit -m "wip"
   zpush = !"git push -u origin `git branch-name`:majjoha/`git branch-name`"
   pr = !"git-pr"
+[interactive]
+  diffFilter = delta --color-only --syntax-theme 'none'
+[delta]
+  minus-style = red
+  minus-emph-style = reverse red
+  plus-style = green
+  plus-emph-style = reverse green
+  whitespace-error-style = reverse green
