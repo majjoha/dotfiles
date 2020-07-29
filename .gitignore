@@ -46,4 +46,4 @@ vendor/cache
 Session.vim
 
 # Do not store undo history
-.vim/undo
+.config/nvim/undo
