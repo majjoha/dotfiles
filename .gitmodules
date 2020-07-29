@@ -37,9 +37,6 @@
 [submodule ".vim/pack/packages/start/vim-flow"]
 	path = .vim/pack/packages/start/vim-flow
 	url = https://github.com/flowtype/vim-flow.git
-[submodule ".vim/pack/packages/start/vim-polyglot"]
-	path = .vim/pack/packages/start/vim-polyglot
-	url = https://github.com/sheerun/vim-polyglot.git
 [submodule ".vim/pack/packages/start/vim-dispatch"]
 	path = .vim/pack/packages/start/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch.git
@@ -52,3 +49,6 @@
 [submodule ".vim/pack/packages/start/vim-test"]
 	path = .vim/pack/packages/start/vim-test
 	url = https://github.com/vim-test/vim-test.git
+[submodule ".vim/pack/packages/start/vim-polyglot"]
+	path = .vim/pack/packages/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
