@@ -2,53 +2,53 @@
 	path = .bin/z
 	url = https://github.com/rupa/z.git
 [submodule ".vim/pack/packages/start/ale"]
-	path = .vim/pack/packages/start/ale
+	path = .config/nvim/pack/packages/start/ale
 	url = https://github.com/w0rp/ale.git
 [submodule ".vim/pack/packages/start/auto-pairs"]
-	path = .vim/pack/packages/start/auto-pairs
+	path = .config/nvim/pack/packages/start/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs.git
 [submodule ".vim/pack/packages/start/fzf.vim"]
-	path = .vim/pack/packages/start/fzf.vim
+	path = .config/nvim/pack/packages/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
 [submodule ".vim/pack/packages/start/neosnippet.vim"]
-	path = .vim/pack/packages/start/neosnippet.vim
+	path = .config/nvim/pack/packages/start/neosnippet.vim
 	url = https://github.com/Shougo/neosnippet.vim.git
 [submodule ".vim/pack/packages/start/vim-commentary"]
-	path = .vim/pack/packages/start/vim-commentary
+	path = .config/nvim/pack/packages/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
 [submodule ".vim/pack/packages/start/vim-endwise"]
-	path = .vim/pack/packages/start/vim-endwise
+	path = .config/nvim/pack/packages/start/vim-endwise
 	url = https://github.com/tpope/vim-endwise.git
 [submodule ".vim/pack/packages/start/vim-fugitive"]
-	path = .vim/pack/packages/start/vim-fugitive
+	path = .config/nvim/pack/packages/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
 [submodule ".vim/pack/packages/start/vim-projectionist"]
-	path = .vim/pack/packages/start/vim-projectionist
+	path = .config/nvim/pack/packages/start/vim-projectionist
 	url = https://github.com/tpope/vim-projectionist.git
 [submodule ".vim/pack/packages/start/vim-snippets"]
-	path = .vim/pack/packages/start/vim-snippets
+	path = .config/nvim/pack/packages/start/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
 [submodule ".vim/pack/packages/start/vim-surround"]
-	path = .vim/pack/packages/start/vim-surround
+	path = .config/nvim/pack/packages/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
 [submodule ".vim/pack/packages/start/splitjoin.vim"]
-	path = .vim/pack/packages/start/splitjoin.vim
+	path = .config/nvim/pack/packages/start/splitjoin.vim
 	url = https://github.com/AndrewRadev/splitjoin.vim.git
 [submodule ".vim/pack/packages/start/vim-flow"]
-	path = .vim/pack/packages/start/vim-flow
+	path = .config/nvim/pack/packages/start/vim-flow
 	url = https://github.com/flowtype/vim-flow.git
 [submodule ".vim/pack/packages/start/vim-dispatch"]
-	path = .vim/pack/packages/start/vim-dispatch
+	path = .config/nvim/pack/packages/start/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch.git
 [submodule ".vim/pack/packages/start/vim-rails"]
-	path = .vim/pack/packages/start/vim-rails
+	path = .config/nvim/pack/packages/start/vim-rails
 	url = https://github.com/tpope/vim-rails.git
 [submodule ".vim/pack/packages/opt/nerdtree"]
-	path = .vim/pack/packages/opt/nerdtree
+	path = .config/nvim/pack/packages/opt/nerdtree
 	url = https://github.com/preservim/nerdtree.git
 [submodule ".vim/pack/packages/start/vim-test"]
-	path = .vim/pack/packages/start/vim-test
+	path = .config/nvim/pack/packages/start/vim-test
 	url = https://github.com/vim-test/vim-test.git
 [submodule ".vim/pack/packages/start/vim-polyglot"]
-	path = .vim/pack/packages/start/vim-polyglot
+	path = .config/nvim/pack/packages/start/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
