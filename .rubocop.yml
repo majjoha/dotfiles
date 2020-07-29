@@ -19,5 +19,8 @@ Layout/MultilineMethodCallIndentation:
   Enabled: false
 Layout/ParameterAlignment:
   Enabled: false
+Layout/LineLength:
+  Enabled: true
+  Max: 80
 Documentation:
   Enabled: false
