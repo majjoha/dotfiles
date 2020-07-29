@@ -1,25 +1,5 @@
-" Neovim already has these defaults but set them when using Vim
-if !has('nvim')
-  " Set syntax highlighting on
-  syntax on
-
-  " Maintain the indentation of the current line
-  set autoindent
-
-  " Delete using backspace
-  set backspace=indent,eol,start
-
-  " Highlight search terms dynamically as they are typed
-  set hlsearch incsearch
-
-  " Auto read when a file is changed from the outside
-  set autoread
-endif
-
-if has('nvim')
-  " Show the effects of a command incrementally as you type
-  set inccommand=nosplit
-endif
+" Show the effects of a command incrementally as you type
+set inccommand=nosplit
 
 " Set the Terminal title
 set title
@@ -99,7 +79,7 @@ set virtualedit=block
 
 " Store undo history
 set undofile
-set undodir=~/.vim/undo
+set undodir=~/.config/nvim/undo
 
 " Use `rg` for searching
 set grepprg=rg\ --vimgrep\ --hidden\ -i

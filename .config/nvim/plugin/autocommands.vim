@@ -16,10 +16,6 @@ augroup END
 augroup terminal_mode
   autocmd!
 
-  if !has('nvim')
-    finish
-  endif
-
   autocmd TermOpen * setlocal nonumber norelativenumber
   autocmd TermOpen * startinsert
   autocmd TermLeave term://* set bufhidden=delete

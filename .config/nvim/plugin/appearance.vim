@@ -16,9 +16,7 @@ set laststatus=2
 set fillchars=vert:\ 
 
 " Supress the `~` character at the end of the buffer
-if has('nvim')
-  set fillchars+=eob:\ 
-endif
+set fillchars+=eob:\ 
 
 " Show the current mode
 set showmode

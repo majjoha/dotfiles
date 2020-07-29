@@ -1,4 +1,5 @@
 " Map leader key to space
+noremap <Leader> <Nop>
 let mapleader = "\<Space>"
 
 " Use Control-S for saving
@@ -96,7 +97,7 @@ nnoremap <Leader>tv :vsp<CR>:term<CR>
 nnoremap <Leader>ts :sp<CR>:term<CR>
 
 " Open completion menu
-inoremap <C-Space> <c-x><c-o>
+" inoremap <C-Space> <c-x><c-o>
 
 " Search in visual selection
 xnoremap / <ESC>/\%V
@@ -155,3 +156,22 @@ tnoremap <expr> <Esc> (&filetype == "fzf") ? "<Esc>" : "<c-\><c-n>"
 " Emacs-style navigation in insert mode
 imap <C-e> <C-o>$
 imap <C-a> <C-o>^
+
+nnoremap [q :cprevious<CR>
+nnoremap ]q :cnext<CR>
+nnoremap [Q :cfirst<CR>
+nnoremap ]Q :clast<CR>
+
+" Add mappings for Kiwi
+nnoremap <silent><Leader>ki :KiwiGoToIndex<CR>
+nnoremap <Leader>knn :KiwiNewNote<Space>
+nnoremap <Leader>ken :KiwiEditNote<Space>
+nnoremap <Leader>knj :KiwiNewJournalNote<CR>
+nnoremap <Leader>kej :KiwiEditJournalNote<Space>
+nnoremap <Leader>kln :KiwiListNotes<CR>
+nnoremap <silent><Leader>kfb :KiwiFindBacklinks<CR>
+nnoremap <Leader>kat :KiwiAddTodo<Space>
+nnoremap <silent><Leader>kct :KiwiCheckTodo<CR>
+nnoremap <silent><Leader>kst :KiwiShowTodoItems<CR>
+nnoremap <Leader>kft :KiwiFindTagReferences<Space>
+nnoremap <silent><Leader> :KiwiConvertWordToTag<CR>
