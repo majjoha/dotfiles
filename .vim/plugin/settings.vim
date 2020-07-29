@@ -100,3 +100,7 @@ set virtualedit=block
 " Store undo history
 set undofile
 set undodir=~/.vim/undo
+
+" Use `rg` for searching
+set grepprg=rg\ --vimgrep\ --hidden\ -i
+set grepformat^=%f:%l:%c:%m
