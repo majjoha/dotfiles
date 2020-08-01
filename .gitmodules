@@ -43,12 +43,12 @@
 [submodule ".vim/pack/packages/start/vim-rails"]
 	path = .config/nvim/pack/packages/start/vim-rails
 	url = https://github.com/tpope/vim-rails.git
-[submodule ".vim/pack/packages/opt/nerdtree"]
-	path = .config/nvim/pack/packages/opt/nerdtree
-	url = https://github.com/preservim/nerdtree.git
 [submodule ".vim/pack/packages/start/vim-test"]
 	path = .config/nvim/pack/packages/start/vim-test
 	url = https://github.com/vim-test/vim-test.git
 [submodule ".vim/pack/packages/start/vim-polyglot"]
 	path = .config/nvim/pack/packages/start/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
+[submodule ".config/nvim/pack/packages/start/chadtree"]
+	path = .config/nvim/pack/packages/start/chadtree
+	url = https://github.com/ms-jpq/chadtree.git
