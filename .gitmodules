@@ -49,6 +49,6 @@
 [submodule ".vim/pack/packages/start/vim-polyglot"]
 	path = .config/nvim/pack/packages/start/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
-[submodule ".config/nvim/pack/packages/start/chadtree"]
-	path = .config/nvim/pack/packages/start/chadtree
-	url = https://github.com/ms-jpq/chadtree.git
+[submodule ".config/nvim/pack/packages/opt/nerdtree"]
+	path = .config/nvim/pack/packages/opt/nerdtree
+	url = https://github.com/preservim/nerdtree.git
