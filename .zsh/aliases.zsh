@@ -26,11 +26,6 @@ function mkcd () {
 alias vim="nvim"
 alias v="nvim"
 
-# Change directory, and open vim
-function zv () {
-  z $1 && v
-}
-
 # Go up one directory
 alias ..='cd ..'
 
@@ -53,15 +48,6 @@ function __tmux-sessions() {
   _describe -t sessions 'sessions' sessions "$@"
 }
 compdef __tmux-sessions tm
-
-# Tab completion for Ag + ctags
-# See http://robots.thoughtbot.com/silver-searcher-tab-completion-with-exuberant-ctags
-_ag() {
-  if (( CURRENT == 2 )); then
-    compadd $(cut -f 1 .git/tags tmp/tags 2>/dev/null | grep -v '!_TAG')
-  fi
-}
-compdef _ag ag
 
 # Tab completion for chruby
 _chruby() { compadd $(chruby | tr -d '* ') }
@@ -99,21 +85,16 @@ alias gbl="git branch --list"
 alias gc="git commit -v"
 alias gcl="git clone"
 alias gcm="git commit -m"
-alias gds="git diff --staged"
+alias gds="git diff --staged --color-words='\w+|.'"
 alias gco="git checkout"
-alias gd="git diff"
+alias gd="git diff --color-words='\w+|.'"
 alias gl="git log"
 alias glw="git last-week"
 alias gp="git pull"
 alias gs="git status"
 alias gsa="git submodule add"
 alias gsrm="git-submodule-rm"
-alias gsu="git submodule foreach git pull origin master"
+alias gsu="git submodule update --remote --jobs=4"
 
 # Rebuild Spotlight index
 alias reindex-spotlight="sudo mdutil -i on /"
-
-# Download m3u8 playlist
-function download-m3u8() {
-  ffmpeg -user_agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/601.7.8 (KHTML, like Gecko) Version/9.1.3 Safari/537.86.7" -i "$1" -c copy "$2"
-}
