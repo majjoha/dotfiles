@@ -11,7 +11,6 @@
   excludesfile = ~/.gitignore
   untrackedCache = true
   whitespace = space-before-tab,-indent-with-non-tab,trailing-space
-  pager = delta --color-only --syntax-theme 'none' --commit-style plain --file-style plain
 [commit]
   template = ~/.gitmessage
 [init]
@@ -21,12 +20,12 @@
 [color]
   ui = true
   branch = auto
-  diff = auto
   interactive = auto
   status = auto
   ui = auto
 [diff]
   compactionHeuristic = true
+  mnemonicprefix = true
 [branch]
   autosetupmerge = true
 [submodule]
@@ -62,11 +61,3 @@
   wip = !git add -u && git commit -m "wip"
   zpush = !"git push -u origin `git branch-name`:majjoha/`git branch-name`"
   pr = !"git-pr"
-[interactive]
-  diffFilter = delta --color-only --syntax-theme 'none'
-[delta]
-  minus-style = red
-  minus-emph-style = reverse red
-  plus-style = green
-  plus-emph-style = reverse green
-  whitespace-error-style = reverse green
