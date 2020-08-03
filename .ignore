@@ -5,7 +5,7 @@ public/assets/
 .sass-cache
 tmp/
 vendor/
-.beam
+*.beam
 *.ibc
 *.idr~
 .git/
