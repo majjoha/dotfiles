@@ -12,10 +12,10 @@ let g:neosnippet#disable_runtime_snippets = {
 let g:neosnippet#enable_snipmate_compatibility = 1
 
 " Tell Neosnippet about the other snippets
-let g:neosnippet#snippets_directory = []
-let g:neosnippet#snippets_directory += [
-\ '~/.config/nvim/pack/packages/start/vim-snippets/snippets']
-let g:neosnippet#snippets_directory += ['~/.config/nvim/snippets']
+let g:neosnippet#snippets_directory = [
+\ '~/.config/nvim/pack/packages/start/vim-snippets/snippets',
+\ '~/.config/nvim/snippets'
+\]
 
 " Mimic SuperTab snippets behavior
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
