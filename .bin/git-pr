@@ -1,5 +1,0 @@
-#!/bin/sh
-url="$(git config --get remote.origin.url)"
-branch=`git branch-name`
-
-open "$url/compare/majjoha/$branch?expand=1"

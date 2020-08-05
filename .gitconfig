@@ -60,4 +60,4 @@
   web = instaweb
   wip = !git add -u && git commit -m "wip"
   zpush = !"git push -u origin `git branch-name`:majjoha/`git branch-name`"
-  pr = !"git-pr"
+  pr = !"gh pr create --web"

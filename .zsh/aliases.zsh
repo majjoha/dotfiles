@@ -93,8 +93,9 @@ alias glw="git last-week"
 alias gp="git pull"
 alias gs="git status"
 alias gsa="git submodule add"
-alias gsrm="git-submodule-rm"
+alias gsrm="git rm"
 alias gsu="git submodule update --remote --jobs=4"
+alias gpr="git pr"
 
 # Rebuild Spotlight index
 alias reindex-spotlight="sudo mdutil -i on /"
