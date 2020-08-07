@@ -13,7 +13,7 @@
 
 battery="$(pmset -g 'batt' | tr '\n' ';' | awk '{print $8}' | tr -d '%;')"
 
-if [[ $battery -le 10 ]]; then
+if [ "$battery" -le 10 ]; then
   echo "#[fg=red]#[blink]♥#[noblink]#[fg=green] $battery%"
 else
   echo "$battery%"
