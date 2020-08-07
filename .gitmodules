@@ -52,3 +52,6 @@
 [submodule ".config/nvim/pack/packages/opt/nerdtree"]
 	path = .config/nvim/pack/packages/opt/nerdtree
 	url = https://github.com/preservim/nerdtree.git
+[submodule ".config/kitty/base16-kitty"]
+	path = .config/kitty/base16-kitty
+	url = https://github.com/kdrag0n/base16-kitty.git
