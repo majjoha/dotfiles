@@ -157,21 +157,19 @@ tnoremap <expr> <Esc> (&filetype == "fzf") ? "<Esc>" : "<c-\><c-n>"
 imap <C-e> <C-o>$
 imap <C-a> <C-o>^
 
+" Mappings for navigation the quickfix list
 nnoremap [q :cprevious<CR>
 nnoremap ]q :cnext<CR>
 nnoremap [Q :cfirst<CR>
 nnoremap ]Q :clast<CR>
 
-" Add mappings for Kiwi
-nnoremap <silent><Leader>ki :KiwiGoToIndex<CR>
-nnoremap <Leader>knn :KiwiNewNote<Space>
-nnoremap <Leader>ken :KiwiEditNote<Space>
-nnoremap <Leader>knj :KiwiNewJournalNote<CR>
-nnoremap <Leader>kej :KiwiEditJournalNote<Space>
-nnoremap <Leader>kln :KiwiListNotes<CR>
-nnoremap <silent><Leader>kfb :KiwiFindBacklinks<CR>
-nnoremap <Leader>kat :KiwiAddTodo<Space>
-nnoremap <silent><Leader>kct :KiwiCheckTodo<CR>
-nnoremap <silent><Leader>kst :KiwiShowTodoItems<CR>
-nnoremap <Leader>kft :KiwiFindTagReferences<Space>
-nnoremap <silent><Leader> :KiwiConvertWordToTag<CR>
+" Search for the word under the cursor in the entire project
+map <leader>* :grep -R <cword> * --exclude-dir={.git,tmp,log}<CR><CR>
+
+" Add mappings for Marginalia
+nnoremap <Leader>mnn :MarginaliaNew<Space>
+nnoremap <Leader>men :MarginaliaEdit<Space>
+nnoremap <silent><Leader>mln :MarginaliaList<CR>
+nnoremap <silent><Leader>mfb :MarginaliaFindBacklinks<CR>
+nnoremap <Leader>mft :MarginaliaFindTagReferences<Space>
+nnoremap <silent><Leader>mcw :MarginaliaConvertWordToTag<CR>
