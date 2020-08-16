@@ -17,6 +17,7 @@ Thumbs.db
 
 # Ignore vim history
 .vim/.netrwhist
+.config/nvim/.netrwhist
 tags
 vendor/ruby
 dump.rdb
