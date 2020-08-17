@@ -6,4 +6,3 @@ source ~/.zsh/prompt.zsh
 source ~/.zsh/env.zsh
 source ~/.zsh/externals.zsh
 source ~/.zsh/aliases.zsh
-source ~/.zsh/docker.zsh

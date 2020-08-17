@@ -75,6 +75,14 @@ _tmuxinator() {
 compdef _tmuxinator tmuxinator mux
 alias tmx="tmuxinator start"
 
+blog() {
+  docker run \
+    -p 4000:4000 \
+    -v $(pwd):/app \
+    -d \
+    majjoha/blog
+}
+
 # Git-related aliases
 alias gi="git init"
 alias ga="git add"
