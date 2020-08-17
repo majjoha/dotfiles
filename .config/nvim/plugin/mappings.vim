@@ -18,10 +18,6 @@ nnoremap <Leader>cw :tabc<CR>
 xnoremap > >gv
 xnoremap < <gv
 
-" Move lines vertically
-xnoremap J :move '<-2<CR>gv=gv
-xnoremap K :move '>+1<CR>gv=gv
-
 " Navigate screen lines instead of file lines
 noremap k gk
 noremap j gj
