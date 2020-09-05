@@ -54,7 +54,8 @@ function mod.init()
     p = "1Password 7",
     r = "Readkit",
     s = "Safari Technology Preview",
-    t = "Kitty"
+    t = "Kitty",
+    z = "Zoom.us"
   }
   for key, app in pairs(charsToApps) do
     hs.hotkey.bind(hyper, key, function()
