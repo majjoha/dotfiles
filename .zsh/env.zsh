@@ -45,3 +45,6 @@ export PATH="$HOME/.npm:$PATH"
 export PATH="$HOME/.nvm/bin:$PATH"
 export PATH="./node_modules/.bin:$PATH"
 export PATH=$PATH:$MYSQL
+
+# Set the TTY for GPG
+export GPG_TTY=$(tty)
