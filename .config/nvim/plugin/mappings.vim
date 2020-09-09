@@ -99,6 +99,7 @@ nnoremap <Leader>ts :sp<CR>:term<CR>
 xnoremap / <ESC>/\%V
 
 " Alternate via vim-projectionist
+nnoremap <Tab> :A<CR>
 nnoremap <Leader>a :A<CR>
 
 " Move up and down in completion menus using j and k
