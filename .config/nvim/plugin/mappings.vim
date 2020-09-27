@@ -92,15 +92,12 @@ noremap <silent><Leader>es :NeoSnippetEdit -split -vertical<CR>
 nnoremap <Leader>tv :vsp<CR>:term<CR>
 nnoremap <Leader>ts :sp<CR>:term<CR>
 
-" Open completion menu
-" inoremap <C-Space> <c-x><c-o>
-
 " Search in visual selection
 xnoremap / <ESC>/\%V
 
 " Alternate via vim-projectionist
-nnoremap <Tab> :A<CR>
-nnoremap <Leader>a :A<CR>
+nnoremap <silent><Tab> :A<CR>
+nnoremap <silent><Leader>a :A<CR>
 
 " Move up and down in completion menus using j and k
 inoremap <expr> j pumvisible() ? '<C-n>' : 'j'
@@ -122,9 +119,6 @@ nnoremap <Leader>ee :e<Space>
 
 " Sort visual selection
 xnoremap <Leader>ss :!sort<CR>
-
-" Flip text segments
-nnoremap <Leader>sw :Switch<CR>
 
 " Rails-related mappings
 nnoremap <Leader>rgc :Rails g controller<Space>
@@ -159,9 +153,6 @@ nnoremap [q :cprevious<CR>
 nnoremap ]q :cnext<CR>
 nnoremap [Q :cfirst<CR>
 nnoremap ]Q :clast<CR>
-
-" Search for the word under the cursor in the entire project
-map <leader>* :grep -R <cword> * --exclude-dir={.git,tmp,log}<CR><CR>
 
 " Add mappings for Marginalia
 nnoremap <Leader>mnn :MarginaliaNew<Space>
