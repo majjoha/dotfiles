@@ -108,3 +108,6 @@ alias gpr="git pull --rebase"
 
 # Rebuild Spotlight index
 alias reindex-spotlight="sudo mdutil -i on /"
+
+# Remove hidden files
+alias remove-hidden-files="find . -maxdepth 5 -type f -name '.*' -delete"
