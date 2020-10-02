@@ -58,8 +58,8 @@ nnoremap <Leader>x :sp<CR>
 
 " Git-related mappings
 nnoremap <silent><Leader>bc :call majjoha#FZFOpen(":Commits")<CR>
-nnoremap <Leader>gb :Gblame<CR>
-nnoremap <Leader>gc :Gcommit -v<CR>
+nnoremap <silent><Leader>gb :Git blame<CR>
+nnoremap <Leader>gc :Git commit -v<CR>
 nnoremap <Leader>gcb :Git checkout -b<Space>
 nnoremap <silent><Leader>gco :call fzf#run({
 \  'source': 'git branch \| sed "s/.* //"',
@@ -67,9 +67,9 @@ nnoremap <silent><Leader>gco :call fzf#run({
 \  'options': '+m --prompt="Branch> "',
 \  'down': '~40%'
 \})<CR>
-nnoremap <Leader>gd :Gvdiff<CR>
+nnoremap <Leader>gd :Gvdiffsplit<CR>
 nnoremap <Leader>gr :Git rebase -i origin/main<CR>
-nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>gs :Git<CR>
 nnoremap <Leader>gg :Git<Space>
 nnoremap <Leader>gpr :!git pr<CR>
 nnoremap <Leader>gpp :Git pull<CR>
