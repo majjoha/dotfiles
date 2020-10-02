@@ -3,16 +3,17 @@ noremap <Leader> <Nop>
 let mapleader = "\<Space>"
 
 " Use Control-S for saving
-inoremap <C-s> <C-o>:update<CR>
-nnoremap <C-s> :update<CR>
+inoremap <silent><C-s> <C-o>:update<CR>
+nnoremap <silent><C-s> :update<CR>
+nnoremap <silent><Leader>w :update<CR>
 
 " Use Control-Q for quitting
-nnoremap <C-q> :q<CR>
-tnoremap <C-q> <C-\><C-n>:q<CR>
+nnoremap <silent><C-q> :q<CR>
+tnoremap <silent><C-q> <C-\><C-n>:q<CR>
 
 " Open the current buffer in a new tab
 nnoremap <silent><Leader>mw :call majjoha#OpenCurrentAsNewTab()<CR>
-nnoremap <Leader>cw :tabc<CR>
+nnoremap <silent><Leader>cw :tabc<CR>
 
 " Keep the visual selection when indenting/outdenting
 xnoremap > >gv
@@ -27,12 +28,6 @@ nnoremap <silent><Leader>d :call
   \ majjoha#LazyLoadPackageWithCommand("nerdtree", "NERDTreeToggle")<CR>
 nnoremap <silent><Leader>D :call
   \ majjoha#LazyLoadPackageWithCommand("nerdtree", "NERDTreeFind")<CR>
-
-" Edit `$MYVIMRC`
-nnoremap <Leader>rc :vsp $MYVIMRC<CR>
-
-" Source `$MYVIMRC`
-nnoremap <Leader>sc :source $MYVIMRC<CR>
 
 " Search the contents of the files in the current directory
 nnoremap <silent><Leader>f :call majjoha#FZFOpen(":Rg")<CR>
@@ -73,13 +68,13 @@ nnoremap <silent><Leader>gco :call fzf#run({
 \  'down': '~40%'
 \})<CR>
 nnoremap <Leader>gd :Gvdiff<CR>
-nnoremap <Leader>gr :Git rebase -i origin/master<CR>
+nnoremap <Leader>gr :Git rebase -i origin/main<CR>
 nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gg :Git<Space>
 nnoremap <Leader>gpr :!git pr<CR>
 nnoremap <Leader>gpp :Git pull<CR>
 nnoremap <Leader>ga :Gwrite<CR>
-nnoremap <Leader>gl :vs<CR>:terminal tig<CR>
+nnoremap <Leader>gl :vs \| terminal tig<CR>
 
 " Toggle comments
 xmap <Leader>/ <Plug>Commentary
@@ -89,8 +84,8 @@ nmap <Leader>/ <Plug>CommentaryLine
 noremap <silent><Leader>es :NeoSnippetEdit -split -vertical<CR>
 
 " Open a terminal in a split window
-nnoremap <Leader>tv :vsp<CR>:term<CR>
-nnoremap <Leader>ts :sp<CR>:term<CR>
+nnoremap <Leader>tv :vsp \| term<CR>
+nnoremap <Leader>ts :sp \| term<CR>
 
 " Search in visual selection
 xnoremap / <ESC>/\%V
@@ -112,22 +107,22 @@ nnoremap <Leader>rs :TestSuite<CR>
 nnoremap ' `
 
 " Allow the file under the cursor to be opened even if it does not exist
-nnoremap <Leader>gf :e <cfile><CR>
+nnoremap <silent><Leader>gf :e <cfile><CR>
 
 " Edit file
 nnoremap <Leader>ee :e<Space>
 
 " Sort visual selection
-xnoremap <Leader>ss :!sort<CR>
+xnoremap <silent><Leader>ss :!sort<CR>
 
 " Rails-related mappings
 nnoremap <Leader>rgc :Rails g controller<Space>
 nnoremap <Leader>rgm :Rails g model<Space>
-nnoremap <Leader>rec :Econtroller<CR>
-nnoremap <Leader>rem :Emodel<CR>
-nnoremap <Leader>res :Espec<CR>
+nnoremap <silent><Leader>rec :Econtroller<CR>
+nnoremap <silent><Leader>rem :Emodel<CR>
+nnoremap <silent><Leader>res :Espec<CR>
 nnoremap <Leader>rr :Rails<Space>
-nnoremap <Leader>rdm :Rails db:migrate<CR>
+nnoremap <silent><Leader>rdm :Rails db:migrate<CR>
 
 " Go to the beginning and end of the line in command mode
 cnoremap <C-a> <Home>
@@ -137,8 +132,8 @@ cnoremap <C-e> <End>
 nnoremap <C-n> *Ncgn
 
 " Save and load sessions
-nnoremap <Leader>ms :mksession!<CR>
-nnoremap <Leader>ls :source Session.vim<CR>
+nnoremap <silent><Leader>ms :mksession!<CR>
+nnoremap <silent><Leader>ls :source Session.vim<CR>
 
 " Use <Esc> to return to normal mode in terminals unless the terminal is
 " running FZF
