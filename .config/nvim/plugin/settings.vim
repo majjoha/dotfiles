@@ -84,3 +84,6 @@ set undodir=~/.config/nvim/undo
 " Use `rg` for searching
 set grepprg=rg\ --vimgrep\ --hidden\ -i
 set grepformat^=%f:%l:%c:%m
+
+" Enable dialog menus for confirmations
+set confirm
