@@ -10,7 +10,7 @@ management.
 % cd ~/.dotfiles && stow .
 ```
 
-On a new machine, you might also want to run `source ~/.dotfiles/.macos` to
+On a new machine, you may also want to run `.bin/initialize-macos-defaults` to
 enable a wide range of sensible defaults for macOS.
 
 ### Update
