@@ -31,7 +31,8 @@ let g:ale_fixers = {
 \ 'json': ['jq'],
 \ 'ruby': ['rubocop'],
 \ 'typescript': ['eslint', 'prettier'],
-\ 'typescriptreact': ['eslint', 'prettier']
+\ 'typescriptreact': ['eslint', 'prettier'],
+\ 'haskell': ['stylish-haskell']
 \}
 
 let g:ale_linters = {
