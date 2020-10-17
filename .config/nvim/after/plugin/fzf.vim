@@ -6,6 +6,9 @@ endif
 " Jump to the existing window if possible
 let g:fzf_buffers_jump = 1
 
+" Display the search window at the bottom instead of in a floating window
+let g:fzf_layout = { 'down': '40%' }
+
 " Include hidden directories when searching
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 
