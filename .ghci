@@ -1,2 +1,3 @@
+:set -Wall
 :set prompt "\ESC[34mλ\ESC[m\ESC[33m› \ESC[m"
-:def hoogle \s -> return $ ":! hoogle --count=15 \"" ++ s ++ "\""
+:set prompt-cont "\ESC[33m * \ESC[m"
