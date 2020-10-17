@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
 # Source from https://gist.github.com/mlen/4379799
 set -e
 
