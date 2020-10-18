@@ -1,3 +1,12 @@
+# dotfiles-related ignores
+.gnupg
+!.gnupg/gpg-agent.conf
+.config/configstore
+.config/gh
+.config/nvim/.netrwhist
+.config/nvim/undo
+.config/tmuxinator
+
 # Folder view configuration files
 .DS_Store
 Desktop.ini
@@ -16,16 +25,10 @@ Thumbs.db
 *.out
 
 # Ignore vim history
-.vim/.netrwhist
-.config/nvim/.netrwhist
 tags
 vendor/ruby
 dump.rdb
 vendor/cache
-.vim/spell
-
-# Ignore tmuxinator configurations
-.config/tmuxinator
 
 # Projectionist configuration
 .projections.json
@@ -37,14 +40,5 @@ vendor/cache
 # Ignore byebug history
 .byebug_history
 
-# Ignore configstore
-.config/configstore
-
-# Ignore `gh` config
-.config/gh
-
 # Ignore session files
 Session.vim
-
-# Do not store undo history
-.config/nvim/undo
