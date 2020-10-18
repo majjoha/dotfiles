@@ -8,14 +8,14 @@
   account = personal
 [core]
   editor = nvim
-  excludesfile = ~/.gitignore
+  excludesfile = ~/.config/git/gitignore
   untrackedCache = true
   whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 [commit]
-  template = ~/.gitmessage
+  template = ~/.config/git/message
 [init]
   defaultBranch = main
-  templatedir = ~/.git_template
+  templatedir = ~/.config/git/template
 [credential]
   helper = osxkeychain
 [color]

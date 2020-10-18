@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 def pbcopy(input)
   str = String(input)
   IO.popen("pbcopy", "w") {|f| f << str }
