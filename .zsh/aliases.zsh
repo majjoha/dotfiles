@@ -105,7 +105,6 @@ alias gs="git status"
 alias gsa="git submodule add"
 alias gsrm="git rm"
 alias gsu="git submodule update --remote --jobs=4"
-alias gpr="git pull --rebase"
 
 # Rebuild Spotlight index
 alias reindex-spotlight="sudo mdutil -i on /"
