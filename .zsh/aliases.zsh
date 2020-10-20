@@ -17,6 +17,7 @@ alias alac="alac-conversion . && rm *.flac"
 alias es="v ~/Library/Preferences/espanso/default.yml -c ':$' && espanso restart"
 alias wk="tmx notes"
 alias hs="stack ghci"
+alias mdless="glow -w 80 -p -s light"
 
 # Create a directory and enter it
 function mkcd () {
