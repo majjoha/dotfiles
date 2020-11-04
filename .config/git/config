@@ -13,6 +13,7 @@
   whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 [commit]
   template = ~/.config/git/message
+  gpgSign = true
 [init]
   defaultBranch = main
   templatedir = ~/.config/git/template
