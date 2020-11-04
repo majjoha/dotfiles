@@ -86,7 +86,6 @@ blog() {
 }
 
 # Git-related aliases
-alias gi="git init"
 alias ga="git add"
 alias gaa="git add -A"
 alias gap="git add -p"
@@ -96,9 +95,10 @@ alias gbl="git branch --list"
 alias gc="git commit -v"
 alias gcl="git clone"
 alias gcm="git commit -m"
-alias gds="git diff --staged"
 alias gco="git checkout"
 alias gd="git diff"
+alias gds="git diff --staged"
+alias gi="git init"
 alias gl="git log"
 alias glw="git last-week"
 alias gp="git pull"
