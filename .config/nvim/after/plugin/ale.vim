@@ -36,7 +36,8 @@ let g:ale_fixers = {
 \}
 
 let g:ale_linters = {
-\ 'ruby': ['solargraph', 'brakeman']
+\ 'ruby': ['solargraph', 'brakeman'],
+\ 'haskell': ['hlint', 'stack-build']
 \}
 
 let g:ale_linters_ignore = {
