@@ -46,15 +46,9 @@
 [instaweb]
   httpd = webrick
 [alias]
-  br = branch
   branch-name = !"git for-each-ref --format=\"%(refname:short)\" $(git symbolic-ref HEAD)"
-  ci = commit
-  co = checkout
-  graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   last-week = shortlog --since='1 week ago' --pretty=format:'%cD: %s' --author=mathias@mjj.io --no-merges
   preview = !"git fetch && git diff ^origin/master"
-  st = status
   standup = shortlog --since=yesterday --no-merges --author=mathias@mjj.io
   undo = reset --soft HEAD^
   unpushed = log --branches --not --remotes --simplify-by-decoration --decorate --oneline
