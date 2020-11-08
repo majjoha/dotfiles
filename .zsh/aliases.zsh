@@ -2,6 +2,13 @@
 # files, etc.
 alias ls="ls -LGaF"
 
+# Ask for confirmation if a file already exists and show a message about the
+# renamed file
+alias mv="mv -iv"
+
+# ...
+alias mkdir="mkdir -vp"
+
 alias be="bundle exec"
 alias bi="brew install"
 alias bci="brew cask install"
@@ -105,6 +112,7 @@ alias gp="git pull"
 alias gs="git status"
 alias gsa="git submodule add"
 alias gsrm="git rm"
+alias gss="git stash --keep-index && git stash save"
 alias gsu="git submodule update --remote --jobs=4"
 
 # Rebuild Spotlight index
