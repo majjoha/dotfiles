@@ -52,7 +52,7 @@ function mod.init()
     d = "Discord",
     n = "Notes",
     p = "1Password 7",
-    r = "Readkit",
+    r = "Reeder",
     s = "Safari Technology Preview",
     t = "Kitty",
     z = "Zoom.us"
