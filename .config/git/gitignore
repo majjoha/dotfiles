@@ -1,11 +1,12 @@
 # dotfiles-related ignores
-.gnupg
-!.gnupg/gpg-agent.conf
 .config/configstore
 .config/gh
 .config/nvim/.netrwhist
 .config/nvim/undo
 .config/tmuxinator
+.gnupg
+!.gnupg/gpg-agent.conf
+.hammerspoon/Spoons
 
 # Folder view configuration files
 .DS_Store
