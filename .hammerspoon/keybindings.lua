@@ -68,10 +68,10 @@ function mod.init()
   local charsToApps = {
     c = "Calendar",
     d = "Discord",
+    f = "Firefox Developer Edition",
     n = "Notes",
     p = "1Password 7",
     r = "Reeder",
-    s = "Safari Technology Preview",
     t = "Kitty",
     z = "Zoom.us"
   }
