@@ -40,10 +40,28 @@ function mod.init()
     hs.grid.set(win, { x = 0, y = 0, w = 10, h = 5 }, win:screen())
   end)
 
-  -- Center the window
-  hs.hotkey.bind(hyper, ",", function()
+  -- Move to quarter right top
+  hs.hotkey.bind(hyper, "[", function()
     local win = hs.window.focusedWindow()
-    hs.grid.set(win, { x = 2.5, y = 0, w = 5, h = 10 }, win:screen())
+    hs.grid.set(win, { x = 5, y = 0, w = 5, h = 5 }, win:screen())
+  end)
+
+  -- Move to quarter right bottom
+  hs.hotkey.bind(hyper, "'", function()
+    local win = hs.window.focusedWindow()
+    hs.grid.set(win, { x = 5, y = 5, w = 5, h = 5 }, win:screen())
+  end)
+
+  -- Move to quarter left top
+  hs.hotkey.bind(hyper, ";", function()
+    local win = hs.window.focusedWindow()
+    hs.grid.set(win, { x = 0, y = 0, w = 5, h = 5 }, win:screen())
+  end)
+
+  -- Move to quarter left bottom
+  hs.hotkey.bind(hyper, "/", function()
+    local win = hs.window.focusedWindow()
+    hs.grid.set(win, { x = 0, y = 5, w = 5, h = 5 }, win:screen())
   end)
 
   -- Application hotkeys
