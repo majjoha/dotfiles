@@ -17,7 +17,7 @@ function mod.init()
   end)
 
   -- Application hotkeys
-  local charsToApps = {
+  local apps = {
     c = "Calendar",
     d = "Discord",
     f = "Firefox Developer Edition",
@@ -28,7 +28,7 @@ function mod.init()
     z = "Zoom.us"
   }
 
-  for key, app in pairs(charsToApps) do
+  for key, app in pairs(apps) do
     hs.hotkey.bind(hyper, key, function()
       hs.application.launchOrFocus(app)
     end)
