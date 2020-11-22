@@ -1,10 +1,9 @@
 local battery = require "battery"
+local hyper = require "hyper"
 local keybindings = require "keybindings"
 
 -- Disable animation when repositioning windows
 hs.window.animationDuration = 0
-
-local hyper = {"ctrl", "alt"}
 
 hs.loadSpoon("SpoonInstall")
 

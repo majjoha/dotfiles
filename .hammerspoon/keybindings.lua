@@ -1,5 +1,5 @@
+local hyper = require "hyper"
 local mod = {}
-local hyper = {"ctrl", "alt"}
 
 function mod.init()
   -- Scroll up
