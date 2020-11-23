@@ -1,4 +1,3 @@
-local battery = require "battery"
 local hyper = require "hyper"
 local keybindings = require "keybindings"
 
@@ -33,7 +32,6 @@ end
 -- Start Caffeine on load
 spoon.Caffeine:setState(true)
 
-battery.init()
 keybindings.init()
 
 hs.alert.show("Config loaded")
