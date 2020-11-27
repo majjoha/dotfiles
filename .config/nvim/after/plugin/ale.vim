@@ -27,20 +27,20 @@ set omnifunc=ale#completion#OmniFunc
 let g:ale_fixers = {
 \ '*': ['remove_trailing_lines'],
 \ 'css': ['prettier'],
+\ 'haskell': ['stylish-haskell'],
 \ 'javascript': ['eslint', 'prettier'],
 \ 'json': ['jq'],
 \ 'ruby': ['rubocop'],
 \ 'sh': ['shfmt'],
 \ 'typescript': ['eslint', 'prettier'],
 \ 'typescriptreact': ['eslint', 'prettier'],
-\ 'haskell': ['stylish-haskell']
 \}
 
 let g:ale_linters = {
+\ 'haskell': ['hlint', 'stack-build'],
 \ 'ruby': ['solargraph', 'brakeman'],
-\ 'haskell': ['hlint', 'stack-build']
 \}
 
 let g:ale_linters_ignore = {
-\ 'javascript': ['tsserver']
+\ 'javascript': ['tsserver'],
 \}
