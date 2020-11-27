@@ -130,10 +130,10 @@ sudo spctl --master-disable
 ### Safari Technology Preview
 
 # Prevent Safari from opening "safe" files automatically after downloading
-defaults write com.apple.SafariTechnologyPreview AutoOpenSafeDownloads -bool false 
+defaults write com.apple.SafariTechnologyPreview AutoOpenSafeDownloads -bool false
 
 # Disallow websites from sending push notifications
-defaults write com.apple.SafariTechnologyPreview CanPromptForPushNotifications -bool false 
+defaults write com.apple.SafariTechnologyPreview CanPromptForPushNotifications -bool false
 
 # Remove downloads upon successful download
 defaults write com.apple.SafariTechnologyPreview DownloadsClearingPolicy -int 2
@@ -158,10 +158,10 @@ defaults write com.apple.SafariTechnologyPreview NewWindowBehavior -int 1
 defaults write com.apple.SafariTechnologyPreview SendDoNotTrackHTTPHeader -bool true
 
 # Hide favorites bar
-defaults write com.apple.SafariTechnologyPreview ShowFavoritesBar -bool false 
+defaults write com.apple.SafariTechnologyPreview ShowFavoritesBar -bool false
 
 # Show full website address in Smart Search Field
-defaults write com.apple.SafariTechnologyPreview ShowFullURLInSmartSearchField -bool true 
+defaults write com.apple.SafariTechnologyPreview ShowFullURLInSmartSearchField -bool true
 
 # Show status bar
 defaults write com.apple.SafariTechnologyPreview ShowStatusBar -bool true
