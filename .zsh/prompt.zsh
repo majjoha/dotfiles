@@ -1,6 +1,6 @@
-GIT_PROMPT_PREFIX=" %{$fg[blue]%}(%{$reset_color%}%{$fg[cyan]%}"
-GIT_PROMPT_SUFFIX="%{$fg[blue]%})%{$reset_color%}"
-GIT_PROMPT_DIRTY="%{$fg[red]%}*%{$reset_colors%}"
+GIT_PROMPT_PREFIX=" %F{blue}(%F{cyan}"
+GIT_PROMPT_SUFFIX="%F{blue})%f"
+GIT_PROMPT_DIRTY="%F{red}*%f"
 
 function git_dirty {
   test -z "$(command git status --porcelain -unormal 2> /dev/null)"
@@ -14,5 +14,5 @@ function git_branch {
 }
 
 precmd() {
-  PS1="%{$fg[blue]%}%~$(git_branch) %{$fg[yellow]%}%#%{%{$reset_color%}%} "
+  PS1="%F{blue}%~$(git_branch) %F{yellow}%# %f"
 }
