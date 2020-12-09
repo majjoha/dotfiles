@@ -4,6 +4,7 @@
 .config/nvim/.netrwhist
 .config/nvim/undo
 .config/tmuxinator
+.config/zsh/.zcompdump
 .gnupg
 !.gnupg/gpg-agent.conf
 .hammerspoon/Spoons
