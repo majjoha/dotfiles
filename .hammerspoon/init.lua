@@ -19,7 +19,11 @@ for plugin, configuration in pairs({
       z = "Zoom.us",
     }
   },
-  Caffeine = { start = true },
+  Caffeine = {
+    fn = function(caffeine)
+      caffeine:start():setState(true)
+    end
+  },
   FnMate = {},
   ReloadConfiguration = { start = true },
   WindowHalfsAndThirds = {
@@ -38,8 +42,5 @@ for plugin, configuration in pairs({
 }) do
   spoon.SpoonInstall:andUse(plugin, configuration)
 end
-
--- Start Caffeine on load
-spoon.Caffeine:setState(true)
 
 hs.alert.show("Config loaded")
