@@ -36,7 +36,10 @@ for plugin, configuration in pairs({
       bottom_right = {hyper, "'"},
       top_left     = {hyper, "["},
       bottom_left  = {hyper, ";"},
-      max          = {hyper, "M"},
+      max_toggle   = {hyper, "M"},
+      smaller      = {hyper, ","},
+      larger       = {hyper, "."},
+      center       = {hyper, "/"},
     }
   }
 }) do
