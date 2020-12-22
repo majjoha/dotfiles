@@ -1,0 +1,32 @@
+#!/bin/sh
+
+set -e
+
+readonly BATTERY_THRESHOLD=10
+readonly BLINK="#[blink]"
+readonly NO_BLINK="#[noblink]"
+readonly RESET="#[fg=colour12]"
+readonly GREEN="#[fg=green]"
+readonly RED="#[fg=red]"
+
+if ! command -v pmset > /dev/null || ! command -v ioreg > /dev/null; then
+  echo "\`pmset\` or \`ioreg\` not found"
+  exit
+fi
+
+battery="$(pmset -g 'batt' | tr '\n' ';' | awk '{print $8}' | tr -d '%;')"
+charging="$(ioreg -l -w0 | grep 'ExternalConnected' | sed 's:.*= ::')"
+
+if [ "${charging}" = "Yes" ]; then
+  charging_status="${GREEN}↑${RESET}"
+else
+  charging_status="${RED}↓${RESET}"
+fi
+
+if [ "${battery}" -le "${BATTERY_THRESHOLD}" ]; then
+  battery_status="${RED}${BLINK}♥${NO_BLINK}${RESET} ${battery}%"
+else
+  battery_status="${battery}%"
+fi
+
+printf "%s %s%" "$charging_status" "$battery_status"
