@@ -13,9 +13,7 @@ let g:fzf_layout = { 'down': '40%' }
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 
 " Display number of results inline
-if has('nvim')
-  let $FZF_DEFAULT_OPTS .= ' --inline-info'
-endif
+let $FZF_DEFAULT_OPTS .= ' --inline-info'
 
 " Hide status line of terminal buffer
 autocmd! FileType fzf
