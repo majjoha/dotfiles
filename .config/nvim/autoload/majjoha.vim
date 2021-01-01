@@ -29,9 +29,9 @@ endfunction
 " See https://github.com/junegunn/fzf/issues/453#issuecomment-354634207
 function! majjoha#FZFOpen(command_str) abort
   if (expand('%') =~# 'NERD_tree' && winnr('$') > 1)
-    exe "normal! \<c-w>\<c-w>"
+    silent exe "normal! \<c-w>\<c-w>"
   endif
-  exe 'normal! ' . a:command_str . "\<cr>"
+  silent exe 'normal! ' . a:command_str . "\<cr>"
 endfunction
 
 " Lazy load package and call command
