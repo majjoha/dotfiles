@@ -169,6 +169,14 @@ defaults write com.apple.SafariTechnologyPreview ShowStatusBar -bool true
 # Suppress search suggestions
 defaults write com.apple.SafariTechnologyPreview SuppressSearchSuggestions -bool true
 
+# Set DuckDuckGo as preferred search engine
+defaults write -g NSPreferredWebServices '{
+  NSWebServicesProviderWebSearch = {
+    NSDefaultDisplayName = DuckDuckGo;
+    NSProviderIdentifier = "com.duckduckgo";
+  };
+}'
+
 ### Transmission
 
 # Enable IP block list, set blocklist, and auto update it
