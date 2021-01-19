@@ -11,7 +11,7 @@ for plugin, configuration in pairs({
     hotkeys = {
       c = "Calendar",
       d = "Discord",
-      f = "Firefox Developer Edition",
+      f = "Finder",
       n = "Notes",
       p = "1Password 7",
       r = "Reeder",
