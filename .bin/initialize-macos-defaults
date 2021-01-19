@@ -27,7 +27,10 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # Enable tap to click for this user and for the login screen
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+
+# Enable three finger taps
+defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadThreeFingerTapGesture -bool true
 
 ### Dock
 
