@@ -130,6 +130,9 @@ defaults write /Library/Preferences/SystemConfiguration/com.apple.captive.contro
 # Disable gatekeeper
 sudo spctl --master-disable
 
+# Disable the "Are you sure you want to open this application?" dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
 ### Safari Technology Preview
 
 # Prevent Safari from opening "safe" files automatically after downloading
