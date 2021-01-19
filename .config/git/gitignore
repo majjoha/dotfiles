@@ -5,9 +5,11 @@
 .config/nvim/undo
 .config/tmuxinator
 .config/zsh/.zcompdump
+.hammerspoon/Spoons
 .gnupg
 !.gnupg/gpg-agent.conf
-.hammerspoon/Spoons
+.ssh
+!.ssh/config
 
 # Folder view configuration files
 .DS_Store
