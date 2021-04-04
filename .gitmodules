@@ -34,9 +34,6 @@
 [submodule ".vim/pack/packages/start/splitjoin.vim"]
 	path = .config/nvim/pack/packages/start/splitjoin.vim
 	url = https://github.com/AndrewRadev/splitjoin.vim.git
-[submodule ".vim/pack/packages/start/vim-flow"]
-	path = .config/nvim/pack/packages/start/vim-flow
-	url = https://github.com/flowtype/vim-flow.git
 [submodule ".vim/pack/packages/start/vim-dispatch"]
 	path = .config/nvim/pack/packages/start/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch.git
