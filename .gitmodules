@@ -40,9 +40,6 @@
 [submodule ".vim/pack/packages/start/vim-dispatch"]
 	path = .config/nvim/pack/packages/start/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch.git
-[submodule ".vim/pack/packages/start/vim-rails"]
-	path = .config/nvim/pack/packages/start/vim-rails
-	url = https://github.com/tpope/vim-rails.git
 [submodule ".vim/pack/packages/start/vim-test"]
 	path = .config/nvim/pack/packages/start/vim-test
 	url = https://github.com/vim-test/vim-test.git
