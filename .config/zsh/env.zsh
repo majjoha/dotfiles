@@ -22,7 +22,6 @@ export MANWIDTH=80
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-export LC_CTYPE="utf-8"
 
 # Install Homebrew Cask applications in /Applications folder and abort
 # installation if no checksum is defined
