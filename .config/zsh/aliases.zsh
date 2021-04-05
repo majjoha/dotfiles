@@ -98,6 +98,7 @@ alias gi="git init"
 alias gl="git log"
 alias glw="git last-week"
 alias gp="git pull"
+alias groot='cd $(git rev-parse --show-toplevel 2> /dev/null || echo -n ".")'
 alias gs="git status"
 alias gsa="git submodule add"
 alias gsrm="git rm"
