@@ -1,3 +1,11 @@
+typeset -U path
+
+path=(
+  $HOME/.local/bin
+  $HOME/.bin
+  $path
+)
+
 # Use vim as default editor
 export EDITOR="nvim"
 export VISUAL="nvim"
@@ -28,18 +36,6 @@ export HOMEBREW_NO_ANALYTICS=1
 
 # Brew coffee instead of beer
 export HOMEBREW_INSTALL_BADGE="☕️"
-
-export MYSQL=/usr/local/mysql/bin
-export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-export PATH=/usr/local/bin:~/.bin:/usr/local/share/npm/bin:$PATH
-export PATH="/usr/local/heroku/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$HOME/.npm:$PATH"
-export PATH="$HOME/.nvm/bin:$PATH"
-export PATH="./node_modules/.bin:$PATH"
-export PATH=$PATH:$MYSQL
 
 # Set the TTY for GPG
 export GPG_TTY=$(tty)
