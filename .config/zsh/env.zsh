@@ -23,10 +23,6 @@ export MANWIDTH=80
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# Install Homebrew Cask applications in /Applications folder and abort
-# installation if no checksum is defined
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
 # Disallow tracking in Homebrew
 export HOMEBREW_NO_ANALYTICS=1
 
