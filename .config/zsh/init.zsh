@@ -1,6 +1,9 @@
 # Enable compdef
 autoload -Uz compinit && compinit
 
+# Add support for Bash completion definitions
+autoload -U +X bashcompinit && bashcompinit
+
 # Enable colors
 autoload -U colors && colors
 
