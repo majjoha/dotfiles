@@ -93,7 +93,6 @@ xnoremap / <ESC>/\%V
 
 " Alternate via vim-projectionist
 nnoremap <silent><Tab> :A<CR>
-nnoremap <silent><Leader>a :A<CR>
 
 " Move up and down in completion menus using j and k
 inoremap <expr> j pumvisible() ? '<C-n>' : 'j'
