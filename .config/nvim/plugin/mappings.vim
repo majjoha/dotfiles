@@ -67,7 +67,7 @@ nnoremap <silent><Leader>gco :call fzf#run({
 \  'options': '+m --prompt="Branch> "',
 \  'down': '~40%'
 \})<CR>
-nnoremap <Leader>gd :Gvdiffsplit<CR>
+nnoremap <Leader>gd :Gdiffsplit!<CR>
 nnoremap <Leader>gr :Git rebase -i origin/main<CR>
 nnoremap <Leader>gs :Git<CR>
 nnoremap <Leader>gg :Git<Space>
