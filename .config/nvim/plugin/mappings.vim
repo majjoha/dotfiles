@@ -61,12 +61,13 @@ nnoremap <silent><Leader>bc :call majjoha#FZFOpen(":Commits")<CR>
 nnoremap <silent><Leader>gb :Git blame<CR>
 nnoremap <Leader>gc :tab Git commit -v<CR>
 nnoremap <Leader>gcb :Git checkout -b<Space>
-nnoremap <silent><Leader>gco :call fzf#run({
-\  'source': 'git branch \| sed "s/.* //"',
-\  'sink': ':!git checkout ',
+nnoremap <silent><Leader>gco :call fzf#run(
+\ fzf#wrap({
+\   'source': 'git branch --sort=-committerdate \| sed "s/.* //"',
+\   'sink': '!git checkout ',
 \  'options': '+m --prompt="Branch> "',
-\  'down': '~40%'
-\})<CR>
+\ })
+\ )<CR>
 nnoremap <Leader>gd :Gdiffsplit!<CR>
 nnoremap <Leader>gr :Git rebase -i origin/main<CR>
 nnoremap <Leader>gs :Git<CR>
