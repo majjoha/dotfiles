@@ -19,6 +19,9 @@ let g:ale_virtualtext_prefix = "▍"
 let g:ale_lint_on_insert_leave = 0
 let g:ale_set_balloons = 1
 let g:ale_fix_on_save = 1
+let g:ale_floating_preview = 1
+let g:ale_floating_window_border =  [' ', ' ', ' ', ' ', ' ', ' ']
+let g:ale_hover_to_floating_preview = 1
 
 " Use ALE for completion
 let g:ale_completion_enabled = 1
