@@ -59,7 +59,7 @@ nnoremap <Leader>x :sp<CR>
 " Git-related mappings
 nnoremap <silent><Leader>bc :call majjoha#FZFOpen(":Commits")<CR>
 nnoremap <silent><Leader>gb :Git blame<CR>
-nnoremap <Leader>gc :Git commit -v<CR>
+nnoremap <Leader>gc :tab Git commit -v<CR>
 nnoremap <Leader>gcb :Git checkout -b<Space>
 nnoremap <silent><Leader>gco :call fzf#run({
 \  'source': 'git branch \| sed "s/.* //"',
