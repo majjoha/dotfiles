@@ -74,7 +74,7 @@ nnoremap <Leader>gg :Git<Space>
 nnoremap <Leader>gpr :!git pr<CR>
 nnoremap <Leader>gpp :Git pull<CR>
 nnoremap <Leader>ga :Gwrite<CR>
-nnoremap <Leader>gl :vs \| terminal tig<CR>
+nnoremap <Leader>gl :tabe \| terminal tig<CR>
 
 " Toggle comments
 xmap <Leader>/ <Plug>Commentary
