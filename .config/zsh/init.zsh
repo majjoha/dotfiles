@@ -42,3 +42,17 @@ zstyle ':completion:*' special-dirs true
 
 # Use Emacs-style key bindings for zsh
 bindkey -e
+
+# Click ^Z to bring a background job to the foreground if any is running
+ctrl-z() {
+  if [[ $#BUFFER -eq 0 ]]; then
+    BUFFER="fg"
+    zle accept-line
+  else
+    zle push-input
+    zle clear-screen
+  fi
+}
+
+zle -N ctrl-z
+bindkey '^Z' ctrl-z
