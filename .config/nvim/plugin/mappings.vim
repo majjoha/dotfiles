@@ -156,3 +156,11 @@ nnoremap <silent><Leader>mln :MarginaliaList<CR>
 nnoremap <silent><Leader>mfb :MarginaliaFindBacklinks<CR>
 nnoremap <Leader>mft :MarginaliaFindTagReferences<Space>
 nnoremap <silent><Leader>mcw :MarginaliaConvertWordToTag<CR>
+
+" ALE-related mappings
+nnoremap <silent><Leader>ad :ALEDetail<CR>
+nnoremap <silent><Leader>af :ALEFindReferences -relative<CR>
+nnoremap <silent><Leader>ag :ALEGoToDefinition<CR>
+nnoremap <silent><Leader>ah :ALEHover<CR>
+nnoremap <silent><Leader>ar :ALERename<CR>
+inoremap <silent><C-Space> <C-\><C-O>:ALEComplete<CR>
