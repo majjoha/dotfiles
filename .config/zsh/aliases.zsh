@@ -6,80 +6,42 @@ alias ls="ls -LGaF"
 # renamed file
 alias mv="mv -iv"
 
-# ...
+# Automatically create nested directories and run in verbose mode
 alias mkdir="mkdir -vp"
-
-alias be="bundle exec"
-alias bi="brew install"
-alias bci="brew cask install"
-alias bs="brew search"
-alias dotf="tmx dotfiles"
-alias n="node"
-alias p="pry"
-alias uph="sudo update-hosts"
-alias ups="update-software"
-alias upsn="update-software --native-apps"
-alias rm="trash"
-alias alac="alac-conversion . && rm *.flac"
-alias es="v ~/Library/Preferences/espanso/default.yml -c ':$' && espanso restart"
-alias wk="tmx notes"
-alias hs="stack ghci"
-alias mdless="glow -w 80 -p -s light"
 
 # Create a directory and enter it
 function mkcd () {
   mkdir $1 && cd $1
 }
 
-# Use Neovim for now
-alias vim="nvim"
-alias v="nvim"
+function upload-file () {
+  curl -F "file=@$1" https://0x0.st
+}
 
-# Go up two directories
-alias ...='cd ../..'
+function shorten-url () {
+  curl -F "shorten=$1" https://0x0.st
+}
 
-# Go up three directories
 alias ....='cd ../../..'
-
-# Tab completion for tmux sessions
-function tm() {
-  [[ -z "$1" ]] && { echo "usage: tm <session>" >&2; return 1; }
-  tmux has -t $1 && tmux attach -t $1 || tmux new -s $1
-}
-
-function __tmux-sessions() {
-  local expl
-  local -a sessions
-  sessions=( ${${(f)"$(command tmux list-sessions)"}/:[ $'\t']##/:} )
-  _describe -t sessions 'sessions' sessions "$@"
-}
-compdef __tmux-sessions tm
-
-# Tab completion for chruby
-_chruby() { compadd $(chruby | tr -d '* ') }
-compdef _chruby chruby
-
-# Tab completion for opening tmuxinator projects
-_tmuxinator() {
-  local commands projects
-  commands=(${(f)"$(tmuxinator commands zsh)"})
-  projects=(${(f)"$(tmuxinator completions start)"})
-
-  if (( CURRENT == 2 )); then
-    _describe -t commands "tmuxinator subcommands" commands
-    _describe -t projects "tmuxinator projects" projects
-  elif (( CURRENT == 3)); then
-    case $words[2] in
-      copy|debug|delete|open|start)
-        _arguments '*:projects:($projects)'
-      ;;
-    esac
-  fi
-
-  return
-}
-compdef _tmuxinator tmuxinator mux
+alias ...='cd ../..'
+alias alac="alac-conversion . && rm *.flac"
+alias bci="brew cask install"
+alias be="bundle exec"
+alias bi="brew install"
+alias bs="brew search"
+alias dotf="tmx dotfiles"
+alias es="v ~/Library/Preferences/espanso/default.yml -c ':$' && espanso restart"
+alias hs="stack ghci"
+alias n="node"
+alias p="pry"
+alias rm="trash"
 alias tmx="tmuxinator start"
+alias uph="sudo update-hosts"
+alias ups="update-software"
+alias upsn="update-software --native-apps"
+alias v="nvim"
+alias vim="nvim"
+alias wk="tmx notes"
 
 # Git-related aliases
 alias ga="git add"
