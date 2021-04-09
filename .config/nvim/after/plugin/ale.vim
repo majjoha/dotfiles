@@ -15,7 +15,7 @@ highlight link ALEVirtualWarning DiffDelete
 
 let g:ale_lint_on_text_changed = 'normal' 
 let g:ale_virtualtext_cursor = 1
-let g:ale_virtualtext_prefix = "▍"
+let g:ale_virtualtext_prefix = "▎"
 let g:ale_lint_on_insert_leave = 0
 let g:ale_set_balloons = 1
 let g:ale_fix_on_save = 1
