@@ -39,3 +39,6 @@ export HOMEBREW_INSTALL_BADGE="☕️"
 
 # Set the TTY for GPG
 export GPG_TTY=$(tty)
+
+# Show hidden files when searching
+export FZF_DEFAULT_COMMAND="rg --hidden"
