@@ -65,7 +65,7 @@ nnoremap <silent><Leader>gco :call fzf#run(
 \ fzf#wrap({
 \   'source': 'git branch --sort=-committerdate \| sed "s/.* //"',
 \   'sink': '!git checkout ',
-\  'options': '+m --prompt="Branch> "',
+\   'options': '+m --prompt="Branch >" --preview="git show --color=always {}"'
 \ })
 \ )<CR>
 nnoremap <Leader>gd :Gdiffsplit!<CR>
