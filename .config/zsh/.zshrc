@@ -6,3 +6,4 @@ source $ZDOTDIR/prompt.zsh
 source $ZDOTDIR/env.zsh
 source $ZDOTDIR/externals.zsh
 source $ZDOTDIR/aliases.zsh
+source $ZDOTDIR/completions.zsh
