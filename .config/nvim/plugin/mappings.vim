@@ -115,15 +115,6 @@ nnoremap <Leader>ee :e<Space>
 " Sort visual selection
 xnoremap <silent><Leader>ss :!sort<CR>
 
-" Rails-related mappings
-nnoremap <Leader>rgc :Rails g controller<Space>
-nnoremap <Leader>rgm :Rails g model<Space>
-nnoremap <silent><Leader>rec :Econtroller<CR>
-nnoremap <silent><Leader>rem :Emodel<CR>
-nnoremap <silent><Leader>res :Espec<CR>
-nnoremap <Leader>rr :Rails<Space>
-nnoremap <silent><Leader>rdm :Rails db:migrate<CR>
-
 " Go to the beginning and end of the line in command mode
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
