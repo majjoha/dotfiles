@@ -43,12 +43,12 @@
 [submodule ".vim/pack/packages/start/vim-polyglot"]
 	path = .config/nvim/pack/packages/start/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
-[submodule ".config/nvim/pack/packages/opt/nerdtree"]
-	path = .config/nvim/pack/packages/opt/nerdtree
-	url = https://github.com/preservim/nerdtree.git
 [submodule ".config/kitty/base16-kitty"]
 	path = .config/kitty/base16-kitty
 	url = https://github.com/kdrag0n/base16-kitty.git
 [submodule ".config/nvim/pack/packages/start/vim-marginalia"]
 	path = .config/nvim/pack/packages/start/vim-marginalia
 	url = git@github.com:majjoha/vim-marginalia.git
+[submodule ".config/nvim/pack/packages/start/nvim-tree.lua"]
+	path = .config/nvim/pack/packages/start/nvim-tree.lua
+	url = https://github.com/kyazdani42/nvim-tree.lua.git
