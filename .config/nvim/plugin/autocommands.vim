@@ -27,3 +27,11 @@ augroup customize_colors
   autocmd!
   autocmd ColorScheme * call majjoha#CustomizeColors()
 augroup END
+
+" Highlight current file in NvimTree, and set status line to NvimTree
+" See https://github.com/kyazdani42/nvim-tree.lua/issues/322
+augroup nvimtree
+  autocmd!
+  autocmd BufEnter NvimTree setlocal cursorline
+  autocmd BufEnter NvimTree setlocal statusline=\ \ %{expand('%:p:h:t')}
+augroup END
