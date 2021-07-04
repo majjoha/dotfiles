@@ -23,11 +23,9 @@ xnoremap < <gv
 noremap k gk
 noremap j gj
 
-" Toggle NERDTree
-nnoremap <silent><Leader>d :call
-  \ majjoha#LazyLoadPackageWithCommand("nerdtree", "NERDTreeToggle")<CR>
-nnoremap <silent><Leader>D :call
-  \ majjoha#LazyLoadPackageWithCommand("nerdtree", "NERDTreeFind")<CR>
+" Toggle NvimTree
+nnoremap <silent><Leader>d :NvimTreeToggle<CR>
+nnoremap <silent><Leader>D :NvimTreeFindFile<CR>
 
 " Search the contents of the files in the current directory
 nnoremap <silent><Leader>f :call majjoha#FZFOpen(":Rg")<CR>
