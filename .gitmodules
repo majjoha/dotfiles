@@ -4,9 +4,6 @@
 [submodule ".vim/pack/packages/start/ale"]
 	path = .config/nvim/pack/packages/start/ale
 	url = https://github.com/w0rp/ale.git
-[submodule ".vim/pack/packages/start/auto-pairs"]
-	path = .config/nvim/pack/packages/start/auto-pairs
-	url = https://github.com/jiangmiao/auto-pairs.git
 [submodule ".vim/pack/packages/start/fzf.vim"]
 	path = .config/nvim/pack/packages/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
@@ -52,3 +49,6 @@
 [submodule ".config/nvim/pack/packages/start/nvim-tree.lua"]
 	path = .config/nvim/pack/packages/start/nvim-tree.lua
 	url = https://github.com/kyazdani42/nvim-tree.lua.git
+[submodule ".config/nvim/pack/packages/start/nvim-autopairs"]
+	path = .config/nvim/pack/packages/start/nvim-autopairs
+	url = https://github.com/windwp/nvim-autopairs.git
