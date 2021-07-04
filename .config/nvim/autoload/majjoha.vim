@@ -34,17 +34,6 @@ function! majjoha#FZFOpen(command_str) abort
   silent exe 'normal! ' . a:command_str . "\<cr>"
 endfunction
 
-" Lazy load package and call command
-let g:lazy_loaded_packages = []
-function! majjoha#LazyLoadPackageWithCommand(package, command) abort
-  if (index(g:lazy_loaded_packages, a:package) == -1)
-    let g:lazy_loaded_packages = add(g:lazy_loaded_packages, a:package)
-    execute "packadd " . a:package
-  endif
-
-  execute a:command
-endfunction
-
 function! majjoha#ShowGitBranch() abort
   let l:branchname =
     \ system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
