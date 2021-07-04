@@ -3,7 +3,7 @@ hs.window.animationDuration = 0
 
 hs.loadSpoon("SpoonInstall")
 
-local hyper = {"ctrl", "alt"}
+local hyper = { "ctrl", "alt" }
 
 -- Load all spoons with their respective settings
 for plugin, configuration in pairs({
@@ -18,31 +18,31 @@ for plugin, configuration in pairs({
       s = "Safari Technology Preview",
       t = "Kitty",
       z = "Zoom.us",
-    }
+    },
   },
   Caffeine = {
     fn = function(caffeine)
       caffeine:start():setState(true)
-    end
+    end,
   },
   FnMate = {},
   ReloadConfiguration = { start = true },
   WindowHalfsAndThirds = {
     hotkeys = {
-      left_half    = {hyper, "H"},
-      right_half   = {hyper, "L"},
-      bottom_half  = {hyper, "J"},
-      top_half     = {hyper, "K"},
-      top_right    = {hyper, "]"},
-      bottom_right = {hyper, "'"},
-      top_left     = {hyper, "["},
-      bottom_left  = {hyper, ";"},
-      max_toggle   = {hyper, "M"},
-      smaller      = {hyper, ","},
-      larger       = {hyper, "."},
-      center       = {hyper, "/"},
-    }
-  }
+      left_half = { hyper, "H" },
+      right_half = { hyper, "L" },
+      bottom_half = { hyper, "J" },
+      top_half = { hyper, "K" },
+      top_right = { hyper, "]" },
+      bottom_right = { hyper, "'" },
+      top_left = { hyper, "[" },
+      bottom_left = { hyper, ";" },
+      max_toggle = { hyper, "M" },
+      smaller = { hyper, "," },
+      larger = { hyper, "." },
+      center = { hyper, "/" },
+    },
+  },
 }) do
   spoon.SpoonInstall:andUse(plugin, configuration)
 end
