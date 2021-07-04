@@ -28,22 +28,22 @@ nnoremap <silent><Leader>d :NvimTreeToggle<CR>
 nnoremap <silent><Leader>D :NvimTreeFindFile<CR>
 
 " Search the contents of the files in the current directory
-nnoremap <silent><Leader>f :call majjoha#FZFOpen(":Rg")<CR>
+nnoremap <silent><Leader>f :Rg<CR>
 
 " Search buffers
-nnoremap <silent><Leader>bb :call majjoha#FZFOpen(":Buffers")<CR>
+nnoremap <silent><Leader>bb :Buffers<CR>
 
 " Show files
-nnoremap <silent><Leader>p :call majjoha#FZFOpen(":Files")<CR>
+nnoremap <silent><Leader>p :Files<CR>
 
 " Search commands
-nnoremap <silent><Leader>cc :call majjoha#FZFOpen(":Commands")<CR>
+nnoremap <silent><Leader>cc :Commands<CR>
 
 " Search file types
-nnoremap <silent><Leader>sf :call majjoha#FZFOpen(":Filetypes")<CR>
+nnoremap <silent><Leader>sf :Filetypes<CR>
 
 " Search help files
-nnoremap <silent><Leader>h :call majjoha#FZFOpen(":Help")<CR>
+nnoremap <silent><Leader>h :Help<CR>
 
 " Remove search highlighting
 nnoremap <silent><Leader><Leader> :let @/ = ""<CR>
@@ -55,7 +55,7 @@ nnoremap <Leader>v :vsp<CR>
 nnoremap <Leader>x :sp<CR>
 
 " Git-related mappings
-nnoremap <silent><Leader>bc :call majjoha#FZFOpen(":Commits")<CR>
+nnoremap <silent><Leader>bc :Commits<CR>
 nnoremap <silent><Leader>gb :Git blame<CR>
 nnoremap <Leader>gc :tab Git commit -v<CR>
 nnoremap <Leader>gcb :Git checkout -b<Space>

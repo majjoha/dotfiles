@@ -25,15 +25,6 @@ function! majjoha#CustomizeColors() abort
   hi! StatusLineNC ctermbg=00
 endfunction
 
-" Avoid opening FZF command in NERDTree
-" See https://github.com/junegunn/fzf/issues/453#issuecomment-354634207
-function! majjoha#FZFOpen(command_str) abort
-  if (expand('%') =~# 'NERD_tree' && winnr('$') > 1)
-    silent exe "normal! \<c-w>\<c-w>"
-  endif
-  silent exe 'normal! ' . a:command_str . "\<cr>"
-endfunction
-
 function! majjoha#ShowGitBranch() abort
   let l:branchname =
     \ system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
