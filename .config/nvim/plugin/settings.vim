@@ -4,9 +4,6 @@ set inccommand=nosplit
 " Set the Terminal title
 set title
 
-" Disable sound on errors
-set noerrorbells visualbell t_vb=
-
 " Use spaces instead of tabs
 set expandtab
 set smarttab
