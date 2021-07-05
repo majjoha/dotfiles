@@ -3,6 +3,14 @@ if !exists("g:loaded_tree")
   finish
 endif
 
+" NvimTree does not respect the options `g:nvim_tree_hijack_netrw` and 
+" `g:nvim_tree_disable_netrw` when they are set in the `after` directory.
+" Netrw is needed for `gx`, however, so reload it here.
+" See https://github.com/kyazdani42/nvim-tree.lua/issues/47#issuecomment-658266288
+unlet! g:loaded_netrw
+unlet! g:loaded_netrwPlugin
+runtime! plugin/netrwPlugin.vim
+
 " Append trailing slash to folder names
 let g:nvim_tree_add_trailing = 1
 
