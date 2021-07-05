@@ -21,7 +21,7 @@ let g:nvim_tree_disable_window_picker = 1
 let g:nvim_tree_ignore = [
 \ '.class$',
 \ '.o$',
-\ '\.git$',
+\ '.git',
 \ '.DS_Store',
 \ '.aux',
 \ '.idr\~',
