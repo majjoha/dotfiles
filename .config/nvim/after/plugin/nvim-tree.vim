@@ -1,3 +1,8 @@
+" Skip if NvimTree is not loaded
+if !exists("g:loaded_tree")
+  finish
+endif
+
 " Append trailing slash to folder names
 let g:nvim_tree_add_trailing = 1
 
