@@ -14,6 +14,9 @@ runtime! plugin/netrwPlugin.vim
 " Append trailing slash to folder names
 let g:nvim_tree_add_trailing = 1
 
+" Disable the window picker to allow more than two splits
+let g:nvim_tree_disable_window_picker = 1
+
 " Don't display these kind of files
 let g:nvim_tree_ignore = [
 \ '.class$',
