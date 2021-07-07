@@ -10,9 +10,6 @@
 [submodule ".vim/pack/packages/start/neosnippet.vim"]
 	path = .config/nvim/pack/packages/start/neosnippet.vim
 	url = https://github.com/Shougo/neosnippet.vim.git
-[submodule ".vim/pack/packages/start/vim-commentary"]
-	path = .config/nvim/pack/packages/start/vim-commentary
-	url = https://github.com/tpope/vim-commentary.git
 [submodule ".vim/pack/packages/start/vim-endwise"]
 	path = .config/nvim/pack/packages/start/vim-endwise
 	url = https://github.com/tpope/vim-endwise.git
@@ -52,3 +49,6 @@
 [submodule ".config/nvim/pack/packages/start/nvim-autopairs"]
 	path = .config/nvim/pack/packages/start/nvim-autopairs
 	url = https://github.com/windwp/nvim-autopairs.git
+[submodule ".config/nvim/pack/packages/start/commented.nvim"]
+	path = .config/nvim/pack/packages/start/commented.nvim
+	url = https://github.com/winston0410/commented.nvim.git

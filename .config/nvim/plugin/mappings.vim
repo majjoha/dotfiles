@@ -76,8 +76,8 @@ nnoremap <Leader>ga :Gwrite<CR>
 nnoremap <Leader>gl :tabe \| terminal tig<CR>
 
 " Toggle comments
-xmap <Leader>/ <Plug>Commentary
-nmap <Leader>/ <Plug>CommentaryLine
+xmap <silent><Leader>/ :Comment<CR>
+nmap <silent><Leader>/ :Comment<CR>
 
 " Edit snippets for the current file type
 noremap <silent><Leader>es :NeoSnippetEdit -split -vertical<CR>
