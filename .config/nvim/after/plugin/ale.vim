@@ -33,6 +33,7 @@ let g:ale_fixers = {
 \ 'haskell': ['stylish-haskell'],
 \ 'javascript': ['eslint', 'prettier'],
 \ 'json': ['jq'],
+\ 'lua': ['lua-format'],
 \ 'ruby': ['rubocop'],
 \ 'sh': ['shfmt'],
 \ 'typescript': ['eslint', 'prettier'],
