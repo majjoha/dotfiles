@@ -153,3 +153,9 @@ nnoremap <silent><Leader>ag :ALEGoToDefinition<CR>
 nnoremap <silent><Leader>ah :ALEHover<CR>
 nnoremap <silent><Leader>ar :ALERename<CR>
 inoremap <silent><C-Space> <C-\><C-O>:ALEComplete<CR>
+
+" Mimic SuperTab snippets behavior
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
