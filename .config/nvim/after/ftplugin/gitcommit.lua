@@ -1,4 +1,5 @@
 -- Use spell checker
+vim.opt_local.spell = true
 vim.opt_local.spelllang = "en_us"
 
 -- Set text width to 72
