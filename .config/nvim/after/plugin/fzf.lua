@@ -34,12 +34,6 @@ vim.g.fzf_colors = {
 -- Allow `ripgrep` to search hidden files and show a preview window
 vim.api.nvim_command([[
   command! -bang -nargs=* Rg
-    call fzf#vim#grep(
-      "rg
-        --column
-        --line-number
-        --no-heading
-        --color=always
-        --smart-case
-        --hidden ".shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)
+    call fzf#vim#grep("
+      rg --column --line-number --no-heading --color=always --smart-case --hidden " . shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)
 ]])
