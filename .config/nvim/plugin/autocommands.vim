@@ -25,7 +25,7 @@ augroup END
 " See https://gist.github.com/romainl/379904f91fa40533175dfaec4c833f2f
 augroup customize_colors
   autocmd!
-  autocmd ColorScheme * call majjoha#CustomizeColors()
+  autocmd ColorScheme * lua require("majjoha").customize_colors()
 augroup END
 
 " Highlight current file in NvimTree, and set status line to NvimTree

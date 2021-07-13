@@ -1,8 +1,10 @@
+local majjoha = require("majjoha")
+
 -- Flush status line
 vim.opt.statusline = ""
 
 -- Show the current Git branch
-vim.opt.statusline = vim.o.statusline .. "%{majjoha#ShowGitBranch()} "
+vim.opt.statusline = vim.o.statusline .. majjoha.show_git_branch() .. " "
 
 -- Show the name of the current file
 vim.opt.statusline = vim.o.statusline .. "%<%f "

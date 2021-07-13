@@ -12,7 +12,7 @@ nnoremap <silent><C-q> :q<CR>
 tnoremap <silent><C-q> <C-\><C-n>:q<CR>
 
 " Open the current buffer in a new tab
-nnoremap <silent><Leader>mw :call majjoha#OpenCurrentAsNewTab()<CR>
+nnoremap <silent><Leader>mw :lua require("majjoha").open_current_as_new_tab()<CR>
 nnoremap <silent><Leader>cw :tabc<CR>
 
 " Keep the visual selection when indenting/outdenting
