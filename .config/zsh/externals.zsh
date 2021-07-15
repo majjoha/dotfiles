@@ -1,5 +1,5 @@
-# Use z
-source ~/.bin/z/z.sh
+# Use z.lua
+eval "$(lua ~/.bin/z.lua/z.lua --init zsh)"
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
