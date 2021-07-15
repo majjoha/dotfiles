@@ -4,13 +4,15 @@ GIT_PROMPT_DIRTY="%F{red}*%f"
 
 function git_dirty {
   test -z "$(command git status --porcelain -unormal 2> /dev/null)"
-  (($?)) && echo $GIT_PROMPT_DIRTY
+  (($?)) && printf "%s" "$GIT_PROMPT_DIRTY"
 }
 
 function git_branch {
-  git branch --no-color 2> /dev/null |\
-    sed -e '/^[^*]/d' \
-      -e "s/* \(.*\)/$GIT_PROMPT_PREFIX\1$(git_dirty)$GIT_PROMPT_SUFFIX/"
+  if command git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+    local branchname="$(command git branch --show-current)"
+    printf "%s%s%s%s" \
+      "$GIT_PROMPT_PREFIX" "$branchname" "$(git_dirty)" "$GIT_PROMPT_SUFFIX"
+  fi
 }
 
 precmd() {
