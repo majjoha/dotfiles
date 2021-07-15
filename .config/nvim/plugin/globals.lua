@@ -4,10 +4,17 @@ function _G.t(str)
   return vim.api.nvim_replace_termcodes(str, true, true, true)
 end
 
--- Expand snippet if a snippet exists, otherwise trigger a `<Tab>`
-function _G.supertab()
-  return vim.fn.call("neosnippet#expandable_or_jumpable", {}) == 1 and
-           t("<Plug>(neosnippet_expand_or_jump)") or t("<Tab>")
+-- If a snippet exists for the current text, expand it with `<Tab>`
+-- If a completion menu is visible, select it with `<Tab>`
+-- Otherwise just trigger a `<Tab>`
+function _G.smart_tab()
+  if vim.fn.call("neosnippet#expandable_or_jumpable", {}) == 1 then
+    return t("<Plug>(neosnippet_expand_or_jump)")
+  elseif vim.fn.pumvisible() == 1 then
+    return t("<C-y>")
+  else
+    return t("<Tab>")
+  end
 end
 
 -- In completion menus, use `j` to select the next item, and in all other cases
@@ -20,12 +27,6 @@ end
 -- cases to move up a line
 function _G.smart_k()
   return vim.fn.pumvisible() == 1 and t("<C-p>") or "k"
-end
-
--- In completion menus, use `<Tab>` to select an item, and in all other cases to
--- trigger a `<Tab>`
-function _G.smart_tab()
-  return vim.fn.pumvisible() == 1 and t("<C-y><Tab>") or t("<Tab>")
 end
 
 -- Use `<Esc>` to return to normal mode in terminals unless the terminal is
