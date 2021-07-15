@@ -15,20 +15,20 @@ vim.env.FZF_DEFAULT_OPTS = "--inline-info --reverse"
 
 -- Redefine color scheme for FZF
 vim.g.fzf_colors = {
-  fg = { "fg", "Normal" },
   bg = { "bg", "Normal" },
+  fg = { "fg", "Normal" },
   hl = { "fg", "StatusLineNC" },
-  ["fg+"] = { "fg", "Normal" },
   ["bg+"] = { "bg", "StatusLine" },
+  ["fg+"] = { "fg", "Normal" },
   ["hl+"] = { "fg", "StatusLine" },
-  gutter = { "bg", "Normal" },
-  info = { "fg", "StatusLine" },
   border = { "fg", "LineNr" },
-  prompt = { "fg", "LineNr" },
-  pointer = { "fg", "Normal" },
-  marker = { "fg", "Normal" },
-  spinner = { "fg", "Normal" },
+  gutter = { "bg", "Normal" },
   header = { "fg", "Comment" },
+  info = { "fg", "StatusLine" },
+  marker = { "fg", "Normal" },
+  pointer = { "fg", "Normal" },
+  prompt = { "fg", "LineNr" },
+  spinner = { "fg", "Normal" },
 }
 
 -- Allow `ripgrep` to search hidden files and show a preview window
