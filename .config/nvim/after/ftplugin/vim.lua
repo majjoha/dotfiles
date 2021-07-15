@@ -1,4 +1,4 @@
--- Set `:help` as keywordprg instead of man
+-- Set `:help` as `keywordprg` instead of `man`
 vim.opt_local.keywordprg = ":help"
 
 -- Do not add `"` on a new line when hitting `o` on a commented line

@@ -5,7 +5,7 @@ function _G.t(str)
 end
 
 -- If a snippet exists for the current text, expand it with `<Tab>`
--- If a completion menu is visible, select it with `<Tab>`
+-- If a completion menu is visible, select the current item with `<Tab>`
 -- Otherwise just trigger a `<Tab>`
 function _G.smart_tab()
   if vim.fn.call("neosnippet#expandable_or_jumpable", {}) == 1 then

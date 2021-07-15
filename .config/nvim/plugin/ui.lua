@@ -2,7 +2,7 @@
 vim.g.colors_name = "base16"
 vim.opt.background = "dark"
 
--- Enable relative line numbering
+-- Enable relative line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
 

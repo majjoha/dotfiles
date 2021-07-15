@@ -36,7 +36,7 @@ vim.cmd([[
   augroup END
 ]])
 
--- Highlight the current file in NvimTree, and set status line to NvimTree
+-- Highlight current file in NvimTree, and set status line to NvimTree
 -- See https://github.com/kyazdani42/nvim-tree.lua/issues/322
 vim.cmd([[
   augroup nvimtree
