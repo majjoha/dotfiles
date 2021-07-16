@@ -7,11 +7,12 @@ majjoha.open_current_as_new_tab = function()
 end
 
 majjoha.show_git_branch = function()
-  local branchname = vim.fn.system(
-                       "git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+  local handle = io.popen("git branch --show-current 2>/dev/null")
+  local branchname = handle:read()
+  handle:close()
 
-  if vim.fn.strlen(branchname) > 0 then
-    return "   " .. branchname .. " |"
+  if branchname and string.len(branchname) > 0 then
+    return "  " .. branchname .. " |"
   else
     return ""
   end
