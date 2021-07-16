@@ -84,3 +84,6 @@ vim.opt.grepformat = "%f:%l:%c:%m"
 
 -- Enable dialog menus for confirmations
 vim.opt.confirm = true
+
+-- Do not jump to the start of the line when navigating files
+vim.opt.startofline = false
