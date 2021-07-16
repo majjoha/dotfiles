@@ -197,6 +197,6 @@ nvim_set_keymap("n", "<Leader>ar", ":ALERename<CR>",
 nvim_set_keymap("i", "<C-Space>", "<C-\\><C-O>:ALEComplete<CR>",
                 { noremap = true, silent = true })
 
--- Mimic smart_tab snippets behavior
+-- Mimic SuperTab snippets behavior
 nvim_set_keymap("i", "<Tab>", "v:lua.smart_tab()", { expr = true })
 nvim_set_keymap("s", "<Tab>", "v:lua.smart_tab()", { expr = true })
