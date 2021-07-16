@@ -28,9 +28,6 @@
 [submodule ".vim/pack/packages/start/vim-test"]
 	path = .config/nvim/pack/packages/start/vim-test
 	url = https://github.com/vim-test/vim-test.git
-[submodule ".vim/pack/packages/start/vim-polyglot"]
-	path = .config/nvim/pack/packages/start/vim-polyglot
-	url = https://github.com/sheerun/vim-polyglot.git
 [submodule ".config/kitty/base16-kitty"]
 	path = .config/kitty/base16-kitty
 	url = https://github.com/kdrag0n/base16-kitty.git
@@ -49,3 +46,6 @@
 [submodule ".bin/z.lua"]
 	path = .bin/z.lua
 	url = https://github.com/skywind3000/z.lua.git
+[submodule ".config/nvim/pack/packages/start/nvim-treesitter"]
+	path = .config/nvim/pack/packages/start/nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter.git
