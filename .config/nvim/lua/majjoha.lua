@@ -19,8 +19,11 @@ end
 
 majjoha.customize_colors = function()
   vim.cmd([[
-    " Highlight current line number
-    hi! CursorLineNr ctermfg=13
+    " Highlight current line number, and set the background color to transparent
+    hi! CursorLineNr ctermfg=13  ctermbg=00
+
+    " Set the background color of the line numbers to transparent
+    hi! LineNr ctermbg=00
 
     " Remove background color for fold column
     hi! link FoldColumn Normal
