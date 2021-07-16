@@ -8,9 +8,9 @@ end
 -- If a completion menu is visible, select the current item with `<Tab>`
 -- Otherwise just trigger a `<Tab>`
 function _G.smart_tab()
-  if vim.fn.call("neosnippet#expandable_or_jumpable", {}) == 1 then
+  if vim.fn.call("neosnippet#expandable_or_jumpable", {}) then
     return t("<Plug>(neosnippet_expand_or_jump)")
-  elseif vim.fn.pumvisible() == 1 then
+  elseif vim.fn.pumvisible() then
     return t("<C-y>")
   else
     return t("<Tab>")
@@ -20,13 +20,13 @@ end
 -- In completion menus, use `j` to select the next item, and in all other cases
 -- to move down a line
 function _G.smart_j()
-  return vim.fn.pumvisible() == 1 and t("<C-n>") or "j"
+  return vim.fn.pumvisible() and t("<C-n>") or "j"
 end
 
 -- In completion menus, use `k` to select the previous item, and in all other
 -- cases to move up a line
 function _G.smart_k()
-  return vim.fn.pumvisible() == 1 and t("<C-p>") or "k"
+  return vim.fn.pumvisible() and t("<C-p>") or "k"
 end
 
 -- Use `<Esc>` to return to normal mode in terminals unless the terminal is
