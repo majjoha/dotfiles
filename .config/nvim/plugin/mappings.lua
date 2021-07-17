@@ -114,14 +114,6 @@ nvim_set_keymap("x", "/", "<ESC>/\\%V", { noremap = true })
 -- Alternate via vim-projectionist
 nvim_set_keymap("n", "<Tab>", ":A<CR>", { noremap = true, silent = true })
 
--- Move up and down in completion menus using j and k
-nvim_set_keymap("i", "j", "v:lua.smart_j()", { noremap = true, expr = true })
-nvim_set_keymap("i", "k", "v:lua.smart_k()", { noremap = true, expr = true })
-
--- Accept the selected match using tab
-nvim_set_keymap("i", "<Tab>", "v:lua.smart_tab()",
-                { noremap = true, expr = true })
-
 -- Test-related mappings
 nvim_set_keymap("n", "<Leader>rt", ":TestFile<CR>",
                 { noremap = true, silent = true })
@@ -156,9 +148,6 @@ nvim_set_keymap("n", "<Leader>ms", ":mksession!<CR>",
                 { noremap = true, silent = true })
 nvim_set_keymap("n", "<Leader>ls", ":source Session.vim<CR>",
                 { noremap = true, silent = true })
-
-nvim_set_keymap("t", "<Esc>", "v:lua.smart_esc()",
-                { noremap = true, expr = true })
 
 -- Emacs-style navigation in insert mode
 nvim_set_keymap("i", "<C-e>", "<C-o>$", {})
