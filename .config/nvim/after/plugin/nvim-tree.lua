@@ -7,11 +7,9 @@ end
 --  `g:nvim_tree_disable_netrw` when they are set in the `after` directory.
 --  Netrw is needed for `gx`, however, so reload it here.
 --  See https://github.com/kyazdani42/nvim-tree.lua/issues/47#issuecomment-658266288
-vim.cmd([[
-  unlet! g:loaded_netrw
-  unlet! g:loaded_netrwPlugin
-  runtime! plugin/netrwPlugin.vim
-]])
+vim.api.nvim_del_var("loaded_netrw")
+vim.api.nvim_del_var("loaded_netrwPlugin")
+vim.opt.runtimepath = vim.o.runtimepath .. ',plugin/netrwPlugin.vim'
 
 -- Append trailing slash to folder names
 vim.g.nvim_tree_add_trailing = 1
