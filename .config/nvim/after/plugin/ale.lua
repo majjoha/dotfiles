@@ -46,6 +46,7 @@ vim.g.ale_linters = {
   c = { "ccls" },
   haskell = { "hls", "hlint", "stack-build" },
   ruby = { "solargraph", "brakeman" },
+  yaml = { "yamllint" },
 }
 
 vim.g.ale_linters_ignore = { javascript = { "tsserver" } }
