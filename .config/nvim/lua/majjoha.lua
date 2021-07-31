@@ -7,7 +7,8 @@ majjoha.open_current_as_new_tab = function()
 end
 
 majjoha.show_git_branch = function()
-  local handle = io.popen("git branch --show-current 2>/dev/null")
+  local handle = io.popen(
+                   "git branch --no-color 2>/dev/null | cut -b 3- | head -n 1 | tr -d '()'")
   local branchname = handle:read()
   handle:close()
 
