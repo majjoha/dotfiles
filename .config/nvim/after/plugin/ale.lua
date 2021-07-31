@@ -43,6 +43,7 @@ vim.g.ale_fixers = {
 }
 
 vim.g.ale_linters = {
+  c = { "ccls" },
   haskell = { "hls", "hlint", "stack-build" },
   ruby = { "solargraph", "brakeman" },
 }
