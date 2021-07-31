@@ -195,3 +195,6 @@ nvim_set_keymap("s", "<Tab>", "v:lua.smart_tab()", { expr = true })
 nvim_set_keymap("n", "gx",
                 ":call netrw#BrowseX(expand('<cfile>'), netrw#CheckIfRemote())<CR>",
                 { noremap = true, silent = true })
+
+-- Reselect pasted text
+nvim_set_keymap("n", "gp", "`[v`]", { noremap = true })
