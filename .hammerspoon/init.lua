@@ -26,6 +26,7 @@ for plugin, configuration in pairs({
   },
   Cherry = {},
   FnMate = {},
+  KSheet = { hotkeys = { toggle = { { "ctrl", "alt", "shift" }, "/" } } },
   ReloadConfiguration = { start = true },
   WindowHalfsAndThirds = {
     hotkeys = {
