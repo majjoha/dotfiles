@@ -17,7 +17,6 @@ for plugin, configuration in pairs({
       r = "Reeder",
       s = "Safari Technology Preview",
       t = "Kitty",
-      z = "Zoom.us",
     },
   },
   Caffeine = {
