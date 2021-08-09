@@ -24,6 +24,7 @@ for plugin, configuration in pairs({
       caffeine:start():setState(true)
     end,
   },
+  Cherry = {},
   FnMate = {},
   ReloadConfiguration = { start = true },
   WindowHalfsAndThirds = {
