@@ -6,19 +6,6 @@ majjoha.open_current_as_new_tab = function()
   vim.fn.setpos(".", current_pos)
 end
 
-majjoha.show_git_branch = function()
-  local handle = io.popen(
-                   "git branch --no-color 2>/dev/null | cut -b 3- | head -n 1 | tr -d '()'")
-  local branchname = handle:read()
-  handle:close()
-
-  if branchname and string.len(branchname) > 0 then
-    return "  " .. branchname .. " |"
-  else
-    return ""
-  end
-end
-
 majjoha.customize_colors = function()
   vim.cmd([[
     " Highlight current line number, and set the background color to transparent
