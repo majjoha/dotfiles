@@ -8,11 +8,10 @@ function git_dirty {
 }
 
 function git_branch {
-  if command git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
-    local branchname="$(command git branch --no-color | cut -b 3- | head -n 1 | tr -d '()')"
-    printf "%s%s%s%s" \
-      "$GIT_PROMPT_PREFIX" "$branchname" "$(git_dirty)" "$GIT_PROMPT_SUFFIX"
-  fi
+  git branch --no-color 2> /dev/null |\
+    tr -d '()' |\
+    sed -e '/^[^*]/d' \
+      -e "s/* \(.*\)/$GIT_PROMPT_PREFIX\1$(git_dirty)$GIT_PROMPT_SUFFIX/"
 }
 
 precmd() {
