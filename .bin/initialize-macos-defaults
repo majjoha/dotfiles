@@ -1,96 +1,142 @@
 #!/bin/sh
-
 set -ex
 
-### Keyboard and trackpad
+# Ask for the administrator password right away
+sudo -v
 
-# Set key repeat, and delay until key repeat
-defaults write -g KeyRepeat -int 2
-defaults write -g InitialKeyRepeat -int 15
+### General
+# Set the menu bar and Dock to dark
+defaults write NSRequiresAquaSystemAppearance -bool true
 
-# Disable automatic spelling correction
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+# Set accent color to graphite
+defaults write NSGlobalDomain AppleAccentColor -int -1
 
-# Disable automatic capitalization
-defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+# Set highlight color to graphite
+defaults write NSGlobalDomain AppleHighlightColor -string "0.847059 0.847059 0.862745"
 
-# Do not add periods with double space
-defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
-
-# Do not use smart quotes and dashes
-defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
-defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
-
-# Enable full keyboard access for all controls
-defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
-
-# Enable tap to click for this user and for the login screen
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
-
-# Enable three finger taps
-defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadThreeFingerTapGesture -bool true
+# Set appearance for buttons, menus, and windows to graphite
+defaults write NSGlobalDomain AppleAquaColorVariant -int 6
 
 ### Dock
-
-# Automatically hide the Dock
-defaults write com.apple.dock autohide -bool true
-
-# Reduce Dock auto-hide
-defaults write com.apple.Dock autohide-delay -float 0
+# Set the Dock size
+defaults write com.apple.dock tilesize -int 36
 
 # Enable magnification
 defaults write com.apple.dock magnification -bool true
 
+# Set the magnification size
+defaults write com.apple.dock largesize -int 50
+
+# Automatically hide the Dock
+defaults write com.apple.dock autohide -bool true
+
+# Set Dock opening delay
+defaults write com.apple.Dock autohide-delay -float 0
+
 # Do not show recent applications
 defaults write com.apple.dock show-recents -bool false
 
-# Set the Dock size
-defaults write com.apple.dock tilesize -int 36
-defaults write com.apple.dock largesize -int 50
+### Security & Privacy
+# Require password immediately after sleep or screen saver begins
+defaults write com.apple.screensaver askForPassword -bool true
+defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-# Set the menu bar and Dock to dark
-defaults write -g NSRequiresAquaSystemAppearance -bool true
+### Sound
+# Play sound on startup
+nvram StartupMute=%00
+
+### Keyboard
+# Set key repeat to fast, and delay until repeat to short
+defaults write NSGlobalDomain KeyRepeat -int 2
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
+
+# Disable automatic spelling correction
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Disable automatic word capitalization
+defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+
+# Disable full stops with double-space
+defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+
+# Disable smart quotes and dashes
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+# Quit Safari Technology Preview with Alt+Cmd+Q
+defaults write com.apple.SafariTechnologyPreview NSUserKeyEquivalents -string '{ "Quit Safari Technology Preview" = "@~q"; }'
+
+# Quit Kitty with Alt+Cmd+Q
+defaults write net.kovidgoyal.kitty NSUserKeyEquivalents -string '{ "Quit kitty" = "@~q"; }'
+
+# Use keyboard navigation to move focus between controls
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+### Trackpad
+# Enable tap to click
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+
+# Enable taps with three fingers
+defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadThreeFingerTapGesture -bool true
 
 ### Finder
+# Show external disks, CDs, DVDs, and iPods on the desktop
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
 
-# Show the status bar in Finder
-defaults write com.apple.finder ShowStatusBar -bool true
+# Show the Desktop folder when opening new Finder windows
+defaults write com.apple.finder NewWindowTarget -string "PfDe"
 
-# Keep folders on top when sorting by name
-defaults write com.apple.finder _FXSortFoldersFirst -bool true
+# Show all filename extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-# Set Desktop view settings
-defaults write com.apple.finder DesktopViewSettings \
-  '{ "IconViewSettings" = { "arrangeBy" = "name"; "gridSpacing" = 54; "iconSize" = 64; "labelOnBottom" = 1; }; }'
+# Show warning before changing an extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool true
+
+# Show warning before emptying the Trash
+defaults write com.apple.finder WarnOnEmptyTrash -bool true
+
+# Always open windows in icon view
+defaults write com.apple.finder FXPreferredViewStyle -string "icnv"
 
 # Group files in Finder by name
 defaults write com.apple.finder FXPreferredGroupBy -string "Name"
 defaults write com.apple.finder FXArrangeGroupViewBy -string "Name"
 
-# Show items as icons in Finder
-defaults write com.apple.finder FXPreferredViewStyle -string "icnv"
+# Keep folders on top when sorting by name
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
-# Show the Desktop when opening new Finder windows
-defaults write com.apple.finder NewWindowTarget -string "PfDe"
-
-# Empty the trash securely by default
-defaults write com.apple.finder EmptyTrashSecurely -bool true
-
-# Show file extensions in Finder
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+# Set default Finder view to arrange by name with icons set to 64x64 pixels,
+# grid spacing of 54, and label position to bottom
+defaults write com.apple.finder FK_DefaultIconViewSettings \
+  '{ "IconViewSettings" = { "arrangeBy" = "name"; "gridSpacing" = 54; "iconSize" = 64; "labelOnBottom" = 1; }; }'
 
 # Set sidebar icon size to medium
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 
+# Show the status bar in Finder
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Empty the trash securely by default
+defaults write com.apple.finder EmptyTrashSecurely -bool true
+
+# Save screenshots to the ~/Desktop
+defaults write com.apple.screencapture location -string "$HOME/Desktop"
+
+# Save screenshots in `.png` format
+defaults write com.apple.screencapture type -string "png"
+
+# Disable writing `.DS_Store` files on network or USB volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
 ### Miscellaneous
-
-# Set appearance for buttons, menus, and windows to graphite
-defaults write -g AppleAquaColorVariant -int 6
-
-# Set highlight color to graphite
-defaults write NSGlobalDomain AppleHighlightColor -string "0.847059 0.847059 0.862745"
+# Do not offer new disks for Time Machine backup
+defaults write com.apple.TimeMachine "DoNotOfferNewDisksForBackup" -bool "false"
 
 # Set menu bar items
 defaults write com.apple.systemuiserver menuExtras -array \
@@ -104,23 +150,6 @@ defaults write com.apple.systemuiserver menuExtras -array \
 # Enable subpixel font rendering on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
-# Save screenshots to the ~/Desktop
-defaults write com.apple.screencapture location -string "$HOME/Desktop"
-
-# Save screenshots in PNG format
-defaults write com.apple.screencapture type -string "png"
-
-# Ask for password immediately after sleep or when the screen saver begins
-defaults write com.apple.screensaver askForPassword -bool true
-defaults write com.apple.screensaver askForPasswordDelay -int 0
-
-# Do not write .DS_Store files on network or USB volumes
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
-
-# Disable crash reporter dialog
-defaults write com.apple.CrashReporter DialogType none
-
 # Disable Notification Center
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
 
@@ -130,61 +159,70 @@ defaults write /Library/Preferences/SystemConfiguration/com.apple.captive.contro
 # Disable gatekeeper
 sudo spctl --master-disable
 
+# Disable crash reporter dialog
+defaults write com.apple.CrashReporter DialogType none
+
 # Disable the "Are you sure you want to open this application?" dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 ### Safari Technology Preview
+# Set homepage to about:blank
+defaults write com.apple.SafariTechnologyPreview HomePage -string "about:blank"
 
-# Prevent Safari from opening "safe" files automatically after downloading
-defaults write com.apple.SafariTechnologyPreview AutoOpenSafeDownloads -bool false
+# Set new windows to open with an empty page
+defaults write com.apple.SafariTechnologyPreview NewWindowBehavior -int 1
 
-# Disallow websites from sending push notifications
-defaults write com.apple.SafariTechnologyPreview CanPromptForPushNotifications -bool false
-
-# Remove downloads upon successful download
-defaults write com.apple.SafariTechnologyPreview DownloadsClearingPolicy -int 2
-
-# Save downloaded files to ~/Downloads
-defaults write com.apple.SafariTechnologyPreview DownloadsPath -string "$HOME/Downloads"
+# Set new tabs to open with an empty page
+defaults write com.apple.SafariTechnologyPreview NewTabBehavior -int 1
 
 # Remove history items after one year
 defaults write com.apple.SafariTechnologyPreview HistoryAgeInDaysLimit -int 365
 
-# Set homepage to about:blank
-defaults write com.apple.SafariTechnologyPreview HomePage -string "about:blank"
+# Save downloaded files to ~/Downloads
+defaults write com.apple.SafariTechnologyPreview DownloadsPath -string "$HOME/Downloads"
 
-# Quit Safari Technology Preview with Alt+Cmd+Q
-defaults write com.apple.SafariTechnologyPreview NSUserKeyEquivalents -string '{ "Quit Safari Technology Preview" = "@~q"; }'
+# Remove download list items upon successful download
+defaults write com.apple.SafariTechnologyPreview DownloadsClearingPolicy -int 2
 
-# Start new windows and tabs with the empty page
-defaults write com.apple.SafariTechnologyPreview NewTabBehavior -int 1
-defaults write com.apple.SafariTechnologyPreview NewWindowBehavior -int 1
+# Prevent Safari from opening "safe" files automatically after downloading
+defaults write com.apple.SafariTechnologyPreview AutoOpenSafeDownloads -bool false
 
-# Ask websites not to track me
-defaults write com.apple.SafariTechnologyPreview SendDoNotTrackHTTPHeader -bool true
-
-# Hide favorites bar
-defaults write com.apple.SafariTechnologyPreview ShowFavoritesBar -bool false
-
-# Show full website address in Smart Search Field
-defaults write com.apple.SafariTechnologyPreview ShowFullURLInSmartSearchField -bool true
-
-# Show status bar
-defaults write com.apple.SafariTechnologyPreview ShowStatusBar -bool true
-
-# Suppress search suggestions
-defaults write com.apple.SafariTechnologyPreview SuppressSearchSuggestions -bool true
+# Disable AutoFill web forms
+defaults write com.apple.SafariTechnologyPreview AutoFillFromAddressBook -bool false
+defaults write com.apple.SafariTechnologyPreview AutoFillPasswords -bool false
+defaults write com.apple.SafariTechnologyPreview AutoFillCreditCardData -bool false
+defaults write com.apple.SafariTechnologyPreview AutoFillMiscellaneousForms -bool false
 
 # Set DuckDuckGo as preferred search engine
-defaults write -g NSPreferredWebServices '{
+defaults write NSGlobalDomain NSPreferredWebServices '{
   NSWebServicesProviderWebSearch = {
     NSDefaultDisplayName = DuckDuckGo;
     NSProviderIdentifier = "com.duckduckgo";
   };
 }'
 
-### Transmission
+# Suppress search suggestions
+defaults write com.apple.SafariTechnologyPreview SuppressSearchSuggestions -bool true
 
+# Warn when visiting a fraudulent website
+defaults write com.apple.SafariTechnologyPreview WarnAboutFraudulentWebsites -bool true
+
+# Ask websites not to track me
+defaults write com.apple.SafariTechnologyPreview SendDoNotTrackHTTPHeader -bool true
+
+# Disallow websites to ask for permission to send notifications
+defaults write com.apple.SafariTechnologyPreview CanPromptForPushNotifications -bool false
+
+# Show full website address in Smart Search Field
+defaults write com.apple.SafariTechnologyPreview ShowFullURLInSmartSearchField -bool true
+
+# Hide favorites bar
+defaults write com.apple.SafariTechnologyPreview ShowFavoritesBar -bool false
+
+# Show status bar
+defaults write com.apple.SafariTechnologyPreview ShowStatusBar -bool true
+
+### Transmission
 # Enable IP block list, set blocklist, and auto update it
 defaults write org.m0k.transmission BlocklistNew -bool true
 defaults write org.m0k.transmission BlocklistURL -string "http://john.bitsurge.net/public/biglist.p2p.gz"
@@ -192,3 +230,53 @@ defaults write org.m0k.transmission BlocklistAutoUpdate -bool true
 
 # Trash original torrent files
 defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
+
+### MacDown
+# Ensure open document on launch
+defaults write com.uranusjr.macdown supressesUntitledDocumentOnLaunch -bool false
+
+# Sync preview scrollbar when editor scrolls
+defaults write com.uranusjr.macdown editorSyncScrolling -bool true
+
+# Set theme to "Mou Paper+"
+defaults write com.uranusjr.macdown editorStyleName -string "Mou Paper+"
+
+# Set line spacing to 3
+defaults write com.uranusjr.macdown editorLineSpacing -int 3
+
+# Set text insets to 15
+defaults write com.uranusjr.macdown editorHorizontalInset -int 15
+defaults write com.uranusjr.macdown editorVerticalInset -int 15
+
+# Limit editor width
+defaults write com.uranusjr.macdown editorWidthLimited -bool true
+
+# Set maximum width to 1000
+defaults write com.uranusjr.macdown editorMaximumWidth -int 1000
+
+# Set list marker to `-`
+defaults write com.uranusjr.macdown editorUnorderedListMarkerType -int 2
+
+# Use spaces instead of tabs
+defaults write com.uranusjr.macdown editorConvertTabs -bool true
+
+# Automatically insert line prefix for the current block
+defaults write com.uranusjr.macdown editorInsertPrefixInBlock -bool true
+
+# Set CSS theme to
+defaults write com.uranusjr.macdown htmlStyleName -string "majjoha"
+
+# Enable syntax highlighted code blocks
+defaults write com.uranusjr.macdown htmlSyntaxHighlighting -bool true
+
+# Enable TeX-like math syntax
+defaults write com.uranusjr.macdown htmlMathJax -bool true
+
+# Use dollar sign as inline delimiter
+defaults write com.uranusjr.macdown htmlMathJaxInlineDollar -bool true
+
+# Enable task list syntax
+defaults write com.uranusjr.macdown htmlTaskList -bool true
+
+# Detect Jekyll front-matter
+defaults write com.uranusjr.macdown htmlDetectFrontMatter -bool true
