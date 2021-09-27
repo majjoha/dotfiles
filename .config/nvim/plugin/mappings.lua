@@ -198,3 +198,7 @@ nvim_set_keymap("n", "gx",
 
 -- Reselect pasted text
 nvim_set_keymap("n", "gp", "`[v`]", { noremap = true })
+
+-- Add `end` to functions in Ruby, Lua, and Elixir
+nvim_set_keymap("i", "<CR>", "v:lua.npairs.autopairs_cr()",
+                { expr = true, noremap = true })
