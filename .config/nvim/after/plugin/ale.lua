@@ -37,6 +37,7 @@ vim.g.ale_fixers = {
   json = { "jq" },
   lua = { "lua-format" },
   ruby = { "rubocop" },
+  rust = { "rustfmt" },
   sh = { "shfmt" },
   typescript = { "eslint", "prettier" },
   typescriptreact = { "eslint", "prettier" },
