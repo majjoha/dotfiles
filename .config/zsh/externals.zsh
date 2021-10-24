@@ -12,3 +12,6 @@ fi
 
 # ghcup-env
 [ -f "/Users/mathias/.ghcup/env" ] && source "/Users/mathias/.ghcup/env"
+
+# rustup
+[ -f ~/.cargo/env ] && source ~/.cargo/env
