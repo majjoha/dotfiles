@@ -1,16 +1,3 @@
--- Skip if NvimTree is not loaded
-if not vim.g.loaded_tree then
-  return
-end
-
---  NvimTree does not respect the options `g:nvim_tree_hijack_netrw` and 
---  `g:nvim_tree_disable_netrw` when they are set in the `after` directory.
---  Netrw is needed for `gx`, however, so reload it here.
---  See https://github.com/kyazdani42/nvim-tree.lua/issues/47#issuecomment-658266288
-vim.api.nvim_del_var("loaded_netrw")
-vim.api.nvim_del_var("loaded_netrwPlugin")
-vim.opt.runtimepath = vim.o.runtimepath .. ',plugin/netrwPlugin.vim'
-
 -- Append trailing slash to folder names
 vim.g.nvim_tree_add_trailing = 1
 
@@ -74,3 +61,8 @@ vim.g.nvim_tree_icons = {
   symlink = "",
 }
 -- LuaFormatter on
+
+require("nvim-tree").setup({
+  -- Enable Netrw as it is needed for `gx`
+  disable_netrw = false,
+})
