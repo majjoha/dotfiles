@@ -67,6 +67,7 @@ alias gsa="git submodule add"
 alias gsrm="git rm"
 alias gss="git stash --keep-index && git stash save"
 alias gsu="git submodule update --remote --jobs=4"
+alias grc="git rebase --continue"
 
 # Rebuild Spotlight index
 alias reindex-spotlight="sudo mdutil -i on /"
