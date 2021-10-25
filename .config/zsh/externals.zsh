@@ -1,8 +1,8 @@
 # Use z.lua
-eval "$(lua ~/.bin/z.lua/z.lua --init zsh)"
+eval "$(lua $HOME/.bin/z.lua/z.lua --init zsh)"
 
 # FZF
-[ -f "$HOME/.fzf.zsh" ] && source ~/.fzf.zsh
+[ -f "$HOME/.fzf.zsh" ] && source $HOME/.fzf.zsh
 
 # chruby
 if [ -d "/usr/local/opt/chruby/" ]; then
@@ -11,7 +11,7 @@ if [ -d "/usr/local/opt/chruby/" ]; then
 fi
 
 # ghcup-env
-[ -f "$HOME/.ghcup/env" ] && source ~/.ghcup/env
+[ -f "$HOME/.ghcup/env" ] && source $HOME/.ghcup/env
 
 # rustup
-[ -f "$HOME/.cargo/env" ] && source ~/.cargo/env
+[ -f "$HOME/.cargo/env" ] && source $HOME/.cargo/env
