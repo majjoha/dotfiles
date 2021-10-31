@@ -14,14 +14,6 @@ function mkcd () {
   mkdir $1 && cd $1
 }
 
-function upload-file () {
-  curl -F "file=@$1" https://0x0.st
-}
-
-function shorten-url () {
-  curl -F "shorten=$1" https://0x0.st
-}
-
 alias ....='cd ../../..'
 alias ...='cd ../..'
 alias alac="alac-conversion . && rm *.flac"
