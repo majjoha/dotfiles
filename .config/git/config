@@ -21,7 +21,6 @@
 [credential]
   helper = osxkeychain
 [color]
-  ui = true
   branch = auto
   interactive = auto
   status = auto
