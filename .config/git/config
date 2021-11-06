@@ -11,6 +11,7 @@
   excludesfile = ~/.config/git/gitignore
   untrackedCache = true
   whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+  pager = diff-so-fancy | less --tabs=4 -RFX
 [commit]
   template = ~/.config/git/message
   gpgSign = true
@@ -57,3 +58,5 @@
   web = instaweb
   wip = !git add -u && git commit -m "wip"
   zpush = !"git push -u origin `git branch-name`:majjoha/`git branch-name`"
+[interactive]
+  diffFilter = diff-so-fancy --patch
