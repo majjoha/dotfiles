@@ -198,3 +198,7 @@ nvim_set_keymap("n", "gp", "`[v`]", { noremap = true })
 -- Add `end` to functions in Ruby, Lua, and Elixir
 nvim_set_keymap("i", "<CR>", "v:lua.npairs.autopairs_cr()",
                 { expr = true, noremap = true })
+
+-- Keep the current search result centered in the viewport when jumping
+nvim_set_keymap("n", "n", "nzz", { noremap = true })
+nvim_set_keymap("n", "N", "Nzz", { noremap = true })
