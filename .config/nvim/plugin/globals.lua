@@ -4,16 +4,6 @@ function _G.t(str)
   return vim.api.nvim_replace_termcodes(str, true, true, true)
 end
 
--- If a snippet exists for the current text, expand it with `<Tab>`, otherwise
--- just trigger a `<Tab>`
-function _G.smart_tab()
-  if vim.fn.call("neosnippet#expandable_or_jumpable", {}) then
-    return t("<Plug>(neosnippet_expand_or_jump)")
-  else
-    return t("<Tab>")
-  end
-end
-
 -- Use `<Esc>` to return to normal mode in terminals unless the terminal is
 -- running FZF
 function _G.smart_esc()
