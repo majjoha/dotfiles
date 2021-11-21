@@ -94,10 +94,6 @@ nvim_set_keymap("n", "<Leader>ga", ":Gwrite<CR>",
 nvim_set_keymap("n", "<Leader>gl", ":tabe | terminal tig<CR>",
                 { noremap = true, silent = true })
 
--- Toggle comments
-nvim_set_keymap("x", "<Leader>/", ":Comment<CR>", { silent = true })
-nvim_set_keymap("n", "<Leader>/", ":Comment<CR>", { silent = true })
-
 -- Edit snippets for the current file type
 nvim_set_keymap("n", "<Leader>es", ":NeoSnippetEdit -split -vertical<CR>",
                 { noremap = true, silent = true })

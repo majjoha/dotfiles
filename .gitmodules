@@ -34,9 +34,6 @@
 [submodule ".config/nvim/pack/packages/start/nvim-autopairs"]
 	path = .config/nvim/pack/packages/start/nvim-autopairs
 	url = https://github.com/windwp/nvim-autopairs.git
-[submodule ".config/nvim/pack/packages/start/commented.nvim"]
-	path = .config/nvim/pack/packages/start/commented.nvim
-	url = https://github.com/winston0410/commented.nvim.git
 [submodule ".bin/z.lua"]
 	path = .bin/z.lua
 	url = https://github.com/skywind3000/z.lua.git
@@ -46,3 +43,6 @@
 [submodule ".config/nvim/pack/packages/start/nvim-snippy"]
 	path = .config/nvim/pack/packages/start/nvim-snippy
 	url = https://github.com/dcampos/nvim-snippy.git
+[submodule ".config/nvim/pack/packages/start/mini.nvim"]
+	path = .config/nvim/pack/packages/start/mini.nvim
+	url = https://github.com/echasnovski/mini.nvim.git
