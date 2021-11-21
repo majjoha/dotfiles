@@ -4,22 +4,6 @@ vim.g.nvim_tree_add_trailing = 1
 -- Disable the window picker to allow more than two splits
 vim.g.nvim_tree_disable_window_picker = 1
 
--- Don't display these file types
--- LuaFormatter off
-vim.g.nvim_tree_ignore = {
-  ".DS_Store",
-  ".aux",
-  ".beam",
-  ".class$",
-  ".git",
-  ".ibc",
-  ".idr~",
-  ".meta",
-  ".o$",
-  ".prefab",
-}
--- LuaFormatter on
-
 -- Change default icons
 -- LuaFormatter off
 vim.g.nvim_tree_show_icons = {
@@ -65,4 +49,11 @@ vim.g.nvim_tree_icons = {
 require("nvim-tree").setup({
   -- Enable Netrw as it is needed for `gx`
   disable_netrw = false,
+  filters = {
+    -- Ignore the following files
+    custom = {
+      ".DS_Store", ".aux", ".beam", ".class$", ".git", ".ibc", ".idr~", ".meta",
+      ".o$", ".prefab",
+    },
+  },
 })
