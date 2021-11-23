@@ -45,10 +45,8 @@ vim.g.ale_linters = {
   c = { "ccls" },
   haskell = { "hls", "hlint", "stack-build" },
   ruby = { "solargraph", "brakeman" },
+  rust = { "analyzer" },
   yaml = { "yamllint" },
 }
 
 vim.g.ale_linters_ignore = { javascript = { "tsserver" } }
-
-vim.g.ale_rust_rls_toolchain = "nightly"
-vim.g.ale_rust_rls_config = { rust = { clippy_preference = "on" } }
