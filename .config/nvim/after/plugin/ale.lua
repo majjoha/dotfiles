@@ -6,14 +6,12 @@ end
 -- Redefine representation of warnings and errors
 vim.g.ale_sign_error = "▍"
 vim.g.ale_sign_warning = "▍"
-vim.cmd([[
-  highlight ALEError cterm=underline ctermfg=01
-  highlight ALEWarning cterm=underline ctermfg=01
-  highlight link ALEErrorSign DiffDelete
-  highlight link ALEWarningSign DiffDelete
-  highlight link ALEVirtualTextError DiffDelete
-  highlight link ALEVirtualWarning DiffDelete
-]])
+vim.highlight.create("ALEError", { cterm = "underline", ctermfg = 01 })
+vim.highlight.create("ALEWarning", { cterm = "underline", ctermfg = 01 })
+vim.highlight.link("ALEErrorSign", "DiffDelete")
+vim.highlight.link("ALEWarningSign", "DiffDelete")
+vim.highlight.link("ALEVirtualTextError", "DiffDelete")
+vim.highlight.link("ALEVirtualWarning", "DiffDelete")
 
 vim.g.ale_lint_on_text_changed = "normal"
 vim.g.ale_virtualtext_cursor = 1
