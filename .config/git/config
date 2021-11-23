@@ -49,7 +49,7 @@
   branch-name = !"git for-each-ref --format=\"%(refname:short)\" $(git symbolic-ref HEAD)"
   last-week = shortlog --since='1 week ago' --pretty=format:'%cD: %s' --author=mathias@mjj.io --no-merges
   pr = !"gh pr create --web"
-  preview = !"git fetch && git diff ^origin/master"
+  preview = !"git fetch && git diff ^origin/main"
   standup = shortlog --since=yesterday --no-merges --author=mathias@mjj.io
   undo = reset --soft HEAD^
   unpushed = log --branches --not --remotes --simplify-by-decoration --decorate --oneline
