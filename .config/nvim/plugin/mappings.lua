@@ -95,8 +95,7 @@ nvim_set_keymap("n", "<Leader>gl", ":tabe | terminal tig<CR>",
                 { noremap = true, silent = true })
 
 -- Edit snippets for the current file type
-nvim_set_keymap("n", "<Leader>es", ":NeoSnippetEdit -split -vertical<CR>",
-                { noremap = true, silent = true })
+nvim_set_keymap("n", "<Leader>es", ":SnippyEdit<Space>", { noremap = true })
 
 -- Open a terminal in a split window
 nvim_set_keymap("n", "<Leader>tv", ":vsp | term<CR>",
