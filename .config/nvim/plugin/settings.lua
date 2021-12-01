@@ -1,6 +1,3 @@
--- Show the effects of a command incrementally as you type
-vim.opt.inccommand = "nosplit"
-
 -- Set the terminal title
 vim.opt.title = true
 
@@ -53,9 +50,6 @@ vim.opt.fileignorecase = true
 vim.opt.ttyfast = true
 vim.opt.lazyredraw = true
 
--- Use one space instead of two when joining lines
-vim.opt.joinspaces = false
-
 -- Disable the intro message
 vim.opt.shortmess = vim.o.shortmess .. "I"
 
@@ -67,9 +61,6 @@ vim.opt.spellsuggest = "15"
 
 -- Look for tags in `.git/tags`
 vim.opt.tags = vim.o.tags .. ",.git/tags"
-
--- Allow more than one unsaved buffer
-vim.opt.hidden = true
 
 -- Allow the cursor to move where there is no text in visual select mode
 vim.opt.virtualedit = "block"
