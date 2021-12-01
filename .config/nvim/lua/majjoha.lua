@@ -20,7 +20,7 @@ majjoha.customize_colors = function()
   vim.highlight.create("VertSplit", { ctermbg = 00 })
 
   -- Show the current mode in a darker, non-bold font
-  vim.highlight.create("ModeMsg", { ctermbg = 08, cterm = "NONE" })
+  vim.highlight.create("ModeMsg", { ctermfg = 08, cterm = "NONE" })
 
   -- Set the background of the status line in the current buffer to match the
   -- color column, and the status line in all inactive buffers to transparent
