@@ -33,244 +33,635 @@ local cterm06 = "13"
 local cterm09 = "09"
 local cterm0F = "14"
 
-vim.cmd [[
+vim.cmd([[
   highlight clear
   syntax reset
-]]
+]])
 vim.g.colors_name = "base16"
 
-local highlight = function(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
-  attr = attr or ""
-  guisp = guisp or ""
-
-  local command = ""
-
-  if guifg ~= "" then
-    command = command .. " guifg=#" .. guifg
-  end
-  if guibg ~= "" then
-    command = command .. " guibg=#" .. guibg
-  end
-  if ctermfg ~= "" then
-    command = command .. " ctermfg=" .. ctermfg
-  end
-  if ctermbg ~= "" then
-    command = command .. " ctermbg=" .. ctermbg
-  end
-  if attr ~= "" then
-    command = command .. " gui=" .. attr .. " cterm=" .. attr
-  end
-  if guisp ~= "" then
-    command = command .. " guisp=#" .. guisp
-  end
-
-  if command ~= "" then
-    vim.cmd("highlight " .. group .. command)
-  end
-end
-
 -- Vim editor colors
-highlight("Bold", "", "", "", "", "bold", "")
-highlight("ColorColumn", "", gui01, "", cterm01, "none", "")
-highlight("Conceal", gui0D, gui00, cterm0D, cterm00, "", "")
-highlight("Cursor", gui00, gui05, cterm00, cterm05, "", "")
-highlight("CursorColumn", "", gui01, "", cterm01, "none", "")
-highlight("CursorLine", "", gui01, "", cterm01, "none", "")
-highlight("CursorLineNr", gui03, gui01, cterm03, cterm01, "", "")
-highlight("Debug", gui08, "", cterm08, "", "", "")
-highlight("Directory", gui0D, "", cterm0D, "", "", "")
-highlight("Error", gui00, gui08, cterm00, cterm08, "", "")
-highlight("ErrorMsg", gui08, gui00, cterm08, cterm00, "", "")
-highlight("Exception", gui08, "", cterm08, "", "", "")
-highlight("FoldColumn", "", gui01, "", cterm01, "", "")
-highlight("Folded", gui03, gui01, cterm03, cterm01, "", "")
-highlight("IncSearch", gui01, gui09, cterm01, cterm09, "none", "")
-highlight("Italic", "", "", "", "", "none", "")
-highlight("LineNr", gui03, gui01, cterm03, cterm01, "", "")
-highlight("Macro", gui08, "", cterm08, "", "", "")
-highlight("MatchParen", gui00, gui03, cterm00, cterm03, "", "")
-highlight("ModeMsg", gui0B, "", cterm0B, "", "", "")
-highlight("MoreMsg", gui0B, "", cterm0B, "", "", "")
-highlight("NonText", gui03, "", cterm03, "", "", "")
-highlight("Normal", gui05, gui00, cterm05, cterm00, "", "")
-highlight("PMenu", gui04, gui01, cterm04, cterm01, "none", "")
-highlight("PMenuSel", gui01, gui04, cterm01, cterm04, "", "")
-highlight("Question", gui0D, "", cterm0D, "", "", "")
-highlight("QuickFixLine", "", gui01, "", cterm01, "none", "")
-highlight("Search", gui03, gui0A, cterm03, cterm0A, "", "")
-highlight("SignColumn", gui03, gui01, cterm03, cterm01, "", "")
-highlight("SpecialKey", gui03, "", cterm03, "", "", "")
-highlight("StatusLine", gui04, gui02, cterm04, cterm02, "none", "")
-highlight("StatusLineNC", gui03, gui01, cterm03, cterm01, "none", "")
-highlight("Substitute", gui01, gui0A, cterm01, cterm0A, "none", "")
-highlight("TabLine", gui03, gui01, cterm03, cterm01, "none", "")
-highlight("TabLineFill", gui03, gui01, cterm03, cterm01, "none", "")
-highlight("TabLineSel", gui0B, gui01, cterm0B, cterm01, "none", "")
-highlight("Title", gui0D, "", cterm0D, "", "none", "")
-highlight("TooLong", gui08, "", cterm08, "", "", "")
-highlight("Underlined", gui08, "", cterm08, "", "", "")
-highlight("VertSplit", gui02, gui02, cterm02, cterm02, "none", "")
-highlight("Visual", "", gui02, "", cterm02, "", "")
-highlight("VisualNOS", gui08, "", cterm08, "", "", "")
-highlight("WarningMsg", gui08, "", cterm08, "", "", "")
-highlight("WildMenu", gui08, gui0A, cterm08, "", "", "")
+vim.highlight.create("Bold", { gui = "bold", cterm = "bold" })
+
+vim.highlight.create("ColorColumn", {
+  guibg = gui01,
+  ctermbg = cterm01,
+  gui = "none",
+  cterm = "none",
+})
+
+vim.highlight.create("Conceal", {
+  guifg = gui0D,
+  guibg = gui00,
+  ctermfg = cterm0D,
+  ctermbg = cterm00,
+})
+
+vim.highlight.create("Cursor", {
+  guifg = gui00,
+  guibg = gui05,
+  ctermfg = cterm00,
+  ctermbg = cterm05,
+})
+
+vim.highlight.create("CursorColumn", {
+  guibg = gui01,
+  ctermbg = cterm01,
+  gui = "none",
+  cterm = "none",
+})
+
+vim.highlight.create("CursorLine", {
+  guibg = gui01,
+  ctermbg = cterm01,
+  gui = "none",
+  cterm = "none",
+})
+
+vim.highlight.create("CursorLineNr", {
+  guifg = gui03,
+  guibg = gui01,
+  ctermfg = cterm03,
+  ctermbg = cterm01,
+})
+
+vim.highlight.create("Debug", { guifg = gui08, ctermfg = cterm08 })
+
+vim.highlight.create("Directory", { guifg = gui0D, ctermfg = cterm0D })
+
+vim.highlight.create("Error", {
+  guifg = gui00,
+  guibg = gui08,
+  ctermfg = cterm00,
+  ctermbg = cterm08,
+})
+
+vim.highlight.create("ErrorMsg", {
+  guifg = gui08,
+  guibg = gui00,
+  ctermfg = cterm08,
+  ctermbg = cterm00,
+})
+
+vim.highlight.create("Exception", { guifg = gui08, ctermfg = cterm08 })
+
+vim.highlight.create("FoldColumn", { guibg = gui01, ctermbg = cterm01 })
+
+vim.highlight.create("Folded", {
+  guifg = gui03,
+  guibg = gui01,
+  ctermfg = cterm03,
+  ctermbg = cterm01,
+})
+
+vim.highlight.create("IncSearch", {
+  guifg = gui01,
+  guibg = gui09,
+  ctermfg = cterm01,
+  ctermbg = cterm09,
+  gui = "none",
+  cterm = "none",
+})
+
+vim.highlight.create("Italic", { gui = "none", cterm = "none" })
+
+vim.highlight.create("LineNr", {
+  guifg = gui03,
+  guibg = gui01,
+  ctermfg = cterm03,
+  ctermbg = cterm01,
+})
+
+vim.highlight.create("Macro", { guifg = gui08, ctermfg = cterm08 })
+
+vim.highlight.create("MatchParen", {
+  guifg = gui00,
+  guibg = gui03,
+  ctermfg = cterm00,
+  ctermbg = cterm03,
+})
+
+vim.highlight.create("ModeMsg", { guifg = gui0B, ctermfg = cterm0B })
+
+vim.highlight.create("MoreMsg", { guifg = gui0B, ctermfg = cterm0B })
+
+vim.highlight.create("NonText", { guifg = gui03, ctermfg = cterm03 })
+
+vim.highlight.create("Normal", {
+  guifg = gui05,
+  guibg = gui00,
+  ctermfg = cterm05,
+  ctermbg = cterm00,
+})
+
+vim.highlight.create("PMenu", {
+  guifg = gui04,
+  guibg = gui01,
+  ctermfg = cterm04,
+  ctermbg = cterm01,
+})
+
+vim.highlight.create("PMenuSel", {
+  guifg = gui01,
+  guibg = gui04,
+  ctermfg = cterm01,
+  ctermbg = cterm04,
+})
+
+vim.highlight.create("Question", { guifg = gui0D, ctermfg = cterm0D })
+
+vim.highlight.create("QuickFixLine", {
+  guibg = gui01,
+  ctermbg = cterm01,
+  gui = "none",
+  cterm = "none",
+})
+
+vim.highlight.create("Search", {
+  guifg = gui03,
+  guibg = gui0A,
+  ctermfg = cterm03,
+  ctermbg = cterm0A,
+})
+
+vim.highlight.create("SignColumn", {
+  guifg = gui03,
+  guibg = gui01,
+  ctermfg = cterm03,
+  ctermbg = cterm01,
+})
+
+vim.highlight.create("SpecialKey", { guifg = gui03, ctermfg = cterm03 })
+
+vim.highlight.create("StatusLine", {
+  guifg = gui04,
+  guibg = gui02,
+  ctermfg = cterm04,
+  ctermbg = cterm02,
+  gui = "none",
+  cterm = "none",
+})
+
+vim.highlight.create("StatusLineNC", {
+  guifg = gui03,
+  guibg = gui01,
+  ctermfg = cterm03,
+  ctermbg = cterm01,
+  gui = "none",
+  cterm = "none",
+})
+
+vim.highlight.create("Substitute", {
+  guifg = gui01,
+  guibg = gui0A,
+  ctermfg = cterm01,
+  ctermbg = cterm0A,
+  gui = "none",
+  cterm = "none",
+})
+
+vim.highlight.create("TabLine", {
+  guifg = gui03,
+  guibg = gui01,
+  ctermfg = cterm03,
+  ctermbg = cterm01,
+  gui = "none",
+  cterm = "none",
+})
+
+vim.highlight.create("TabLineFill", {
+  guifg = gui03,
+  guibg = gui01,
+  ctermfg = cterm03,
+  ctermbg = cterm01,
+  gui = "none",
+  cterm = "none",
+})
+
+vim.highlight.create("TabLineSel", {
+  guifg = gui0B,
+  guibg = gui01,
+  ctermfg = cterm0B,
+  ctermbg = cterm01,
+  gui = "none",
+  cterm = "none",
+})
+
+vim.highlight.create("Title", {
+  guifg = gui0D,
+  ctermfg = cterm0D,
+  gui = "none",
+  cterm = "none",
+})
+
+vim.highlight.create("TooLong", { guifg = gui08, ctermfg = cterm08 })
+
+vim.highlight.create("Underlined", { guifg = gui08, ctermfg = cterm08 })
+
+vim.highlight.create("VertSplit", {
+  guifg = gui02,
+  guibg = gui02,
+  ctermfg = cterm02,
+  ctermbg = cterm02,
+  gui = "none",
+  cterm = "none",
+})
+
+vim.highlight.create("Visual", { guibg = gui02, ctermbg = cterm02 })
+
+vim.highlight.create("VisualNOS", { guifg = gui08, ctermfg = cterm08 })
+
+vim.highlight.create("WarningMsg", { guifg = gui08, ctermfg = cterm08 })
+
+vim.highlight.create("WildMenu",
+                     { guifg = gui08, guibg = gui0A, ctermfg = cterm08 })
 
 -- Standard syntax highlighting
-highlight("Boolean", gui09, "", cterm09, "", "", "")
-highlight("Character", gui08, "", cterm08, "", "", "")
-highlight("Comment", gui03, "", cterm03, "", "", "")
-highlight("Conditional", gui0E, "", cterm0E, "", "", "")
-highlight("Constant", gui09, "", cterm09, "", "", "")
-highlight("Define", gui0E, "", cterm0E, "", "none", "")
-highlight("Delimiter", gui0F, "", cterm0F, "", "", "")
-highlight("Float", gui09, "", cterm09, "", "", "")
-highlight("Function", gui0D, "", cterm0D, "", "", "")
-highlight("Identifier", gui08, "", cterm08, "", "none", "")
-highlight("Include", gui0D, "", cterm0D, "", "", "")
-highlight("Keyword", gui0E, "", cterm0E, "", "", "")
-highlight("Label", gui0A, "", cterm0A, "", "", "")
-highlight("Number", gui09, "", cterm09, "", "", "")
-highlight("Operator", gui05, "", cterm05, "", "none", "")
-highlight("PreProc", gui0A, "", cterm0A, "", "", "")
-highlight("Repeat", gui0A, "", cterm0A, "", "", "")
-highlight("Special", gui0C, "", cterm0C, "", "", "")
-highlight("SpecialChar", gui0F, "", cterm0F, "", "", "")
-highlight("Statement", gui08, "", cterm08, "", "", "")
-highlight("StorageClass", gui0A, "", cterm0A, "", "", "")
-highlight("String", gui0B, "", cterm0B, "", "", "")
-highlight("Structure", gui0E, "", cterm0E, "", "", "")
-highlight("Tag", gui0A, "", cterm0A, "", "", "")
-highlight("Todo", gui0A, gui01, cterm0A, cterm01, "", "")
-highlight("Type", gui0A, "", cterm0A, "", "none", "")
-highlight("Typedef", gui0A, "", cterm0A, "", "", "")
+vim.highlight.create("Boolean", { guifg = gui09, ctermfg = cterm09 })
+
+vim.highlight.create("Character", { guifg = gui08, ctermfg = cterm08 })
+
+vim.highlight.create("Comment", { guifg = gui03, ctermfg = cterm03 })
+
+vim.highlight.create("Conditional", { guifg = gui0E, ctermfg = cterm0E })
+
+vim.highlight.create("Constant", { guifg = gui09, ctermfg = cterm09 })
+
+vim.highlight.create("Define", {
+  guifg = gui0E,
+  ctermfg = cterm0E,
+  gui = "none",
+  cterm = "none",
+})
+
+vim.highlight.create("Delimiter", { guifg = gui0F, ctermfg = cterm0F })
+
+vim.highlight.create("Float", { guifg = gui09, ctermfg = cterm09 })
+
+vim.highlight.create("Function", { guifg = gui0D, ctermfg = cterm0D })
+
+vim.highlight.create("Identifier", {
+  guifg = gui08,
+  ctermfg = cterm08,
+  gui = "none",
+  cterm = "none",
+})
+
+vim.highlight.create("Include", { guifg = gui0D, ctermfg = cterm0D })
+
+vim.highlight.create("Keyword", { guifg = gui0E, ctermfg = cterm0E })
+
+vim.highlight.create("Label", { guifg = gui0A, ctermfg = cterm0A })
+
+vim.highlight.create("Number", { guifg = gui09, ctermfg = cterm09 })
+
+vim.highlight.create("Operator", {
+  guifg = gui05,
+  ctermfg = cterm05,
+  gui = "none",
+  cterm = "none",
+})
+
+vim.highlight.create("PreProc", { guifg = gui0A, ctermfg = cterm0A })
+
+vim.highlight.create("Repeat", { guifg = gui0A, ctermfg = cterm0A })
+
+vim.highlight.create("Special", { guifg = gui0C, ctermfg = cterm0C })
+
+vim.highlight.create("SpecialChar", { guifg = gui0F, ctermfg = cterm0F })
+
+vim.highlight.create("Statement", { guifg = gui08, ctermfg = cterm08 })
+
+vim.highlight.create("StorageClass", { guifg = gui0A, ctermfg = cterm0A })
+
+vim.highlight.create("String", { guifg = gui0B, ctermfg = cterm0B })
+
+vim.highlight.create("Structure", { guifg = gui0E, ctermfg = cterm0E })
+
+vim.highlight.create("Tag", { guifg = gui0A, ctermfg = cterm0A })
+
+vim.highlight.create("Todo", {
+  guifg = gui0A,
+  guibg = gui01,
+  ctermfg = cterm0A,
+  ctermbg = cterm01,
+})
+
+vim.highlight.create("Type", {
+  guifg = gui0A,
+  ctermfg = cterm0A,
+  gui = "none",
+  cterm = "none",
+})
+
+vim.highlight.create("Typedef", { guifg = gui0A, ctermfg = cterm0A })
 
 -- C highlighting
-highlight("cOperator", gui0C, "", cterm0C, "", "", "")
-highlight("cPreCondit", gui0E, "", cterm0E, "", "", "")
+vim.highlight.create("cOperator", { guifg = gui0C, ctermfg = cterm0C })
+
+vim.highlight.create("cPreCondit", { guifg = gui0E, ctermfg = cterm0E })
 
 -- C# highlighting
-highlight("csClass", gui0A, "", cterm0A, "", "", "")
-highlight("csAttribute", gui0A, "", cterm0A, "", "", "")
-highlight("csModifier", gui0E, "", cterm0E, "", "", "")
-highlight("csType", gui08, "", cterm08, "", "", "")
-highlight("csUnspecifiedStatement", gui0D, "", cterm0D, "", "", "")
-highlight("csContextualStatement", gui0E, "", cterm0E, "", "", "")
-highlight("csNewDecleration", gui08, "", cterm08, "", "", "")
+vim.highlight.create("csClass", { guifg = gui0A, ctermfg = cterm0A })
+
+vim.highlight.create("csAttribute", { guifg = gui0A, ctermfg = cterm0A })
+
+vim.highlight.create("csModifier", { guifg = gui0E, ctermfg = cterm0E })
+
+vim.highlight.create("csType", { guifg = gui08, ctermfg = cterm08 })
+
+vim.highlight.create("csUnspecifiedStatement",
+                     { guifg = gui0D, ctermfg = cterm0D })
+
+vim.highlight.create("csContextualStatement",
+                     { guifg = gui0E, ctermfg = cterm0E })
+
+vim.highlight.create("csNewDecleration", { guifg = gui08, ctermfg = cterm08 })
 
 -- CSS highlighting
-highlight("cssBraces", gui05, "", cterm05, "", "", "")
-highlight("cssClassName", gui0E, "", cterm0E, "", "", "")
-highlight("cssColor", gui0C, "", cterm0C, "", "", "")
+vim.highlight.create("cssBraces", { guifg = gui05, ctermfg = cterm05 })
+
+vim.highlight.create("cssClassName", { guifg = gui0E, ctermfg = cterm0E })
+
+vim.highlight.create("cssColor", { guifg = gui0C, ctermfg = cterm0C })
 
 -- Diff highlighting
-highlight("DiffAdd", gui0B, gui01, cterm0B, cterm01, "", "")
-highlight("DiffChange", gui03, gui01, cterm03, cterm01, "", "")
-highlight("DiffDelete", gui08, gui01, cterm08, cterm01, "", "")
-highlight("DiffText", gui0D, gui01, cterm0D, cterm01, "", "")
-highlight("DiffAdded", gui0B, gui00, cterm0B, cterm00, "", "")
-highlight("DiffFile", gui08, gui00, cterm08, cterm00, "", "")
-highlight("DiffNewFile", gui0B, gui00, cterm0B, cterm00, "", "")
-highlight("DiffLine", gui0D, gui00, cterm0D, cterm00, "", "")
-highlight("DiffRemoved", gui08, gui00, cterm08, cterm00, "", "")
+vim.highlight.create("DiffAdd", {
+  guifg = gui0B,
+  guibg = gui01,
+  ctermfg = cterm0B,
+  ctermbg = cterm01,
+})
+
+vim.highlight.create("DiffChange", {
+  guifg = gui03,
+  guibg = gui01,
+  ctermfg = cterm03,
+  ctermbg = cterm01,
+})
+
+vim.highlight.create("DiffDelete", {
+  guifg = gui08,
+  guibg = gui01,
+  ctermfg = cterm08,
+  ctermbg = cterm01,
+})
+
+vim.highlight.create("DiffText", {
+  guifg = gui0D,
+  guibg = gui01,
+  ctermfg = cterm0D,
+  ctermbg = cterm01,
+})
+
+vim.highlight.create("DiffAdded", {
+  guifg = gui0B,
+  guibg = gui00,
+  ctermfg = cterm0B,
+  ctermbg = cterm00,
+})
+
+vim.highlight.create("DiffFile", {
+  guifg = gui08,
+  guibg = gui00,
+  ctermfg = cterm08,
+  ctermbg = cterm00,
+})
+
+vim.highlight.create("DiffNewFile", {
+  guifg = gui0B,
+  guibg = gui00,
+  ctermfg = cterm0B,
+  ctermbg = cterm00,
+})
+
+vim.highlight.create("DiffLine", {
+  guifg = gui0D,
+  guibg = gui00,
+  ctermfg = cterm0D,
+  ctermbg = cterm00,
+})
+
+vim.highlight.create("DiffRemoved", {
+  guifg = gui08,
+  guibg = gui00,
+  ctermfg = cterm08,
+  ctermbg = cterm00,
+})
 
 -- Git highlighting
-highlight("gitcommitOverflow", gui08, "", cterm08, "", "", "")
-highlight("gitcommitSummary", gui0B, "", cterm0B, "", "", "")
-highlight("gitcommitComment", gui03, "", cterm03, "", "", "")
-highlight("gitcommitUntracked", gui03, "", cterm03, "", "", "")
-highlight("gitcommitDiscarded", gui03, "", cterm03, "", "", "")
-highlight("gitcommitSelected", gui03, "", cterm03, "", "", "")
-highlight("gitcommitHeader", gui0E, "", cterm0E, "", "", "")
-highlight("gitcommitSelectedType", gui0D, "", cterm0D, "", "", "")
-highlight("gitcommitUnmergedType", gui0D, "", cterm0D, "", "", "")
-highlight("gitcommitDiscardedType", gui0D, "", cterm0D, "", "", "")
-highlight("gitcommitBranch", gui09, "", cterm09, "", "bold", "")
-highlight("gitcommitUntrackedFile", gui0A, "", cterm0A, "", "", "")
-highlight("gitcommitUnmergedFile", gui08, "", cterm08, "", "bold", "")
-highlight("gitcommitDiscardedFile", gui08, "", cterm08, "", "bold", "")
-highlight("gitcommitSelectedFile", gui0B, "", cterm0B, "", "bold", "")
+vim.highlight.create("gitcommitOverflow", { guifg = gui08, ctermfg = cterm08 })
+
+vim.highlight.create("gitcommitSummary", { guifg = gui0B, ctermfg = cterm0B })
+
+vim.highlight.create("gitcommitComment", { guifg = gui03, ctermfg = cterm03 })
+
+vim.highlight.create("gitcommitUntracked", { guifg = gui03, ctermfg = cterm03 })
+
+vim.highlight.create("gitcommitDiscarded", { guifg = gui03, ctermfg = cterm03 })
+
+vim.highlight.create("gitcommitSelected", { guifg = gui03, ctermfg = cterm03 })
+
+vim.highlight.create("gitcommitHeader", { guifg = gui0E, ctermfg = cterm0E })
+
+vim.highlight.create("gitcommitSelectedType",
+                     { guifg = gui0D, ctermfg = cterm0D })
+
+vim.highlight.create("gitcommitUnmergedType",
+                     { guifg = gui0D, ctermfg = cterm0D })
+
+vim.highlight.create("gitcommitDiscardedType",
+                     { guifg = gui0D, ctermfg = cterm0D })
+
+vim.highlight.create("gitcommitBranch", {
+  guifg = gui09,
+  ctermfg = cterm09,
+  gui = "bold",
+  cterm = "bold",
+})
+
+vim.highlight.create("gitcommitUntrackedFile",
+                     { guifg = gui0A, ctermfg = cterm0A })
+
+vim.highlight.create("gitcommitUnmergedFile", {
+  guifg = gui08,
+  ctermfg = cterm08,
+  gui = "bold",
+  cterm = "bold",
+})
+
+vim.highlight.create("gitcommitDiscardedFile", {
+  guifg = gui08,
+  ctermfg = cterm08,
+  gui = "bold",
+  cterm = "bold",
+})
+
+vim.highlight.create("gitcommitSelectedFile", {
+  guifg = gui0B,
+  ctermfg = cterm0B,
+  gui = "bold",
+  cterm = "bold",
+})
 
 -- HTML highlighting
-highlight("htmlBold", gui0A, "", cterm0A, "", "", "")
-highlight("htmlItalic", gui0E, "", cterm0E, "", "", "")
-highlight("htmlEndTag", gui05, "", cterm05, "", "", "")
-highlight("htmlTag", gui05, "", cterm05, "", "", "")
+vim.highlight.create("htmlBold", { guifg = gui0A, ctermfg = cterm0A })
+
+vim.highlight.create("htmlItalic", { guifg = gui0E, ctermfg = cterm0E })
+
+vim.highlight.create("htmlEndTag", { guifg = gui05, ctermfg = cterm05 })
+
+vim.highlight.create("htmlTag", { guifg = gui05, ctermfg = cterm05 })
 
 -- JavaScript highlighting
-highlight("javaScript", gui05, "", cterm05, "", "", "")
-highlight("javaScriptBraces", gui05, "", cterm05, "", "", "")
-highlight("javaScriptNumber", gui09, "", cterm09, "", "", "")
+vim.highlight.create("javaScript", { guifg = gui05, ctermfg = cterm05 })
+
+vim.highlight.create("javaScriptBraces", { guifg = gui05, ctermfg = cterm05 })
+
+vim.highlight.create("javaScriptNumber", { guifg = gui09, ctermfg = cterm09 })
 
 -- pangloss/vim-javascript highlighting
-highlight("jsOperator", gui0D, "", cterm0D, "", "", "")
-highlight("jsStatement", gui0E, "", cterm0E, "", "", "")
-highlight("jsReturn", gui0E, "", cterm0E, "", "", "")
-highlight("jsThis", gui08, "", cterm08, "", "", "")
-highlight("jsClassDefinition", gui0A, "", cterm0A, "", "", "")
-highlight("jsFunction", gui0E, "", cterm0E, "", "", "")
-highlight("jsFuncName", gui0D, "", cterm0D, "", "", "")
-highlight("jsFuncCall", gui0D, "", cterm0D, "", "", "")
-highlight("jsClassFuncName", gui0D, "", cterm0D, "", "", "")
-highlight("jsClassMethodType", gui0E, "", cterm0E, "", "", "")
-highlight("jsRegexpString", gui0C, "", cterm0C, "", "", "")
-highlight("jsGlobalObjects", gui0A, "", cterm0A, "", "", "")
-highlight("jsGlobalNodeObjects", gui0A, "", cterm0A, "", "", "")
-highlight("jsExceptions", gui0A, "", cterm0A, "", "", "")
-highlight("jsBuiltins", gui0A, "", cterm0A, "", "", "")
+vim.highlight.create("jsOperator", { guifg = gui0D, ctermfg = cterm0D })
+
+vim.highlight.create("jsStatement", { guifg = gui0E, ctermfg = cterm0E })
+
+vim.highlight.create("jsReturn", { guifg = gui0E, ctermfg = cterm0E })
+
+vim.highlight.create("jsThis", { guifg = gui08, ctermfg = cterm08 })
+
+vim.highlight.create("jsClassDefinition", { guifg = gui0A, ctermfg = cterm0A })
+
+vim.highlight.create("jsFunction", { guifg = gui0E, ctermfg = cterm0E })
+
+vim.highlight.create("jsFuncName", { guifg = gui0D, ctermfg = cterm0D })
+
+vim.highlight.create("jsFuncCall", { guifg = gui0D, ctermfg = cterm0D })
+
+vim.highlight.create("jsClassFuncName", { guifg = gui0D, ctermfg = cterm0D })
+
+vim.highlight.create("jsClassMethodType", { guifg = gui0E, ctermfg = cterm0E })
+
+vim.highlight.create("jsRegexpString", { guifg = gui0C, ctermfg = cterm0C })
+
+vim.highlight.create("jsGlobalObjects", { guifg = gui0A, ctermfg = cterm0A })
+
+vim.highlight
+  .create("jsGlobalNodeObjects", { guifg = gui0A, ctermfg = cterm0A })
+
+vim.highlight.create("jsExceptions", { guifg = gui0A, ctermfg = cterm0A })
+
+vim.highlight.create("jsBuiltins", { guifg = gui0A, ctermfg = cterm0A })
 
 -- Mail highlighting
-highlight("mailQuoted1", gui0A, "", cterm0A, "", "", "")
-highlight("mailQuoted2", gui0B, "", cterm0B, "", "", "")
-highlight("mailQuoted3", gui0E, "", cterm0E, "", "", "")
-highlight("mailQuoted4", gui0C, "", cterm0C, "", "", "")
-highlight("mailQuoted5", gui0D, "", cterm0D, "", "", "")
-highlight("mailQuoted6", gui0A, "", cterm0A, "", "", "")
-highlight("mailURL", gui0D, "", cterm0D, "", "", "")
-highlight("mailEmail", gui0D, "", cterm0D, "", "", "")
+vim.highlight.create("mailQuoted1", { guifg = gui0A, ctermfg = cterm0A })
+
+vim.highlight.create("mailQuoted2", { guifg = gui0B, ctermfg = cterm0B })
+
+vim.highlight.create("mailQuoted3", { guifg = gui0E, ctermfg = cterm0E })
+
+vim.highlight.create("mailQuoted4", { guifg = gui0C, ctermfg = cterm0C })
+
+vim.highlight.create("mailQuoted5", { guifg = gui0D, ctermfg = cterm0D })
+
+vim.highlight.create("mailQuoted6", { guifg = gui0A, ctermfg = cterm0A })
+
+vim.highlight.create("mailURL", { guifg = gui0D, ctermfg = cterm0D })
+
+vim.highlight.create("mailEmail", { guifg = gui0D, ctermfg = cterm0D })
 
 -- Markdown highlighting
-highlight("markdownCode", gui0B, "", cterm0B, "", "", "")
-highlight("markdownError", gui05, gui00, cterm05, cterm00, "", "")
-highlight("markdownCodeBlock", gui0B, "", cterm0B, "", "", "")
-highlight("markdownHeadingDelimiter", gui0D, "", cterm0D, "", "", "")
+vim.highlight.create("markdownCode", { guifg = gui0B, ctermfg = cterm0B })
+
+vim.highlight.create("markdownError", {
+  guifg = gui05,
+  guibg = gui00,
+  ctermfg = cterm05,
+  ctermbg = cterm00,
+})
+
+vim.highlight.create("markdownCodeBlock", { guifg = gui0B, ctermfg = cterm0B })
+
+vim.highlight.create("markdownHeadingDelimiter",
+                     { guifg = gui0D, ctermfg = cterm0D })
 
 -- NERDTree highlighting
-highlight("NERDTreeDirSlash", gui0D, "", cterm0D, "", "", "")
-highlight("NERDTreeExecFile", gui05, "", cterm05, "", "", "")
+vim.highlight.create("NERDTreeDirSlash", { guifg = gui0D, ctermfg = cterm0D })
+
+vim.highlight.create("NERDTreeExecFile", { guifg = gui05, ctermfg = cterm05 })
 
 -- PHP highlighting
-highlight("phpMemberSelector", gui05, "", cterm05, "", "", "")
-highlight("phpComparison", gui05, "", cterm05, "", "", "")
-highlight("phpParent", gui05, "", cterm05, "", "", "")
-highlight("phpMethodsVar", gui0C, "", cterm0C, "", "", "")
+vim.highlight.create("phpMemberSelector", { guifg = gui05, ctermfg = cterm05 })
+
+vim.highlight.create("phpComparison", { guifg = gui05, ctermfg = cterm05 })
+
+vim.highlight.create("phpParent", { guifg = gui05, ctermfg = cterm05 })
+
+vim.highlight.create("phpMethodsVar", { guifg = gui0C, ctermfg = cterm0C })
 
 -- Python highlighting
-highlight("pythonOperator", gui0E, "", cterm0E, "", "", "")
-highlight("pythonRepeat", gui0E, "", cterm0E, "", "", "")
-highlight("pythonInclude", gui0E, "", cterm0E, "", "", "")
-highlight("pythonStatement", gui0E, "", cterm0E, "", "", "")
+vim.highlight.create("pythonOperator", { guifg = gui0E, ctermfg = cterm0E })
+
+vim.highlight.create("pythonRepeat", { guifg = gui0E, ctermfg = cterm0E })
+
+vim.highlight.create("pythonInclude", { guifg = gui0E, ctermfg = cterm0E })
+
+vim.highlight.create("pythonStatement", { guifg = gui0E, ctermfg = cterm0E })
 
 -- Ruby highlighting
-highlight("rubyAttribute", gui0D, "", cterm0D, "", "", "")
-highlight("rubyConstant", gui0A, "", cterm0A, "", "", "")
-highlight("rubyInterpolation", gui0B, "", cterm0B, "", "", "")
-highlight("rubyInterpolationDelimiter", gui0F, "", cterm0F, "", "", "")
-highlight("rubyRegexp", gui0C, "", cterm0C, "", "", "")
-highlight("rubySymbol", gui0B, "", cterm0B, "", "", "")
-highlight("rubyStringDelimiter", gui0B, "", cterm0B, "", "", "")
+vim.highlight.create("rubyAttribute", { guifg = gui0D, ctermfg = cterm0D })
+
+vim.highlight.create("rubyConstant", { guifg = gui0A, ctermfg = cterm0A })
+
+vim.highlight.create("rubyInterpolation", { guifg = gui0B, ctermfg = cterm0B })
+
+vim.highlight.create("rubyInterpolationDelimiter",
+                     { guifg = gui0F, ctermfg = cterm0F })
+
+vim.highlight.create("rubyRegexp", { guifg = gui0C, ctermfg = cterm0C })
+
+vim.highlight.create("rubySymbol", { guifg = gui0B, ctermfg = cterm0B })
+
+vim.highlight
+  .create("rubyStringDelimiter", { guifg = gui0B, ctermfg = cterm0B })
 
 -- SASS highlighting
-highlight("sassidChar", gui08, "", cterm08, "", "", "")
-highlight("sassClassChar", gui09, "", cterm09, "", "", "")
-highlight("sassInclude", gui0E, "", cterm0E, "", "", "")
-highlight("sassMixing", gui0E, "", cterm0E, "", "", "")
-highlight("sassMixinName", gui0D, "", cterm0D, "", "", "")
+vim.highlight.create("sassidChar", { guifg = gui08, ctermfg = cterm08 })
+
+vim.highlight.create("sassClassChar", { guifg = gui09, ctermfg = cterm09 })
+
+vim.highlight.create("sassInclude", { guifg = gui0E, ctermfg = cterm0E })
+
+vim.highlight.create("sassMixing", { guifg = gui0E, ctermfg = cterm0E })
+
+vim.highlight.create("sassMixinName", { guifg = gui0D, ctermfg = cterm0D })
 
 -- Spelling highlighting
-highlight("SpellBad", "", gui00, "", cterm00, "undercurl", "")
-highlight("SpellLocal", "", gui00, "", cterm00, "undercurl", "")
-highlight("SpellCap", "", gui00, "", cterm00, "undercurl", "")
-highlight("SpellRare", "", gui00, "", cterm00, "undercurl", "")
+vim.highlight.create("SpellBad", {
+  guibg = gui00,
+  ctermbg = cterm00,
+  gui = "undercurl",
+  cterm = "undercurl",
+})
+
+vim.highlight.create("SpellLocal", {
+  guibg = gui00,
+  ctermbg = cterm00,
+  gui = "undercurl",
+  cterm = "undercurl",
+})
+
+vim.highlight.create("SpellCap", {
+  guibg = gui00,
+  ctermbg = cterm00,
+  gui = "undercurl",
+  cterm = "undercurl",
+})
+
+vim.highlight.create("SpellRare", {
+  guibg = gui00,
+  ctermbg = cterm00,
+  gui = "undercurl",
+  cterm = "undercurl",
+})
 
 -- Java highlighting
-highlight("javaOperator", gui0D, "", cterm0D, "", "", "")
+vim.highlight.create("javaOperator", { guifg = gui0D, ctermfg = cterm0D })
