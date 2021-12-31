@@ -147,9 +147,6 @@ defaults write com.apple.systemuiserver menuExtras -array \
 # Enable subpixel font rendering on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
-# Disable Captive Portal Assistant
-defaults write /Library/Preferences/SystemConfiguration/com.apple.captive.control Active -bool false
-
 # Disable gatekeeper
 sudo spctl --master-disable
 
