@@ -42,9 +42,6 @@ defaults write com.apple.screensaver askForPassword -bool true
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 ### Sound
-# Play sound on startup
-nvram StartupMute=%00
-
 ### Keyboard
 # Set key repeat to fast, and delay until repeat to short
 defaults write NSGlobalDomain KeyRepeat -int 2
