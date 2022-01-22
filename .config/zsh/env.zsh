@@ -3,6 +3,7 @@ typeset -U path
 path=(
   $HOME/.local/bin
   $HOME/.bin
+  /opt/homebrew/bin
   $path
 )
 

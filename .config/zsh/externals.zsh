@@ -5,9 +5,9 @@ eval "$(lua $HOME/.bin/z.lua/z.lua --init zsh)"
 [ -f "$HOME/.fzf.zsh" ] && source $HOME/.fzf.zsh
 
 # chruby
-if [ -d "/usr/local/opt/chruby/" ]; then
-  source /usr/local/opt/chruby/share/chruby/chruby.sh
-  source /usr/local/opt/chruby/share/chruby/auto.sh
+if [ -d "$(brew --prefix)/opt/chruby/" ]; then
+  source "$(brew --prefix)/opt/chruby/share/chruby/chruby.sh"
+  source "$(brew --prefix)/opt/chruby/share/chruby/auto.sh"
 fi
 
 # ghcup-env
