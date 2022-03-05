@@ -49,4 +49,33 @@ vim.g.ale_linters = {
   yaml = { "yamllint" },
 }
 
+vim.g.ale_completion_symbols = {
+  ["<default>"] = "v",
+  class = "",
+  color = "",
+  constant = "",
+  constructor = "",
+  ["enum member"] = "",
+  enum = "了",
+  event = "event",
+  field = "",
+  file = "",
+  folder = "",
+  ["function"] = "ƒ",
+  interface = "ﰮ ",
+  keyword = "",
+  method = "ƒ",
+  module = "",
+  operator = "",
+  property = "",
+  reference = "ref",
+  snippet = "﬌",
+  struct = "",
+  text = "",
+  type_parameter = "type param",
+  unit = "",
+  value = "",
+  variable = "",
+}
+
 vim.g.ale_linters_ignore = { javascript = { "tsserver" } }
