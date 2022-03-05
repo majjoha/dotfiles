@@ -24,3 +24,5 @@ vim.opt.showmode = true
 
 -- Do not display key strokes
 vim.opt.showcmd = false
+
+vim.opt.signcolumn = "yes:1"
