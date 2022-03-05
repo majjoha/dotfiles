@@ -26,6 +26,11 @@ majjoha.customize_colors = function()
   -- color column, and the status line in all inactive buffers to transparent
   vim.highlight.create("StatusLine", { ctermbg = 10 })
   vim.highlight.create("StatusLineNC", { ctermbg = 00 })
+
+  vim.highlight.create("SignColumn", { ctermbg = 00 })
+  vim.highlight.create("ALEErrorSign", { ctermfg = 01, ctermbg = 00 })
+  vim.highlight.create("ALEWarningSign", { ctermfg = 03, ctermbg = 00 })
+  vim.highlight.create("ALEInfoSign", { ctermfg = 07, ctermbg = 00 })
 end
 
 return majjoha
