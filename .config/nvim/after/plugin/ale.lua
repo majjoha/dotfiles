@@ -16,7 +16,7 @@ vim.highlight.link("ALEVirtualWarning", "DiffDelete")
 vim.g.ale_lint_on_text_changed = "normal"
 vim.g.ale_virtualtext_cursor = 1
 vim.g.ale_virtualtext_prefix = "▎"
-vim.g.ale_lint_on_insert_leave = 0
+vim.g.ale_lint_on_insert_leave = 1
 vim.g.ale_set_balloons = 1
 vim.g.ale_fix_on_save = 1
 vim.g.ale_floating_preview = 1
