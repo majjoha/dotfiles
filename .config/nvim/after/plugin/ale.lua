@@ -4,8 +4,9 @@ if not vim.g.loaded_ale then
 end
 
 -- Redefine representation of warnings and errors
-vim.g.ale_sign_error = "▍"
-vim.g.ale_sign_warning = "▍"
+vim.g.ale_sign_error = ""
+vim.g.ale_sign_info = ""
+vim.g.ale_sign_warning = ""
 vim.highlight.create("ALEError", { cterm = "underline", ctermfg = 01 })
 vim.highlight.create("ALEWarning", { cterm = "underline", ctermfg = 01 })
 vim.highlight.link("ALEErrorSign", "DiffDelete")
