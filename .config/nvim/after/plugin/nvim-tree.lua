@@ -1,9 +1,6 @@
 -- Append trailing slash to folder names
 vim.g.nvim_tree_add_trailing = 1
 
--- Disable the window picker to allow more than two splits
-vim.g.nvim_tree_disable_window_picker = 1
-
 -- Change default icons
 -- LuaFormatter off
 vim.g.nvim_tree_show_icons = {
@@ -56,4 +53,12 @@ require("nvim-tree").setup({
       ".o$", ".prefab",
     },
   },
+  actions = {
+    open_file = {
+      -- Disable the window picker to allow more than two splits
+      window_picker = {
+        enable = false
+      }
+    }
+  }
 })
