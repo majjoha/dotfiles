@@ -11,7 +11,8 @@ vim.env.FZF_DEFAULT_COMMAND = "rg --files --hidden"
 
 -- Place the search field in the top, and display the number of results next to
 -- it
-vim.env.FZF_DEFAULT_OPTS = "--inline-info --reverse"
+vim.env.FZF_DEFAULT_OPTS =
+  "--inline-info --reverse --preview-window border-left"
 
 vim.g.fzf_layout = { window = { width = 0.9, height = 0.7, border = "sharp" } }
 
