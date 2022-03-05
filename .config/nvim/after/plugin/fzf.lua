@@ -13,6 +13,8 @@ vim.env.FZF_DEFAULT_COMMAND = "rg --files --hidden"
 -- it
 vim.env.FZF_DEFAULT_OPTS = "--inline-info --reverse"
 
+vim.g.fzf_layout = { window = { width = 0.9, height = 0.7, border = "sharp" } }
+
 -- Redefine color scheme for FZF
 vim.g.fzf_colors = {
   bg = { "bg", "Normal" },
