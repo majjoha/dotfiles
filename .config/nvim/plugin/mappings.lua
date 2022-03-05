@@ -197,3 +197,7 @@ nvim_set_keymap("i", "<CR>", "v:lua.npairs.autopairs_cr()",
 -- Keep the current search result centered in the viewport when jumping
 nvim_set_keymap("n", "n", "nzz", { noremap = true })
 nvim_set_keymap("n", "N", "Nzz", { noremap = true })
+
+-- Move visual selection up/down
+nvim_set_keymap("v", "K", ":m '<-2<CR>gv=gv", { noremap = true })
+nvim_set_keymap("v", "J", ":m '>+1<CR>gv=gv", { noremap = true })
