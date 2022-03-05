@@ -20,7 +20,7 @@ vim.g.ale_lint_on_insert_leave = 0
 vim.g.ale_set_balloons = 1
 vim.g.ale_fix_on_save = 1
 vim.g.ale_floating_preview = 1
-vim.g.ale_floating_window_border = { " ", " ", " ", " ", " ", " " }
+vim.g.ale_floating_window_border = { '│', '─', '┌', '┐', '┘', '└' }
 vim.g.ale_hover_to_floating_preview = 1
 
 -- Use ALE for completion
