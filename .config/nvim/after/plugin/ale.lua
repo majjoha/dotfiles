@@ -7,8 +7,6 @@ end
 vim.g.ale_sign_error = ""
 vim.g.ale_sign_info = ""
 vim.g.ale_sign_warning = ""
-vim.highlight.create("ALEError", { cterm = "underline", ctermfg = 01 })
-vim.highlight.create("ALEWarning", { cterm = "underline", ctermfg = 01 })
 vim.highlight.link("ALEErrorSign", "DiffDelete")
 vim.highlight.link("ALEWarningSign", "DiffDelete")
 vim.highlight.link("ALEVirtualTextError", "DiffDelete")
