@@ -178,6 +178,7 @@ nvim_set_keymap("n", "<Leader>ah", ":ALEHover<CR>",
                 { noremap = true, silent = true })
 nvim_set_keymap("n", "<Leader>ar", ":ALERename<CR>",
                 { noremap = true, silent = true })
+-- Open completion menus with Ctrl-Space
 nvim_set_keymap("i", "<C-Space>", "<C-x><C-o>",
                 { noremap = true, silent = true })
 
