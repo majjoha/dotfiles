@@ -46,16 +46,12 @@ lspconfig.efm.setup({
   settings = { languages = languages, filetypes = vim.tbl_keys(languages) },
 })
 
-local servers = {
-  "solargraph"
-}
+local servers = { "solargraph", "tsserver" }
 
 for _, lsp in pairs(servers) do
   lspconfig[lsp].setup {
     init_options = { documentFormatting = true },
     on_attach = on_attach,
-    flags = {
-      debounce_text_changes = 150,
-    }
+    flags = { debounce_text_changes = 150 },
   }
 end
