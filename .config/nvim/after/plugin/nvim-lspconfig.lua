@@ -72,14 +72,6 @@ vim.fn.sign_define("DiagnosticSignInfo", {
 })
 
 local on_attach = function(client)
-  -- Enable completion through LSP servers
-  vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
-
-  -- Configure completion icons
-  for i, kind in ipairs(vim.lsp.protocol.CompletionItemKind) do
-    vim.lsp.protocol.CompletionItemKind[i] = completion_icons[kind] or kind
-  end
-
   -- Format files on save
   if client.resolved_capabilities.document_formatting then
     local autocmd = [[
@@ -90,6 +82,14 @@ local on_attach = function(client)
     ]]
 
     vim.cmd(autocmd)
+  end
+
+  -- Enable completion through LSP servers
+  vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+
+  -- Configure completion icons
+  for i, kind in ipairs(vim.lsp.protocol.CompletionItemKind) do
+    vim.lsp.protocol.CompletionItemKind[i] = completion_icons[kind] or kind
   end
 end
 
