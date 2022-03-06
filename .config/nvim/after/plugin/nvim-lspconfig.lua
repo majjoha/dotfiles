@@ -1,5 +1,29 @@
 local lspconfig = require("lspconfig")
 
+local completion_icons = {
+  Class = " ",
+  Color = " ",
+  Constant = " ",
+  Constructor = " ",
+  Enum = "了 ",
+  EnumMember = " ",
+  Field = " ",
+  File = " ",
+  Folder = " ",
+  Function = " ",
+  Interface = "ﰮ ",
+  Keyword = " ",
+  Method = "ƒ ",
+  Module = " ",
+  Property = " ",
+  Snippet = "﬌ ",
+  Struct = " ",
+  Text = " ",
+  Unit = " ",
+  Value = " ",
+  Variable = " ",
+}
+
 local border = {
   { "┌", "FloatBorder" }, { "─", "FloatBorder" }, { "┐", "FloatBorder" },
   { "│", "FloatBorder" }, { "┘", "FloatBorder" }, { "─", "FloatBorder" },
@@ -22,6 +46,11 @@ end
 local on_attach = function(client)
   -- Enable completion through LSP servers
   vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+
+  -- Configure completion icons
+  for i, kind in ipairs(vim.lsp.protocol.CompletionItemKind) do
+    vim.lsp.protocol.CompletionItemKind[i] = completion_icons[kind] or kind
+  end
 
   -- Format files on save
   if client.resolved_capabilities.document_formatting then
