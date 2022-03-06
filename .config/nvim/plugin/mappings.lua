@@ -179,6 +179,14 @@ nvim_set_keymap("n", "<Leader>ah", ":ALEHover<CR>",
 nvim_set_keymap("n", "<Leader>ar", ":ALERename<CR>",
                 { noremap = true, silent = true })
 
+-- Diagnostic-related mappings
+nvim_set_keymap("n", "<Leader>am", ":lua vim.diagnostic.open_float()<CR>",
+                { noremap = true, silent = true })
+nvim_set_keymap("n", "]d", ":lua vim.diagnostic.goto_next()<CR>",
+                { noremap = true, silent = true })
+nvim_set_keymap("n", "[d", ":lua vim.diagnostic.goto_prev()<CR>",
+                { noremap = true, silent = true })
+
 -- Use NetRw to open file under the cursor
 -- See https://github.com/kyazdani42/nvim-tree.lua/issues/47#issuecomment-658266288
 nvim_set_keymap("n", "gx",
