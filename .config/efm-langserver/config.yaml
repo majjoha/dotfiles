@@ -36,5 +36,7 @@ languages:
   sh:
     - <<: *shellcheck
     - <<: *shfmt
+  typescript:
+    - <<: *prettier
   yaml:
     - <<: *yamllint
