@@ -43,6 +43,9 @@ function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
   return orig_util_open_floating_preview(contents, syntax, opts, ...)
 end
 
+-- Disable virtual text
+vim.diagnostic.config({ virtual_text = false })
+
 local on_attach = function(client)
   -- Enable completion through LSP servers
   vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
