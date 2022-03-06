@@ -2,7 +2,8 @@ local majjoha = {}
 
 majjoha.open_current_as_new_tab = function()
   local current_pos = vim.fn.getcurpos()
-  vim.cmd([[tabedit %]])
+  local tabedit = [[tabedit %]]
+  vim.cmd(tabedit)
   vim.fn.setpos(".", current_pos)
 end
 
