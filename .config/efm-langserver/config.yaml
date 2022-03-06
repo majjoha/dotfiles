@@ -1,0 +1,40 @@
+---
+version: 2
+
+tools:
+  prettier: &prettier
+    format-command: "./node_modules/.bin/prettier --stdin-filepath ${INPUT}"
+    format-stdin: true
+  jq: &jq
+    format-command: "jq ."
+    format-stdin: true
+  lua-format: &lua-format
+    format-command: "lua-format -i"
+    format-stdin: true
+  shellcheck: &shellcheck
+    lint-command: "shellcheck -f gcc -x -"
+    lint-source: "shellcheck"
+    lint-stdin: true
+    lint-formats:
+      - "%f:%l:%c: %t%*[^:]: %m [SC%n]"
+  shfmt: &shfmt
+    format-command: "shfmt -ln bash -i 2 -bn -ci -sr -kp"
+    format-stdin: true
+  yamllint: &yamllint
+    lint-command: "yamllint --strict --format parsable ${INPUT}"
+    lint-stdin: false
+    lint-formats:
+      - "%f:%l:%c: [%t%*[a-z]] %m"
+
+languages:
+  javascript:
+    - <<: *prettier
+  json:
+    - <<: *jq
+  lua:
+    - <<: *lua-format
+  sh:
+    - <<: *shellcheck
+    - <<: *shfmt
+  yaml:
+    - <<: *yamllint
