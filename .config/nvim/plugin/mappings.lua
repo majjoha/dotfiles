@@ -167,16 +167,18 @@ nvim_set_keymap("n", "<Leader>mft", ":MarginaliaFindTagReferences<Space>",
 nvim_set_keymap("n", "<Leader>mcw", ":MarginaliaConvertWordToTag<CR>",
                 { noremap = true, silent = true })
 
--- ALE-related mappings
-nvim_set_keymap("n", "<Leader>ad", ":ALEDetail<CR>",
+-- LSP-related mappings
+nvim_set_keymap("n", "<Leader>ac", ":lua vim.lsp.buf.code_action()<CR>",
                 { noremap = true, silent = true })
-nvim_set_keymap("n", "<Leader>af", ":ALEFindReferences -relative<CR>",
+nvim_set_keymap("n", "<Leader>af", ":lua vim.lsp.buf.references()<CR>",
                 { noremap = true, silent = true })
-nvim_set_keymap("n", "<Leader>ag", ":ALEGoToDefinition<CR>",
+nvim_set_keymap("n", "<Leader>ag", ":lua vim.lsp.buf.definition()<CR>",
                 { noremap = true, silent = true })
-nvim_set_keymap("n", "<Leader>ah", ":ALEHover<CR>",
+nvim_set_keymap("n", "<Leader>ah", ":lua vim.lsp.buf.hover()<CR>",
                 { noremap = true, silent = true })
-nvim_set_keymap("n", "<Leader>ar", ":ALERename<CR>",
+nvim_set_keymap("n", "<Leader>ar", ":lua vim.lsp.buf.rename()<CR>",
+                { noremap = true, silent = true })
+nvim_set_keymap("n", "<Leader>ap", ":lua peek_definition()<CR>",
                 { noremap = true, silent = true })
 
 -- Diagnostic-related mappings
