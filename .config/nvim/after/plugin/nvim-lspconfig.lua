@@ -46,7 +46,7 @@ lspconfig.efm.setup({
   settings = { languages = languages, filetypes = vim.tbl_keys(languages) },
 })
 
-local servers = { "solargraph", "tsserver" }
+local servers = { "solargraph", "tsserver", "rust_analyzer" }
 
 for _, lsp in pairs(servers) do
   lspconfig[lsp].setup {
