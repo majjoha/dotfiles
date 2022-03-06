@@ -46,6 +46,12 @@ lspconfig.efm.setup({
   settings = { languages = languages, filetypes = vim.tbl_keys(languages) },
 })
 
+lspconfig.elixirls.setup({
+  on_attach = on_attach,
+  init_options = { documentFormatting = true },
+  cmd = { "/opt/homebrew/bin/elixir-ls" },
+})
+
 local servers = { "solargraph", "tsserver", "rust_analyzer" }
 
 for _, lsp in pairs(servers) do
