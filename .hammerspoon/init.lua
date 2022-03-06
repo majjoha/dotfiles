@@ -5,6 +5,12 @@ hs.loadSpoon("SpoonInstall")
 
 local hyper = { "ctrl", "alt" }
 
+hs.hints.style = "vimperator"
+hs.hints.fontName = "SFPro-Regular"
+hs.hints.fontSize = 20
+hs.hints.windowHints(hs.window.focusedWindow():application():allWindows())
+hs.hotkey.bind(hyper, "Space", hs.hints.windowHints)
+
 -- Load all spoons with their respective settings
 for plugin, configuration in pairs({
   AppLauncher = {
