@@ -178,9 +178,6 @@ nvim_set_keymap("n", "<Leader>ah", ":ALEHover<CR>",
                 { noremap = true, silent = true })
 nvim_set_keymap("n", "<Leader>ar", ":ALERename<CR>",
                 { noremap = true, silent = true })
--- Open completion menus with Ctrl-Space
-nvim_set_keymap("i", "<C-Space>", "<C-x><C-o>",
-                { noremap = true, silent = true })
 
 -- Use NetRw to open file under the cursor
 -- See https://github.com/kyazdani42/nvim-tree.lua/issues/47#issuecomment-658266288
@@ -202,3 +199,7 @@ nvim_set_keymap("n", "N", "Nzz", { noremap = true })
 -- Move visual selection up/down
 nvim_set_keymap("v", "K", ":m '<-2<CR>gv=gv", { noremap = true })
 nvim_set_keymap("v", "J", ":m '>+1<CR>gv=gv", { noremap = true })
+
+-- Open completion menus with Ctrl-Space
+nvim_set_keymap("i", "<C-Space>", "<C-x><C-o>",
+                { noremap = true, silent = true })
