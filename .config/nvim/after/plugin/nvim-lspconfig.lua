@@ -1,6 +1,9 @@
 local lspconfig = require("lspconfig")
 
 local on_attach = function(client)
+  -- Enable completion through LSP servers
+  vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
+
   if client.resolved_capabilities.document_formatting then
     local autocmd = [[
       augroup lsp_formatting
