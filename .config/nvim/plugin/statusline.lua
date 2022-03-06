@@ -3,7 +3,7 @@ function show_git_branch()
 
   if string.len(branchname) > 0 then
     local formatted_branchname = string.sub(branchname, 6):sub(1, -3)
-    return "   " .. formatted_branchname .. " | "
+    return "   " .. formatted_branchname .. "  "
   else
     return " "
   end
@@ -22,10 +22,10 @@ vim.opt.statusline = table.concat({
   -- Align right
   "%=",
   -- Show the file type if any file type is set
-  "%{strlen(&filetype)>0?&filetype.' | ':''}",
+  "%{strlen(&filetype)>0?&filetype.'  ':''}",
   -- Show the percentage through the file
   "%4.(%p%%%) ",
   -- Show line and column numbers
-  "| %6.(%l:%c%) "
+  " %6.(%l:%c%) "
 })
 -- LuaFormatter on
