@@ -33,6 +33,11 @@ majjoha.customize_colors = function()
   vim.highlight.create("ALEWarningSign", { ctermfg = 03, ctermbg = 00 })
   vim.highlight.create("ALEInfoSign", { ctermfg = 07, ctermbg = 00 })
 
+  vim.highlight.create("DiagnosticSignError", { ctermfg = 01, ctermbg = 00 })
+  vim.highlight.create("DiagnosticSignWarn", { ctermfg = 03, ctermbg = 00 })
+  vim.highlight.create("DiagnosticSignHint", { ctermfg = 07, ctermbg = 00 })
+  vim.highlight.create("DiagnosticSignInfo", { ctermfg = 07, ctermbg = 00 })
+
   -- Define colors for floating windows
   vim.highlight.create("NormalFloat", { ctermbg = 00 })
   vim.highlight.create("FloatBorder", { ctermbg = 00 })
