@@ -99,7 +99,9 @@ lspconfig.elixirls.setup({
   cmd = { "/opt/homebrew/bin/elixir-ls" },
 })
 
-local servers = { "efm", "solargraph", "tsserver", "rust_analyzer" }
+local servers = {
+  "bashls", "efm", "rust_analyzer", "solargraph", "tsserver",
+}
 
 for _, lsp in pairs(servers) do
   lspconfig[lsp].setup {
