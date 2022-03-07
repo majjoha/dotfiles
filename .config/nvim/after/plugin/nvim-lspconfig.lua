@@ -100,7 +100,7 @@ lspconfig.elixirls.setup({
 })
 
 local servers = {
-  "bashls", "efm", "rust_analyzer", "solargraph", "tsserver",
+  "bashls", "efm", "hls", "rust_analyzer", "solargraph", "tsserver",
 }
 
 for _, lsp in pairs(servers) do
