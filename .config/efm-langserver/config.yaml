@@ -2,14 +2,14 @@
 version: 2
 
 tools:
-  prettier: &prettier
-    format-command: "./node_modules/.bin/prettier --stdin-filepath ${INPUT}"
-    format-stdin: true
   jq: &jq
     format-command: "jq ."
     format-stdin: true
   lua-format: &lua-format
     format-command: "lua-format -i"
+    format-stdin: true
+  prettier: &prettier
+    format-command: "./node_modules/.bin/prettier --stdin-filepath ${INPUT}"
     format-stdin: true
   shellcheck: &shellcheck
     lint-command: "shellcheck -f gcc -x -"
