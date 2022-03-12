@@ -2,6 +2,10 @@
 version: 2
 
 tools:
+  hadolint: &hadolint
+    lint-command: "hadolint --no-color"
+    lint-formats:
+      - "%f:%l %m"
   jq: &jq
     format-command: "jq ."
     format-stdin: true
@@ -27,6 +31,8 @@ tools:
       - "%f:%l:%c: [%t%*[a-z]] %m"
 
 languages:
+  dockerfile:
+    - <<: *hadolint
   javascript:
     - <<: *prettier
   json:
