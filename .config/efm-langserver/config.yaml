@@ -24,6 +24,9 @@ tools:
   shfmt: &shfmt
     format-command: "shfmt -ln bash -i 2 -bn -ci -sr -kp"
     format-stdin: true
+  stylish-haskell: &stylish-haskell
+    format-command: "stylish-haskell -i"
+    format-stdin: true
   yamllint: &yamllint
     lint-command: "yamllint --strict --format parsable ${INPUT}"
     lint-stdin: false
@@ -33,6 +36,8 @@ tools:
 languages:
   dockerfile:
     - <<: *hadolint
+  haskell:
+    - <<: *stylish-haskell
   javascript:
     - <<: *prettier
   json:
