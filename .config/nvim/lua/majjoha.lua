@@ -28,11 +28,9 @@ majjoha.customize_colors = function()
   vim.highlight.create("StatusLine", { ctermbg = 10 })
   vim.highlight.create("StatusLineNC", { ctermbg = 00 })
 
+  -- Set the sign column to have a transparent background and define the
+  -- foreground colors for the various signs
   vim.highlight.create("SignColumn", { ctermbg = 00 })
-  vim.highlight.create("ALEErrorSign", { ctermfg = 01, ctermbg = 00 })
-  vim.highlight.create("ALEWarningSign", { ctermfg = 03, ctermbg = 00 })
-  vim.highlight.create("ALEInfoSign", { ctermfg = 07, ctermbg = 00 })
-
   vim.highlight.create("DiagnosticSignError", { ctermfg = 01, ctermbg = 00 })
   vim.highlight.create("DiagnosticSignWarn", { ctermfg = 03, ctermbg = 00 })
   vim.highlight.create("DiagnosticSignHint", { ctermfg = 07, ctermbg = 00 })
