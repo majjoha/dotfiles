@@ -8,9 +8,6 @@ majjoha.open_current_as_new_tab = function()
 end
 
 majjoha.customize_colors = function()
-  -- Highlight current line number, and set the background color to transparent
-  vim.highlight.create("CursorLineNr", { ctermfg = 13, ctermbg = 00 })
-
   -- Set the background color of the line numbers to transparent
   vim.highlight.create("LineNr", { ctermbg = 00 })
 
