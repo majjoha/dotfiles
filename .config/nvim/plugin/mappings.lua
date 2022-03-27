@@ -174,7 +174,7 @@ nvim_set_keymap("n", "<Leader>af", ":lua vim.lsp.buf.references()<CR>",
                 { noremap = true, silent = true })
 nvim_set_keymap("n", "<Leader>ag", ":lua vim.lsp.buf.definition()<CR>",
                 { noremap = true, silent = true })
-nvim_set_keymap("n", "<Leader>ah", ":lua vim.lsp.buf.hover()<CR>:lua vim.lsp.buf.hover()<CR>",
+nvim_set_keymap("n", "<Leader>ah", ":lua vim.lsp.buf.hover()<CR>",
                 { noremap = true, silent = true })
 nvim_set_keymap("n", "<Leader>ar", ":lua vim.lsp.buf.rename()<CR>",
                 { noremap = true, silent = true })
