@@ -213,3 +213,9 @@ nvim_set_keymap("v", "J", ":m '>+1<CR>gv=gv", { noremap = true })
 -- Open completion menus with Ctrl-Space
 nvim_set_keymap("i", "<C-Space>", "<C-x><C-o>",
                 { noremap = true, silent = true })
+
+-- Toggle GitHub Copilot
+nvim_set_keymap("n", "<Leader>oe", ":Copilot enable<CR>",
+                { noremap = true, silent = true })
+nvim_set_keymap("n", "<Leader>od", ":Copilot disable<CR>",
+                { noremap = true, silent = true })
