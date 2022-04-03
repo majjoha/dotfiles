@@ -64,20 +64,20 @@ local on_attach = function(client)
   vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 end
 
-lspconfig.elixirls.setup({
-  on_attach = on_attach,
-  init_options = { documentFormatting = true },
-  cmd = { "/opt/homebrew/bin/elixir-ls" },
-})
-
 local servers = {
-  "bashls", "efm", "hls", "rust_analyzer", "solargraph", "tsserver",
+  bashls = {},
+  efm = {},
+  elixirls = { cmd = { "/opt/homebrew/bin/elixir-ls" } },
+  hls = { settings = { formattingProvider = "stylish-haskell" } },
+  rust_analyzer = {},
+  solargraph = {},
+  tsserver = {},
 }
 
-for _, lsp in pairs(servers) do
-  lspconfig[lsp].setup {
+for server, config in pairs(servers) do
+  lspconfig[server].setup(vim.tbl_deep_extend("force", {
     init_options = { documentFormatting = true },
     on_attach = on_attach,
     flags = { debounce_text_changes = 150 },
-  }
+  }, config))
 end
