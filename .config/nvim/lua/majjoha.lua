@@ -36,6 +36,10 @@ majjoha.customize_colors = function()
   -- Define colors for floating windows
   vim.highlight.create("NormalFloat", { ctermbg = 00 })
   vim.highlight.create("FloatBorder", { ctermbg = 00 })
+
+  -- Hide status line for NvimTree buffer
+  vim.highlight.create("NvimTreeStatusLineNC", { ctermbg = 00, ctermfg = 00 })
+  vim.highlight.create("NvimTreeStatusLine", { ctermbg = 00, ctermfg = 00 })
 end
 
 return majjoha
