@@ -2,6 +2,9 @@
 version: 2
 
 tools:
+  cabal-fmt: &cabal-fmt
+    format-command: "cabal-fmt --inplace"
+    format-stdin: true
   hadolint: &hadolint
     lint-command: "hadolint --no-color"
     lint-formats:
@@ -34,6 +37,8 @@ tools:
       - "%f:%l:%c: [%t%*[a-z]] %m"
 
 languages:
+  cabal:
+    - <<: *cabal-fmt
   dockerfile:
     - <<: *hadolint
   haskell:
