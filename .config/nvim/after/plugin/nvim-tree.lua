@@ -49,8 +49,7 @@ require("nvim-tree").setup({
   filters = {
     -- Ignore the following files
     custom = {
-      ".DS_Store", ".aux", ".beam", ".class$", ".git", ".ibc", ".idr~", ".meta",
-      ".o$", ".prefab",
+      ".DS_Store", ".aux", ".beam", ".class$", ".git", ".ibc", ".meta", ".o$", ".prefab",
     },
   },
   actions = {
