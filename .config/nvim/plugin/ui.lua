@@ -6,8 +6,9 @@ vim.opt.background = "dark"
 vim.opt.number = true
 vim.opt.relativenumber = true
 
--- Set color column to 80
-vim.opt.colorcolumn = "80"
+-- Set text width to 80 and mark column 81
+vim.opt.textwidth = 80
+vim.opt.colorcolumn = "+1"
 
 -- Always show the status line
 vim.opt.laststatus = 2
