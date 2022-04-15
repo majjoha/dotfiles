@@ -50,14 +50,12 @@ vim.fn.sign_define("DiagnosticSignInfo", {
 local on_attach = function(client, bufnr)
   -- Format files on save
   if client.resolved_capabilities.document_formatting then
-    local autocmd = [[
-      augroup lsp_formatting
-        autocmd!
-        autocmd BufWritePre <buffer> :lua vim.lsp.buf.formatting_seq_sync()
-      augroup END
-    ]]
-
-    vim.cmd(autocmd)
+    vim.api.nvim_create_augroup("LSPFormatting", {})
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      buffer = bufnr,
+      callback = vim.lsp.buf.formatting_seq_sync,
+      group = "LSPFormatting",
+    })
   end
 
   -- Enable completion through LSP servers
