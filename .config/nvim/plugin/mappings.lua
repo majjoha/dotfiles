@@ -15,9 +15,11 @@ nvim_set_keymap("t", "<C-q>", "<C-\\><C-n>:q<CR>",
                 { noremap = true, silent = true })
 
 -- Open the current buffer in a new tab
-nvim_set_keymap("n", "<Leader>mw",
-                ":lua require('majjoha').open_current_as_new_tab()<CR>",
-                { noremap = true, silent = true })
+nvim_set_keymap("n", "<Leader>mw", "", {
+  callback = require("majjoha").open_current_as_new_tab,
+  noremap = true,
+  silent = true,
+})
 
 -- Close the current tab
 nvim_set_keymap("n", "<Leader>cw", ":tabc<CR>",
@@ -77,8 +79,11 @@ nvim_set_keymap("n", "<Leader>gb", ":Git blame<CR>",
 nvim_set_keymap("n", "<Leader>gc", ":tab Git commit -v<CR>", { noremap = true })
 nvim_set_keymap("n", "<Leader>gcb", ":Git checkout -b<Space>",
                 { noremap = true })
-nvim_set_keymap("n", "<Leader>gco", ":call v:lua.fzf_search_branches()<CR>",
-                { noremap = true, silent = true })
+nvim_set_keymap("n", "<Leader>gco", "", {
+  callback = fzf_search_branches,
+  noremap = true,
+  silent = true
+})
 nvim_set_keymap("n", "<Leader>gd", ":Gdiffsplit!<CR>",
                 { noremap = true, silent = true })
 nvim_set_keymap("n", "<Leader>gr", ":Git rebase -i origin/main<CR>",
@@ -168,26 +173,47 @@ nvim_set_keymap("n", "<Leader>mcw", ":MarginaliaConvertWordToTag<CR>",
                 { noremap = true, silent = true })
 
 -- LSP-related mappings
-nvim_set_keymap("n", "<Leader>ac", ":lua vim.lsp.buf.code_action()<CR>",
-                { noremap = true, silent = true })
-nvim_set_keymap("n", "<Leader>af", ":lua vim.lsp.buf.references()<CR>",
-                { noremap = true, silent = true })
-nvim_set_keymap("n", "<Leader>ag", ":lua vim.lsp.buf.definition()<CR>",
-                { noremap = true, silent = true })
-nvim_set_keymap("n", "<Leader>ah", ":lua vim.lsp.buf.hover()<CR>",
-                { noremap = true, silent = true })
-nvim_set_keymap("n", "<Leader>ar", ":lua vim.lsp.buf.rename()<CR>",
-                { noremap = true, silent = true })
-nvim_set_keymap("n", "<Leader>ap", ":lua peek_definition()<CR>",
-                { noremap = true, silent = true })
+nvim_set_keymap("n", "<Leader>ac", "", {
+  callback = vim.lsp.buf.code_action,
+  noremap = true,
+  silent = true,
+})
+nvim_set_keymap("n", "<Leader>af", "", {
+  callback = vim.lsp.buf.references,
+  noremap = true,
+  silent = true,
+})
+nvim_set_keymap("n", "<Leader>ag", "", {
+  callback = vim.lsp.buf.definition,
+  noremap = true,
+  silent = true,
+})
+nvim_set_keymap("n", "<Leader>ah", "",
+                { callback = vim.lsp.buf.hover, noremap = true, silent = true })
+nvim_set_keymap("n", "<Leader>ar", "", {
+  callback = vim.lsp.buf.rename,
+  noremap = true,
+  silent = true,
+})
+nvim_set_keymap("n", "<Leader>ap", "",
+                { callback = peek_definition, noremap = true, silent = true })
 
 -- Diagnostic-related mappings
-nvim_set_keymap("n", "<Leader>am", ":lua vim.diagnostic.open_float()<CR>",
-                { noremap = true, silent = true })
-nvim_set_keymap("n", "]d", ":lua vim.diagnostic.goto_next()<CR>",
-                { noremap = true, silent = true })
-nvim_set_keymap("n", "[d", ":lua vim.diagnostic.goto_prev()<CR>",
-                { noremap = true, silent = true })
+nvim_set_keymap("n", "<Leader>am", "", {
+  callback = vim.diagnostic.open_float,
+  noremap = true,
+  silent = true,
+})
+nvim_set_keymap("n", "]d", "", {
+  callback = vim.diagnostic.goto_next,
+  noremap = true,
+  silent = true,
+})
+nvim_set_keymap("n", "[d", "", {
+  callback = vim.diagnostic.goto_prev,
+  noremap = true,
+  silent = true,
+})
 
 -- Use NetRw to open file under the cursor
 -- See https://github.com/kyazdani42/nvim-tree.lua/issues/47#issuecomment-658266288
@@ -199,8 +225,11 @@ nvim_set_keymap("n", "gx",
 nvim_set_keymap("n", "gp", "`[v`]", { noremap = true })
 
 -- Add `end` to functions in Ruby, Lua, and Elixir
-nvim_set_keymap("i", "<CR>", "v:lua.npairs.autopairs_cr()",
-                { expr = true, noremap = true })
+nvim_set_keymap("i", "<CR>", "", {
+  callback = require("nvim-autopairs").autopairs_cr,
+  expr = true,
+  noremap = true,
+})
 
 -- Keep the current search result centered in the viewport when jumping
 nvim_set_keymap("n", "n", "nzz", { noremap = true })
