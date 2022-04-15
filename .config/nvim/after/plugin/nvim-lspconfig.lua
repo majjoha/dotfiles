@@ -47,7 +47,7 @@ vim.fn.sign_define("DiagnosticSignInfo", {
   numhl = "DiagnosticSignInfo",
 })
 
-local on_attach = function(client)
+local on_attach = function(client, bufnr)
   -- Format files on save
   if client.resolved_capabilities.document_formatting then
     local autocmd = [[
