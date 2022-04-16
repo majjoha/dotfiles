@@ -21,9 +21,9 @@ vim.opt.statusline = table.concat({
   "%r",
   -- Align right
   "%=",
-  -- Show the percentage through the file
-  "%4.(%p%%%) ",
   -- Show line and column numbers
-  " %6.(%l:%c%) "
+  "%6.(%l:%c%) ",
+  -- Show the percentage through the file
+  " %4.(%p%%%) "
 })
 -- LuaFormatter on
