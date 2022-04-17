@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+if [ "$(git rev-parse --is-inside-work-tree)" ]; then
+  printf "%s" " $(git branch --no-color | tr -d '()' | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1/")  "
+else
+  printf ""
+fi
