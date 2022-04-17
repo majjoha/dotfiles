@@ -22,8 +22,8 @@ majjoha.customize_colors = function()
 
   -- Set the background of the status line in the current buffer to match the
   -- color column, and the status line in all inactive buffers to transparent
-  vim.highlight.create("StatusLine", { ctermbg = 10 })
-  vim.highlight.create("StatusLineNC", { ctermbg = 00 })
+  vim.highlight.create("StatusLine", { ctermbg = 10, ctermfg = 07 })
+  vim.highlight.create("StatusLineNC", { ctermbg = 10, ctermfg = 08 })
 
   -- Set the sign column to have a transparent background and define the
   -- foreground colors for the various signs
