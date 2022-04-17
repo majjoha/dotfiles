@@ -14,8 +14,6 @@ vim.opt.colorcolumn = "+1"
 vim.opt.laststatus = 2
 
 vim.opt.fillchars = {
-  -- Blend vertical separator and line numbers
-  vert = " ",
   -- Supress the `~` character at the end of the buffer
   eob = " ",
 }
