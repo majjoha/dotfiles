@@ -20,12 +20,7 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 vim.api.nvim_create_augroup("TerminalMode", {})
 vim.api.nvim_create_autocmd("TermOpen", {
   pattern = "*",
-  command = "setlocal nonumber norelativenumber",
-  group = "TerminalMode",
-})
-vim.api.nvim_create_autocmd("TermOpen", {
-  pattern = "*",
-  command = "startinsert",
+  command = "setlocal nonumber norelativenumber | startinsert",
   group = "TerminalMode",
 })
 vim.api.nvim_create_autocmd("TermLeave", {
