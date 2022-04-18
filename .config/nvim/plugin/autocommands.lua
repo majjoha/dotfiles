@@ -11,7 +11,9 @@ vim.api.nvim_create_autocmd("VimResized", {
 vim.api.nvim_create_augroup("CleanFugitiveBuffers", {})
 vim.api.nvim_create_autocmd("BufReadPost", {
   pattern = "fugitive://*",
-  command = "set bufhidden=delete",
+  callback = function()
+    vim.opt.bufhidden = "delete"
+  end,
   group = "CleanFugitiveBuffers",
 })
 
@@ -20,14 +22,20 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 vim.api.nvim_create_augroup("TerminalMode", {})
 vim.api.nvim_create_autocmd("TermOpen", {
   pattern = "*",
-  command = [[
-    setlocal nonumber norelativenumber signcolumn=no statusline=\ | startinsert
-  ]],
+  callback = function()
+    vim.wo.number = false
+    vim.wo.relativenumber = false
+    vim.wo.signcolumn = "no"
+    vim.wo.statusline = " "
+    vim.api.nvim_command("startinsert")
+  end,
   group = "TerminalMode",
 })
 vim.api.nvim_create_autocmd("TermLeave", {
   pattern = "term://*",
-  command = "set bufhidden=delete",
+  callback = function()
+    vim.opt.bufhidden = "delete"
+  end,
   group = "TerminalMode",
 })
 
