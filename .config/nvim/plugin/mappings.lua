@@ -248,3 +248,13 @@ nvim_set_keymap("n", "<Leader>oe", ":Copilot enable<CR>",
                 { noremap = true, silent = true })
 nvim_set_keymap("n", "<Leader>od", ":Copilot disable<CR>",
                 { noremap = true, silent = true })
+
+-- Move between windows without having to use <C-w>
+nvim_set_keymap("n", "<C-h>", "<C-w><C-h>", { noremap = true })
+nvim_set_keymap("n", "<C-l>", "<C-w><C-l>", { noremap = true })
+nvim_set_keymap("n", "<C-j>", "<C-w><C-j>", { noremap = true })
+nvim_set_keymap("n", "<C-k>", "<C-w><C-k>", { noremap = true })
+nvim_set_keymap("t", "<C-h>", "<C-w><C-h>", { noremap = true })
+nvim_set_keymap("t", "<C-l>", "<C-w><C-l>", { noremap = true })
+nvim_set_keymap("t", "<C-j>", "<C-w><C-j>", { noremap = true })
+nvim_set_keymap("t", "<C-k>", "<C-w><C-k>", { noremap = true })
