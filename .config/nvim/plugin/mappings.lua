@@ -80,7 +80,13 @@ nvim_set_keymap("n", "<Leader>gc", ":tab Git commit -v<CR>", { noremap = true })
 nvim_set_keymap("n", "<Leader>gcb", ":Git checkout -b<Space>",
                 { noremap = true })
 nvim_set_keymap("n", "<Leader>gco", "", {
-  callback = fzf_search_branches,
+  callback = function()
+    vim.fn["fzf#run"](vim.fn["fzf#wrap"]({
+      source = "git branch --sort=-committerdate | sed 's/.* //'",
+      sink = "!git checkout ",
+      options = "+m --prompt='Branch >' --preview='git show --color=always {}'",
+    }))
+  end,
   noremap = true,
   silent = true
 })
@@ -195,8 +201,25 @@ nvim_set_keymap("n", "<Leader>ar", "", {
   noremap = true,
   silent = true,
 })
-nvim_set_keymap("n", "<Leader>ap", "",
-                { callback = peek_definition, noremap = true, silent = true })
+nvim_set_keymap("n", "<Leader>ap", "", {
+  callback = function()
+    function preview_location_callback(_, result)
+      if result == nil or vim.tbl_isempty(result) then
+        return nil
+      end
+
+      vim.lsp.util.preview_location(result[1])
+    end
+
+    return vim.lsp.buf_request(
+      0,
+      "textDocument/definition",
+      vim.lsp.util.make_position_params(),
+      preview_location_callback)
+  end,
+  noremap = true,
+  silent = true,
+})
 
 -- Diagnostic-related mappings
 nvim_set_keymap("n", "<Leader>am", "", {
