@@ -49,7 +49,7 @@ vim.fn.sign_define("DiagnosticSignInfo", {
 
 local on_attach = function(client, bufnr)
   -- Format files on save
-  if client.resolved_capabilities.document_formatting then
+  if client.server_capabilities.documentFormattingProvider then
     vim.api.nvim_create_augroup("LSPFormatting", {})
     vim.api.nvim_create_autocmd("BufWritePre", {
       buffer = bufnr,
