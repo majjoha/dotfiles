@@ -5,6 +5,9 @@ tools:
   cabal-fmt: &cabal-fmt
     format-command: "cabal-fmt --inplace"
     format-stdin: true
+  gleam: &gleam
+    format-command: "gleam format --stdin"
+    format-stdin: true
   hadolint: &hadolint
     lint-command: "hadolint --no-color"
     lint-formats:
@@ -39,6 +42,8 @@ tools:
 languages:
   cabal:
     - <<: *cabal-fmt
+  gleam:
+    - <<: *gleam
   dockerfile:
     - <<: *hadolint
   haskell:
