@@ -11,6 +11,11 @@ require("mini.comment").setup({
 })
 
 require("mini.surround").setup({
+  mappings = {
+    add = "ys",
+    delete = "ds",
+    replace = "cs",
+  },
   custom_surroundings = {
     ["("] = { output = { left = "( ", right = " )" } },
     ["["] = { output = { left = "[ ", right = " ]" } },
