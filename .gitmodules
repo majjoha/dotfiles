@@ -10,9 +10,6 @@
 [submodule ".vim/pack/packages/start/vim-snippets"]
 	path = .config/nvim/pack/packages/start/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
-[submodule ".vim/pack/packages/start/vim-surround"]
-	path = .config/nvim/pack/packages/start/vim-surround
-	url = https://github.com/tpope/vim-surround.git
 [submodule ".vim/pack/packages/start/splitjoin.vim"]
 	path = .config/nvim/pack/packages/start/splitjoin.vim
 	url = https://github.com/AndrewRadev/splitjoin.vim.git
