@@ -13,9 +13,6 @@
 [submodule ".vim/pack/packages/start/splitjoin.vim"]
 	path = .config/nvim/pack/packages/start/splitjoin.vim
 	url = https://github.com/AndrewRadev/splitjoin.vim.git
-[submodule ".vim/pack/packages/start/vim-test"]
-	path = .config/nvim/pack/packages/start/vim-test
-	url = https://github.com/vim-test/vim-test.git
 [submodule ".config/kitty/base16-kitty"]
 	path = .config/kitty/base16-kitty
 	url = https://github.com/kdrag0n/base16-kitty.git
@@ -46,3 +43,6 @@
 [submodule ".config/nvim/pack/packages/start/copilot.vim"]
 	path = .config/nvim/pack/packages/start/copilot.vim
 	url = git@github.com:github/copilot.vim.git
+[submodule ".config/nvim/pack/packages/start/nvim-test"]
+	path = .config/nvim/pack/packages/start/nvim-test
+	url = git@github.com:klen/nvim-test.git
