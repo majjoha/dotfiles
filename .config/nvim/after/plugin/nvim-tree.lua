@@ -53,9 +53,7 @@ require("nvim-tree").setup({
   actions = {
     open_file = {
       -- Disable the window picker to allow more than two splits
-      window_picker = {
-        enable = false
-      }
-    }
-  }
+      window_picker = { enable = false },
+    },
+  },
 })
