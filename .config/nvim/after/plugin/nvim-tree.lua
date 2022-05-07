@@ -48,9 +48,7 @@ require("nvim-tree").setup({
   disable_netrw = false,
   filters = {
     -- Ignore the following files
-    custom = {
-      ".DS_Store", ".aux", ".beam", ".class$", ".git", ".ibc", ".meta", ".o$", ".prefab",
-    },
+    custom = { ".DS_Store", ".aux", ".beam", ".class$", ".git", ".ibc", ".meta" },
   },
   actions = {
     open_file = {
