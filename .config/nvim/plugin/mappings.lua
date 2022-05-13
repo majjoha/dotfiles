@@ -30,22 +30,22 @@ vim.keymap.set("n", "<Leader>d", ":NvimTreeToggle<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>D", ":NvimTreeFindFile<CR>", { silent = true })
 
 -- Search the contents of the files in the current directory
-vim.keymap.set("n", "<Leader>f", ":Rg<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>f", ":FzfLua grep_project<CR>", { silent = true })
 
 -- Search buffers
-vim.keymap.set("n", "<Leader>bb", ":Buffers<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>bb", ":FzfLua buffers<CR>", { silent = true })
 
 -- Search files
-vim.keymap.set("n", "<Leader>p", ":Files<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>p", ":FzfLua files<CR>", { silent = true })
 
 -- Search commands
-vim.keymap.set("n", "<Leader>cc", ":Commands<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>cc", ":FzfLua commands<CR>", { silent = true })
 
 -- Search file types
-vim.keymap.set("n", "<Leader>sf", ":Filetypes<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>sf", ":FzfLua filetypes<CR>", { silent = true })
 
 -- Search help files
-vim.keymap.set("n", "<Leader>h", ":Help<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>h", ":FzfLua help_tags<CR>", { silent = true })
 
 -- Remove search highlighting
 vim.keymap.set("n", "<Leader><Leader>", ":let @/ = ''<CR>", { silent = true })
@@ -57,17 +57,11 @@ vim.keymap.set("n", "<Leader>v", ":vsp<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>x", ":sp<CR>", { silent = true })
 
 -- Git-related mappings
-vim.keymap.set("n", "<Leader>bc", ":Commits<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>bc", ":FzfLua git_commits<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>gb", ":Git blame<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>gc", ":tab Git commit -v<CR>")
 vim.keymap.set("n", "<Leader>gcb", ":Git checkout -b<Space>")
-vim.keymap.set("n", "<Leader>gco", function()
-  vim.fn["fzf#run"](vim.fn["fzf#wrap"]({
-    source = "git branch --sort=-committerdate | sed 's/.* //'",
-    sink = "!git checkout ",
-    options = "+m --prompt='Branch >' --preview='git show --color=always {}'",
-  }))
-end, { silent = true })
+vim.keymap.set("n", "<Leader>gco", ":FzfLua git_branches<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>gd", ":Gdiffsplit!<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>gr", ":Git rebase -i origin/main<CR>",
                { silent = true })
