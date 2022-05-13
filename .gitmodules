@@ -1,6 +1,3 @@
-[submodule ".vim/pack/packages/start/fzf.vim"]
-	path = .config/nvim/pack/packages/start/fzf.vim
-	url = https://github.com/junegunn/fzf.vim.git
 [submodule ".vim/pack/packages/start/vim-fugitive"]
 	path = .config/nvim/pack/packages/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
