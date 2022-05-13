@@ -46,3 +46,6 @@
 [submodule ".config/nvim/pack/packages/start/nvim-test"]
 	path = .config/nvim/pack/packages/start/nvim-test
 	url = git@github.com:klen/nvim-test.git
+[submodule ".config/nvim/pack/packages/start/fzf-lua"]
+	path = .config/nvim/pack/packages/start/fzf-lua
+	url = git@github.com:ibhagwan/fzf-lua.git
