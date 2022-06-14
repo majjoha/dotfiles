@@ -7,5 +7,5 @@ on_project_start: kitty @ set-tab-title <%= File.basename(Dir.getwd).downcase %>
 startup_window: zsh
 
 windows:
-  - nvim: nvim -c ":Files"
+  - nvim: nvim -c ":FzfLua files"
   - zsh:
