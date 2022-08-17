@@ -176,10 +176,6 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 -- Open completion menus with Ctrl-Space
 vim.keymap.set("i", "<C-Space>", "<C-x><C-o>", { silent = true })
 
--- Toggle GitHub Copilot
-vim.keymap.set("n", "<Leader>oe", ":Copilot enable<CR>", { silent = true })
-vim.keymap.set("n", "<Leader>od", ":Copilot disable<CR>", { silent = true })
-
 -- Move between windows without having to use <C-w>
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>")
 vim.keymap.set("n", "<C-l>", "<C-w><C-l>")
