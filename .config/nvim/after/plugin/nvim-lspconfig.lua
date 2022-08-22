@@ -67,6 +67,7 @@ local servers = {
   efm = {},
   elixirls = { cmd = { "/opt/homebrew/bin/elixir-ls" } },
   hls = { settings = { formattingProvider = "stylish-haskell" } },
+  marksman = {},
   rust_analyzer = {},
   solargraph = {},
   tsserver = {},
