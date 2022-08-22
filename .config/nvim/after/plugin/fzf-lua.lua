@@ -6,6 +6,7 @@ require("fzf-lua").setup({
     preview = {
       horizontal = "right:50%",
       title = false,
+      layout = "horizontal"
     }
   },
   fzf_opts = {
