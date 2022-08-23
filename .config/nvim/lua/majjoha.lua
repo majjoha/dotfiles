@@ -1,12 +1,5 @@
 local majjoha = {}
 
-majjoha.open_current_as_new_tab = function()
-  local current_pos = vim.fn.getcurpos()
-  local tabedit = [[tabedit %]]
-  vim.cmd(tabedit)
-  vim.fn.setpos(".", current_pos)
-end
-
 majjoha.customize_colors = function()
   -- Set the background color of the line numbers to transparent
   vim.highlight.create("LineNr", { ctermbg = 00 })

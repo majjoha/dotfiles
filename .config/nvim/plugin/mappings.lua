@@ -11,8 +11,12 @@ vim.keymap.set("n", "<C-q>", ":q<CR>", { silent = true })
 vim.keymap.set("t", "<C-q>", "<C-\\><C-n>:q<CR>", { silent = true })
 
 -- Open the current buffer in a new tab
-vim.keymap.set("n", "<Leader>mw", require("majjoha").open_current_as_new_tab,
-               { silent = true })
+vim.keymap.set("n", "<Leader>mw", function()
+  local current_pos = vim.fn.getcurpos()
+  local tabedit = [[tabedit %]]
+  vim.cmd(tabedit)
+  vim.fn.setpos(".", current_pos)
+end, { silent = true })
 
 -- Close the current tab
 vim.keymap.set("n", "<Leader>cw", ":tabc<CR>", { silent = true })
