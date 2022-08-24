@@ -1,3 +1,5 @@
+local actions = require("fzf-lua.actions")
+
 require("fzf-lua").setup({
   winopts = {
     height = 0.7,
@@ -28,6 +30,11 @@ require("fzf-lua").setup({
     pointer = { "fg", "Normal" },
     prompt = { "fg", "LineNr" },
     spinner = { "fg", "Normal" },
+  },
+  buffers = {
+    actions = {
+      ["ctrl-d"] = { actions.buf_del, actions.resume },
+    },
   },
   grep = {
     rg_opts =
