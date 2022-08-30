@@ -138,12 +138,12 @@ vim.keymap.set("n", "<Leader>mcw", ":MarginaliaConvertWordToTag<CR>",
                { silent = true })
 
 -- LSP-related mappings
-vim.keymap.set("n", "<Leader>ac", vim.lsp.buf.code_action, { silent = true })
-vim.keymap.set("n", "<Leader>af", vim.lsp.buf.references, { silent = true })
-vim.keymap.set("n", "<Leader>ag", vim.lsp.buf.definition, { silent = true })
-vim.keymap.set("n", "<Leader>ah", vim.lsp.buf.hover, { silent = true })
-vim.keymap.set("n", "<Leader>ar", vim.lsp.buf.rename, { silent = true })
-vim.keymap.set("n", "<Leader>ap", function()
+vim.keymap.set("n", "<Leader>la", vim.lsp.buf.code_action, { silent = true })
+vim.keymap.set("n", "<Leader>lr", vim.lsp.buf.references, { silent = true })
+vim.keymap.set("n", "<Leader>ld", vim.lsp.buf.definition, { silent = true })
+vim.keymap.set("n", "<Leader>lh", vim.lsp.buf.hover, { silent = true })
+vim.keymap.set("n", "<Leader>ln", vim.lsp.buf.rename, { silent = true })
+vim.keymap.set("n", "<Leader>lp", function()
   function preview_location_callback(_, result)
     if result == nil or vim.tbl_isempty(result) then
       return nil
