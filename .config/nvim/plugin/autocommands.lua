@@ -56,6 +56,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     -- Set the color of the vertical split bar to transparent
     vim.api.nvim_set_hl(0, "VertSplit", { ctermbg = 00 })
     vim.api.nvim_set_hl(0, "WinSeparator", { ctermfg = 10 })
+    vim.api.nvim_set_hl(0, "NvimTreeWinSeparator", { link = "WinSeparator" })
 
     -- Show the current mode in a darker, non-bold font
     vim.api.nvim_set_hl(0, "ModeMsg", { ctermfg = 08, cterm = {} })
