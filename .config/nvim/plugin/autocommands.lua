@@ -91,13 +91,15 @@ local lsp_mode_group = vim.api.nvim_create_augroup("LSPMode", {})
 vim.api.nvim_create_autocmd("LSPAttach", {
   callback = function(_)
     local border = {
-      { "┌", "FloatBorder" }, { "─", "FloatBorder" }, { "┐", "FloatBorder" },
-      { "│", "FloatBorder" }, { "┘", "FloatBorder" }, { "─", "FloatBorder" },
+      { "┌", "FloatBorder" }, { "─", "FloatBorder" },
+      { "┐", "FloatBorder" }, { "│", "FloatBorder" },
+      { "┘", "FloatBorder" }, { "─", "FloatBorder" },
       { "└", "FloatBorder" }, { "│", "FloatBorder" },
     }
 
-    vim.lsp.handlers["textDocument/hover"] =
-      vim.lsp.with(vim.lsp.handlers.hover, { border = border })
+    vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+                                               vim.lsp.handlers.hover,
+                                               { border = border })
 
     -- Override `vim.lsp.util.open_floating_preview` function so it uses the
     -- custom border instead
@@ -135,8 +137,8 @@ vim.api.nvim_create_autocmd("LSPAttach", {
     local client = vim.lsp.get_client_by_id(args.data.client_id)
 
     if client.server_capabilities.documentFormattingProvider then
-      local lsp_formatting_group =
-        vim.api.nvim_create_augroup("LSPFormatting", {})
+      local lsp_formatting_group = vim.api.nvim_create_augroup("LSPFormatting",
+                                                               {})
 
       vim.api.nvim_create_autocmd("BufWritePre", {
         buffer = bufnr,
@@ -152,8 +154,8 @@ vim.api.nvim_create_autocmd("LSPAttach", {
 
 vim.api.nvim_create_autocmd("LSPDetach", {
   callback = function(_)
-      vim.opt_local.tagfunc = nil
-      vim.opt_local.omnifunc = nil
+    vim.opt_local.tagfunc = nil
+    vim.opt_local.omnifunc = nil
   end,
   group = lsp_mode_group,
 })
