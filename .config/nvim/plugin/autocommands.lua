@@ -85,3 +85,75 @@ vim.api.nvim_create_autocmd("ColorScheme", {
   end,
   group = customize_colors_group,
 })
+
+local lsp_mode_group = vim.api.nvim_create_augroup("LSPMode", {})
+-- Use custom border on hover
+vim.api.nvim_create_autocmd("LSPAttach", {
+  callback = function(_)
+    local border = {
+      { "┌", "FloatBorder" }, { "─", "FloatBorder" }, { "┐", "FloatBorder" },
+      { "│", "FloatBorder" }, { "┘", "FloatBorder" }, { "─", "FloatBorder" },
+      { "└", "FloatBorder" }, { "│", "FloatBorder" },
+    }
+
+    vim.lsp.handlers["textDocument/hover"] =
+      vim.lsp.with(vim.lsp.handlers.hover, { border = border })
+
+    -- Override `vim.lsp.util.open_floating_preview` function so it uses the
+    -- custom border instead
+    local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
+    function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+      opts = opts or {}
+      opts.border = opts.border or border
+      return orig_util_open_floating_preview(contents, syntax, opts, ...)
+    end
+  end,
+  group = lsp_mode_group,
+})
+
+-- Enable completion and definition capabilities for LSP
+vim.api.nvim_create_autocmd("LSPAttach", {
+  callback = function(args)
+    local bufnr = args.buf
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+
+    if client.server_capabilities.completionProvider then
+      vim.bo[bufnr].omnifunc = "v:lua.vim.lsp.omnifunc"
+    end
+
+    if client.server_capabilities.definitionProvider then
+      vim.bo[bufnr].tagfunc = "v:lua.vim.lsp.tagfunc"
+    end
+  end,
+  group = lsp_mode_group,
+})
+
+-- Format files on save
+vim.api.nvim_create_autocmd("LSPAttach", {
+  callback = function(args)
+    local bufnr = args.buf
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+
+    if client.server_capabilities.documentFormattingProvider then
+      local lsp_formatting_group =
+        vim.api.nvim_create_augroup("LSPFormatting", {})
+
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        buffer = bufnr,
+        callback = function(_)
+          vim.lsp.buf.format({ bufnr = bufnr, timeout_ms = 5000 })
+        end,
+        group = lsp_formatting_group,
+      })
+    end
+  end,
+  group = lsp_mode_group,
+})
+
+vim.api.nvim_create_autocmd("LSPDetach", {
+  callback = function(_)
+      vim.opt_local.tagfunc = nil
+      vim.opt_local.omnifunc = nil
+  end,
+  group = lsp_mode_group,
+})
