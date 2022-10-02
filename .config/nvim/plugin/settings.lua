@@ -22,9 +22,6 @@ vim.opt.splitright = true
 -- longest common text of the matches
 vim.opt.completeopt = { "longest", "menuone" }
 
--- Allow the mouse in all modes
-vim.opt.mouse = "a"
-
 -- Allow per project `.vimrc`
 vim.opt.exrc = true
 
