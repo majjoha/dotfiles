@@ -16,6 +16,7 @@ vim.opt.laststatus = 2
 vim.opt.fillchars = {
   -- Supress the `~` character at the end of the buffer
   eob = " ",
+  diff = "╱",
 }
 
 -- Show the current mode
