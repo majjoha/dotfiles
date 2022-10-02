@@ -35,7 +35,7 @@ local servers = {
   marksman = {},
   rust_analyzer = {},
   solargraph = {},
-  tsserver = {},
+  tsserver = { filetypes = { "typescript", "typescriptreact", "typescript.tsx" } },
 }
 
 for server, config in pairs(servers) do
