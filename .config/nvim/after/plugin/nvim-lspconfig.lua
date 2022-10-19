@@ -30,6 +30,7 @@ local servers = {
   bashls = {},
   efm = {},
   elixirls = { cmd = { "/opt/homebrew/bin/elixir-ls" } },
+  eslint = {},
   flow = {},
   hls = { settings = { formattingProvider = "stylish-haskell" } },
   marksman = {},
