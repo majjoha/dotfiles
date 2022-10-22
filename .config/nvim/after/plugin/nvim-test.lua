@@ -1,7 +1,7 @@
 require("nvim-test").setup({
   termOpts = {
-    direction = "horizontal",
-    height = 20,
+    direction = "vertical",
+    width = 90,
     stopinsert = "false"
   }
 })
