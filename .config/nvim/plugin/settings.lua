@@ -18,9 +18,9 @@ vim.opt.swapfile = false
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
--- Show the popup menu even if there is only one match and insert only the
--- longest common text of the matches
-vim.opt.completeopt = { "longest", "menuone" }
+-- Show the popup menu even if there is only one match and select the first
+-- option in the menu
+vim.opt.completeopt = { "menuone", "noinsert" }
 
 -- Allow per project `.vimrc`
 vim.opt.exrc = true

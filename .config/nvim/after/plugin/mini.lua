@@ -23,3 +23,8 @@ require("mini.surround").setup({
     ["<"] = { output = { left = "< ", right = " >" } },
   },
 })
+
+require("mini.completion").setup({
+  mappings = { force_twostep = "" },
+  set_vim_settings = false,
+})

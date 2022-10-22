@@ -86,8 +86,17 @@ vim.keymap.set("n", "<Leader>ts", ":sp | term<CR>", { silent = true })
 -- Search in visual selection
 vim.keymap.set("x", "/", "<ESC>/\\%V")
 
--- Alternate via vim-projectionist
-vim.keymap.set("n", "<Tab>", ":A<CR>", { silent = true })
+-- Toggle auto-completion
+vim.keymap.set("n", "<Leader>tc", function()
+  if vim.g.minicompletion_disable or vim.b.minicompletion_disable then
+    print("Autocompletion enabled")
+  else
+    print("Autocompletion disabled")
+  end
+
+  vim.g.minicompletion_disable = not vim.g.minicompletion_disable
+  vim.b.minicompletion_disable = not vim.b.minicompletion_disable
+end, { silent = true })
 
 -- Test-related mappings
 vim.keymap.set("n", "<Leader>rt", ":TestFile<CR>", { silent = true })
@@ -177,8 +186,33 @@ vim.keymap.set("n", "N", "Nzz")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 
--- Open completion menus with Ctrl-Space
+-- Open completion menu with C-Space
 vim.keymap.set("i", "<C-Space>", "<C-x><C-o>", { silent = true })
+
+-- Select completion items
+vim.keymap.set("i", "<S-Tab>", function()
+  if vim.fn.pumvisible() then
+    return "<C-y>"
+  else
+    return "<S-Tab>"
+  end
+end, { expr = true, replace_keycodes = true })
+
+vim.keymap.set("i", "<C-j>", function()
+  if vim.fn.pumvisible() then
+    return "<C-n>"
+  else
+    return "<C-j>"
+  end
+end, { expr = true, replace_keycodes = true })
+
+vim.keymap.set("i", "<C-k>", function()
+  if vim.fn.pumvisible() then
+    return "<C-p>"
+  else
+    return "<C-k>"
+  end
+end, { expr = true, replace_keycodes = true })
 
 -- Move between windows without having to use <C-w>
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>")
