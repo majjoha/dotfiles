@@ -75,3 +75,7 @@ vim.opt.confirm = true
 
 -- Do not jump to the start of the line when navigating files
 vim.opt.startofline = false
+
+-- Always spell check files
+vim.opt.spell = true
+vim.opt.spelllang = "en_us"
