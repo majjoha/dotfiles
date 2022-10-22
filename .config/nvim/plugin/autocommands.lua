@@ -6,6 +6,17 @@ vim.api.nvim_create_autocmd("VimResized", {
   group = resize_splits_group,
 })
 
+-- Disable auto-completion for filetypes
+local disable_autocompletion_group = vim.api.nvim_create_augroup(
+                                       "DisableAutocompletion", {})
+vim.api.nvim_create_autocmd("Filetype", {
+  pattern = "markdown,gitcommit",
+  callback = function()
+    vim.b.minicompletion_disable = true
+  end,
+  group = disable_autocompletion_group,
+})
+
 -- Auto-clean Fugitive buffers
 -- Source: http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/
 local clean_fugitive_buffers_group = vim.api.nvim_create_augroup(
