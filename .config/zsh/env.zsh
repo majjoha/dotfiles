@@ -11,7 +11,7 @@ path=(
 export EDITOR="nvim"
 export VISUAL="nvim"
 
-export TERM=xterm-256color
+export TERM=xterm-kitty
 
 # Save a lot of history
 export HISTSIZE=20000
