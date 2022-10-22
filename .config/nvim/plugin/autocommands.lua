@@ -87,8 +87,8 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     vim.api.nvim_set_hl(0, "DiagnosticSignInfo", { ctermfg = 07, ctermbg = 00 })
 
     -- Define colors for floating windows
-    vim.api.nvim_set_hl(0, "NormalFloat", { ctermbg = 00 })
-    vim.api.nvim_set_hl(0, "FloatBorder", { ctermbg = 00 })
+    vim.api.nvim_set_hl(0, "NormalFloat", { ctermbg = 10 })
+    vim.api.nvim_set_hl(0, "FloatBorder", { ctermbg = 10 })
 
     -- Hide status line for NvimTree buffer
     vim.api.nvim_set_hl(0, "NvimTreeStatusLineNC",
