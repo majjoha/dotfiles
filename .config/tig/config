@@ -3,3 +3,9 @@ set main-view = \
   author:width=25 \
   id:yes,color \
   commit-title:yes,refs=yes
+
+# Vim-inspired key bindings
+bind generic g  none
+bind generic gg move-first-line
+bind generic <C-f> move-page-down
+bind generic <C-b> move-page-up
