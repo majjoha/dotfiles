@@ -3,6 +3,7 @@ typeset -U path
 path=(
   $HOME/.local/bin
   $HOME/.bin
+  $HOME/.ghcup/env
   /opt/homebrew/bin
   $path
 )
