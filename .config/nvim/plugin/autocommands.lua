@@ -175,3 +175,11 @@ vim.api.nvim_create_autocmd("LSPDetach", {
   end,
   group = lsp_mode_group,
 })
+
+-- Reload Vim configuration on save
+local reload_config_group = vim.api.nvim_create_augroup("ReloadConfig", {})
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+  pattern = { "*nvim/*.lua" },
+  command = "source <afile>",
+  group = reload_config_group,
+})
