@@ -1,0 +1,223 @@
+---
+# Use full screen, tall and wide layouts
+layouts:
+  - fullscreen
+  - tall
+  - wide
+
+# General settings
+ignore-menu-bar: true
+new-windows-to-main: true
+window-margins: true
+window-margin-size: 10
+screen-padding-top: 25
+screen-padding-bottom: 5
+
+# Shortcuts
+mod1:
+  - control
+  - option
+
+mod2:
+  - command
+  - control
+  - option
+
+cycle-layout:
+  mod: mod2
+  key: "space"
+
+cycle-layout-backward:
+  mod: mod3
+  key: ""
+
+shrink-main:
+  mod: mod1
+  key: ","
+
+expand-main:
+  mod: mod1
+  key: "."
+
+increase-main:
+  mod: mod3
+  key: ""
+
+decrease-main:
+  mod: mod3
+  key: ""
+
+focus-ccw:
+  mod: mod1
+  key: ";"
+
+focus-cw:
+  mod: mod1
+  key: "'"
+
+focus-main:
+  mod: mod3
+  key: ""
+
+focus-screen-ccw:
+  mod: mod3
+  key: ""
+
+focus-screen-cw:
+  mod: mod3
+  key: ""
+
+swap-screen-ccw:
+  mod: mod3
+  key: ""
+
+swap-screen-cw:
+  mod: mod3
+  key: ""
+
+swap-ccw:
+  mod: mod2
+  key: ";"
+
+swap-cw:
+  mod: mod2
+  key: "'"
+
+swap-main:
+  mod: mod2
+  key: "enter"
+
+reevaluate-windows:
+  mod: mod3
+  key: ""
+
+throw-space-left:
+  mod: mod3
+  key: ""
+
+throw-space-right:
+  mod: mod3
+  key: ""
+
+throw-space-1:
+  mod: mod3
+  key: ""
+
+throw-space-2:
+  mod: mod3
+  key: ""
+
+throw-space-3:
+  mod: mod3
+  key: ""
+
+throw-space-4:
+  mod: mod3
+  key: ""
+
+throw-space-5:
+  mod: mod3
+  key: ""
+
+throw-space-6:
+  mod: mod3
+  key: ""
+
+throw-space-7:
+  mod: mod3
+  key: ""
+
+throw-space-8:
+  mod: mod3
+  key: ""
+
+throw-space-9:
+  mod: mod3
+  key: ""
+
+throw-space-10:
+  mod: mod3
+  key: ""
+
+focus-screen-1:
+  mod: mod3
+  key: ""
+
+focus-screen-2:
+  mod: mod3
+  key: ""
+
+focus-screen-3:
+  mod: mod3
+  key: ""
+
+focus-screen-4:
+  mod: mod3
+  key: ""
+
+throw-screen-1:
+  mod: mod3
+  key: ""
+
+throw-screen-2:
+  mod: mod3
+  key: ""
+
+throw-screen-3:
+  mod: mod3
+  key: ""
+
+throw-screen-4:
+  mod: mod3
+  key: ""
+
+toggle-float:
+  mod: mod3
+  key: ""
+
+display-current-layout:
+  mod: mod3
+  key: ""
+
+toggle-focus-follows-mouse:
+  mod: mod3
+  key: ""
+
+toggle-tiling:
+  mod: mod3
+  key: ""
+
+relaunch-amethyst:
+  mod: mod2
+  key: "r"
+
+# TODO:
+# - Set "Select Tall layout" to control + option + command + s
+# - Set "Select Wide layout" to control + option + command + x
+# - Set "Select Fullscreen layout" to control + option + command + m
+# - Remove shortcut for "Select Column layout"
+
+# Mouse
+mouse-follows-focus: false
+focus-follows-mouse: false
+mouse-resizes-windows: true
+
+# Floating
+floating-is-blacklist: false
+floating:
+  - "com.apple.ActivityMonitor"
+  - "com.apple.DiskUtility"
+  - "com.apple.Preview"
+  - "com.apple.SafariTechnologyPreview"
+  - "com.apple.iCal"
+  - "com.coppertino.Vox"
+  - "com.hnc.Discord"
+  - "com.todoist.mac.Todoist"
+  - "com.uranusjr.macdown"
+  - "com.yourcompany.SoulseekQt"
+  - "net.kovidgoyal.calibre"
+  - "net.kovidgoyal.kitty"
+  - "org.libreoffice.script"
+  - "org.mozilla.firefoxdeveloperedition"
+  - "org.musescore.MuseScore"
+  - "org.videolan.vlc"

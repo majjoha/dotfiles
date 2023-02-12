@@ -33,23 +33,7 @@ for plugin, configuration in pairs({
   Cherry = {},
   FnMate = {},
   KSheet = { hotkeys = { toggle = { { "ctrl", "alt", "shift" }, "/" } } },
-  ReloadConfiguration = { start = true },
-  WindowHalfsAndThirds = {
-    hotkeys = {
-      left_half = { hyper, "H" },
-      right_half = { hyper, "L" },
-      bottom_half = { hyper, "J" },
-      top_half = { hyper, "K" },
-      top_right = { hyper, "]" },
-      bottom_right = { hyper, "'" },
-      top_left = { hyper, "[" },
-      bottom_left = { hyper, ";" },
-      max_toggle = { hyper, "M" },
-      smaller = { hyper, "," },
-      larger = { hyper, "." },
-      center = { hyper, "/" },
-    },
-  },
+  ReloadConfiguration = { start = true }
 }) do
   spoon.SpoonInstall:andUse(plugin, configuration)
 end
