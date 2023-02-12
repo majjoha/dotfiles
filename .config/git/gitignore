@@ -47,3 +47,6 @@ vendor/cache
 
 # Ignore session files
 Session.vim
+
+# Ignore ghci history
+ghci_history
