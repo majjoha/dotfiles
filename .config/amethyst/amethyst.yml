@@ -6,12 +6,12 @@ layouts:
   - wide
 
 # General settings
-ignore-menu-bar: true
+ignore-menu-bar: false
 new-windows-to-main: true
 window-margins: true
 window-margin-size: 10
-screen-padding-top: 25
-screen-padding-bottom: 5
+screen-padding-top: 0
+screen-padding-bottom: 0
 
 # Shortcuts
 mod1:
