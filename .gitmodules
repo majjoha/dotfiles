@@ -1,9 +1,6 @@
 [submodule ".vim/pack/packages/start/vim-fugitive"]
 	path = .config/nvim/pack/packages/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule ".vim/pack/packages/start/vim-projectionist"]
-	path = .config/nvim/pack/packages/start/vim-projectionist
-	url = https://github.com/tpope/vim-projectionist.git
 [submodule ".vim/pack/packages/start/vim-snippets"]
 	path = .config/nvim/pack/packages/start/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
@@ -43,3 +40,6 @@
 [submodule ".config/nvim/pack/packages/start/fzf-lua"]
 	path = .config/nvim/pack/packages/start/fzf-lua
 	url = git@github.com:ibhagwan/fzf-lua.git
+[submodule ".config/nvim/pack/packages/start/other.nvim"]
+	path = .config/nvim/pack/packages/start/other.nvim
+	url = https://github.com/rgroli/other.nvim.git

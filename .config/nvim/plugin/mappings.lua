@@ -223,3 +223,6 @@ vim.keymap.set("t", "<C-h>", "<C-w><C-h>")
 vim.keymap.set("t", "<C-l>", "<C-w><C-l>")
 vim.keymap.set("t", "<C-j>", "<C-w><C-j>")
 vim.keymap.set("t", "<C-k>", "<C-w><C-k>")
+
+-- Move between implementation and tests
+vim.keymap.set("n", "<Tab>", require("other-nvim").open)
