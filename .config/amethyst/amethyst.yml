@@ -3,7 +3,6 @@
 layouts:
   - fullscreen
   - tall
-  - wide
 
 # General settings
 ignore-menu-bar: false
