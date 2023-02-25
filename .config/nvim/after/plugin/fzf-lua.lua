@@ -41,9 +41,6 @@ require("fzf-lua").setup({
       "--column --line-number --no-heading --color=always --smart-case --hidden",
   },
   keymap = {
-    builtin = {
-      ["K"] = "preview-page-up",
-      ["J"] = "preview-page-down",
-    },
+    builtin = { ["<S-K>"] = "preview-page-up", ["<S-J>"] = "preview-page-down" },
   },
 })

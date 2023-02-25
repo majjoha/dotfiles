@@ -43,3 +43,6 @@
 [submodule ".config/nvim/pack/packages/start/other.nvim"]
 	path = .config/nvim/pack/packages/start/other.nvim
 	url = https://github.com/rgroli/other.nvim.git
+[submodule ".hammerspoon/Spoons/SkyRocket.spoon"]
+	path = .hammerspoon/Spoons/SkyRocket.spoon
+	url = https://github.com/dbalatero/SkyRocket.spoon
