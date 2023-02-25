@@ -204,6 +204,7 @@ mouse-resizes-windows: true
 # Floating
 floating-is-blacklist: false
 floating:
+  - "ch.protonvpn.mac"
   - "com.apple.ActivityMonitor"
   - "com.apple.DiskUtility"
   - "com.apple.Preview"
