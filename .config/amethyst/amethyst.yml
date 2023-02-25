@@ -219,6 +219,7 @@ floating:
   - "net.kovidgoyal.calibre"
   - "net.kovidgoyal.kitty"
   - "org.libreoffice.script"
+  - "org.m0k.transmission"
   - "org.mozilla.firefoxdeveloperedition"
   - "org.musescore.MuseScore"
   - "org.videolan.vlc"
