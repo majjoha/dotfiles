@@ -28,3 +28,5 @@ require("mini.completion").setup({
   mappings = { force_twostep = "" },
   set_vim_settings = false,
 })
+
+require("mini.bracketed").setup({})
