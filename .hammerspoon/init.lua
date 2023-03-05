@@ -33,7 +33,16 @@ for plugin, configuration in pairs({
   Cherry = {},
   FnMate = {},
   KSheet = { hotkeys = { toggle = { { "ctrl", "alt", "shift" }, "/" } } },
-  ReloadConfiguration = { start = true }
+  ReloadConfiguration = { start = true },
+  SkyRocket = {
+    fn = function(skyrocket)
+      skyrocket:new({
+        opacity = 0.3,
+        moveModifiers = { "cmd", "alt", "shift" },
+        resizeModifiers = { "alt", "shift" },
+      })
+    end,
+  },
 }) do
   spoon.SpoonInstall:andUse(plugin, configuration)
 end
