@@ -4,9 +4,6 @@
 [submodule ".vim/pack/packages/start/vim-snippets"]
 	path = .config/nvim/pack/packages/start/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
-[submodule ".vim/pack/packages/start/splitjoin.vim"]
-	path = .config/nvim/pack/packages/start/splitjoin.vim
-	url = https://github.com/AndrewRadev/splitjoin.vim.git
 [submodule ".config/kitty/base16-kitty"]
 	path = .config/kitty/base16-kitty
 	url = https://github.com/kdrag0n/base16-kitty.git
@@ -46,3 +43,6 @@
 [submodule ".hammerspoon/Spoons/SkyRocket.spoon"]
 	path = .hammerspoon/Spoons/SkyRocket.spoon
 	url = https://github.com/dbalatero/SkyRocket.spoon
+[submodule ".config/nvim/pack/packages/start/treesj"]
+	path = .config/nvim/pack/packages/start/treesj
+	url = git@github.com:Wansmer/treesj.git

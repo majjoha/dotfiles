@@ -226,3 +226,7 @@ vim.keymap.set("t", "<C-k>", "<C-w><C-k>")
 
 -- Move between implementation and tests
 vim.keymap.set("n", "<Tab>", require("other-nvim").open)
+
+-- Mimic mappings from splitjoin.vim
+vim.keymap.set("n", "gS", ":TSJSplit<CR>", { silent = true })
+vim.keymap.set("n", "gJ", ":TSJJoin<CR>", { silent = true })
