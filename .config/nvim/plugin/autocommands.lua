@@ -98,6 +98,10 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     -- Set spelling errors to be red and emphasize them using undercurl
     vim.api.nvim_set_hl(0, "SpellBad", { ctermfg = 01, undercurl = true })
     vim.api.nvim_set_hl(0, "SpellCap", { ctermfg = 01, undercurl = true })
+
+    -- Set colors for floating windows
+    vim.api.nvim_set_hl(0, "FloatBorder", { ctermfg = 07, ctermbg = 00 })
+    vim.api.nvim_set_hl(0, "NormalFloat", { ctermbg = 00 })
   end,
   group = customize_colors_group,
 })
