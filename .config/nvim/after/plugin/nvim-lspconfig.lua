@@ -1,6 +1,3 @@
--- Disable virtual text
-vim.diagnostic.config({ virtual_text = false })
-
 -- Define signs for diagnostics
 vim.fn.sign_define("DiagnosticSignError", {
   text = "▍",
