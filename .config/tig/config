@@ -1,5 +1,5 @@
 set main-view = \
-  date:default \
+  date:relative \
   author:width=25 \
   id:yes,color \
   commit-title:yes,refs=yes
