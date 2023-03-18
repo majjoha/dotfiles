@@ -7,6 +7,6 @@ if ! command -v pmset > /dev/null || ! command -v ioreg > /dev/null; then
   exit
 fi
 
-battery="$(pmset -g 'batt' | tr '\n' ';' | awk '{print $8}' | tr -d '%;')"
+battery="$(pmset -g 'batt' | grep -Eo "\d+%" | cut -d% -f1)"
 
 printf "%s%%" "$battery"
