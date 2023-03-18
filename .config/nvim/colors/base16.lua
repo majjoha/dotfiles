@@ -455,6 +455,12 @@ for group, settings in pairs({
     ctermfg = cterm0B,
     ctermbg = cterm00,
   },
+  ["@text.diff.add"] = {
+    fg = gui0B,
+    bg = gui00,
+    ctermfg = cterm0B,
+    ctermbg = cterm00,
+  },
   DiffFile = {
     fg = gui08,
     bg = gui00,
@@ -474,6 +480,12 @@ for group, settings in pairs({
     ctermbg = cterm00,
   },
   DiffRemoved = {
+    fg = gui08,
+    bg = gui00,
+    ctermfg = cterm08,
+    ctermbg = cterm00,
+  },
+  ["@text.diff.delete"] = {
     fg = gui08,
     bg = gui00,
     ctermfg = cterm08,
