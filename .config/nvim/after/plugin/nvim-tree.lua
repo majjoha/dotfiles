@@ -66,4 +66,5 @@ require("nvim-tree").setup({
       return math.floor(vim.opt.columns:get() / 2)
     end,
   },
+  git = { enable = true, ignore = false },
 })
