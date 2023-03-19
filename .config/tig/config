@@ -4,6 +4,8 @@ set main-view = \
   id:yes \
   commit-title:yes,refs=yes
 
+color cursor black yellow
+
 # Vim-inspired key bindings
 bind generic g  none
 bind generic gg move-first-line
