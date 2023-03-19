@@ -1,7 +1,7 @@
 set main-view = \
   date:relative \
   author:width=25 \
-  id:yes,color \
+  id:yes \
   commit-title:yes,refs=yes
 
 # Vim-inspired key bindings
