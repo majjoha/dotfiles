@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -e
+
+id="$(gh pr list -L100 | fzf --border=sharp | cut -f1)"; [ -n "$id" ] && gh pr checkout "$id"
