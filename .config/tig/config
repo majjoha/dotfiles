@@ -4,6 +4,9 @@ set main-view = \
   id:yes \
   commit-title:yes,refs=yes
 
+set vertical-split = horizontal
+set split-view-height = 75%
+
 color cursor black yellow
 
 # Vim-inspired key bindings
