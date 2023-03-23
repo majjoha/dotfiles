@@ -2,4 +2,4 @@
 
 set -e
 
-id="$(gh pr list -L100 | fzf --border=sharp | cut -f1)"; [ -n "$id" ] && gh pr checkout "$id"
+id="$(gh pr list -L100 | fzf --border=sharp --height=100% --no-preview | cut -f1)" [ -n "$id" ] && gh pr checkout "$id"
