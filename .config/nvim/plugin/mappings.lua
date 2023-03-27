@@ -31,7 +31,8 @@ vim.keymap.set("", "j", "gj")
 
 -- Toggle NvimTree
 vim.keymap.set("n", "<Leader>d", ":NvimTreeToggle<CR>", { silent = true })
-vim.keymap.set("n", "<Leader>D", ":NvimTreeFindFile<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>D", ":NvimTreeFindFile<CR>:NvimTreeFocus<CR>",
+               { silent = true })
 
 -- Search the contents of the files in the current directory
 vim.keymap.set("n", "<Leader>f", ":FzfLua grep_project<CR>", { silent = true })
