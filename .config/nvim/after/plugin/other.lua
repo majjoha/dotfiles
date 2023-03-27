@@ -18,6 +18,12 @@ require("other-nvim").setup({
     }, {
       pattern = "src/__tests__/(.*).ts",
       target = { { target = "src/%1.ts", context = "source" } },
+    }, {
+      pattern = "src/(.*).ts",
+      target = { { target = "src/%1.test.ts", context = "test" } },
+    }, {
+      pattern = "src/(.*).test.ts",
+      target = { { target = "src/%1.ts", context = "source" } },
     },
   },
 })
