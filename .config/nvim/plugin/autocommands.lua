@@ -189,9 +189,4 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 })
 
 -- Associate `.livemd` files with Markdown
-local livemd_group = vim.api.nvim_create_augroup("LivemdGroup", {})
-vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-  pattern = { "*.livemd" },
-  command = "set filetype=markdown",
-  group = livemd_group,
-})
+vim.filetype.add({ extension = { livemd = "markdown" } })
