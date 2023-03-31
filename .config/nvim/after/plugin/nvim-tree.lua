@@ -43,28 +43,5 @@ require("nvim-tree").setup({
       },
     },
   },
-  view = {
-    float = {
-      enable = true,
-      open_win_config = function()
-        local screen_w = vim.opt.columns:get()
-        local screen_h = vim.opt.lines:get() - vim.opt.cmdheight:get()
-        local window_w = screen_w / 2
-        local window_h = screen_h / 1.5
-
-        return {
-          border = "single",
-          relative = "editor",
-          row = ((vim.opt.lines:get() - window_h) / 2) - vim.opt.cmdheight:get(),
-          col = (screen_w - window_w) / 2,
-          width = math.floor(window_w),
-          height = math.floor(window_h),
-        }
-      end,
-    },
-    width = function()
-      return math.floor(vim.opt.columns:get() / 2)
-    end,
-  },
   git = { enable = true, ignore = false },
 })
