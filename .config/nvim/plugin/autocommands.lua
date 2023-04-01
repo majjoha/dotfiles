@@ -102,6 +102,9 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     -- Set colors for floating windows
     vim.api.nvim_set_hl(0, "FloatBorder", { ctermfg = 07, ctermbg = 00 })
     vim.api.nvim_set_hl(0, "NormalFloat", { ctermbg = 00 })
+
+    -- Set color for virtual color column
+    vim.api.nvim_set_hl(0, "VirtColumn", { ctermfg = 10 })
   end,
   group = customize_colors_group,
 })

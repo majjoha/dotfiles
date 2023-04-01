@@ -46,3 +46,9 @@
 [submodule ".config/nvim/pack/packages/start/treesj"]
 	path = .config/nvim/pack/packages/start/treesj
 	url = git@github.com:Wansmer/treesj.git
+[submodule ".bin/projectdo"]
+	path = .bin/projectdo
+	url = git@github.com:paldepind/projectdo.git
+[submodule ".config/nvim/pack/packages/start/virt-column.nvim"]
+	path = .config/nvim/pack/packages/start/virt-column.nvim
+	url = https://github.com/lukas-reineke/virt-column.nvim.git
