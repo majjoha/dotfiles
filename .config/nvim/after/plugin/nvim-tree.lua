@@ -44,4 +44,6 @@ require("nvim-tree").setup({
     },
   },
   git = { enable = true, ignore = false },
+  -- Highlight the currently opened buffer
+  update_focused_file = { enable = true },
 })
