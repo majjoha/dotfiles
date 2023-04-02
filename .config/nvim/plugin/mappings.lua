@@ -67,7 +67,8 @@ vim.keymap.set("n", "<Leader>bc", ":FzfLua git_commits<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>gb", ":Git blame<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>gc", ":tab Git commit -v<CR>")
 vim.keymap.set("n", "<Leader>gcb", ":Git checkout -b<Space>")
-vim.keymap.set("n", "<Leader>gco", ":FzfLua git_branches<CR>", { silent = true })
+vim.keymap
+  .set("n", "<Leader>gco", ":FzfLua git_branches<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>gd", ":Gdiffsplit<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>gr", ":Git rebase -i origin/main<CR>",
                { silent = true })
