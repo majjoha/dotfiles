@@ -31,7 +31,6 @@ for plugin, configuration in pairs({
       caffeine:start():setState(true)
     end,
   },
-  Cherry = {},
   FnMate = {},
   KSheet = { hotkeys = { toggle = { { "ctrl", "alt", "shift" }, "/" } } },
   ReloadConfiguration = { start = true },
