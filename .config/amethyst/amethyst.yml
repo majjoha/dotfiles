@@ -194,6 +194,10 @@ select-wide-layout:
   mod: mod3
   key: "w"
 
+select-tall-layout:
+  mod: mod3
+  key: "t"
+
 # TODO:
 # - Set "Select Tall layout" to control + option + command + s
 # - Set "Select Wide layout" to control + option + command + x
