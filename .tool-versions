@@ -1,5 +1,5 @@
 elixir 1.14.1-otp-25
 erlang 25.2.2
-gleam 0.27.0
+gleam 0.29.0
 nodejs 19.6.0
 ruby 3.2.1
