@@ -190,6 +190,10 @@ relaunch-amethyst:
   mod: mod2
   key: "r"
 
+select-wide-layout:
+  mod: mod3
+  key: "w"
+
 # TODO:
 # - Set "Select Tall layout" to control + option + command + s
 # - Set "Select Wide layout" to control + option + command + x
