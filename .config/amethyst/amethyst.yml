@@ -220,6 +220,7 @@ mouse-resizes-windows: true
 # Floating
 floating-is-blacklist: false
 floating:
+  - "br.com.marcosatanaka.music-harbor"
   - "ch.protonvpn.mac"
   - "com.apple.ActivityMonitor"
   - "com.apple.DiskUtility"
