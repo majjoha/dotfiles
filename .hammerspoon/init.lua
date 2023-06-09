@@ -18,6 +18,7 @@ for plugin, configuration in pairs({
       c = "Calendar",
       d = "Discord",
       f = "Finder",
+      m = "Music",
       n = "Notes",
       p = "1Password 7",
       r = "Reeder",
