@@ -47,6 +47,9 @@ tools:
       - "%f:%l:%c: [%t%*[a-z]] %m"
 
 languages:
+  astro:
+    - <<: *eslint
+    - <<: *prettier
   cabal:
     - <<: *cabal-fmt
   gleam:
