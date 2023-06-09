@@ -171,8 +171,8 @@ throw-screen-4:
   key: ""
 
 toggle-float:
-  mod: mod3
-  key: ""
+  mod: mod2
+  key: "f"
 
 display-current-layout:
   mod: mod3
