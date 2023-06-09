@@ -33,6 +33,7 @@ local servers = {
   erlangls = {},
   eslint = {},
   flow = {},
+  gleam = {},
   hls = { settings = { formattingProvider = "stylish-haskell" } },
   marksman = {},
   rust_analyzer = {},
