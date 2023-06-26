@@ -222,6 +222,7 @@ floating-is-blacklist: false
 floating:
   - "br.com.marcosatanaka.music-harbor"
   - "ch.protonvpn.mac"
+  - "com.agilebits.onepassword7"
   - "com.apple.ActivityMonitor"
   - "com.apple.DiskUtility"
   - "com.apple.Maps"
