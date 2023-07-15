@@ -12,6 +12,9 @@ require("nvim-tree").setup({
     },
   },
   renderer = {
+    root_folder_label = function(path)
+      return vim.fn.fnamemodify(path, ':t') .. "/"
+    end,
     add_trailing = true,
     icons = {
       show = {
