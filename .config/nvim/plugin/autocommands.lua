@@ -106,6 +106,13 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     -- Set color for virtual color column
     vim.api.nvim_set_hl(0, "VirtColumn", { ctermfg = 10 })
 
+    -- Set colors for Markdown headlines
+    vim.api.nvim_set_hl(0, "Headline1", { ctermbg = 00, bold = true })
+    vim.api.nvim_set_hl(0, "Headline2", { ctermbg = 10, bold = true })
+    vim.api.nvim_set_hl(0, "Headline3", { ctermbg = 00, bold = true })
+    vim.api.nvim_set_hl(0, "CodeBlock", { ctermbg = 10 })
+    vim.api.nvim_set_hl(0, "Dash", { ctermfg = 10 })
+
     local links = {
       ['@lsp.type.namespace'] = '@namespace',
       ['@lsp.type.type'] = '@type',
