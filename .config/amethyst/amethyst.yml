@@ -98,7 +98,7 @@ reevaluate-windows:
 
 throw-space-left:
   mod: mod3
-  key: ""
+  key: "h"
 
 throw-space-right:
   mod: mod3
