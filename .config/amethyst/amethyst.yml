@@ -22,6 +22,12 @@ mod2:
   - control
   - option
 
+mod3:
+  - command
+  - control
+  - option
+  - shift
+
 cycle-layout:
   mod: mod2
   key: "space"
