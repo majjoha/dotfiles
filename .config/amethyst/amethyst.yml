@@ -102,7 +102,7 @@ throw-space-left:
 
 throw-space-right:
   mod: mod3
-  key: ""
+  key: "l"
 
 throw-space-1:
   mod: mod3
