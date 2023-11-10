@@ -232,6 +232,7 @@ floating:
   - "com.apple.SafariTechnologyPreview"
   - "com.apple.iCal"
   - "com.apple.logic10"
+  - "com.apple.weather"
   - "com.coppertino.Vox"
   - "com.figma.Desktop"
   - "com.hnc.Discord"
