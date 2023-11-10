@@ -250,4 +250,5 @@ floating:
   - "org.m0k.transmission"
   - "org.mozilla.firefoxdeveloperedition"
   - "org.musescore.MuseScore"
+  - "org.openemu.OpenEmu"
   - "org.videolan.vlc"
