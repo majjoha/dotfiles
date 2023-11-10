@@ -31,7 +31,7 @@ vim.keymap.set("", "j", "gj")
 
 -- Toggle NvimTree
 vim.keymap.set("n", "<Leader>d",
-               ":lua require('nvim-tree.api').tree.toggle({ focus = false })<CR>",
+               ":lua require('nvim-tree.api').tree.toggle()<CR>",
                { silent = true })
 vim.keymap.set("n", "<Leader>D", ":NvimTreeFindFile<CR>", { silent = true })
 
