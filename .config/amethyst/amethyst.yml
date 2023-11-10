@@ -227,6 +227,7 @@ floating:
   - "com.apple.DiskUtility"
   - "com.apple.Maps"
   - "com.apple.Music"
+  - "com.apple.Notes"
   - "com.apple.Preview"
   - "com.apple.SafariTechnologyPreview"
   - "com.apple.iCal"
