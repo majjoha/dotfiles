@@ -1,6 +1,7 @@
 -- Set theme
-vim.g.colors_name = "base16"
+vim.cmd("colorscheme base16")
 vim.opt.background = "dark"
+vim.opt.termguicolors = false
 
 -- Enable relative line numbers
 vim.opt.number = true
