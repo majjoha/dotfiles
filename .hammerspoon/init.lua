@@ -22,7 +22,7 @@ for plugin, configuration in pairs({
       n = "Notes",
       p = "1Password 7",
       r = "Reeder",
-      s = "Firefox Developer Edition",
+      s = "Safari Technology Preview",
       t = "Kitty",
     },
   },
