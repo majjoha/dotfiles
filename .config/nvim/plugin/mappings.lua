@@ -171,8 +171,6 @@ end, { silent = true })
 
 -- Diagnostic-related mappings
 vim.keymap.set("n", "<Leader>am", vim.diagnostic.open_float, { silent = true })
-vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { silent = true })
-vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { silent = true })
 
 -- Reselect pasted text
 vim.keymap.set("n", "gp", "`[v`]")
