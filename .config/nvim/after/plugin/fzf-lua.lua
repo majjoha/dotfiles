@@ -5,11 +5,7 @@ require("fzf-lua").setup({
     height = 0.7,
     width = 0.9,
     border = { "┌", "─", "┐", "│", "┘", "─", "└", "│" },
-    preview = {
-      horizontal = "right:50%",
-      title = false,
-      layout = "horizontal"
-    }
+    preview = { horizontal = "right:50%", title = false, layout = "horizontal" },
   },
   fzf_opts = {
     ["--inline-info"] = "",
@@ -31,14 +27,9 @@ require("fzf-lua").setup({
     prompt = { "fg", "LineNr" },
     spinner = { "fg", "Normal" },
   },
-  buffers = {
-    actions = {
-      ["ctrl-d"] = { actions.buf_del, actions.resume },
-    },
-  },
+  buffers = { actions = { ["ctrl-d"] = { actions.buf_del, actions.resume } } },
   grep = {
-    rg_opts =
-      "--column --line-number --no-heading --color=always --smart-case --hidden",
+    rg_opts = "--column --line-number --no-heading --color=always --smart-case --hidden",
   },
   keymap = {
     builtin = { ["<S-K>"] = "preview-page-up", ["<S-J>"] = "preview-page-down" },
