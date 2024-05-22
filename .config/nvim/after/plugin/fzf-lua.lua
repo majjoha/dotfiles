@@ -7,10 +7,7 @@ require("fzf-lua").setup({
     border = { "┌", "─", "┐", "│", "┘", "─", "└", "│" },
     preview = { horizontal = "right:50%", title = false, layout = "horizontal" },
   },
-  fzf_opts = {
-    ["--inline-info"] = "",
-    ["--reverse"] = "",
-  },
+  fzf_opts = { ["--inline-info"] = "", ["--reverse"] = "" },
   fzf_colors = {
     bg = { "bg", "Normal" },
     fg = { "fg", "Normal" },
