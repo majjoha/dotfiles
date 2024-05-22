@@ -62,3 +62,5 @@
   useBuiltin = false
 [interactive]
   diffFilter = diff-so-fancy --patch
+[delta]
+  syntax-theme = "Solarized (light)"
