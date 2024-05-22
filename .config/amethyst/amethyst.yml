@@ -224,6 +224,7 @@ floating:
   - "ch.protonvpn.mac"
   - "com.agilebits.onepassword7"
   - "com.apple.ActivityMonitor"
+  - "com.apple.AppStore"
   - "com.apple.DiskUtility"
   - "com.apple.Maps"
   - "com.apple.Music"
