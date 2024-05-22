@@ -150,7 +150,9 @@ vim.keymap.set("n", "<Leader>mcw", ":MarginaliaConvertWordToTag<CR>",
                { silent = true })
 
 -- LSP-related mappings
-vim.keymap.set("n", "<Leader>la", vim.lsp.buf.code_action, { silent = true })
+vim.keymap.set("n", "<Leader>la",
+               ":FzfLua lsp_code_actions previewer=codeaction_native<CR>",
+               { silent = true })
 vim.keymap.set("n", "<Leader>lr", vim.lsp.buf.references, { silent = true })
 vim.keymap.set("n", "<Leader>ld", vim.lsp.buf.definition, { silent = true })
 vim.keymap.set("n", "<Leader>lh", vim.lsp.buf.hover, { silent = true })

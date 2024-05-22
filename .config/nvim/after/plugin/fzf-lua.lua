@@ -31,4 +31,10 @@ require("fzf-lua").setup({
   keymap = {
     builtin = { ["<S-K>"] = "preview-page-up", ["<S-J>"] = "preview-page-down" },
   },
+  lsp = {
+    code_actions = {
+      previewer = "codeaction_native",
+      preview_pager = "delta --side-by-side --width=$FZF_PREVIEW_COLUMNS --hunk-header-style='omit' --file-style='omit'",
+    },
+  },
 })
