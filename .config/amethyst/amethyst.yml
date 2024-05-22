@@ -249,6 +249,7 @@ floating:
   - "com.uranusjr.macdown"
   - "com.yourcompany.SoulseekQt"
   - "jp.co.korg.volcaSampleLibrarian"
+  - "md.obsidian"
   - "net.kovidgoyal.calibre"
   - "net.kovidgoyal.kitty"
   - "org.libreoffice.script"
