@@ -26,4 +26,5 @@ vim.opt.showmode = true
 -- Do not display key strokes
 vim.opt.showcmd = false
 
+-- Always display the sign column
 vim.opt.signcolumn = "yes:1"
