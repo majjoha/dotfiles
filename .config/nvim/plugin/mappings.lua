@@ -171,9 +171,6 @@ vim.keymap.set("n", "<Leader>lp", function()
                              preview_location_callback)
 end, { silent = true })
 
--- Diagnostic-related mappings
-vim.keymap.set("n", "<Leader>am", vim.diagnostic.open_float, { silent = true })
-
 -- Reselect pasted text
 vim.keymap.set("n", "gp", "`[v`]")
 
