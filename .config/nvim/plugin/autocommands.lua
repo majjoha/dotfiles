@@ -104,7 +104,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     vim.api.nvim_set_hl(0, "NormalFloat", { ctermbg = 00 })
 
     -- Set color for virtual color column
-    vim.api.nvim_set_hl(0, "VirtColumn", { ctermfg = 10 })
+    vim.api.nvim_set_hl(0, "NonText", { ctermfg = 10 })
 
     -- Set colors for Markdown headlines
     vim.api.nvim_set_hl(0, "Headline1", { ctermbg = 00, bold = true })
