@@ -52,6 +52,3 @@
 [submodule ".config/nvim/pack/packages/start/virt-column.nvim"]
 	path = .config/nvim/pack/packages/start/virt-column.nvim
 	url = https://github.com/lukas-reineke/virt-column.nvim.git
-[submodule ".config/nvim/pack/packages/start/headlines.nvim"]
-	path = .config/nvim/pack/packages/start/headlines.nvim
-	url = https://github.com/lukas-reineke/headlines.nvim.git
