@@ -154,7 +154,6 @@ vim.keymap.set("n", "<Leader>la",
                ":FzfLua lsp_code_actions previewer=codeaction_native<CR>",
                { silent = true })
 vim.keymap.set("n", "<Leader>lr", vim.lsp.buf.references, { silent = true })
-vim.keymap.set("n", "<Leader>ld", vim.lsp.buf.definition, { silent = true })
 vim.keymap.set("n", "<Leader>ln", vim.lsp.buf.rename, { silent = true })
 vim.keymap.set("n", "<Leader>lp", function()
   function preview_location_callback(_, result)
