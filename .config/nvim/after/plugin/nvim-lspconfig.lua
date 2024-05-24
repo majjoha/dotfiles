@@ -36,6 +36,7 @@ local servers = {
   gleam = {},
   hls = { settings = { formattingProvider = "stylish-haskell" } },
   marksman = {},
+  ruby_lsp = {},
   rust_analyzer = {},
   solargraph = {},
   tsserver = { filetypes = { "typescript", "typescriptreact", "typescript.tsx" } },
