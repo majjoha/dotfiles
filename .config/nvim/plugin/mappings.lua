@@ -90,18 +90,6 @@ vim.keymap.set("n", "<Leader>ts", ":sp | term<CR>", { silent = true })
 -- Search in visual selection
 vim.keymap.set("x", "/", "<ESC>/\\%V")
 
--- Toggle auto-completion
-vim.keymap.set("n", "<Leader>tc", function()
-  if vim.g.minicompletion_disable or vim.b.minicompletion_disable then
-    print("Autocompletion enabled")
-  else
-    print("Autocompletion disabled")
-  end
-
-  vim.g.minicompletion_disable = not vim.g.minicompletion_disable
-  vim.b.minicompletion_disable = not vim.b.minicompletion_disable
-end, { silent = true })
-
 -- Test-related mappings
 vim.keymap.set("n", "<Leader>rt", ":TestFile<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>rl", ":TestNearest<CR>", { silent = true })

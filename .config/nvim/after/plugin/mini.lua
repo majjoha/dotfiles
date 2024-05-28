@@ -12,11 +12,6 @@ require("mini.comment").setup({
   },
 })
 
-require("mini.completion").setup({
-  mappings = { force_twostep = "" },
-  set_vim_settings = false,
-})
-
 require("mini.files").setup(
   { windows = { preview = true, width_preview = 100 } })
 
