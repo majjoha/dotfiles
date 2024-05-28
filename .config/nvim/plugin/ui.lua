@@ -1,5 +1,5 @@
 -- Set theme
-vim.cmd("colorscheme base16")
+vim.cmd.colorscheme("base16")
 vim.opt.background = "dark"
 vim.opt.termguicolors = false
 
