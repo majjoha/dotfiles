@@ -35,6 +35,9 @@ vim.keymap.set("n", "<Leader>d", function(...)
     MiniFiles.open(...)
   end
 end, { silent = true })
+vim.keymap.set("n", "<Leader>D", function()
+  MiniFiles.open(vim.api.nvim_buf_get_name(0))
+end)
 
 -- Search the contents of the files in the current directory
 vim.keymap.set("n", "<Leader>f", ":FzfLua grep_project<CR>", { silent = true })
