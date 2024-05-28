@@ -10,9 +10,6 @@
 [submodule ".config/nvim/pack/packages/start/vim-marginalia"]
 	path = .config/nvim/pack/packages/start/vim-marginalia
 	url = git@github.com:majjoha/vim-marginalia.git
-[submodule ".config/nvim/pack/packages/start/nvim-tree.lua"]
-	path = .config/nvim/pack/packages/start/nvim-tree.lua
-	url = https://github.com/kyazdani42/nvim-tree.lua.git
 [submodule ".config/nvim/pack/packages/start/nvim-autopairs"]
 	path = .config/nvim/pack/packages/start/nvim-autopairs
 	url = https://github.com/windwp/nvim-autopairs.git

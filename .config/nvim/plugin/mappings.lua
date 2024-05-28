@@ -29,11 +29,12 @@ vim.keymap.set("x", "<", "<gv")
 vim.keymap.set("", "k", "gk")
 vim.keymap.set("", "j", "gj")
 
--- Toggle NvimTree
-vim.keymap.set("n", "<Leader>d",
-               ":lua require('nvim-tree.api').tree.toggle()<CR>",
-               { silent = true })
-vim.keymap.set("n", "<Leader>D", ":NvimTreeFindFile<CR>", { silent = true })
+-- Toggle MiniFiles
+vim.keymap.set("n", "<Leader>d", function(...)
+  if not MiniFiles.close() then
+    MiniFiles.open(...)
+  end
+end, { silent = true })
 
 -- Search the contents of the files in the current directory
 vim.keymap.set("n", "<Leader>f", ":FzfLua grep_project<CR>", { silent = true })
