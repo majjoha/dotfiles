@@ -1,3 +1,5 @@
+require("mini.bracketed").setup({})
+
 require("mini.comment").setup({
   mappings = {
     -- Toggle comment (like `gcip` - comment inner paragraph) for both
@@ -10,12 +12,18 @@ require("mini.comment").setup({
   },
 })
 
+require("mini.completion").setup({
+  mappings = { force_twostep = "" },
+  set_vim_settings = false,
+})
+
+require("mini.files").setup(
+  { windows = { preview = true, width_preview = 100 } })
+
+require("mini.pairs").setup()
+
 require("mini.surround").setup({
-  mappings = {
-    add = "ys",
-    delete = "ds",
-    replace = "cs",
-  },
+  mappings = { add = "ys", delete = "ds", replace = "cs" },
   custom_surroundings = {
     ["("] = { output = { left = "( ", right = " )" } },
     ["["] = { output = { left = "[ ", right = " ]" } },
@@ -23,12 +31,3 @@ require("mini.surround").setup({
     ["<"] = { output = { left = "< ", right = " >" } },
   },
 })
-
-require("mini.completion").setup({
-  mappings = { force_twostep = "" },
-  set_vim_settings = false,
-})
-
-require("mini.bracketed").setup({})
-
-require("mini.files").setup({ windows = { preview = true, width_preview = 100 } })
