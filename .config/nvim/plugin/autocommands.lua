@@ -210,9 +210,6 @@ vim.api.nvim_create_autocmd("LSPDetach", {
   group = lsp_mode_group,
 })
 
--- Associate `.livemd` files with Markdown
-vim.filetype.add({ extension = { livemd = "markdown" } })
-
 -- Set mappings for opening file in split using `MiniFiles`
 local map_split = function(buf_id, lhs, direction)
   local rhs = function()
