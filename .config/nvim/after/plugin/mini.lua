@@ -15,6 +15,22 @@ require("mini.comment").setup({
 require("mini.files").setup(
   { windows = { preview = true, width_preview = 100 } })
 
+require("mini.notify").setup({
+  content = {
+    -- Sort notifications by most recent first
+    sort = function(notif_arr)
+      table.sort(
+        notif_arr,
+        function(a, b) return a.ts_update > b.ts_update end
+      )
+      return notif_arr
+    end,
+  },
+  lsp_progress = {
+    duration_last = 2000,
+  }
+})
+
 require("mini.pairs").setup()
 
 require("mini.surround").setup({
