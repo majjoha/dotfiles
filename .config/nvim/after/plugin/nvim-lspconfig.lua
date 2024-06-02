@@ -36,6 +36,7 @@ local servers = {
   gleam = {},
   hls = { settings = { formattingProvider = "stylish-haskell" } },
   marksman = {},
+  rubocop = {},
   ruby_lsp = {},
   rust_analyzer = {},
   solargraph = {},
