@@ -259,6 +259,7 @@ floating:
   - "net.ankiweb.dtop"
   - "net.kovidgoyal.calibre"
   - "net.kovidgoyal.kitty"
+  - "net.sourceforge.supercollider"
   - "org.libreoffice.script"
   - "org.m0k.transmission"
   - "org.mozilla.firefoxdeveloperedition"
