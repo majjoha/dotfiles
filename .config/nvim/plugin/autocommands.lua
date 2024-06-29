@@ -86,6 +86,13 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     vim.api.nvim_set_hl(0, "DiagnosticSignHint", { ctermfg = 07, ctermbg = 00 })
     vim.api.nvim_set_hl(0, "DiagnosticSignInfo", { ctermfg = 07, ctermbg = 00 })
 
+    -- Set underline colors for diagnostics
+    vim.api
+      .nvim_set_hl(0, "DiagnosticUnderlineError", { undercurl = true })
+    vim.api.nvim_set_hl(0, "DiagnosticUnderlineWarn", { undercurl = true })
+    vim.api.nvim_set_hl(0, "DiagnosticUnderlineHint", { undercurl = true })
+    vim.api.nvim_set_hl(0, "DiagnosticUnderlineInfo", { undercurl = true })
+
     -- Define colors for floating windows
     vim.api.nvim_set_hl(0, "NormalFloat", { ctermbg = 10 })
     vim.api.nvim_set_hl(0, "FloatBorder", { ctermbg = 10 })
