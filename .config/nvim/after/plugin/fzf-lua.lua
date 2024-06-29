@@ -31,6 +31,9 @@ require("fzf-lua").setup({
   keymap = {
     builtin = { ["<S-K>"] = "preview-page-up", ["<S-J>"] = "preview-page-down" },
   },
+  files = {
+    rg_opts ="--color=never --files --hidden --no-ignore --follow --glob '!*/**/*.png' --glob '!*/**/.jpg'"
+  },
   lsp = {
     code_actions = {
       previewer = "codeaction_native",
