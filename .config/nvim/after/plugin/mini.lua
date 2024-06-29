@@ -17,12 +17,11 @@ require("mini.files").setup(
 
 require("mini.notify").setup({
   content = {
-    -- Sort notifications by most recent first
+    -- Sort notifications by oldest first
     sort = function(notif_arr)
-      table.sort(
-        notif_arr,
-        function(a, b) return a.ts_update > b.ts_update end
-      )
+      table.sort(notif_arr, function(a, b)
+        return a.ts_update < b.ts_update
+      end)
       return notif_arr
     end,
   },
