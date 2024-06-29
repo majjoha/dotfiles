@@ -12,8 +12,15 @@ require("mini.comment").setup({
   },
 })
 
-require("mini.files").setup(
-  { windows = { preview = true, width_preview = 100 } })
+require("mini.files").setup({
+  mappings = {
+    go_in = "<Tab>",
+    go_in_plus = "<CR>",
+    go_out = "<S-Tab>",
+    go_out_plus = nil,
+  },
+  windows = { preview = true, width_preview = 100 },
+})
 
 require("mini.notify").setup({
   content = {
