@@ -70,3 +70,5 @@ alias reindex-spotlight="sudo mdutil -i on /"
 
 # Remove hidden files
 alias remove-hidden-files="find . -maxdepth 5 -type f -name '.*' -delete"
+
+function ffsilent { ffmpeg -i "$1" -c copy -an "${1%.*}-nosound.${1#*.}" }
