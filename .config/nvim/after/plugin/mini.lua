@@ -25,9 +25,16 @@ require("mini.notify").setup({
       return notif_arr
     end,
   },
-  lsp_progress = {
-    duration_last = 2000,
-  }
+  lsp_progress = { duration_last = 2000 },
+  window = {
+    -- Show the notifications in the bottom right corner
+    config = {
+      border = "single",
+      anchor = "SE",
+      col = vim.o.columns,
+      row = vim.o.lines - (vim.o.cmdheight + 1),
+    },
+  },
 })
 
 require("mini.pairs").setup()
