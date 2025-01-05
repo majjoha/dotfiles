@@ -23,7 +23,7 @@ for plugin, configuration in pairs({
       p = "1Password 7",
       r = "Reeder",
       s = "Firefox Developer Edition",
-      t = "Kitty",
+      t = "Ghostty",
     },
   },
   Caffeine = {

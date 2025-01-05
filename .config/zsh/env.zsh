@@ -12,7 +12,7 @@ path=(
 export EDITOR="nvim"
 export VISUAL="nvim"
 
-export TERM=xterm-kitty
+export TERM=xterm-ghostty
 
 # Save a lot of history
 export HISTSIZE=20000
