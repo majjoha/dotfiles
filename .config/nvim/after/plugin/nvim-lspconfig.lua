@@ -34,13 +34,14 @@ local servers = {
   eslint = {},
   flow = {},
   gleam = {},
+  harper_ls = {},
   hls = { settings = { formattingProvider = "stylish-haskell" } },
   marksman = {},
   rubocop = {},
   ruby_lsp = {},
   rust_analyzer = {},
   solargraph = {},
-  tsserver = { filetypes = { "typescript", "typescriptreact", "typescript.tsx" } },
+  ts_ls = {},
 }
 
 for server, config in pairs(servers) do
