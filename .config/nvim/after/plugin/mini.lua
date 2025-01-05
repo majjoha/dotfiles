@@ -22,6 +22,8 @@ require("mini.files").setup({
   windows = { preview = true, width_preview = 100 },
 })
 
+require("mini.icons").setup({})
+
 require("mini.notify").setup({
   content = {
     -- Sort notifications by oldest first
