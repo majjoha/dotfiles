@@ -231,6 +231,7 @@ floating:
   - "com.agilebits.onepassword7"
   - "com.apple.ActivityMonitor"
   - "com.apple.AppStore"
+  - "com.apple.Dictionary"
   - "com.apple.DiskUtility"
   - "com.apple.Maps"
   - "com.apple.Music"
