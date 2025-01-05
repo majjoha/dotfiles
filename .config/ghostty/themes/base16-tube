@@ -1,0 +1,27 @@
+# Base16 London Tube - kitty color config
+# Scheme by Jan T. Sott
+background = #231f20
+foreground = #d9d8d8
+selection-background = #d9d8d8
+selection-foreground = #231f20
+cursor-color =#d9d8d8
+
+# normal
+palette = 0=#231f20
+palette = 1=#ee2e24
+palette = 2=#00853e
+palette = 3=#ffd204
+palette = 4=#009ddc
+palette = 5=#98005d
+palette = 6=#85cebc
+palette = 7=#d9d8d8
+
+# bright
+palette = 8=#737171
+palette = 9=#f386a1
+palette = 10=#1c3f95
+palette = 11=#5a5758
+palette = 12=#959ca1
+palette = 13=#e7e7e8
+palette = 14=#b06110
+palette = 15=#ffffff

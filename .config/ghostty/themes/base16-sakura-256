@@ -1,0 +1,35 @@
+# Base16 Sakura - kitty color config
+# Scheme by Misterio77 (http://github.com/Misterio77)
+background = #feedf3
+foreground = #564448
+selection-background = #564448
+selection-foreground = #feedf3
+cursor-color =#564448
+
+# normal
+palette = 0=#feedf3
+palette = 1=#df2d52
+palette = 2=#2e916d
+palette = 3=#c29461
+palette = 4=#006e93
+palette = 5=#5e2180
+palette = 6=#1d8991
+palette = 7=#564448
+
+# bright
+palette = 8=#755f64
+palette = 9=#df2d52
+palette = 10=#2e916d
+palette = 11=#c29461
+palette = 12=#006e93
+palette = 13=#5e2180
+palette = 14=#1d8991
+palette = 15=#33292b
+
+# extended base16 colors
+palette = 16=#f6661e
+palette = 17=#ba0d35
+palette = 18=#f8e2e7
+palette = 19=#e0ccd1
+palette = 20=#665055
+palette = 21=#42383a

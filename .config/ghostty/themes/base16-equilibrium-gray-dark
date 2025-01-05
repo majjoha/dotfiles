@@ -1,0 +1,27 @@
+# Base16 Equilibrium Gray Dark - kitty color config
+# Scheme by Carlo Abelli
+background = #111111
+foreground = #ababab
+selection-background = #ababab
+selection-foreground = #111111
+cursor-color =#ababab
+
+# normal
+palette = 0=#111111
+palette = 1=#f04339
+palette = 2=#7f8b00
+palette = 3=#bb8801
+palette = 4=#008dd1
+palette = 5=#6a7fd2
+palette = 6=#00948b
+palette = 7=#ababab
+
+# bright
+palette = 8=#777777
+palette = 9=#df5923
+palette = 10=#1b1b1b
+palette = 11=#262626
+palette = 12=#919191
+palette = 13=#c6c6c6
+palette = 14=#e3488e
+palette = 15=#e2e2e2

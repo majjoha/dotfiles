@@ -1,0 +1,35 @@
+# Base16 Horizon Dark - kitty color config
+# Scheme by Michaël Ball (http://github.com/michael-ball/)
+background = #1C1E26
+foreground = #CBCED0
+selection-background = #CBCED0
+selection-foreground = #1C1E26
+cursor-color =#CBCED0
+
+# normal
+palette = 0=#1C1E26
+palette = 1=#E95678
+palette = 2=#29D398
+palette = 3=#FAC29A
+palette = 4=#26BBD9
+palette = 5=#EE64AC
+palette = 6=#59E1E3
+palette = 7=#CBCED0
+
+# bright
+palette = 8=#6F6F70
+palette = 9=#E95678
+palette = 10=#29D398
+palette = 11=#FAC29A
+palette = 12=#26BBD9
+palette = 13=#EE64AC
+palette = 14=#59E1E3
+palette = 15=#E3E6EE
+
+# extended base16 colors
+palette = 16=#FAB795
+palette = 17=#F09383
+palette = 18=#232530
+palette = 19=#2E303E
+palette = 20=#9DA0A2
+palette = 21=#DCDFE4

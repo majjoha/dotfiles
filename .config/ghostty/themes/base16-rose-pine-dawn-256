@@ -1,0 +1,35 @@
+# Base16 Rosé Pine Dawn - kitty color config
+# Scheme by Emilia Dunfelt &lt;sayhi@dunfelt.se&gt;
+background = #faf4ed
+foreground = #575279
+selection-background = #575279
+selection-foreground = #faf4ed
+cursor-color =#575279
+
+# normal
+palette = 0=#faf4ed
+palette = 1=#1f1d2e
+palette = 2=#d7827e
+palette = 3=#ea9d34
+palette = 4=#56949f
+palette = 5=#907aa9
+palette = 6=#286983
+palette = 7=#575279
+
+# bright
+palette = 8=#9893a5
+palette = 9=#1f1d2e
+palette = 10=#d7827e
+palette = 11=#ea9d34
+palette = 12=#56949f
+palette = 13=#907aa9
+palette = 14=#286983
+palette = 15=#26233a
+
+# extended base16 colors
+palette = 16=#b4637a
+palette = 17=#c5c3ce
+palette = 18=#fffaf3
+palette = 19=#f2e9de
+palette = 20=#6e6a86
+palette = 21=#555169

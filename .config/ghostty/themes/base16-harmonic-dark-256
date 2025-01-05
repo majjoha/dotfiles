@@ -1,0 +1,35 @@
+# Base16 Harmonic16 Dark - kitty color config
+# Scheme by Jannik Siebert (https://github.com/janniks)
+background = #0b1c2c
+foreground = #cbd6e2
+selection-background = #cbd6e2
+selection-foreground = #0b1c2c
+cursor-color =#cbd6e2
+
+# normal
+palette = 0=#0b1c2c
+palette = 1=#bf8b56
+palette = 2=#56bf8b
+palette = 3=#8bbf56
+palette = 4=#8b56bf
+palette = 5=#bf568b
+palette = 6=#568bbf
+palette = 7=#cbd6e2
+
+# bright
+palette = 8=#627e99
+palette = 9=#bf8b56
+palette = 10=#56bf8b
+palette = 11=#8bbf56
+palette = 12=#8b56bf
+palette = 13=#bf568b
+palette = 14=#568bbf
+palette = 15=#f7f9fb
+
+# extended base16 colors
+palette = 16=#bfbf56
+palette = 17=#bf5656
+palette = 18=#223b54
+palette = 19=#405c79
+palette = 20=#aabcce
+palette = 21=#e5ebf1

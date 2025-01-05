@@ -1,0 +1,35 @@
+# Base16 Gruvbox Material Light, Soft - kitty color config
+# Scheme by Mayush Kumar (https://github.com/MayushKumar), sainnhe (https://github.com/sainnhe/gruvbox-material-vscode)
+background = #f2e5bc
+foreground = #654735
+selection-background = #654735
+selection-foreground = #f2e5bc
+cursor-color =#654735
+
+# normal
+palette = 0=#f2e5bc
+palette = 1=#c14a4a
+palette = 2=#6c782e
+palette = 3=#b47109
+palette = 4=#45707a
+palette = 5=#945e80
+palette = 6=#4c7a5d
+palette = 7=#654735
+
+# bright
+palette = 8=#a89984
+palette = 9=#c14a4a
+palette = 10=#6c782e
+palette = 11=#b47109
+palette = 12=#45707a
+palette = 13=#945e80
+palette = 14=#4c7a5d
+palette = 15=#282828
+
+# extended base16 colors
+palette = 16=#c35e0a
+palette = 17=#e78a4e
+palette = 18=#ebdbb2
+palette = 19=#c9b99a
+palette = 20=#665c54
+palette = 21=#3c3836

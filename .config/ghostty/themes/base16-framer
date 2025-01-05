@@ -1,0 +1,27 @@
+# Base16 Framer - kitty color config
+# Scheme by Framer (Maintained by Jesse Hoyos)
+background = #181818
+foreground = #D0D0D0
+selection-background = #D0D0D0
+selection-foreground = #181818
+cursor-color =#D0D0D0
+
+# normal
+palette = 0=#181818
+palette = 1=#FD886B
+palette = 2=#32CCDC
+palette = 3=#FECB6E
+palette = 4=#20BCFC
+palette = 5=#BA8CFC
+palette = 6=#ACDDFD
+palette = 7=#D0D0D0
+
+# bright
+palette = 8=#747474
+palette = 9=#FC4769
+palette = 10=#151515
+palette = 11=#464646
+palette = 12=#B9B9B9
+palette = 13=#E8E8E8
+palette = 14=#B15F4A
+palette = 15=#EEEEEE

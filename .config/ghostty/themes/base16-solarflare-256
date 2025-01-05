@@ -1,0 +1,35 @@
+# Base16 Solar Flare - kitty color config
+# Scheme by Chuck Harmston (https://chuck.harmston.ch)
+background = #18262F
+foreground = #A6AFB8
+selection-background = #A6AFB8
+selection-foreground = #18262F
+cursor-color =#A6AFB8
+
+# normal
+palette = 0=#18262F
+palette = 1=#EF5253
+palette = 2=#7CC844
+palette = 3=#E4B51C
+palette = 4=#33B5E1
+palette = 5=#A363D5
+palette = 6=#52CBB0
+palette = 7=#A6AFB8
+
+# bright
+palette = 8=#667581
+palette = 9=#EF5253
+palette = 10=#7CC844
+palette = 11=#E4B51C
+palette = 12=#33B5E1
+palette = 13=#A363D5
+palette = 14=#52CBB0
+palette = 15=#F5F7FA
+
+# extended base16 colors
+palette = 16=#E66B2B
+palette = 17=#D73C9A
+palette = 18=#222E38
+palette = 19=#586875
+palette = 20=#85939E
+palette = 21=#E8E9ED

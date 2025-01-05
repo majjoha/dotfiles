@@ -1,0 +1,27 @@
+# Base16 Tokyo Night Storm - kitty color config
+# Scheme by Michaël Ball
+background = #24283B
+foreground = #A9B1D6
+selection-background = #A9B1D6
+selection-foreground = #24283B
+cursor-color =#A9B1D6
+
+# normal
+palette = 0=#24283B
+palette = 1=#C0CAF5
+palette = 2=#9ECE6A
+palette = 3=#0DB9D7
+palette = 4=#2AC3DE
+palette = 5=#BB9AF7
+palette = 6=#B4F9F8
+palette = 7=#A9B1D6
+
+# bright
+palette = 8=#444B6A
+palette = 9=#A9B1D6
+palette = 10=#16161E
+palette = 11=#343A52
+palette = 12=#787C99
+palette = 13=#CBCCD1
+palette = 14=#F7768E
+palette = 15=#D5D6DB

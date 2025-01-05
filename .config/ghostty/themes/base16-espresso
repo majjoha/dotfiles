@@ -1,0 +1,27 @@
+# Base16 Espresso - kitty color config
+# Scheme by Unknown. Maintained by Alex Mirrington (https://github.com/alexmirrington)
+background = #2d2d2d
+foreground = #cccccc
+selection-background = #cccccc
+selection-foreground = #2d2d2d
+cursor-color =#cccccc
+
+# normal
+palette = 0=#2d2d2d
+palette = 1=#d25252
+palette = 2=#a5c261
+palette = 3=#ffc66d
+palette = 4=#6c99bb
+palette = 5=#d197d9
+palette = 6=#bed6ff
+palette = 7=#cccccc
+
+# bright
+palette = 8=#777777
+palette = 9=#f9a959
+palette = 10=#393939
+palette = 11=#515151
+palette = 12=#b4b7b4
+palette = 13=#e0e0e0
+palette = 14=#f97394
+palette = 15=#ffffff

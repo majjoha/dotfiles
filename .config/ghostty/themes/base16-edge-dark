@@ -1,0 +1,27 @@
+# Base16 Edge Dark - kitty color config
+# Scheme by cjayross (https://github.com/cjayross)
+background = #262729
+foreground = #b7bec9
+selection-background = #b7bec9
+selection-foreground = #262729
+cursor-color =#b7bec9
+
+# normal
+palette = 0=#262729
+palette = 1=#e77171
+palette = 2=#a1bf78
+palette = 3=#dbb774
+palette = 4=#73b3e7
+palette = 5=#d390e7
+palette = 6=#5ebaa5
+palette = 7=#b7bec9
+
+# bright
+palette = 8=#3e4249
+palette = 9=#e77171
+palette = 10=#88909f
+palette = 11=#b7bec9
+palette = 12=#73b3e7
+palette = 13=#d390e7
+palette = 14=#5ebaa5
+palette = 15=#3e4249

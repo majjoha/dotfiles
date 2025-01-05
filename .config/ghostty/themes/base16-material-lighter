@@ -1,0 +1,27 @@
+# Base16 Material Lighter - kitty color config
+# Scheme by Nate Peterson
+background = #FAFAFA
+foreground = #80CBC4
+selection-background = #80CBC4
+selection-foreground = #FAFAFA
+cursor-color =#80CBC4
+
+# normal
+palette = 0=#FAFAFA
+palette = 1=#FF5370
+palette = 2=#91B859
+palette = 3=#FFB62C
+palette = 4=#6182B8
+palette = 5=#7C4DFF
+palette = 6=#39ADB5
+palette = 7=#80CBC4
+
+# bright
+palette = 8=#CCD7DA
+palette = 9=#F76D47
+palette = 10=#E7EAEC
+palette = 11=#CCEAE7
+palette = 12=#8796B0
+palette = 13=#80CBC4
+palette = 14=#E53935
+palette = 15=#FFFFFF

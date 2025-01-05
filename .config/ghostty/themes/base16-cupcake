@@ -1,0 +1,27 @@
+# Base16 Cupcake - kitty color config
+# Scheme by Chris Kempson (http://chriskempson.com)
+background = #fbf1f2
+foreground = #8b8198
+selection-background = #8b8198
+selection-foreground = #fbf1f2
+cursor-color =#8b8198
+
+# normal
+palette = 0=#fbf1f2
+palette = 1=#D57E85
+palette = 2=#A3B367
+palette = 3=#DCB16C
+palette = 4=#7297B9
+palette = 5=#BB99B4
+palette = 6=#69A9A7
+palette = 7=#8b8198
+
+# bright
+palette = 8=#bfb9c6
+palette = 9=#EBB790
+palette = 10=#f2f1f4
+palette = 11=#d8d5dd
+palette = 12=#a59daf
+palette = 13=#72677E
+palette = 14=#BAA58C
+palette = 15=#585062

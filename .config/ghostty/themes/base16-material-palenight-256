@@ -1,0 +1,35 @@
+# Base16 Material Palenight - kitty color config
+# Scheme by Nate Peterson
+background = #292D3E
+foreground = #959DCB
+selection-background = #959DCB
+selection-foreground = #292D3E
+cursor-color =#959DCB
+
+# normal
+palette = 0=#292D3E
+palette = 1=#F07178
+palette = 2=#C3E88D
+palette = 3=#FFCB6B
+palette = 4=#82AAFF
+palette = 5=#C792EA
+palette = 6=#89DDFF
+palette = 7=#959DCB
+
+# bright
+palette = 8=#676E95
+palette = 9=#F07178
+palette = 10=#C3E88D
+palette = 11=#FFCB6B
+palette = 12=#82AAFF
+palette = 13=#C792EA
+palette = 14=#89DDFF
+palette = 15=#FFFFFF
+
+# extended base16 colors
+palette = 16=#F78C6C
+palette = 17=#FF5370
+palette = 18=#444267
+palette = 19=#32374D
+palette = 20=#8796B0
+palette = 21=#959DCB

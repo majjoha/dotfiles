@@ -1,0 +1,35 @@
+# Base16 Material - kitty color config
+# Scheme by Nate Peterson
+background = #263238
+foreground = #EEFFFF
+selection-background = #EEFFFF
+selection-foreground = #263238
+cursor-color =#EEFFFF
+
+# normal
+palette = 0=#263238
+palette = 1=#F07178
+palette = 2=#C3E88D
+palette = 3=#FFCB6B
+palette = 4=#82AAFF
+palette = 5=#C792EA
+palette = 6=#89DDFF
+palette = 7=#EEFFFF
+
+# bright
+palette = 8=#546E7A
+palette = 9=#F07178
+palette = 10=#C3E88D
+palette = 11=#FFCB6B
+palette = 12=#82AAFF
+palette = 13=#C792EA
+palette = 14=#89DDFF
+palette = 15=#FFFFFF
+
+# extended base16 colors
+palette = 16=#F78C6C
+palette = 17=#FF5370
+palette = 18=#2E3C43
+palette = 19=#314549
+palette = 20=#B2CCD6
+palette = 21=#EEFFFF

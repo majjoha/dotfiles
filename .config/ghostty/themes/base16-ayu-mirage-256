@@ -1,0 +1,35 @@
+# Base16 Ayu Mirage - kitty color config
+# Scheme by Khue Nguyen &lt;Z5483Y@gmail.com&gt;
+background = #171B24
+foreground = #CCCAC2
+selection-background = #CCCAC2
+selection-foreground = #171B24
+cursor-color =#CCCAC2
+
+# normal
+palette = 0=#171B24
+palette = 1=#F28779
+palette = 2=#D5FF80
+palette = 3=#FFD173
+palette = 4=#5CCFE6
+palette = 5=#D4BFFF
+palette = 6=#95E6CB
+palette = 7=#CCCAC2
+
+# bright
+palette = 8=#707A8C
+palette = 9=#F28779
+palette = 10=#D5FF80
+palette = 11=#FFD173
+palette = 12=#5CCFE6
+palette = 13=#D4BFFF
+palette = 14=#95E6CB
+palette = 15=#F3F4F5
+
+# extended base16 colors
+palette = 16=#FFAD66
+palette = 17=#F29E74
+palette = 18=#1F2430
+palette = 19=#242936
+palette = 20=#8A9199
+palette = 21=#D9D7CE

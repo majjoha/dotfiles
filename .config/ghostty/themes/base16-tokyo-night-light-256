@@ -1,0 +1,35 @@
+# Base16 Tokyo Night Light - kitty color config
+# Scheme by Michaël Ball
+background = #D5D6DB
+foreground = #343B59
+selection-background = #343B59
+selection-foreground = #D5D6DB
+cursor-color =#343B59
+
+# normal
+palette = 0=#D5D6DB
+palette = 1=#343B58
+palette = 2=#485E30
+palette = 3=#166775
+palette = 4=#34548A
+palette = 5=#5A4A78
+palette = 6=#3E6968
+palette = 7=#343B59
+
+# bright
+palette = 8=#9699A3
+palette = 9=#343B58
+palette = 10=#485E30
+palette = 11=#166775
+palette = 12=#34548A
+palette = 13=#5A4A78
+palette = 14=#3E6968
+palette = 15=#1A1B26
+
+# extended base16 colors
+palette = 16=#965027
+palette = 17=#8C4351
+palette = 18=#CBCCD1
+palette = 19=#DFE0E5
+palette = 20=#4C505E
+palette = 21=#1A1B26

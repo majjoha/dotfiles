@@ -1,0 +1,35 @@
+# Base16 Qualia - kitty color config
+# Scheme by isaacwhanson
+background = #101010
+foreground = #C0C0C0
+selection-background = #C0C0C0
+selection-foreground = #101010
+cursor-color =#C0C0C0
+
+# normal
+palette = 0=#101010
+palette = 1=#EFA6A2
+palette = 2=#80C990
+palette = 3=#E6A3DC
+palette = 4=#50CACD
+palette = 5=#E0AF85
+palette = 6=#C8C874
+palette = 7=#C0C0C0
+
+# bright
+palette = 8=#454545
+palette = 9=#EFA6A2
+palette = 10=#80C990
+palette = 11=#E6A3DC
+palette = 12=#50CACD
+palette = 13=#E0AF85
+palette = 14=#C8C874
+palette = 15=#454545
+
+# extended base16 colors
+palette = 16=#A3B8EF
+palette = 17=#808080
+palette = 18=#454545
+palette = 19=#454545
+palette = 20=#808080
+palette = 21=#C0C0C0

@@ -1,0 +1,27 @@
+# Base16 lime - kitty color config
+# Scheme by limelier
+background = #1a1a2f
+foreground = #818175
+selection-background = #818175
+selection-foreground = #1a1a2f
+cursor-color =#818175
+
+# normal
+palette = 0=#1a1a2f
+palette = 1=#ff662a
+palette = 2=#8cd97c
+palette = 3=#ffd15e
+palette = 4=#2b926f
+palette = 5=#1b825f
+palette = 6=#4cad83
+palette = 7=#818175
+
+# bright
+palette = 8=#313140
+palette = 9=#ff773a
+palette = 10=#202030
+palette = 11=#2a2a3f
+palette = 12=#515155
+palette = 13=#fff2d1
+palette = 14=#b4d97c
+palette = 15=#fff8e1

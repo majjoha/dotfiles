@@ -1,0 +1,35 @@
+# Base16 Helios - kitty color config
+# Scheme by Alex Meyer (https://github.com/reyemxela)
+background = #1d2021
+foreground = #d5d5d5
+selection-background = #d5d5d5
+selection-foreground = #1d2021
+cursor-color =#d5d5d5
+
+# normal
+palette = 0=#1d2021
+palette = 1=#d72638
+palette = 2=#88b92d
+palette = 3=#f19d1a
+palette = 4=#1e8bac
+palette = 5=#be4264
+palette = 6=#1ba595
+palette = 7=#d5d5d5
+
+# bright
+palette = 8=#6f7579
+palette = 9=#d72638
+palette = 10=#88b92d
+palette = 11=#f19d1a
+palette = 12=#1e8bac
+palette = 13=#be4264
+palette = 14=#1ba595
+palette = 15=#e5e5e5
+
+# extended base16 colors
+palette = 16=#eb8413
+palette = 17=#c85e0d
+palette = 18=#383c3e
+palette = 19=#53585b
+palette = 20=#cdcdcd
+palette = 21=#dddddd

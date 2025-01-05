@@ -1,0 +1,27 @@
+# Base16 better-contrast - kitty color config
+# Scheme by Ben Mayoras
+background = #182430
+foreground = #C8E1F8
+selection-background = #C8E1F8
+selection-foreground = #182430
+cursor-color =#C8E1F8
+
+# normal
+palette = 0=#182430
+palette = 1=#4CE587
+palette = 2=#C3E88D
+palette = 3=#82AAFF
+palette = 4=#82AAFF
+palette = 5=#FF84DD
+palette = 6=#5FD1FF
+palette = 7=#C8E1F8
+
+# bright
+palette = 8=#616D78
+palette = 9=#F6A85C
+palette = 10=#243C54
+palette = 11=#46290A
+palette = 12=#74AFE7
+palette = 13=#DDEAF6
+palette = 14=#BBD2E8
+palette = 15=#8F98A0

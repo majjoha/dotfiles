@@ -1,0 +1,27 @@
+# Base16 Kanagawa - kitty color config
+# Scheme by Tommaso Laurenzi (https://github.com/rebelot)
+background = #1F1F28
+foreground = #DCD7BA
+selection-background = #DCD7BA
+selection-foreground = #1F1F28
+cursor-color =#DCD7BA
+
+# normal
+palette = 0=#1F1F28
+palette = 1=#C34043
+palette = 2=#76946A
+palette = 3=#C0A36E
+palette = 4=#7E9CD8
+palette = 5=#957FB8
+palette = 6=#6A9589
+palette = 7=#DCD7BA
+
+# bright
+palette = 8=#54546D
+palette = 9=#FFA066
+palette = 10=#16161D
+palette = 11=#223249
+palette = 12=#727169
+palette = 13=#C8C093
+palette = 14=#D27E99
+palette = 15=#717C7C

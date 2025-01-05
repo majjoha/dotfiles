@@ -1,0 +1,35 @@
+# Base16 Synth Midnight Terminal Light - kitty color config
+# Scheme by Michaël Ball (http://github.com/michael-ball/)
+background = #dddfe0
+foreground = #28292a
+selection-background = #28292a
+selection-foreground = #dddfe0
+cursor-color =#28292a
+
+# normal
+palette = 0=#dddfe0
+palette = 1=#b53b50
+palette = 2=#06ea61
+palette = 3=#c9d364
+palette = 4=#03aeff
+palette = 5=#ea5ce2
+palette = 6=#42fff9
+palette = 7=#28292a
+
+# bright
+palette = 8=#a3a5a6
+palette = 9=#b53b50
+palette = 10=#06ea61
+palette = 11=#c9d364
+palette = 12=#03aeff
+palette = 13=#ea5ce2
+palette = 14=#42fff9
+palette = 15=#050608
+
+# extended base16 colors
+palette = 16=#ea770d
+palette = 17=#cd6320
+palette = 18=#cfd1d2
+palette = 19=#c1c3c4
+palette = 20=#474849
+palette = 21=#1a1b1c

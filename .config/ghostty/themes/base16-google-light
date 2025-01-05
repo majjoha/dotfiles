@@ -1,0 +1,27 @@
+# Base16 Google Light - kitty color config
+# Scheme by Seth Wright (http://sethawright.com)
+background = #ffffff
+foreground = #373b41
+selection-background = #373b41
+selection-foreground = #ffffff
+cursor-color =#373b41
+
+# normal
+palette = 0=#ffffff
+palette = 1=#CC342B
+palette = 2=#198844
+palette = 3=#FBA922
+palette = 4=#3971ED
+palette = 5=#A36AC7
+palette = 6=#3971ED
+palette = 7=#373b41
+
+# bright
+palette = 8=#b4b7b4
+palette = 9=#F96A38
+palette = 10=#e0e0e0
+palette = 11=#c5c8c6
+palette = 12=#969896
+palette = 13=#282a2e
+palette = 14=#3971ED
+palette = 15=#1d1f21

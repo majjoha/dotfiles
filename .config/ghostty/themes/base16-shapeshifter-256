@@ -1,0 +1,35 @@
+# Base16 Shapeshifter - kitty color config
+# Scheme by Tyler Benziger (http://tybenz.com)
+background = #f9f9f9
+foreground = #102015
+selection-background = #102015
+selection-foreground = #f9f9f9
+cursor-color =#102015
+
+# normal
+palette = 0=#f9f9f9
+palette = 1=#e92f2f
+palette = 2=#0ed839
+palette = 3=#dddd13
+palette = 4=#3b48e3
+palette = 5=#f996e2
+palette = 6=#23edda
+palette = 7=#102015
+
+# bright
+palette = 8=#555555
+palette = 9=#e92f2f
+palette = 10=#0ed839
+palette = 11=#dddd13
+palette = 12=#3b48e3
+palette = 13=#f996e2
+palette = 14=#23edda
+palette = 15=#000000
+
+# extended base16 colors
+palette = 16=#e09448
+palette = 17=#69542d
+palette = 18=#e0e0e0
+palette = 19=#ababab
+palette = 20=#343434
+palette = 21=#040404

@@ -1,0 +1,27 @@
+# Base16 Windows NT - kitty color config
+# Scheme by Fergus Collins (https://github.com/C-Fergus)
+background = #000000
+foreground = #c0c0c0
+selection-background = #c0c0c0
+selection-foreground = #000000
+cursor-color =#c0c0c0
+
+# normal
+palette = 0=#000000
+palette = 1=#ff0000
+palette = 2=#00ff00
+palette = 3=#ffff00
+palette = 4=#0000ff
+palette = 5=#ff00ff
+palette = 6=#00ffff
+palette = 7=#c0c0c0
+
+# bright
+palette = 8=#808080
+palette = 9=#808000
+palette = 10=#2a2a2a
+palette = 11=#555555
+palette = 12=#a1a1a1
+palette = 13=#e0e0e0
+palette = 14=#008000
+palette = 15=#ffffff

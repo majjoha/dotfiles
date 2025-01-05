@@ -1,0 +1,27 @@
+# Base16 Atelier Estuary Light - kitty color config
+# Scheme by Bram de Haan (http://atelierbramdehaan.nl)
+background = #f4f3ec
+foreground = #5f5e4e
+selection-background = #5f5e4e
+selection-foreground = #f4f3ec
+cursor-color =#5f5e4e
+
+# normal
+palette = 0=#f4f3ec
+palette = 1=#ba6236
+palette = 2=#7d9726
+palette = 3=#a5980d
+palette = 4=#36a166
+palette = 5=#5f9182
+palette = 6=#5b9d48
+palette = 7=#5f5e4e
+
+# bright
+palette = 8=#878573
+palette = 9=#ae7313
+palette = 10=#e7e6df
+palette = 11=#929181
+palette = 12=#6c6b5a
+palette = 13=#302f27
+palette = 14=#9d6c7c
+palette = 15=#22221b

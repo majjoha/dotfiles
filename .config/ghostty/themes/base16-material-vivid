@@ -1,0 +1,27 @@
+# Base16 Material Vivid - kitty color config
+# Scheme by joshyrobot
+background = #202124
+foreground = #80868b
+selection-background = #80868b
+selection-foreground = #202124
+cursor-color =#80868b
+
+# normal
+palette = 0=#202124
+palette = 1=#f44336
+palette = 2=#00e676
+palette = 3=#ffeb3b
+palette = 4=#2196f3
+palette = 5=#673ab7
+palette = 6=#00bcd4
+palette = 7=#80868b
+
+# bright
+palette = 8=#44464d
+palette = 9=#ff9800
+palette = 10=#27292c
+palette = 11=#323639
+palette = 12=#676c71
+palette = 13=#9e9e9e
+palette = 14=#8d6e63
+palette = 15=#ffffff

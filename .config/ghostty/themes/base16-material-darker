@@ -1,0 +1,27 @@
+# Base16 Material Darker - kitty color config
+# Scheme by Nate Peterson
+background = #212121
+foreground = #EEFFFF
+selection-background = #EEFFFF
+selection-foreground = #212121
+cursor-color =#EEFFFF
+
+# normal
+palette = 0=#212121
+palette = 1=#F07178
+palette = 2=#C3E88D
+palette = 3=#FFCB6B
+palette = 4=#82AAFF
+palette = 5=#C792EA
+palette = 6=#89DDFF
+palette = 7=#EEFFFF
+
+# bright
+palette = 8=#4A4A4A
+palette = 9=#F78C6C
+palette = 10=#303030
+palette = 11=#353535
+palette = 12=#B2CCD6
+palette = 13=#EEFFFF
+palette = 14=#FF5370
+palette = 15=#FFFFFF

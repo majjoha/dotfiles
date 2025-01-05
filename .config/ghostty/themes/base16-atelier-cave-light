@@ -1,0 +1,27 @@
+# Base16 Atelier Cave Light - kitty color config
+# Scheme by Bram de Haan (http://atelierbramdehaan.nl)
+background = #efecf4
+foreground = #585260
+selection-background = #585260
+selection-foreground = #efecf4
+cursor-color =#585260
+
+# normal
+palette = 0=#efecf4
+palette = 1=#be4678
+palette = 2=#2a9292
+palette = 3=#a06e3b
+palette = 4=#576ddb
+palette = 5=#955ae7
+palette = 6=#398bc6
+palette = 7=#585260
+
+# bright
+palette = 8=#7e7887
+palette = 9=#aa573c
+palette = 10=#e2dfe7
+palette = 11=#8b8792
+palette = 12=#655f6d
+palette = 13=#26232a
+palette = 14=#bf40bf
+palette = 15=#19171c

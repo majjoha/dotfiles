@@ -1,0 +1,35 @@
+# Base16 Stella - kitty color config
+# Scheme by Shrimpram
+background = #2B213C
+foreground = #998BAD
+selection-background = #998BAD
+selection-foreground = #2B213C
+cursor-color =#998BAD
+
+# normal
+palette = 0=#2B213C
+palette = 1=#C79987
+palette = 2=#ACC79B
+palette = 3=#C7C691
+palette = 4=#A5AAD4
+palette = 5=#C594FF
+palette = 6=#9BC7BF
+palette = 7=#998BAD
+
+# bright
+palette = 8=#655978
+palette = 9=#C79987
+palette = 10=#ACC79B
+palette = 11=#C7C691
+palette = 12=#A5AAD4
+palette = 13=#C594FF
+palette = 14=#9BC7BF
+palette = 15=#EBDCFF
+
+# extended base16 colors
+palette = 16=#8865C6
+palette = 17=#C7AB87
+palette = 18=#362B48
+palette = 19=#4D4160
+palette = 20=#7F7192
+palette = 21=#B4A5C8

@@ -1,0 +1,35 @@
+# Base16 darkmoss - kitty color config
+# Scheme by Gabriel Avanzi (https://github.com/avanzzzi)
+background = #171e1f
+foreground = #c7c7a5
+selection-background = #c7c7a5
+selection-foreground = #171e1f
+cursor-color =#c7c7a5
+
+# normal
+palette = 0=#171e1f
+palette = 1=#ff4658
+palette = 2=#499180
+palette = 3=#fdb11f
+palette = 4=#498091
+palette = 5=#9bc0c8
+palette = 6=#66d9ef
+palette = 7=#c7c7a5
+
+# bright
+palette = 8=#555e5f
+palette = 9=#ff4658
+palette = 10=#499180
+palette = 11=#fdb11f
+palette = 12=#498091
+palette = 13=#9bc0c8
+palette = 14=#66d9ef
+palette = 15=#e1eaef
+
+# extended base16 colors
+palette = 16=#e6db74
+palette = 17=#d27b53
+palette = 18=#252c2d
+palette = 19=#373c3d
+palette = 20=#818f80
+palette = 21=#e3e3c8

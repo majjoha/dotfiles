@@ -1,0 +1,27 @@
+# Base16 Tokyo City Dark - kitty color config
+# Scheme by Michaël Ball
+background = #171D23
+foreground = #D8E2EC
+selection-background = #D8E2EC
+selection-foreground = #171D23
+cursor-color =#D8E2EC
+
+# normal
+palette = 0=#171D23
+palette = 1=#F7768E
+palette = 2=#9ECE6A
+palette = 3=#B7C5D3
+palette = 4=#7AA2F7
+palette = 5=#BB9AF7
+palette = 6=#89DDFF
+palette = 7=#D8E2EC
+
+# bright
+palette = 8=#526270
+palette = 9=#FF9E64
+palette = 10=#1D252C
+palette = 11=#28323A
+palette = 12=#B7C5D3
+palette = 13=#F6F6F8
+palette = 14=#BB9AF7
+palette = 15=#FBFBFD

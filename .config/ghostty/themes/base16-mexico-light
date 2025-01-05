@@ -1,0 +1,27 @@
+# Base16 Mexico Light - kitty color config
+# Scheme by Sheldon Johnson
+background = #f8f8f8
+foreground = #383838
+selection-background = #383838
+selection-foreground = #f8f8f8
+cursor-color =#383838
+
+# normal
+palette = 0=#f8f8f8
+palette = 1=#ab4642
+palette = 2=#538947
+palette = 3=#f79a0e
+palette = 4=#7cafc2
+palette = 5=#96609e
+palette = 6=#4b8093
+palette = 7=#383838
+
+# bright
+palette = 8=#b8b8b8
+palette = 9=#dc9656
+palette = 10=#e8e8e8
+palette = 11=#d8d8d8
+palette = 12=#585858
+palette = 13=#282828
+palette = 14=#a16946
+palette = 15=#181818

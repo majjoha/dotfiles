@@ -1,0 +1,27 @@
+# Base16 Grayscale Light - kitty color config
+# Scheme by Alexandre Gavioli (https://github.com/Alexx2/)
+background = #f7f7f7
+foreground = #464646
+selection-background = #464646
+selection-foreground = #f7f7f7
+cursor-color =#464646
+
+# normal
+palette = 0=#f7f7f7
+palette = 1=#7c7c7c
+palette = 2=#8e8e8e
+palette = 3=#a0a0a0
+palette = 4=#686868
+palette = 5=#747474
+palette = 6=#868686
+palette = 7=#464646
+
+# bright
+palette = 8=#ababab
+palette = 9=#999999
+palette = 10=#e3e3e3
+palette = 11=#b9b9b9
+palette = 12=#525252
+palette = 13=#252525
+palette = 14=#5e5e5e
+palette = 15=#101010

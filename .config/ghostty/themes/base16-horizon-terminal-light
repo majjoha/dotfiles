@@ -1,0 +1,27 @@
+# Base16 Horizon Light - kitty color config
+# Scheme by Michaël Ball (http://github.com/michael-ball/)
+background = #FDF0ED
+foreground = #403C3D
+selection-background = #403C3D
+selection-foreground = #FDF0ED
+cursor-color =#403C3D
+
+# normal
+palette = 0=#FDF0ED
+palette = 1=#E95678
+palette = 2=#29D398
+palette = 3=#FADAD1
+palette = 4=#26BBD9
+palette = 5=#EE64AC
+palette = 6=#59E1E3
+palette = 7=#403C3D
+
+# bright
+palette = 8=#BDB3B1
+palette = 9=#F9CEC3
+palette = 10=#FADAD1
+palette = 11=#F9CBBE
+palette = 12=#948C8A
+palette = 13=#302C2D
+palette = 14=#F9CBBE
+palette = 15=#201C1D

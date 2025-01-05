@@ -1,0 +1,27 @@
+# Base16 Brush Trees - kitty color config
+# Scheme by Abraham White &lt;abelincoln.white@gmail.com&gt;
+background = #E3EFEF
+foreground = #6D828E
+selection-background = #6D828E
+selection-foreground = #E3EFEF
+cursor-color =#6D828E
+
+# normal
+palette = 0=#E3EFEF
+palette = 1=#b38686
+palette = 2=#87b386
+palette = 3=#aab386
+palette = 4=#868cb3
+palette = 5=#b386b2
+palette = 6=#86b3b3
+palette = 7=#6D828E
+
+# bright
+palette = 8=#98AFB5
+palette = 9=#d8bba2
+palette = 10=#C9DBDC
+palette = 11=#B0C5C8
+palette = 12=#8299A1
+palette = 13=#5A6D7A
+palette = 14=#b39f9f
+palette = 15=#485867

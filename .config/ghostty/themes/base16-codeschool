@@ -1,0 +1,27 @@
+# Base16 Codeschool - kitty color config
+# Scheme by blockloop
+background = #232c31
+foreground = #9ea7a6
+selection-background = #9ea7a6
+selection-foreground = #232c31
+cursor-color =#9ea7a6
+
+# normal
+palette = 0=#232c31
+palette = 1=#2a5491
+palette = 2=#237986
+palette = 3=#a03b1e
+palette = 4=#484d79
+palette = 5=#c59820
+palette = 6=#b02f30
+palette = 7=#9ea7a6
+
+# bright
+palette = 8=#3f4944
+palette = 9=#43820d
+palette = 10=#1c3657
+palette = 11=#2a343a
+palette = 12=#84898c
+palette = 13=#a7cfa3
+palette = 14=#c98344
+palette = 15=#b5d8f6

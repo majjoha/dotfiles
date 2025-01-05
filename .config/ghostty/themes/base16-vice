@@ -1,0 +1,27 @@
+# Base16 vice - kitty color config
+# Scheme by Thomas Leon Highbaugh thighbaugh@zoho.com
+background = #17191E
+foreground = #8b9cbe
+selection-background = #8b9cbe
+selection-foreground = #17191E
+cursor-color =#8b9cbe
+
+# normal
+palette = 0=#17191E
+palette = 1=#ff29a8
+palette = 2=#0badff
+palette = 3=#f0ffaa
+palette = 4=#00eaff
+palette = 5=#00f6d9
+palette = 6=#8265ff
+palette = 7=#8b9cbe
+
+# bright
+palette = 8=#383a47
+palette = 9=#85ffe0
+palette = 10=#22262d
+palette = 11=#3c3f4c
+palette = 12=#555e70
+palette = 13=#B2BFD9
+palette = 14=#ff3d81
+palette = 15=#f4f4f7

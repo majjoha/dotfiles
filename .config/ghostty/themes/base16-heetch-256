@@ -1,0 +1,35 @@
+# Base16 Heetch Dark - kitty color config
+# Scheme by Geoffrey Teale (tealeg@gmail.com)
+background = #190134
+foreground = #BDB6C5
+selection-background = #BDB6C5
+selection-foreground = #190134
+cursor-color =#BDB6C5
+
+# normal
+palette = 0=#190134
+palette = 1=#27D9D5
+palette = 2=#C33678
+palette = 3=#8F6C97
+palette = 4=#BD0152
+palette = 5=#82034C
+palette = 6=#F80059
+palette = 7=#BDB6C5
+
+# bright
+palette = 8=#7B6D8B
+palette = 9=#27D9D5
+palette = 10=#C33678
+palette = 11=#8F6C97
+palette = 12=#BD0152
+palette = 13=#82034C
+palette = 14=#F80059
+palette = 15=#FEFFFF
+
+# extended base16 colors
+palette = 16=#5BA2B6
+palette = 17=#470546
+palette = 18=#392551
+palette = 19=#5A496E
+palette = 20=#9C92A8
+palette = 21=#DEDAE2

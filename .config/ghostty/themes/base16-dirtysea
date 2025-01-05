@@ -1,0 +1,27 @@
+# Base16 dirtysea - kitty color config
+# Scheme by Kahlil (Kal) Hodgson
+background = #e0e0e0
+foreground = #000000
+selection-background = #000000
+selection-foreground = #e0e0e0
+cursor-color =#000000
+
+# normal
+palette = 0=#e0e0e0
+palette = 1=#840000
+palette = 2=#730073
+palette = 3=#755B00
+palette = 4=#007300
+palette = 5=#000090
+palette = 6=#755B00
+palette = 7=#000000
+
+# bright
+palette = 8=#707070
+palette = 9=#006565
+palette = 10=#d0dad0
+palette = 11=#d0d0d0
+palette = 12=#202020
+palette = 13=#f8f8f8
+palette = 14=#755B00
+palette = 15=#c4d9c4

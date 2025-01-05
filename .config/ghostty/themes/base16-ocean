@@ -1,0 +1,27 @@
+# Base16 Ocean - kitty color config
+# Scheme by Chris Kempson (http://chriskempson.com)
+background = #2b303b
+foreground = #c0c5ce
+selection-background = #c0c5ce
+selection-foreground = #2b303b
+cursor-color =#c0c5ce
+
+# normal
+palette = 0=#2b303b
+palette = 1=#bf616a
+palette = 2=#a3be8c
+palette = 3=#ebcb8b
+palette = 4=#8fa1b3
+palette = 5=#b48ead
+palette = 6=#96b5b4
+palette = 7=#c0c5ce
+
+# bright
+palette = 8=#65737e
+palette = 9=#d08770
+palette = 10=#343d46
+palette = 11=#4f5b66
+palette = 12=#a7adba
+palette = 13=#dfe1e8
+palette = 14=#ab7967
+palette = 15=#eff1f5

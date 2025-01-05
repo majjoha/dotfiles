@@ -1,0 +1,27 @@
+# Base16 Atelier Seaside Light - kitty color config
+# Scheme by Bram de Haan (http://atelierbramdehaan.nl)
+background = #f4fbf4
+foreground = #5e6e5e
+selection-background = #5e6e5e
+selection-foreground = #f4fbf4
+cursor-color =#5e6e5e
+
+# normal
+palette = 0=#f4fbf4
+palette = 1=#e6193c
+palette = 2=#29a329
+palette = 3=#98981b
+palette = 4=#3d62f5
+palette = 5=#ad2bee
+palette = 6=#1999b3
+palette = 7=#5e6e5e
+
+# bright
+palette = 8=#809980
+palette = 9=#87711d
+palette = 10=#cfe8cf
+palette = 11=#8ca68c
+palette = 12=#687d68
+palette = 13=#242924
+palette = 14=#e619c3
+palette = 15=#131513

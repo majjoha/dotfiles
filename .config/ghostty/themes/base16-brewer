@@ -1,0 +1,27 @@
+# Base16 Brewer - kitty color config
+# Scheme by Timothée Poisot (http://github.com/tpoisot)
+background = #0c0d0e
+foreground = #b7b8b9
+selection-background = #b7b8b9
+selection-foreground = #0c0d0e
+cursor-color =#b7b8b9
+
+# normal
+palette = 0=#0c0d0e
+palette = 1=#e31a1c
+palette = 2=#31a354
+palette = 3=#dca060
+palette = 4=#3182bd
+palette = 5=#756bb1
+palette = 6=#80b1d3
+palette = 7=#b7b8b9
+
+# bright
+palette = 8=#737475
+palette = 9=#e6550d
+palette = 10=#2e2f30
+palette = 11=#515253
+palette = 12=#959697
+palette = 13=#dadbdc
+palette = 14=#b15928
+palette = 15=#fcfdfe

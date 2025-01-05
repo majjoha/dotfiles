@@ -1,0 +1,27 @@
+# Base16 Pico - kitty color config
+# Scheme by PICO-8 (http://www.lexaloffle.com/pico-8.php)
+background = #000000
+foreground = #5f574f
+selection-background = #5f574f
+selection-foreground = #000000
+cursor-color =#5f574f
+
+# normal
+palette = 0=#000000
+palette = 1=#ff004d
+palette = 2=#00e756
+palette = 3=#fff024
+palette = 4=#83769c
+palette = 5=#ff77a8
+palette = 6=#29adff
+palette = 7=#5f574f
+
+# bright
+palette = 8=#008751
+palette = 9=#ffa300
+palette = 10=#1d2b53
+palette = 11=#7e2553
+palette = 12=#ab5236
+palette = 13=#c2c3c7
+palette = 14=#ffccaa
+palette = 15=#fff1e8

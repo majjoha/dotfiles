@@ -1,0 +1,27 @@
+# Base16 Paraiso - kitty color config
+# Scheme by Jan T. Sott
+background = #2f1e2e
+foreground = #a39e9b
+selection-background = #a39e9b
+selection-foreground = #2f1e2e
+cursor-color =#a39e9b
+
+# normal
+palette = 0=#2f1e2e
+palette = 1=#ef6155
+palette = 2=#48b685
+palette = 3=#fec418
+palette = 4=#06b6ef
+palette = 5=#815ba4
+palette = 6=#5bc4bf
+palette = 7=#a39e9b
+
+# bright
+palette = 8=#776e71
+palette = 9=#f99b15
+palette = 10=#41323f
+palette = 11=#4f424c
+palette = 12=#8d8687
+palette = 13=#b9b6b0
+palette = 14=#e96ba8
+palette = 15=#e7e9db

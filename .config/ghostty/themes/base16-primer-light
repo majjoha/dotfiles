@@ -1,0 +1,27 @@
+# Base16 Primer Light - kitty color config
+# Scheme by Jimmy Lin
+background = #fafbfc
+foreground = #2f363d
+selection-background = #2f363d
+selection-foreground = #fafbfc
+cursor-color =#2f363d
+
+# normal
+palette = 0=#fafbfc
+palette = 1=#d73a49
+palette = 2=#28a745
+palette = 3=#ffd33d
+palette = 4=#0366d6
+palette = 5=#ea4aaa
+palette = 6=#79b8ff
+palette = 7=#2f363d
+
+# bright
+palette = 8=#959da5
+palette = 9=#f66a0a
+palette = 10=#e1e4e8
+palette = 11=#d1d5da
+palette = 12=#444d56
+palette = 13=#24292e
+palette = 14=#a04100
+palette = 15=#1b1f23

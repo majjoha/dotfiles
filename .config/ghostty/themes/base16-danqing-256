@@ -1,0 +1,35 @@
+# Base16 DanQing - kitty color config
+# Scheme by Wenhan Zhu (Cosmos) (zhuwenhan950913@gmail.com)
+background = #2d302f
+foreground = #e0f0eF
+selection-background = #e0f0eF
+selection-foreground = #2d302f
+cursor-color =#e0f0eF
+
+# normal
+palette = 0=#2d302f
+palette = 1=#F9906F
+palette = 2=#8AB361
+palette = 3=#F0C239
+palette = 4=#B0A4E3
+palette = 5=#CCA4E3
+palette = 6=#30DFF3
+palette = 7=#e0f0eF
+
+# bright
+palette = 8=#9da8a3
+palette = 9=#F9906F
+palette = 10=#8AB361
+palette = 11=#F0C239
+palette = 12=#B0A4E3
+palette = 13=#CCA4E3
+palette = 14=#30DFF3
+palette = 15=#fcfefd
+
+# extended base16 colors
+palette = 16=#B38A61
+palette = 17=#CA6924
+palette = 18=#434846
+palette = 19=#5a605d
+palette = 20=#cad8d2
+palette = 21=#ecf6f2

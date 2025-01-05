@@ -1,0 +1,27 @@
+# Base16 Windows 10 Light - kitty color config
+# Scheme by Fergus Collins (https://github.com/C-Fergus)
+background = #f2f2f2
+foreground = #767676
+selection-background = #767676
+selection-foreground = #f2f2f2
+cursor-color =#767676
+
+# normal
+palette = 0=#f2f2f2
+palette = 1=#c50f1f
+palette = 2=#13a10e
+palette = 3=#c19c00
+palette = 4=#0037da
+palette = 5=#881798
+palette = 6=#3a96dd
+palette = 7=#767676
+
+# bright
+palette = 8=#cccccc
+palette = 9=#f9f1a5
+palette = 10=#e5e5e5
+palette = 11=#d9d9d9
+palette = 12=#ababab
+palette = 13=#414141
+palette = 14=#16c60c
+palette = 15=#0c0c0c

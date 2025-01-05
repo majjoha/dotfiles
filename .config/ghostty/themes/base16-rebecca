@@ -1,0 +1,27 @@
+# Base16 Rebecca - kitty color config
+# Scheme by Victor Borja (http://github.com/vic) based on Rebecca Theme (http://github.com/vic/rebecca-theme)
+background = #292a44
+foreground = #f1eff8
+selection-background = #f1eff8
+selection-foreground = #292a44
+cursor-color =#f1eff8
+
+# normal
+palette = 0=#292a44
+palette = 1=#a0a0c5
+palette = 2=#6dfedf
+palette = 3=#ae81ff
+palette = 4=#2de0a7
+palette = 5=#7aa5ff
+palette = 6=#8eaee0
+palette = 7=#f1eff8
+
+# bright
+palette = 8=#666699
+palette = 9=#efe4a1
+palette = 10=#663399
+palette = 11=#383a62
+palette = 12=#a0a0c5
+palette = 13=#ccccff
+palette = 14=#ff79c6
+palette = 15=#53495d

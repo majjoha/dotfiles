@@ -1,0 +1,35 @@
+# Base16 Hopscotch - kitty color config
+# Scheme by Jan T. Sott
+background = #322931
+foreground = #b9b5b8
+selection-background = #b9b5b8
+selection-foreground = #322931
+cursor-color =#b9b5b8
+
+# normal
+palette = 0=#322931
+palette = 1=#dd464c
+palette = 2=#8fc13e
+palette = 3=#fdcc59
+palette = 4=#1290bf
+palette = 5=#c85e7c
+palette = 6=#149b93
+palette = 7=#b9b5b8
+
+# bright
+palette = 8=#797379
+palette = 9=#dd464c
+palette = 10=#8fc13e
+palette = 11=#fdcc59
+palette = 12=#1290bf
+palette = 13=#c85e7c
+palette = 14=#149b93
+palette = 15=#ffffff
+
+# extended base16 colors
+palette = 16=#fd8b19
+palette = 17=#b33508
+palette = 18=#433b42
+palette = 19=#5c545b
+palette = 20=#989498
+palette = 21=#d5d3d5

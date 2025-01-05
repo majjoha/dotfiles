@@ -1,0 +1,27 @@
+# Base16 ShadeSmear Light - kitty color config
+# Scheme by Kyle Giammarco (http://kyle.giammar.co)
+background = #DBDBDB
+foreground = #232323
+selection-background = #232323
+selection-foreground = #DBDBDB
+cursor-color =#232323
+
+# normal
+palette = 0=#DBDBDB
+palette = 1=#CC5450
+palette = 2=#71983B
+palette = 3=#307878
+palette = 4=#376388
+palette = 5=#D7AB54
+palette = 6=#C57D42
+palette = 7=#232323
+
+# bright
+palette = 8=#4E4E4E
+palette = 9=#A64270
+palette = 10=#E4E4E4
+palette = 11=#C0C0C0
+palette = 12=#1C1C1C
+palette = 13=#1C1C1C
+palette = 14=#6D6D6D
+palette = 15=#E4E4E4

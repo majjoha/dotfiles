@@ -1,0 +1,35 @@
+# Base16 Catppuccin - kitty color config
+# Scheme by Pocco81 (https://github.com/pocco81)
+background = #1E1E28
+foreground = #D7DAE0
+selection-background = #D7DAE0
+selection-foreground = #1E1E28
+cursor-color =#D7DAE0
+
+# normal
+palette = 0=#1E1E28
+palette = 1=#F28FAD
+palette = 2=#ABE9B3
+palette = 3=#FAE3B0
+palette = 4=#96CDFB
+palette = 5=#DDB6F2
+palette = 6=#B5E8E0
+palette = 7=#D7DAE0
+
+# bright
+palette = 8=#575268
+palette = 9=#F28FAD
+palette = 10=#ABE9B3
+palette = 11=#FAE3B0
+palette = 12=#96CDFB
+palette = 13=#DDB6F2
+palette = 14=#B5E8E0
+palette = 15=#C9CBFF
+
+# extended base16 colors
+palette = 16=#F8BD96
+palette = 17=#F2CDCD
+palette = 18=#1A1826
+palette = 19=#302D41
+palette = 20=#6E6C7C
+palette = 21=#F5E0DC

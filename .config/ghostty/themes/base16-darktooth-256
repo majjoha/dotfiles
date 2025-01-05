@@ -1,0 +1,35 @@
+# Base16 Darktooth - kitty color config
+# Scheme by Jason Milkins (https://github.com/jasonm23)
+background = #1D2021
+foreground = #A89984
+selection-background = #A89984
+selection-foreground = #1D2021
+cursor-color =#A89984
+
+# normal
+palette = 0=#1D2021
+palette = 1=#FB543F
+palette = 2=#95C085
+palette = 3=#FAC03B
+palette = 4=#0D6678
+palette = 5=#8F4673
+palette = 6=#8BA59B
+palette = 7=#A89984
+
+# bright
+palette = 8=#665C54
+palette = 9=#FB543F
+palette = 10=#95C085
+palette = 11=#FAC03B
+palette = 12=#0D6678
+palette = 13=#8F4673
+palette = 14=#8BA59B
+palette = 15=#FDF4C1
+
+# extended base16 colors
+palette = 16=#FE8625
+palette = 17=#A87322
+palette = 18=#32302F
+palette = 19=#504945
+palette = 20=#928374
+palette = 21=#D5C4A1

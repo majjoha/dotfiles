@@ -1,0 +1,35 @@
+# Base16 Ashes - kitty color config
+# Scheme by Jannik Siebert (https://github.com/janniks)
+background = #1C2023
+foreground = #C7CCD1
+selection-background = #C7CCD1
+selection-foreground = #1C2023
+cursor-color =#C7CCD1
+
+# normal
+palette = 0=#1C2023
+palette = 1=#C7AE95
+palette = 2=#95C7AE
+palette = 3=#AEC795
+palette = 4=#AE95C7
+palette = 5=#C795AE
+palette = 6=#95AEC7
+palette = 7=#C7CCD1
+
+# bright
+palette = 8=#747C84
+palette = 9=#C7AE95
+palette = 10=#95C7AE
+palette = 11=#AEC795
+palette = 12=#AE95C7
+palette = 13=#C795AE
+palette = 14=#95AEC7
+palette = 15=#F3F4F5
+
+# extended base16 colors
+palette = 16=#C7C795
+palette = 17=#C79595
+palette = 18=#393F45
+palette = 19=#565E65
+palette = 20=#ADB3BA
+palette = 21=#DFE2E5

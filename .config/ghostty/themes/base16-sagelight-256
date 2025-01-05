@@ -1,0 +1,35 @@
+# Base16 Sagelight - kitty color config
+# Scheme by Carter Veldhuizen
+background = #f8f8f8
+foreground = #383838
+selection-background = #383838
+selection-foreground = #f8f8f8
+cursor-color =#383838
+
+# normal
+palette = 0=#f8f8f8
+palette = 1=#fa8480
+palette = 2=#a0d2c8
+palette = 3=#ffdc61
+palette = 4=#a0a7d2
+palette = 5=#c8a0d2
+palette = 6=#a2d6f5
+palette = 7=#383838
+
+# bright
+palette = 8=#b8b8b8
+palette = 9=#fa8480
+palette = 10=#a0d2c8
+palette = 11=#ffdc61
+palette = 12=#a0a7d2
+palette = 13=#c8a0d2
+palette = 14=#a2d6f5
+palette = 15=#181818
+
+# extended base16 colors
+palette = 16=#ffaa61
+palette = 17=#d2b2a0
+palette = 18=#e8e8e8
+palette = 19=#d8d8d8
+palette = 20=#585858
+palette = 21=#282828

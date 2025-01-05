@@ -1,0 +1,27 @@
+# Base16 Atelier Plateau Light - kitty color config
+# Scheme by Bram de Haan (http://atelierbramdehaan.nl)
+background = #f4ecec
+foreground = #585050
+selection-background = #585050
+selection-foreground = #f4ecec
+cursor-color =#585050
+
+# normal
+palette = 0=#f4ecec
+palette = 1=#ca4949
+palette = 2=#4b8b8b
+palette = 3=#a06e3b
+palette = 4=#7272ca
+palette = 5=#8464c4
+palette = 6=#5485b6
+palette = 7=#585050
+
+# bright
+palette = 8=#7e7777
+palette = 9=#b45a3c
+palette = 10=#e7dfdf
+palette = 11=#8a8585
+palette = 12=#655d5d
+palette = 13=#292424
+palette = 14=#bd5187
+palette = 15=#1b1818

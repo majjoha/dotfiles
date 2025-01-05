@@ -1,0 +1,27 @@
+# Base16 Eva Dim - kitty color config
+# Scheme by kjakapat (https://github.com/kjakapat)
+background = #2a3b4d
+foreground = #9fa2a6
+selection-background = #9fa2a6
+selection-foreground = #2a3b4d
+cursor-color =#9fa2a6
+
+# normal
+palette = 0=#2a3b4d
+palette = 1=#c4676c
+palette = 2=#5de561
+palette = 3=#cfd05d
+palette = 4=#1ae1dc
+palette = 5=#9c6cd3
+palette = 6=#4b8f77
+palette = 7=#9fa2a6
+
+# bright
+palette = 8=#55799c
+palette = 9=#ff9966
+palette = 10=#3d566f
+palette = 11=#4b6988
+palette = 12=#7e90a3
+palette = 13=#d6d7d9
+palette = 14=#bb64a9
+palette = 15=#ffffff

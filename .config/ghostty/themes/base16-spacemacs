@@ -1,0 +1,27 @@
+# Base16 Spacemacs - kitty color config
+# Scheme by Nasser Alshammari (https://github.com/nashamri/spacemacs-theme)
+background = #1f2022
+foreground = #a3a3a3
+selection-background = #a3a3a3
+selection-foreground = #1f2022
+cursor-color =#a3a3a3
+
+# normal
+palette = 0=#1f2022
+palette = 1=#f2241f
+palette = 2=#67b11d
+palette = 3=#b1951d
+palette = 4=#4f97d7
+palette = 5=#a31db1
+palette = 6=#2d9574
+palette = 7=#a3a3a3
+
+# bright
+palette = 8=#585858
+palette = 9=#ffa500
+palette = 10=#282828
+palette = 11=#444155
+palette = 12=#b8b8b8
+palette = 13=#e8e8e8
+palette = 14=#b03060
+palette = 15=#f8f8f8

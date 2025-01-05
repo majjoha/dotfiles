@@ -1,0 +1,35 @@
+# Base16 Nord - kitty color config
+# Scheme by arcticicestudio
+background = #2E3440
+foreground = #E5E9F0
+selection-background = #E5E9F0
+selection-foreground = #2E3440
+cursor-color =#E5E9F0
+
+# normal
+palette = 0=#2E3440
+palette = 1=#BF616A
+palette = 2=#A3BE8C
+palette = 3=#EBCB8B
+palette = 4=#81A1C1
+palette = 5=#B48EAD
+palette = 6=#88C0D0
+palette = 7=#E5E9F0
+
+# bright
+palette = 8=#4C566A
+palette = 9=#BF616A
+palette = 10=#A3BE8C
+palette = 11=#EBCB8B
+palette = 12=#81A1C1
+palette = 13=#B48EAD
+palette = 14=#88C0D0
+palette = 15=#8FBCBB
+
+# extended base16 colors
+palette = 16=#D08770
+palette = 17=#5E81AC
+palette = 18=#3B4252
+palette = 19=#434C5E
+palette = 20=#D8DEE9
+palette = 21=#ECEFF4

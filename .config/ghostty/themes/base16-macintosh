@@ -1,0 +1,27 @@
+# Base16 Macintosh - kitty color config
+# Scheme by Rebecca Bettencourt (http://www.kreativekorp.com)
+background = #000000
+foreground = #c0c0c0
+selection-background = #c0c0c0
+selection-foreground = #000000
+cursor-color =#c0c0c0
+
+# normal
+palette = 0=#000000
+palette = 1=#dd0907
+palette = 2=#1fb714
+palette = 3=#fbf305
+palette = 4=#0000d3
+palette = 5=#4700a5
+palette = 6=#02abea
+palette = 7=#c0c0c0
+
+# bright
+palette = 8=#808080
+palette = 9=#ff6403
+palette = 10=#404040
+palette = 11=#404040
+palette = 12=#808080
+palette = 13=#c0c0c0
+palette = 14=#90713a
+palette = 15=#ffffff

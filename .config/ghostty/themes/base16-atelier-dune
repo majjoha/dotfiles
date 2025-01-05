@@ -1,0 +1,27 @@
+# Base16 Atelier Dune - kitty color config
+# Scheme by Bram de Haan (http://atelierbramdehaan.nl)
+background = #20201d
+foreground = #a6a28c
+selection-background = #a6a28c
+selection-foreground = #20201d
+cursor-color =#a6a28c
+
+# normal
+palette = 0=#20201d
+palette = 1=#d73737
+palette = 2=#60ac39
+palette = 3=#ae9513
+palette = 4=#6684e1
+palette = 5=#b854d4
+palette = 6=#1fad83
+palette = 7=#a6a28c
+
+# bright
+palette = 8=#7d7a68
+palette = 9=#b65611
+palette = 10=#292824
+palette = 11=#6e6b5e
+palette = 12=#999580
+palette = 13=#e8e4cf
+palette = 14=#d43552
+palette = 15=#fefbec

@@ -1,0 +1,35 @@
+# Base16 Tokyo Night Terminal Dark - kitty color config
+# Scheme by Michaël Ball
+background = #16161E
+foreground = #787C99
+selection-background = #787C99
+selection-foreground = #16161E
+cursor-color =#787C99
+
+# normal
+palette = 0=#16161E
+palette = 1=#F7768E
+palette = 2=#41A6B5
+palette = 3=#E0AF68
+palette = 4=#7AA2F7
+palette = 5=#BB9AF7
+palette = 6=#7DCFFF
+palette = 7=#787C99
+
+# bright
+palette = 8=#444B6A
+palette = 9=#F7768E
+palette = 10=#41A6B5
+palette = 11=#E0AF68
+palette = 12=#7AA2F7
+palette = 13=#BB9AF7
+palette = 14=#7DCFFF
+palette = 15=#D5D6DB
+
+# extended base16 colors
+palette = 16=#FF9E64
+palette = 17=#D18616
+palette = 18=#1A1B26
+palette = 19=#2F3549
+palette = 20=#787C99
+palette = 21=#CBCCD1

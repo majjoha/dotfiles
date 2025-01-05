@@ -1,0 +1,27 @@
+# Base16 Pop - kitty color config
+# Scheme by Chris Kempson (http://chriskempson.com)
+background = #000000
+foreground = #d0d0d0
+selection-background = #d0d0d0
+selection-foreground = #000000
+cursor-color =#d0d0d0
+
+# normal
+palette = 0=#000000
+palette = 1=#eb008a
+palette = 2=#37b349
+palette = 3=#f8ca12
+palette = 4=#0e5a94
+palette = 5=#b31e8d
+palette = 6=#00aabb
+palette = 7=#d0d0d0
+
+# bright
+palette = 8=#505050
+palette = 9=#f29333
+palette = 10=#202020
+palette = 11=#303030
+palette = 12=#b0b0b0
+palette = 13=#e0e0e0
+palette = 14=#7a2d00
+palette = 15=#ffffff
