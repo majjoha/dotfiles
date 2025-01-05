@@ -1,0 +1,27 @@
+# Font settings
+font-family = VictorMono NFM Light
+font-size = 21
+window-inherit-font-size = true
+
+# Quit Ghostty once the last window has been closed
+quit-after-last-window-closed = true
+
+# Appearance
+## Color scheme
+theme = dark:base16-gruvbox-material-dark-soft,light:base16-equilibrium-light
+
+## Cursor style
+cursor-style = block
+cursor-style-blink = false
+
+## Window appearance
+
+# macOS-specific settings
+macos-titlebar-style = tabs
+macos-icon = custom-style
+macos-icon-ghost-color = #f5f0e7
+macos-icon-screen-color = #f5f0e7
+macos-icon-frame = plastic
+
+# Key bindings
+keybind = super+shift+r=reload_config
