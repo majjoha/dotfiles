@@ -6,6 +6,7 @@ window-inherit-font-size = true
 
 # Quit Ghostty once the last window has been closed
 quit-after-last-window-closed = true
+confirm-close-surface = false
 
 # Appearance
 ## Color scheme
