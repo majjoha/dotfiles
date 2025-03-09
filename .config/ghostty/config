@@ -8,6 +8,9 @@ window-inherit-font-size = true
 quit-after-last-window-closed = true
 confirm-close-surface = false
 
+# Do not inherit the current working directory
+window-inherit-working-directory = false
+
 # Appearance
 ## Color scheme
 theme = dark:base16-gruvbox-material-dark-soft,light:base16-equilibrium-light
