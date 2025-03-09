@@ -1,6 +1,7 @@
 # Font settings
 font-family = VictorMono NFM Light
 font-size = 21
+font-thicken = true
 window-inherit-font-size = true
 
 # Quit Ghostty once the last window has been closed
