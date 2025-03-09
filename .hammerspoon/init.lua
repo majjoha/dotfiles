@@ -43,6 +43,18 @@ for plugin, configuration in pairs({
       })
     end,
   },
+  Spatial = {
+    repo = "Spatial",
+    start = true,
+    config = {
+      activeSpaceIcon = function()
+        return "⦁ "
+      end,
+      inactiveSpaceIcon = function()
+        return "⸱ "
+      end,
+    },
+  },
 }) do
   spoon.SpoonInstall:andUse(plugin, configuration)
 end
