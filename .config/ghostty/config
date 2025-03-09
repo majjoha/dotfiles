@@ -11,6 +11,9 @@ confirm-close-surface = false
 # Do not inherit the current working directory
 window-inherit-working-directory = false
 
+# Auto-update Ghostty
+auto-update = download
+
 # Appearance
 ## Color scheme
 theme = dark:base16-gruvbox-material-dark-soft,light:base16-equilibrium-light
