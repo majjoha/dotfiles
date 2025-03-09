@@ -17,6 +17,10 @@ vim.api.nvim_create_autocmd("Filetype", {
   group = disable_autocompletion_group,
 })
 
+-- Open help pages in a vertical split
+vim.api.nvim_create_autocmd("Filetype",
+                            { pattern = "help", command = "wincmd L" })
+
 -- Auto-clean Fugitive buffers
 -- Source: http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/
 local clean_fugitive_buffers_group = vim.api.nvim_create_augroup(
