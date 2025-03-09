@@ -22,7 +22,9 @@ theme = dark:base16-gruvbox-material-dark-soft,light:base16-equilibrium-light
 cursor-style = block
 cursor-style-blink = false
 
-## Window appearance
+## Quick terminal appearance
+quick-terminal-position = center
+quick-terminal-animation-duration = 0
 
 # macOS-specific settings
 macos-titlebar-style = tabs
@@ -33,3 +35,4 @@ macos-icon-frame = plastic
 
 # Key bindings
 keybind = super+shift+r=reload_config
+keybind = global:super+shift+grave_accent=toggle_quick_terminal
