@@ -4,7 +4,6 @@ path=(
   $HOME/.local/bin
   $HOME/.bin
   $HOME/.ghcup/env
-  ${ASDF_DATA_DIR:-$HOME/.asdf}/shims
   /opt/homebrew/bin
   $path
 )

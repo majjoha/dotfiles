@@ -1,0 +1,32 @@
+[settings]
+experimental = true
+color = false
+
+[tools]
+"aqua:mattn/efm-langserver" = "latest"
+"gem:bundler" = "latest"
+"gem:tmuxinator" = "latest"
+"npm:bash-language-server" = "latest"
+"npm:trash-cli" = "latest"
+"npm:typescript" = "latest"
+"npm:typescript-language-server" = "latest"
+"npm:vscode-langservers-extracted" = "latest"
+bat = "latest"
+fzf = "latest"
+github-cli = "latest"
+glow = "latest"
+hadolint = "latest"
+harper-ls = "latest"
+htmlq = "latest"
+jq = "latest"
+lua-language-server = "latest"
+marksman = "latest"
+neovim = "latest"
+node = "23.10.0"
+python = "latest"
+ripgrep = "latest"
+ruby = "3.4.2"
+rust = "latest"
+shellcheck = "latest"
+shfmt = "latest"
+tree-sitter = "latest"
