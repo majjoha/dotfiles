@@ -30,6 +30,7 @@
   mnemonicprefix = true
 [branch]
   autosetupmerge = true
+  sort = -committerdate
 [submodule]
   fetchJobs = 4
 [status]
