@@ -28,6 +28,7 @@
 [diff]
   compactionHeuristic = true
   mnemonicprefix = true
+  algorithm = histogram
 [branch]
   autosetupmerge = true
   sort = -committerdate
