@@ -65,3 +65,5 @@
   diffFilter = diff-so-fancy --patch
 [delta]
   syntax-theme = "Solarized (light)"
+[tag]
+  sort = version:refname
