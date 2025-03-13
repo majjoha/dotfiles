@@ -68,3 +68,5 @@
   syntax-theme = "Solarized (light)"
 [tag]
   sort = version:refname
+[help]
+  autocorrect = prompt
