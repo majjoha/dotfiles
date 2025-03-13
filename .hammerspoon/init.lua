@@ -32,7 +32,6 @@ for plugin, configuration in pairs({
     end,
   },
   FnMate = {},
-  KSheet = { hotkeys = { toggle = { { "ctrl", "alt", "shift" }, "/" } } },
   ReloadConfiguration = { start = true },
   SkyRocket = {
     fn = function(skyrocket)
