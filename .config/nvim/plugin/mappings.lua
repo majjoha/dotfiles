@@ -147,19 +147,7 @@ vim.keymap.set("n", "<Leader>la",
                { silent = true })
 vim.keymap.set("n", "<Leader>lr", vim.lsp.buf.references, { silent = true })
 vim.keymap.set("n", "<Leader>ln", vim.lsp.buf.rename, { silent = true })
-vim.keymap.set("n", "<Leader>lp", function()
-  function preview_location_callback(_, result)
-    if result == nil or vim.tbl_isempty(result) then
-      return nil
-    end
-
-    vim.lsp.util.preview_location(result[1])
-  end
-
-  return vim.lsp.buf_request(0, "textDocument/definition",
-                             vim.lsp.util.make_position_params(),
-                             preview_location_callback)
-end, { silent = true })
+vim.keymap.set("n", "<Leader>lp", vim.lsp.buf.hover, { silent = true })
 
 -- Reselect pasted text
 vim.keymap.set("n", "gp", "`[v`]")
