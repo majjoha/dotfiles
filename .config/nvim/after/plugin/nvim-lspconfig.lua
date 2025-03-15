@@ -28,6 +28,7 @@ vim.fn.sign_define("DiagnosticSignInfo", {
 
 local servers = {
   bashls = {},
+  cssls = {},
   efm = {},
   elixirls = { cmd = { "/opt/homebrew/bin/elixir-ls" } },
   erlangls = {},
