@@ -37,6 +37,7 @@ local servers = {
   gleam = {},
   harper_ls = {},
   hls = { settings = { formattingProvider = "stylish-haskell" } },
+  html = {},
   marksman = {},
   rubocop = {},
   ruby_lsp = {},
