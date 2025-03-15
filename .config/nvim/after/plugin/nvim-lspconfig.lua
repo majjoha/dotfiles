@@ -38,6 +38,7 @@ local servers = {
   harper_ls = {},
   hls = { settings = { formattingProvider = "stylish-haskell" } },
   html = {},
+  jsonls = {},
   marksman = {},
   rubocop = {},
   ruby_lsp = {},
