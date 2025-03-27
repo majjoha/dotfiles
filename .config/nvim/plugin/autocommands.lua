@@ -6,17 +6,6 @@ vim.api.nvim_create_autocmd("VimResized", {
   group = resize_splits_group,
 })
 
--- Disable auto-completion for filetypes
-local disable_autocompletion_group = vim.api.nvim_create_augroup(
-  "DisableAutocompletion", {})
-vim.api.nvim_create_autocmd("Filetype", {
-  pattern = "markdown,gitcommit",
-  callback = function()
-    vim.b.minicompletion_disable = true
-  end,
-  group = disable_autocompletion_group,
-})
-
 -- Open help pages in a vertical split
 vim.api.nvim_create_autocmd("Filetype",
   { pattern = "help", command = "wincmd L" })
