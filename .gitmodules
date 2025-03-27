@@ -55,6 +55,3 @@
 [submodule ".config/nvim/pack/packages/start/scnvim"]
 	path = .config/nvim/pack/packages/start/scnvim
 	url = https://github.com/davidgranstrom/scnvim.git
-[submodule ".config/nvim/pack/packages/start/markview.nvim"]
-	path = .config/nvim/pack/packages/start/markview.nvim
-	url = https://github.com/OXY2DEV/markview.nvim.git
