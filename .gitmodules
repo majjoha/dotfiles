@@ -55,6 +55,3 @@
 [submodule ".config/nvim/pack/packages/start/scnvim"]
 	path = .config/nvim/pack/packages/start/scnvim
 	url = https://github.com/davidgranstrom/scnvim.git
-[submodule ".config/nvim/pack/packages/start/hardtime.nvim"]
-	path = .config/nvim/pack/packages/start/hardtime.nvim
-	url = https://github.com/m4xshen/hardtime.nvim
