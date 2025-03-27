@@ -8,7 +8,7 @@ vim.api.nvim_create_autocmd("VimResized", {
 
 -- Disable auto-completion for filetypes
 local disable_autocompletion_group = vim.api.nvim_create_augroup(
-                                       "DisableAutocompletion", {})
+  "DisableAutocompletion", {})
 vim.api.nvim_create_autocmd("Filetype", {
   pattern = "markdown,gitcommit",
   callback = function()
@@ -19,12 +19,12 @@ vim.api.nvim_create_autocmd("Filetype", {
 
 -- Open help pages in a vertical split
 vim.api.nvim_create_autocmd("Filetype",
-                            { pattern = "help", command = "wincmd L" })
+  { pattern = "help", command = "wincmd L" })
 
 -- Auto-clean Fugitive buffers
 -- Source: http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/
 local clean_fugitive_buffers_group = vim.api.nvim_create_augroup(
-                                       "CleanFugitiveBuffers", {})
+  "CleanFugitiveBuffers", {})
 vim.api.nvim_create_autocmd("BufReadPost", {
   pattern = "fugitive://*",
   callback = function()
@@ -58,7 +58,7 @@ vim.api.nvim_create_autocmd("TermLeave", {
 -- Customize colors
 -- See https://gist.github.com/romainl/379904f91fa40533175dfaec4c833f2f
 local customize_colors_group = vim.api
-                                 .nvim_create_augroup("CustomizeColors", {})
+    .nvim_create_augroup("CustomizeColors", {})
 vim.api.nvim_create_autocmd("ColorScheme", {
   pattern = "*",
   callback = function()
@@ -85,14 +85,13 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     -- foreground colors for the various signs
     vim.api.nvim_set_hl(0, "SignColumn", { ctermbg = 00 })
     vim.api
-      .nvim_set_hl(0, "DiagnosticSignError", { ctermfg = 01, ctermbg = 00 })
+        .nvim_set_hl(0, "DiagnosticSignError", { ctermfg = 01, ctermbg = 00 })
     vim.api.nvim_set_hl(0, "DiagnosticSignWarn", { ctermfg = 03, ctermbg = 00 })
     vim.api.nvim_set_hl(0, "DiagnosticSignHint", { ctermfg = 07, ctermbg = 00 })
     vim.api.nvim_set_hl(0, "DiagnosticSignInfo", { ctermfg = 07, ctermbg = 00 })
 
     -- Set underline colors for diagnostics
-    vim.api
-      .nvim_set_hl(0, "DiagnosticUnderlineError", { undercurl = true })
+    vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", { undercurl = true })
     vim.api.nvim_set_hl(0, "DiagnosticUnderlineWarn", { undercurl = true })
     vim.api.nvim_set_hl(0, "DiagnosticUnderlineHint", { undercurl = true })
     vim.api.nvim_set_hl(0, "DiagnosticUnderlineInfo", { undercurl = true })
@@ -103,7 +102,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 
     -- Hide status line for NvimTree buffer
     vim.api.nvim_set_hl(0, "NvimTreeStatusLineNC",
-                        { ctermbg = 00, ctermfg = 00 })
+      { ctermbg = 00, ctermfg = 00 })
     vim.api.nvim_set_hl(0, "NvimTreeStatusLine", { ctermbg = 00, ctermfg = 00 })
 
     -- Set spelling errors to be red and emphasize them using undercurl
@@ -159,8 +158,8 @@ vim.api.nvim_create_autocmd("LSPAttach", {
     }
 
     vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
-                                               vim.lsp.handlers.hover,
-                                               { border = border })
+      vim.lsp.handlers.hover,
+      { border = border })
 
     -- Override `vim.lsp.util.open_floating_preview` function so it uses the
     -- custom border instead
@@ -199,7 +198,7 @@ vim.api.nvim_create_autocmd("LSPAttach", {
 
     if client.server_capabilities.documentFormattingProvider then
       local lsp_formatting_group = vim.api.nvim_create_augroup("LSPFormatting",
-                                                               {})
+        {})
 
       vim.api.nvim_create_autocmd("BufWritePre", {
         buffer = bufnr,

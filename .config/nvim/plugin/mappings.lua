@@ -72,10 +72,10 @@ vim.keymap.set("n", "<Leader>gb", ":Git blame<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>gc", ":tab Git commit -v<CR>")
 vim.keymap.set("n", "<Leader>gcb", ":Git checkout -b<Space>")
 vim.keymap
-  .set("n", "<Leader>gco", ":FzfLua git_branches<CR>", { silent = true })
+    .set("n", "<Leader>gco", ":FzfLua git_branches<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>gd", ":Gdiffsplit<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>gr", ":Git rebase -i origin/main<CR>",
-               { silent = true })
+  { silent = true })
 vim.keymap.set("n", "<Leader>gs", ":Git<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>gg", ":Git<Space>")
 vim.keymap.set("n", "<Leader>gpr", ":!git pr<CR>", { silent = true })
@@ -130,22 +130,22 @@ vim.keymap.set("n", "<Leader>mnn", ":MarginaliaNew<Space>")
 vim.keymap.set("n", "<Leader>men", ":MarginaliaEdit<Space>")
 vim.keymap.set("n", "<Leader>mln", ":MarginaliaList<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>mfb", ":MarginaliaFindBacklinks<CR>",
-               { silent = true })
+  { silent = true })
 vim.keymap.set("n", "<Leader>mft", ":MarginaliaFindTagReferences<Space>", {})
 vim.keymap.set("n", "<Leader>mcw", ":MarginaliaConvertWordToTag<CR>",
-               { silent = true })
+  { silent = true })
 
 -- LSP-related mappings
 vim.keymap.set("n", "gra",
-               ":FzfLua lsp_code_actions previewer=codeaction_native<CR>",
-               { silent = true })
+  ":FzfLua lsp_code_actions previewer=codeaction_native<CR>",
+  { silent = true })
 
 -- Reselect pasted text
 vim.keymap.set("n", "gp", "`[v`]")
 
 -- Add `end` to functions in Ruby, Lua, and Elixir
 vim.keymap.set("i", "<CR>", require("nvim-autopairs").autopairs_cr,
-               { expr = true })
+  { expr = true })
 
 -- Keep the current search result centered in the viewport when jumping
 vim.keymap.set("n", "n", "nzz")
