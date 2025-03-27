@@ -29,7 +29,6 @@ local servers = {
   eslint = {},
   flow = {},
   gleam = {},
-  harper_ls = {},
   hls = { settings = { formattingProvider = "stylish-haskell" } },
   lua_ls = {
     settings = {
