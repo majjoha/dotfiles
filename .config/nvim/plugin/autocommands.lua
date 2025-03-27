@@ -126,23 +126,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
   group = customize_colors_group,
 })
 
--- Enable completion and definition capabilities for LSP
-vim.api.nvim_create_autocmd("LSPAttach", {
-  callback = function(args)
-    local bufnr = args.buf
-    local client = vim.lsp.get_client_by_id(args.data.client_id)
-
-    if client.server_capabilities.completionProvider then
-      vim.bo[bufnr].omnifunc = "v:lua.vim.lsp.omnifunc"
-    end
-
-    if client.server_capabilities.definitionProvider then
-      vim.bo[bufnr].tagfunc = "v:lua.vim.lsp.tagfunc"
-    end
-  end,
-  group = lsp_mode_group,
-})
-
 -- Format files on save
 vim.api.nvim_create_autocmd("LSPAttach", {
   callback = function(args)
