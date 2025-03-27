@@ -25,7 +25,6 @@ vim.diagnostic.config({
 local servers = {
   elixirls = { cmd = { "/opt/homebrew/bin/elixir-ls" } },
   eslint = {},
-  hls = { settings = { formattingProvider = "stylish-haskell" } },
   lua_ls = {
     settings = {
       Lua = {
