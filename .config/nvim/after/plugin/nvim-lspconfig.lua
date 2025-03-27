@@ -57,7 +57,6 @@ local servers = {
     },
   },
   rust_analyzer = {},
-  solargraph = {},
   ts_ls = {},
 }
 
