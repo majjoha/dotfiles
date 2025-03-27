@@ -7,7 +7,6 @@ vim.opt.title = true
 
 -- Use spaces instead of tabs
 vim.opt.expandtab = true
-vim.opt.smarttab = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
@@ -76,9 +75,6 @@ vim.opt.grepformat = "%f:%l:%c:%m"
 
 -- Enable dialog menus for confirmations
 vim.opt.confirm = true
-
--- Do not jump to the start of the line when navigating files
-vim.opt.startofline = false
 
 -- Always spell check files
 vim.opt.spell = true
