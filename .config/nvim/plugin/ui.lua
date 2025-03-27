@@ -28,3 +28,6 @@ vim.opt.showcmd = false
 
 -- Always display the sign column
 vim.opt.signcolumn = "yes:1"
+
+-- Use single line borders for floating windows
+vim.opt.winborder = "single"
