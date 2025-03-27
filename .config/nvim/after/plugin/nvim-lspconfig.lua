@@ -56,7 +56,6 @@ local servers = {
       },
     },
   },
-  marksman = {},
   rubocop = {},
   ruby_lsp = {},
   rust_analyzer = {},
