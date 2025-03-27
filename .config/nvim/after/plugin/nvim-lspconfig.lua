@@ -56,7 +56,6 @@ local servers = {
       },
     },
   },
-  rubocop = {},
   ruby_lsp = {},
   rust_analyzer = {},
   solargraph = {},
