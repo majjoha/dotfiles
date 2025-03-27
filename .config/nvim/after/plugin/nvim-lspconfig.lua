@@ -27,7 +27,6 @@ local servers = {
   elixirls = { cmd = { "/opt/homebrew/bin/elixir-ls" } },
   erlangls = {},
   eslint = {},
-  flow = {},
   hls = { settings = { formattingProvider = "stylish-haskell" } },
   lua_ls = {
     settings = {
