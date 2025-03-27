@@ -136,7 +136,7 @@ vim.keymap.set("n", "<Leader>mcw", ":MarginaliaConvertWordToTag<CR>",
                { silent = true })
 
 -- LSP-related mappings
-vim.keymap.set("n", "<Leader>la",
+vim.keymap.set("n", "gra",
                ":FzfLua lsp_code_actions previewer=codeaction_native<CR>",
                { silent = true })
 
