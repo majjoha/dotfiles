@@ -23,7 +23,6 @@ vim.diagnostic.config({
 })
 
 local servers = {
-  cssls = {},
   efm = {},
   elixirls = { cmd = { "/opt/homebrew/bin/elixir-ls" } },
   erlangls = {},
