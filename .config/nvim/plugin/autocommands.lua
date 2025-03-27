@@ -71,7 +71,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     -- Set the color of the vertical split bar to transparent
     vim.api.nvim_set_hl(0, "VertSplit", { ctermbg = 00 })
     vim.api.nvim_set_hl(0, "WinSeparator", { ctermfg = 10 })
-    vim.api.nvim_set_hl(0, "NvimTreeWinSeparator", { link = "WinSeparator" })
 
     -- Show the current mode in a darker, non-bold font
     vim.api.nvim_set_hl(0, "ModeMsg", { ctermfg = 08, cterm = {} })
@@ -99,11 +98,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     -- Define colors for floating windows
     vim.api.nvim_set_hl(0, "NormalFloat", { ctermbg = 10 })
     vim.api.nvim_set_hl(0, "FloatBorder", { ctermbg = 10 })
-
-    -- Hide status line for NvimTree buffer
-    vim.api.nvim_set_hl(0, "NvimTreeStatusLineNC",
-      { ctermbg = 00, ctermfg = 00 })
-    vim.api.nvim_set_hl(0, "NvimTreeStatusLine", { ctermbg = 00, ctermfg = 00 })
 
     -- Set spelling errors to be red and emphasize them using undercurl
     vim.api.nvim_set_hl(0, "SpellBad", { ctermfg = 01, undercurl = true })
