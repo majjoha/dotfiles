@@ -127,6 +127,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 
 -- Format files on save
+local lsp_mode_group = vim.api.nvim_create_augroup("LSPMode", {})
 vim.api.nvim_create_autocmd("LSPAttach", {
   callback = function(args)
     local bufnr = args.buf
