@@ -125,12 +125,6 @@ vim.keymap.set("n", "<Leader>ls", ":source Session.vim<CR>", { silent = true })
 vim.keymap.set("i", "<C-e>", "<C-o>$")
 vim.keymap.set("i", "<C-a>", "<C-o>^")
 
--- Mappings for navigation the quickfix list
-vim.keymap.set("n", "[q", ":cprevious<CR>", { silent = true })
-vim.keymap.set("n", "]q", ":cnext<CR>", { silent = true })
-vim.keymap.set("n", "[Q", ":cfirst<CR>", { silent = true })
-vim.keymap.set("n", "]Q", ":clast<CR>", { silent = true })
-
 -- Marginalia-related mappings
 vim.keymap.set("n", "<Leader>mnn", ":MarginaliaNew<Space>")
 vim.keymap.set("n", "<Leader>men", ":MarginaliaEdit<Space>")
