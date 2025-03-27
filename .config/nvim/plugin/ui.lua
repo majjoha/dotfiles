@@ -15,7 +15,7 @@ vim.opt.colorcolumn = "+1"
 vim.opt.laststatus = 2
 
 vim.opt.fillchars = {
-  -- Supress the `~` character at the end of the buffer
+  -- Suppress the `~` character at the end of the buffer
   eob = " ",
   diff = "╱",
 }
