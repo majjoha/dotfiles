@@ -31,7 +31,6 @@ local servers = {
   gleam = {},
   harper_ls = {},
   hls = { settings = { formattingProvider = "stylish-haskell" } },
-  html = {},
   jsonls = {},
   lua_ls = {
     settings = {
