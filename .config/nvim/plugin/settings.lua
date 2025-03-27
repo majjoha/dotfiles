@@ -1,7 +1,7 @@
 package.path = package.path .. ";" .. vim.fn.expand("$HOME") ..
-                 "/.luarocks/share/lua/5.1/?/init.lua;"
+    "/.luarocks/share/lua/5.1/?/init.lua;"
 package.path = package.path .. ";" .. vim.fn.expand("$HOME") ..
-                 "/.luarocks/share/lua/5.1/?.lua;"
+    "/.luarocks/share/lua/5.1/?.lua;"
 -- Set the terminal title
 vim.opt.title = true
 
@@ -23,7 +23,7 @@ vim.opt.splitright = true
 
 -- Show the popup menu even if there is only one match and select the first
 -- option in the menu
-vim.opt.completeopt = { "menuone", "noinsert" }
+vim.opt.completeopt = { "fuzzy", "menuone", "noinsert" }
 
 -- Allow per project `.vimrc`
 vim.opt.exrc = true
