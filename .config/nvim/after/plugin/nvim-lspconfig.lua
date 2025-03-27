@@ -19,13 +19,12 @@ vim.diagnostic.config({
       [vim.diagnostic.severity.HINT] = "DiagnosticSignHint",
       [vim.diagnostic.severity.INFO] = "DiagnosticSignInfo",
     },
-  }
+  },
 })
 
 local servers = {
   elixirls = { cmd = { "/opt/homebrew/bin/elixir-ls" } },
   eslint = {},
-  rust_analyzer = {},
 }
 
 for server, config in pairs(servers) do
