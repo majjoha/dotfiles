@@ -23,7 +23,6 @@ vim.diagnostic.config({
 })
 
 local servers = {
-  elixirls = { cmd = { "/opt/homebrew/bin/elixir-ls" } },
 }
 
 for server, config in pairs(servers) do
