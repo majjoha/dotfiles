@@ -140,33 +140,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
   group = customize_colors_group,
 })
 
-local lsp_mode_group = vim.api.nvim_create_augroup("LSPMode", {})
--- Use custom border on hover
-vim.api.nvim_create_autocmd("LSPAttach", {
-  callback = function(_)
-    local border = {
-      { "┌", "FloatBorder" }, { "─", "FloatBorder" },
-      { "┐", "FloatBorder" }, { "│", "FloatBorder" },
-      { "┘", "FloatBorder" }, { "─", "FloatBorder" },
-      { "└", "FloatBorder" }, { "│", "FloatBorder" },
-    }
-
-    vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
-      vim.lsp.handlers.hover,
-      { border = border })
-
-    -- Override `vim.lsp.util.open_floating_preview` function so it uses the
-    -- custom border instead
-    local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
-    function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
-      opts = opts or {}
-      opts.border = opts.border or border
-      return orig_util_open_floating_preview(contents, syntax, opts, ...)
-    end
-  end,
-  group = lsp_mode_group,
-})
-
 -- Enable completion and definition capabilities for LSP
 vim.api.nvim_create_autocmd("LSPAttach", {
   callback = function(args)
