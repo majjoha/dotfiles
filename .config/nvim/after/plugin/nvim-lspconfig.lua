@@ -25,27 +25,6 @@ vim.diagnostic.config({
 local servers = {
   elixirls = { cmd = { "/opt/homebrew/bin/elixir-ls" } },
   eslint = {},
-  lua_ls = {
-    settings = {
-      Lua = {
-        runtime = { version = "LuaJIT" },
-        diagnostics = {
-          -- Get the language server to recognize the `vim` and `hs` globals
-          globals = { "vim", "hs" },
-        },
-        workspace = {
-          -- Make the server aware of Neovim runtime files
-          library = {
-            vim.api.nvim_get_runtime_file("", true),
-            os.getenv("HOME") .. ".hammerspoon/Spoons/EmmyLua.spoon/annotations",
-          },
-        },
-        -- Do not send telemetry data containing a randomized but unique
-        -- identifier
-        telemetry = { enable = false },
-      },
-    },
-  },
   rust_analyzer = {},
 }
 
