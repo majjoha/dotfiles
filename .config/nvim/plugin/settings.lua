@@ -67,7 +67,6 @@ vim.opt.virtualedit = "block"
 
 -- Store undo history
 vim.opt.undofile = true
-vim.opt.undodir = vim.fn.expand("~/.config/nvim/undo")
 
 -- Use `rg` for searching
 vim.opt.grepprg = "rg --vimgrep --hidden -i"
