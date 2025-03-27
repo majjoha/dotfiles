@@ -1,6 +1,6 @@
 -- Map leader key to space
 vim.keymap.set("n", "<Leader>", "<Nop>", { remap = true, silent = false })
-vim.g.mapleader = " "
+vim.g.mapleader = vim.keycode("<space>")
 
 -- Use Control-S for saving
 vim.keymap.set("i", "<C-s>", "<C-o>:update<CR>", { silent = true })
