@@ -28,7 +28,6 @@ local servers = {
   erlangls = {},
   eslint = {},
   flow = {},
-  gleam = {},
   hls = { settings = { formattingProvider = "stylish-haskell" } },
   lua_ls = {
     settings = {
