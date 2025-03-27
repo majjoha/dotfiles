@@ -22,15 +22,12 @@ vim.api.nvim_create_autocmd("BufReadPost", {
   group = clean_fugitive_buffers_group,
 })
 
--- Remove line numbers in terminal mode, start it in insert mode and delete the
--- buffer when it is no longer displayed
+-- Hide status line in terminal mode and start in insert mode. Delete the buffer
+-- when it is no longer displayed.
 local terminal_mode_group = vim.api.nvim_create_augroup("TerminalMode", {})
 vim.api.nvim_create_autocmd("TermOpen", {
   pattern = "*",
   callback = function()
-    vim.wo.number = false
-    vim.wo.relativenumber = false
-    vim.wo.signcolumn = "no"
     vim.wo.statusline = " "
     vim.api.nvim_command("startinsert")
   end,
