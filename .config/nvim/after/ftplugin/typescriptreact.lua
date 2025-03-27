@@ -1,1 +1,1 @@
-.config/nvim/after/ftplugin/typescript.lua
+/Users/mathias/.config/nvim/after/ftplugin/typescript.lua
