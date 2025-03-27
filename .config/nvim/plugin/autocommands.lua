@@ -226,12 +226,15 @@ local map_split = function(buf_id, lhs, direction)
   local rhs = function()
     -- Make new window and set it as target
     local new_target_window
-    vim.api.nvim_win_call(MiniFiles.get_target_window(), function()
-      vim.cmd(direction .. " split")
-      new_target_window = vim.api.nvim_get_current_win()
-    end)
+    vim.api.nvim_win_call(MiniFiles.get_explorer_state().target_window,
+      function()
+        vim.cmd(direction .. " split")
+        new_target_window = vim.api.nvim_get_current_win()
+      end)
 
     MiniFiles.set_target_window(new_target_window)
+    MiniFiles.go_in()
+    MiniFiles.close()
   end
 
   -- Adding `desc` will result into `show_help` entries
