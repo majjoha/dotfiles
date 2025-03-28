@@ -1,5 +1,3 @@
-require("mini.bracketed").setup({})
-
 require("mini.files").setup({
   mappings = {
     go_in = "<Tab>",
