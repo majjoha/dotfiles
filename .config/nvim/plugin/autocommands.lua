@@ -104,6 +104,8 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     vim.api.nvim_set_hl(0, "CodeBlock", { ctermbg = 10 })
     vim.api.nvim_set_hl(0, "Dash", { ctermfg = 10 })
 
+    vim.api.nvim_set_hl(0, "MiniFilesBorder", { ctermfg = 10 })
+
     local links = {
       ['@lsp.type.namespace'] = '@namespace',
       ['@lsp.type.type'] = '@type',
