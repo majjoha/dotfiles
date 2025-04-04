@@ -199,3 +199,12 @@ vim.keymap.set("n", "<Tab>", require("other-nvim").open)
 -- Mimic mappings from splitjoin.vim
 vim.keymap.set("n", "gS", ":TSJSplit<CR>", { silent = true })
 vim.keymap.set("n", "gJ", ":TSJJoin<CR>", { silent = true })
+
+vim.keymap.set("n", "gK", function()
+  vim.diagnostic.config {
+    virtual_lines = not vim.diagnostic.config().virtual_lines,
+    virtual_text = not vim.diagnostic.config().virtual_text,
+  }
+  end,
+  {}
+)
