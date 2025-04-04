@@ -76,6 +76,18 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     vim.api.nvim_set_hl(0, "DiagnosticSignHint", { ctermfg = 07, ctermbg = 00 })
     vim.api.nvim_set_hl(0, "DiagnosticSignInfo", { ctermfg = 07, ctermbg = 00 })
 
+    -- Set text color for virtual lines
+    vim.api.nvim_set_hl(0, "DiagnosticVirtualLinesError",
+      { ctermfg = 08, ctermbg = 00 })
+    vim.api.nvim_set_hl(0, "DiagnosticVirtualLinesWarn",
+      { ctermfg = 08, ctermbg = 00 })
+    vim.api.nvim_set_hl(0, "DiagnosticVirtualLinesHint",
+      { ctermfg = 08, ctermbg = 00 })
+    vim.api.nvim_set_hl(0, "DiagnosticVirtualLinesInfo",
+      { ctermfg = 08, ctermbg = 00 })
+    vim.api.nvim_set_hl(0, "DiagnosticVirtualLinesOk",
+      { ctermfg = 08, ctermbg = 00 })
+
     -- Set underline colors for diagnostics
     vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", { undercurl = true })
     vim.api.nvim_set_hl(0, "DiagnosticUnderlineWarn", { undercurl = true })
