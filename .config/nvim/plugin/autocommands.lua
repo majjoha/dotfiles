@@ -29,6 +29,7 @@ vim.api.nvim_create_autocmd("TermOpen", {
   pattern = "*",
   callback = function()
     vim.wo.statusline = " "
+    vim.wo.statuscolumn = ""
     vim.api.nvim_command("startinsert")
   end,
   group = terminal_mode_group,
