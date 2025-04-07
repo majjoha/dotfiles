@@ -20,6 +20,7 @@ vim.diagnostic.config({
       [vim.diagnostic.severity.INFO] = "DiagnosticSignInfo",
     },
   },
+  severity_sort = true,
 })
 
 local configurations = {}
