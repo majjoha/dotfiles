@@ -21,6 +21,7 @@ vim.diagnostic.config({
     },
   },
   severity_sort = true,
+  underline = false,
 })
 
 local configurations = {}
