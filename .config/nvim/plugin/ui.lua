@@ -7,6 +7,9 @@ vim.opt.termguicolors = false
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+-- Enable cursor line to allow custom line number highlighting
+vim.opt.cursorline = true
+
 -- Set text width to 80 and mark column 81
 vim.opt.textwidth = 80
 vim.opt.colorcolumn = "+1"

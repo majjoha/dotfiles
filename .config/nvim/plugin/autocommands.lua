@@ -49,8 +49,11 @@ local customize_colors_group = vim.api
 vim.api.nvim_create_autocmd("ColorScheme", {
   pattern = "*",
   callback = function()
-    -- Set the background color of the line numbers to transparent
-    vim.api.nvim_set_hl(0, "LineNr", { ctermbg = 00 })
+    -- Set the current line number to slightly darker than the rest of the line
+    -- numbers
+    vim.api.nvim_set_hl(0, "LineNr", { ctermfg = 08 })
+    vim.api.nvim_set_hl(0, "CursorLine", { })
+    vim.api.nvim_set_hl(0, "CursorLineNr", { ctermfg = 07 })
 
     -- Remove background color for fold column
     vim.api.nvim_set_hl(0, "FoldColumn", { link = "Normal" })
