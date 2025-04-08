@@ -5,7 +5,12 @@ require("fzf-lua").setup({
     height = 0.7,
     width = 0.9,
     border = { "┌", "─", "┐", "│", "┘", "─", "└", "│" },
-    preview = { horizontal = "right:50%", title = "file", layout = "horizontal" },
+    preview = {
+      border = "single",
+      horizontal = "right:50%",
+      title = "file",
+      layout = "horizontal",
+    },
   },
   fzf_opts = { ["--inline-info"] = "", ["--reverse"] = "" },
   fzf_colors = {
