@@ -22,9 +22,6 @@
 [submodule ".config/nvim/pack/packages/start/nvim-snippy"]
 	path = .config/nvim/pack/packages/start/nvim-snippy
 	url = https://github.com/dcampos/nvim-snippy.git
-[submodule ".config/nvim/pack/packages/start/mini.nvim"]
-	path = .config/nvim/pack/packages/start/mini.nvim
-	url = https://github.com/echasnovski/mini.nvim.git
 [submodule ".config/nvim/pack/packages/start/nvim-test"]
 	path = .config/nvim/pack/packages/start/nvim-test
 	url = git@github.com:klen/nvim-test.git
@@ -55,3 +52,6 @@
 [submodule ".config/nvim/pack/packages/start/scnvim"]
 	path = .config/nvim/pack/packages/start/scnvim
 	url = https://github.com/davidgranstrom/scnvim.git
+[submodule ".config/nvim/pack/packages/start/mini.nvim"]
+	path = .config/nvim/pack/packages/start/mini.nvim
+	url = https://github.com/nvim-mini/mini.nvim.git
