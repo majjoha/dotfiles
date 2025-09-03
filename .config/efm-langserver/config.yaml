@@ -2,6 +2,13 @@
 version: 2
 
 tools:
+  alex: &alex
+    lint-command: "alex"
+    lint-formats:
+      - "  %l:%c-%e:%k  %terror  %m"
+      - "  %l:%c-%e:%k  %tarning  %m"
+    lint-stdin: true
+    lint-source: "alex"
   cabal-fmt: &cabal-fmt
     format-command: "cabal-fmt --inplace"
     format-stdin: true
@@ -65,6 +72,8 @@ languages:
     - <<: *jq
   lua:
     - <<: *lua-format
+  markdown:
+    - <<: *alex
   sh:
     - <<: *shellcheck
     - <<: *shfmt
