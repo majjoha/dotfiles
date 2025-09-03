@@ -233,6 +233,7 @@ floating:
   - "com.apple.AppStore"
   - "com.apple.Dictionary"
   - "com.apple.DiskUtility"
+  - "com.apple.Home"
   - "com.apple.Maps"
   - "com.apple.MobileSMS"
   - "com.apple.Music"
