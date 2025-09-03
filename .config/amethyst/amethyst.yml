@@ -238,6 +238,7 @@ floating:
   - "com.apple.MobileSMS"
   - "com.apple.Music"
   - "com.apple.Notes"
+  - "com.apple.Passwords"
   - "com.apple.Photos"
   - "com.apple.Preview"
   - "com.apple.SafariTechnologyPreview"
