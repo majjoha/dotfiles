@@ -69,19 +69,23 @@ vim.keymap.set("n", "<Leader>x", ":sp<CR>", { silent = true })
 -- Git-related mappings
 vim.keymap.set("n", "<Leader>bc", ":FzfLua git_commits<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>gb", ":Git blame<CR>", { silent = true })
-vim.keymap.set("n", "<Leader>gc", ":tab Git commit -v<CR>")
-vim.keymap.set("n", "<Leader>gcb", ":Git checkout -b<Space>")
+vim.keymap.set("n", "<Leader>gc", ":echo 'Use C-a g c instead!'<CR>")
+vim.keymap.set("n", "<Leader>gcb", ":echo 'Use C-a g n instead!'<Space>")
 vim.keymap
     .set("n", "<Leader>gco", ":FzfLua git_branches<CR>", { silent = true })
-vim.keymap.set("n", "<Leader>gd", ":Gdiffsplit<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>gd", ":echo 'Use C-a g d instead!'<CR>",
+  { silent = true })
 vim.keymap.set("n", "<Leader>gr", ":Git rebase -i origin/main<CR>",
   { silent = true })
-vim.keymap.set("n", "<Leader>gs", ":Git<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>gs", ":echo 'Use C-a g s instead!'<CR>",
+  { silent = true })
 vim.keymap.set("n", "<Leader>gg", ":Git<Space>")
 vim.keymap.set("n", "<Leader>gpr", ":!git pr<CR>", { silent = true })
-vim.keymap.set("n", "<Leader>gpp", ":Git pull<CR>", { silent = true })
-vim.keymap.set("n", "<Leader>ga", ":Gwrite<CR>", { silent = true })
-vim.keymap.set("n", "<Leader>gl", ":tabe | terminal tig<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>gpp", ":echo 'Use C-a g p instead!'<CR>",
+  { silent = true })
+vim.keymap.set("n", "<Leader>ga", ":echo 'Use C-a g a instead!'<CR>",
+  { silent = true })
+vim.keymap.set("n", "<Leader>gl", ":echo 'Use C-a g l instead!'<CR>", { silent = true })
 
 -- Edit snippets for the current file type
 vim.keymap.set("n", "<Leader>es", ":SnippyEdit<Space>")
