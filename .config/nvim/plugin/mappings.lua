@@ -80,7 +80,7 @@ vim.keymap.set("n", "<Leader>gr", ":Git rebase -i origin/main<CR>",
 vim.keymap.set("n", "<Leader>gs", ":echo 'Use C-a g s instead!'<CR>",
   { silent = true })
 vim.keymap.set("n", "<Leader>gg", ":Git<Space>")
-vim.keymap.set("n", "<Leader>gpr", ":!git pr<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>gpr", ":vsp | term<CR>git pr<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>gpp", ":echo 'Use C-a g p instead!'<CR>",
   { silent = true })
 vim.keymap.set("n", "<Leader>ga", ":echo 'Use C-a g a instead!'<CR>",
