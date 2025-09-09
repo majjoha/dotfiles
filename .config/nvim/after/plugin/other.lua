@@ -26,4 +26,9 @@ require("other-nvim").setup({
       target = { { target = "src/%1.ts", context = "source" } },
     },
   },
+  style = {
+    border = "single",
+    seperator = "│",
+    newFileIndicator = "New file —",
+  }
 })
