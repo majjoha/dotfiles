@@ -235,6 +235,7 @@ floating:
   - "com.apple.DiskUtility"
   - "com.apple.Home"
   - "com.apple.iCal"
+  - "com.apple.logic10"
   - "com.apple.Maps"
   - "com.apple.MobileSMS"
   - "com.apple.Music"
