@@ -78,3 +78,6 @@ vim.opt.confirm = true
 -- Always spell check files
 vim.opt.spell = true
 vim.opt.spelllang = "en_us"
+
+-- Set `updatetime` to reduce waiting time for diagnostic floating windows
+vim.opt.updatetime = 50
