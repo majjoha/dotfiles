@@ -30,6 +30,9 @@ quick-terminal-animation-duration = 0
 macos-titlebar-style = tabs
 macos-icon = blueprint
 
+# Always open new tabs at the end
+window-new-tab-position = end
+
 # Key bindings
 keybind = super+shift+r=reload_config
 keybind = global:super+shift+grave_accent=toggle_quick_terminal
