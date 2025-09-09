@@ -271,3 +271,6 @@ defaults write com.uranusjr.macdown htmlTaskList -bool true
 
 # Detect Jekyll front-matter
 defaults write com.uranusjr.macdown htmlDetectFrontMatter -bool true
+
+# Disable "Tile by dragging windows to screen edges"
+defaults write com.apple.WindowManager EnableTilingByEdgeDrag -int 0
