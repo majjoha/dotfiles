@@ -134,6 +134,10 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     -- Set borders for MiniFiles explorer
     vim.api.nvim_set_hl(0, "MiniFilesBorder", { ctermfg = 10 })
 
+    -- Set colors for `other.nvim` windows
+    vim.api.nvim_set_hl(0, "OtherSelector", { ctermfg = 10 })
+    vim.api.nvim_set_hl(0, "OtherUnderlined", { ctermfg = 07 })
+
     local links = {
       ['@lsp.type.namespace'] = '@namespace',
       ['@lsp.type.type'] = '@type',
