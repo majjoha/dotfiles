@@ -250,6 +250,7 @@ floating:
   - "com.coppertino.Vox"
   - "com.figma.Desktop"
   - "com.firecore.infuse"
+  - "com.github.wez.wezterm"
   - "com.hnc.Discord"
   - "com.kagi.kagimacOS"
   - "com.kishanbagaria.jack"
