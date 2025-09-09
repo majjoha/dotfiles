@@ -36,8 +36,8 @@ export LC_ALL=en_US.UTF-8
 # Disallow tracking in Homebrew
 export HOMEBREW_NO_ANALYTICS=1
 
-# Brew coffee instead of beer
-export HOMEBREW_INSTALL_BADGE="☕️"
+# Use check mark instead of beer bottle for install badges
+export HOMEBREW_INSTALL_BADGE="✓"
 
 # Set the TTY for GPG
 export GPG_TTY=$(tty)
