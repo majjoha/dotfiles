@@ -39,6 +39,9 @@ export HOMEBREW_NO_ANALYTICS=1
 # Use check mark instead of beer bottle for install badges
 export HOMEBREW_INSTALL_BADGE="✓"
 
+# Forbid redirects from secure HTTPS to insecure HTTP
+export HOMEBREW_NO_INSECURE_REDIRECT=1
+
 # Set the TTY for GPG
 export GPG_TTY=$(tty)
 
