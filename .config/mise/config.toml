@@ -3,6 +3,7 @@ always_keep_download = false
 always_keep_install = false
 experimental = true
 color = false
+idiomatic_version_file_enable_tools = ["ruby"]
 
 [tools]
 "aqua:mattn/efm-langserver" = "latest"
