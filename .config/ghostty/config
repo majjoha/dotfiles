@@ -18,6 +18,9 @@ auto-update = download
 ## Color scheme
 theme = dark:base16-gruvbox-material-dark-soft,light:base16-equilibrium-light
 
+# Interpret colors in the Display P3 color space
+window-colorspace = display-p3
+
 ## Cursor style
 cursor-style = block
 cursor-style-blink = false
