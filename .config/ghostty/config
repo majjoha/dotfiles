@@ -40,3 +40,4 @@ window-new-tab-position = end
 # Key bindings
 keybind = super+shift+r=reload_config
 keybind = global:super+shift+grave_accent=toggle_quick_terminal
+keybind = super+shift+t=prompt_surface_title
