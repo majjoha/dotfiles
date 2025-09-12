@@ -12,6 +12,7 @@ confirm-close-surface = false
 window-inherit-working-directory = false
 
 # Auto-update Ghostty
+auto-update-channel = tip
 auto-update = download
 
 # Appearance
