@@ -12,6 +12,7 @@ lockfile = true
 "gem:bundler" = "latest"
 "gem:rubocop" = "latest"
 "gem:ruby-lsp" = "latest"
+"gem:solargraph" = "latest"
 "gem:tmuxinator" = "latest"
 "npm:bash-language-server" = "latest"
 "npm:trash-cli" = "latest"
