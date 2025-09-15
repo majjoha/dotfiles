@@ -10,6 +10,7 @@ lockfile = true
 "aqua:mattn/efm-langserver" = "latest"
 "aqua:watchexec/watchexec" = "latest"
 "gem:bundler" = "latest"
+"gem:rubocop" = "latest"
 "gem:tmuxinator" = "latest"
 "npm:bash-language-server" = "latest"
 "npm:trash-cli" = "latest"
