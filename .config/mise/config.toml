@@ -11,6 +11,7 @@ lockfile = true
 "aqua:watchexec/watchexec" = "latest"
 "gem:bundler" = "latest"
 "gem:rubocop" = "latest"
+"gem:ruby-lsp" = "latest"
 "gem:tmuxinator" = "latest"
 "npm:bash-language-server" = "latest"
 "npm:trash-cli" = "latest"
