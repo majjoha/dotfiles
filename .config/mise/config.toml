@@ -5,6 +5,7 @@ color = false
 experimental = true
 idiomatic_version_file_enable_tools = ["ruby"]
 lockfile = true
+disable_backends = ["asdf"]
 
 [tools]
 "aqua:mattn/efm-langserver" = "latest"
