@@ -15,6 +15,7 @@ disable_backends = ["asdf"]
 "gem:ruby-lsp" = "latest"
 "gem:solargraph" = "latest"
 "gem:tmuxinator" = "latest"
+"npm:@anthropic-ai/claude-code" = "latest"
 "npm:bash-language-server" = "latest"
 "npm:trash-cli" = "latest"
 "npm:typescript-language-server" = "latest"
