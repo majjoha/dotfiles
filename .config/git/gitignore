@@ -50,3 +50,6 @@ Session.vim
 
 # Ignore ghci history
 ghci_history
+
+# Ignore local Claude settings
+**/.claude/settings.local.json
