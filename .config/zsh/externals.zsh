@@ -12,7 +12,3 @@ eval "$(mise activate zsh)"
 
 # Use FZF
 source <(fzf --zsh)
-
-# Use `chruby`
-source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-source /opt/homebrew/opt/chruby/share/chruby/auto.sh
