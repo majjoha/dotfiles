@@ -52,3 +52,6 @@
 [submodule ".config/nvim/pack/packages/start/mini.nvim"]
 	path = .config/nvim/pack/packages/start/mini.nvim
 	url = https://github.com/nvim-mini/mini.nvim.git
+[submodule ".config/nvim/pack/packages/start/sapf.nvim"]
+	path = .config/nvim/pack/packages/start/sapf.nvim
+	url = https://github.com/vasilymilovidov/sapf.nvim.git
