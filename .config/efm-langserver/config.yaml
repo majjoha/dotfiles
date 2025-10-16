@@ -70,8 +70,6 @@ languages:
     - <<: *prettier
   json:
     - <<: *jq
-  lua:
-    - <<: *lua-format
   markdown:
     - <<: *alex
   sh:
