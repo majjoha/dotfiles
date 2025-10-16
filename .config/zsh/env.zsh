@@ -61,3 +61,11 @@ export FZF_DEFAULT_OPTS="
 
 # Use Neovim when viewing manual pages
 export MANPAGER="nvim +Man!"
+
+export SAPF_HISTORY="$HOME/sapf-files/sapf-history.txt"
+export SAPF_LOG="$HOME/sapf-files/sapf-log.txt"
+export SAPF_PRELUDE="$HOME/sapf-files/sapf-prelude.txt"
+export SAPF_EXAMPLES="$HOME/sapf-files/sapf-examples.txt"
+export SAPF_README="$HOME/sapf-files/README.txt"
+export SAPF_RECORDINGS="$HOME/sapf-files/recordings"
+export SAPF_SPECTROGRAMS="$HOME/sapf-files/spectrograms"
