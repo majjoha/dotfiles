@@ -23,6 +23,7 @@ disable_backends = ["asdf"]
 "npm:typescript" = "latest"
 "npm:vscode-langservers-extracted" = "latest"
 bat = "latest"
+erlang = "latest"
 flyctl = "latest"
 fzf = "latest"
 github-cli = "latest"
