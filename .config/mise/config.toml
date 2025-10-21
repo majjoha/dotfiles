@@ -16,7 +16,6 @@ disable_backends = ["asdf"]
 "gem:rubocop" = "latest"
 "gem:rubocop-rspec" = "latest"
 "gem:ruby-lsp" = "latest"
-"gem:solargraph" = "latest"
 "gem:tmuxinator" = "latest"
 "npm:@anthropic-ai/claude-code" = "latest"
 "npm:bash-language-server" = "latest"
