@@ -248,6 +248,7 @@ floating:
   - "com.apple.VoiceMemos"
   - "com.apple.weather"
   - "com.coppertino.Vox"
+  - "com.electron.realtimeboard"
   - "com.figma.Desktop"
   - "com.firecore.infuse"
   - "com.github.wez.wezterm"
