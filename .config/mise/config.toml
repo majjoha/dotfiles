@@ -12,6 +12,7 @@ disable_backends = ["asdf"]
 "aqua:watchexec/watchexec" = "latest"
 "gem:bundler" = "latest"
 "gem:create-ruby-app" = "latest"
+"gem:pry" = "latest"
 "gem:rubocop" = "latest"
 "gem:ruby-lsp" = "latest"
 "gem:solargraph" = "latest"
