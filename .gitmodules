@@ -55,3 +55,6 @@
 [submodule ".config/nvim/pack/packages/start/sapf.nvim"]
 	path = .config/nvim/pack/packages/start/sapf.nvim
 	url = https://github.com/vasilymilovidov/sapf.nvim.git
+[submodule ".config/nvim/pack/packages/start/LuaSnip"]
+	path = .config/nvim/pack/packages/start/LuaSnip
+	url = https://github.com/L3MON4D3/LuaSnip.git
