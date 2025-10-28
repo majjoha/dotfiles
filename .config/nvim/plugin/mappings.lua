@@ -71,21 +71,55 @@ vim.keymap.set("n", "<Leader>bc", ":FzfLua git_commits<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>gb", ":Git blame<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>gc", ":echo 'Use C-a g c instead!'<CR>")
 vim.keymap.set("n", "<Leader>gcb", ":echo 'Use C-a g n instead!'<Space>")
-vim.keymap
-    .set("n", "<Leader>gco", ":FzfLua git_branches<CR>", { silent = true })
-vim.keymap.set("n", "<Leader>gd", ":echo 'Use C-a g d instead!'<CR>",
-  { silent = true })
-vim.keymap.set("n", "<Leader>gr", ":Git rebase -i origin/main<CR>",
-  { silent = true })
-vim.keymap.set("n", "<Leader>gs", ":echo 'Use C-a g s instead!'<CR>",
-  { silent = true })
+vim.keymap.set(
+  "n",
+  "<Leader>gco",
+  ":FzfLua git_branches<CR>",
+  { silent = true }
+)
+vim.keymap.set(
+  "n",
+  "<Leader>gd",
+  ":echo 'Use C-a g d instead!'<CR>",
+  { silent = true }
+)
+vim.keymap.set(
+  "n",
+  "<Leader>gr",
+  ":Git rebase -i origin/main<CR>",
+  { silent = true }
+)
+vim.keymap.set(
+  "n",
+  "<Leader>gs",
+  ":echo 'Use C-a g s instead!'<CR>",
+  { silent = true }
+)
 vim.keymap.set("n", "<Leader>gg", ":Git<Space>")
-vim.keymap.set("n", "<Leader>gpr", ":vsp | term<CR>git pr<CR>", { silent = true })
-vim.keymap.set("n", "<Leader>gpp", ":echo 'Use C-a g p instead!'<CR>",
-  { silent = true })
-vim.keymap.set("n", "<Leader>ga", ":echo 'Use C-a g a instead!'<CR>",
-  { silent = true })
-vim.keymap.set("n", "<Leader>gl", ":echo 'Use C-a g l instead!'<CR>", { silent = true })
+vim.keymap.set(
+  "n",
+  "<Leader>gpr",
+  ":vsp | term<CR>git pr<CR>",
+  { silent = true }
+)
+vim.keymap.set(
+  "n",
+  "<Leader>gpp",
+  ":echo 'Use C-a g p instead!'<CR>",
+  { silent = true }
+)
+vim.keymap.set(
+  "n",
+  "<Leader>ga",
+  ":echo 'Use C-a g a instead!'<CR>",
+  { silent = true }
+)
+vim.keymap.set(
+  "n",
+  "<Leader>gl",
+  ":echo 'Use C-a g l instead!'<CR>",
+  { silent = true }
+)
 
 -- Edit snippets for the current file type
 vim.keymap.set("n", "<Leader>es", ":SnippyEdit<Space>")
@@ -133,16 +167,27 @@ vim.keymap.set("i", "<C-a>", "<C-o>^")
 vim.keymap.set("n", "<Leader>mnn", ":MarginaliaNew<Space>")
 vim.keymap.set("n", "<Leader>men", ":MarginaliaEdit<Space>")
 vim.keymap.set("n", "<Leader>mln", ":MarginaliaList<CR>", { silent = true })
-vim.keymap.set("n", "<Leader>mfb", ":MarginaliaFindBacklinks<CR>",
-  { silent = true })
+vim.keymap.set(
+  "n",
+  "<Leader>mfb",
+  ":MarginaliaFindBacklinks<CR>",
+  { silent = true }
+)
 vim.keymap.set("n", "<Leader>mft", ":MarginaliaFindTagReferences<Space>", {})
-vim.keymap.set("n", "<Leader>mcw", ":MarginaliaConvertWordToTag<CR>",
-  { silent = true })
+vim.keymap.set(
+  "n",
+  "<Leader>mcw",
+  ":MarginaliaConvertWordToTag<CR>",
+  { silent = true }
+)
 
 -- LSP-related mappings
-vim.keymap.set("n", "gra",
+vim.keymap.set(
+  "n",
+  "gra",
   ":FzfLua lsp_code_actions previewer=codeaction_native<CR>",
-  { silent = true })
+  { silent = true }
+)
 
 -- Reselect pasted text
 vim.keymap.set("n", "gp", "`[v`]")
@@ -200,17 +245,40 @@ vim.keymap.set("t", "<C-k>", "<C-w><C-k>")
 -- Move between implementation and tests
 vim.keymap.set("n", "<Tab>", require("other-nvim").open)
 
+-- Expand and jump to snippets using <Tab> and <S-Tab>
+local ls = require("luasnip")
+vim.keymap.set({ "i", "s" }, "<Tab>", function()
+  if ls.expand_or_jumpable() then
+    ls.expand_or_jump(1)
+  else
+    vim.api.nvim_feedkeys(
+      vim.api.nvim_replace_termcodes("<Tab>", true, false, true),
+      "n",
+      false
+    )
+  end
+end, { silent = true })
+vim.keymap.set({ "i", "s" }, "<S-Tab>", function()
+  if ls.expand_or_jumpable() then
+    ls.jump(-1)
+  else
+    vim.api.nvim_feedkeys(
+      vim.api.nvim_replace_termcodes("<Tab>", true, false, true),
+      "n",
+      false
+    )
+  end
+end, { silent = true })
+
 -- Mimic mappings from splitjoin.vim
 vim.keymap.set("n", "gS", ":TSJSplit<CR>", { silent = true })
 vim.keymap.set("n", "gJ", ":TSJJoin<CR>", { silent = true })
 
 vim.keymap.set("n", "gK", function()
-  vim.diagnostic.config {
+  vim.diagnostic.config({
     virtual_lines = not vim.diagnostic.config().virtual_lines,
     virtual_text = not vim.diagnostic.config().virtual_text,
-  }
-  end,
-  {}
-)
+  })
+end, {})
 
 vim.keymap.set("n", "<Leader>ch", ":helpclose<CR>", { silent = true })
