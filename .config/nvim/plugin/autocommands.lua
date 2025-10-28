@@ -7,13 +7,15 @@ vim.api.nvim_create_autocmd("VimResized", {
 })
 
 -- Open help pages in a vertical split
-vim.api.nvim_create_autocmd("Filetype",
-  { pattern = "help", command = "wincmd L" })
+vim.api.nvim_create_autocmd(
+  "Filetype",
+  { pattern = "help", command = "wincmd L" }
+)
 
 -- Auto-clean Fugitive buffers
 -- Source: http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/
-local clean_fugitive_buffers_group = vim.api.nvim_create_augroup(
-  "CleanFugitiveBuffers", {})
+local clean_fugitive_buffers_group =
+  vim.api.nvim_create_augroup("CleanFugitiveBuffers", {})
 vim.api.nvim_create_autocmd("BufReadPost", {
   pattern = "fugitive://*",
   callback = function()
@@ -44,15 +46,15 @@ vim.api.nvim_create_autocmd("TermLeave", {
 
 -- Customize colors
 -- See https://gist.github.com/romainl/379904f91fa40533175dfaec4c833f2f
-local customize_colors_group = vim.api
-    .nvim_create_augroup("CustomizeColors", {})
+local customize_colors_group =
+  vim.api.nvim_create_augroup("CustomizeColors", {})
 vim.api.nvim_create_autocmd("ColorScheme", {
   pattern = "*",
   callback = function()
     -- Set the current line number to slightly darker than the rest of the line
     -- numbers
-    vim.api.nvim_set_hl(0, "LineNr", { ctermfg = 08 })
-    vim.api.nvim_set_hl(0, "CursorLine", { })
+    vim.api.nvim_set_hl(0, "LineNr", { ctermfg = 12 })
+    vim.api.nvim_set_hl(0, "CursorLine", {})
     vim.api.nvim_set_hl(0, "CursorLineNr", { ctermfg = 07 })
 
     -- Remove background color for fold column
@@ -80,28 +82,58 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     vim.api.nvim_set_hl(0, "DiagnosticSignInfo", { ctermfg = 07, ctermbg = 00 })
 
     -- Set text color for virtual lines
-    vim.api.nvim_set_hl(0, "DiagnosticVirtualLinesError",
-      { ctermfg = 08, ctermbg = 00 })
-    vim.api.nvim_set_hl(0, "DiagnosticVirtualLinesWarn",
-      { ctermfg = 08, ctermbg = 00 })
-    vim.api.nvim_set_hl(0, "DiagnosticVirtualLinesHint",
-      { ctermfg = 08, ctermbg = 00 })
-    vim.api.nvim_set_hl(0, "DiagnosticVirtualLinesInfo",
-      { ctermfg = 08, ctermbg = 00 })
-    vim.api.nvim_set_hl(0, "DiagnosticVirtualLinesOk",
-      { ctermfg = 08, ctermbg = 00 })
+    vim.api.nvim_set_hl(
+      0,
+      "DiagnosticVirtualLinesError",
+      { ctermfg = 08, ctermbg = 00 }
+    )
+    vim.api.nvim_set_hl(
+      0,
+      "DiagnosticVirtualLinesWarn",
+      { ctermfg = 08, ctermbg = 00 }
+    )
+    vim.api.nvim_set_hl(
+      0,
+      "DiagnosticVirtualLinesHint",
+      { ctermfg = 08, ctermbg = 00 }
+    )
+    vim.api.nvim_set_hl(
+      0,
+      "DiagnosticVirtualLinesInfo",
+      { ctermfg = 08, ctermbg = 00 }
+    )
+    vim.api.nvim_set_hl(
+      0,
+      "DiagnosticVirtualLinesOk",
+      { ctermfg = 08, ctermbg = 00 }
+    )
 
     -- Set text color for diagnostic messages in floating windows
-    vim.api.nvim_set_hl(0, "DiagnosticFloatingError",
-      { ctermfg = 08, ctermbg = 00 })
-    vim.api.nvim_set_hl(0, "DiagnosticFloatingWarn",
-      { ctermfg = 08, ctermbg = 00 })
-    vim.api.nvim_set_hl(0, "DiagnosticFloatingHint",
-      { ctermfg = 08, ctermbg = 00 })
-    vim.api.nvim_set_hl(0, "DiagnosticFloatingInfo",
-      { ctermfg = 08, ctermbg = 00 })
-    vim.api.nvim_set_hl(0, "DiagnosticFloatingOk",
-      { ctermfg = 08, ctermbg = 00 })
+    vim.api.nvim_set_hl(
+      0,
+      "DiagnosticFloatingError",
+      { ctermfg = 08, ctermbg = 00 }
+    )
+    vim.api.nvim_set_hl(
+      0,
+      "DiagnosticFloatingWarn",
+      { ctermfg = 08, ctermbg = 00 }
+    )
+    vim.api.nvim_set_hl(
+      0,
+      "DiagnosticFloatingHint",
+      { ctermfg = 08, ctermbg = 00 }
+    )
+    vim.api.nvim_set_hl(
+      0,
+      "DiagnosticFloatingInfo",
+      { ctermfg = 08, ctermbg = 00 }
+    )
+    vim.api.nvim_set_hl(
+      0,
+      "DiagnosticFloatingOk",
+      { ctermfg = 08, ctermbg = 00 }
+    )
 
     -- Set underline colors for diagnostics
     vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", { undercurl = true })
@@ -169,8 +201,8 @@ vim.api.nvim_create_autocmd("LSPAttach", {
     local client = vim.lsp.get_client_by_id(args.data.client_id)
 
     if client.server_capabilities.documentFormattingProvider then
-      local lsp_formatting_group = vim.api.nvim_create_augroup("LSPFormatting",
-        {})
+      local lsp_formatting_group =
+        vim.api.nvim_create_augroup("LSPFormatting", {})
 
       vim.api.nvim_create_autocmd("BufWritePre", {
         buffer = bufnr,
@@ -197,11 +229,13 @@ local map_split = function(buf_id, lhs, direction)
   local rhs = function()
     -- Make new window and set it as target
     local new_target_window
-    vim.api.nvim_win_call(MiniFiles.get_explorer_state().target_window,
+    vim.api.nvim_win_call(
+      MiniFiles.get_explorer_state().target_window,
       function()
         vim.cmd(direction .. " split")
         new_target_window = vim.api.nvim_get_current_win()
-      end)
+      end
+    )
 
     MiniFiles.set_target_window(new_target_window)
     MiniFiles.go_in()
