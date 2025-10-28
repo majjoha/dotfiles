@@ -1,4 +1,6 @@
-require: rubocop-rspec
+plugins:
+  - rubocop-performance
+  - rubocop-rspec
 AllCops:
   TargetRubyVersion: 3.4
 Style/ConditionalAssignment:
