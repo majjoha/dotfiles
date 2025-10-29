@@ -192,10 +192,6 @@ vim.keymap.set(
 -- Reselect pasted text
 vim.keymap.set("n", "gp", "`[v`]")
 
--- Add `end` to functions in Ruby, Lua, and Elixir
-vim.keymap.set("i", "<CR>", require("nvim-autopairs").autopairs_cr,
-  { expr = true })
-
 -- Keep the current search result centered in the viewport when jumping
 vim.keymap.set("n", "n", "nzz")
 vim.keymap.set("n", "N", "Nzz")
