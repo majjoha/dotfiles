@@ -16,9 +16,6 @@
 [submodule ".config/nvim/pack/packages/start/nvim-treesitter"]
 	path = .config/nvim/pack/packages/start/nvim-treesitter
 	url = https://github.com/nvim-treesitter/nvim-treesitter.git
-[submodule ".config/nvim/pack/packages/start/nvim-snippy"]
-	path = .config/nvim/pack/packages/start/nvim-snippy
-	url = https://github.com/dcampos/nvim-snippy.git
 [submodule ".config/nvim/pack/packages/start/nvim-test"]
 	path = .config/nvim/pack/packages/start/nvim-test
 	url = git@github.com:klen/nvim-test.git
