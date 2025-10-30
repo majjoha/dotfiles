@@ -55,3 +55,6 @@
 [submodule ".config/nvim/pack/packages/start/LuaSnip"]
 	path = .config/nvim/pack/packages/start/LuaSnip
 	url = https://github.com/L3MON4D3/LuaSnip.git
+[submodule ".config/nvim/pack/packages/start/marginalia.nvim"]
+	path = .config/nvim/pack/packages/start/marginalia.nvim
+	url = https://github.com/majjoha/marginalia.nvim.git
