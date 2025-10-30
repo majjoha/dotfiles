@@ -224,6 +224,17 @@ vim.api.nvim_create_autocmd("LSPDetach", {
   group = lsp_mode_group,
 })
 
+-- Refresh code lenses automatically
+local lsp_codelens_group = vim.api.nvim_create_augroup("LSPCodeLens", {})
+vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "InsertLeave" }, {
+  pattern = "*_spec.rb",
+  callback = function()
+    vim.lsp.codelens.display = function() end
+    vim.lsp.codelens.refresh()
+  end,
+  group = lsp_codelens_group,
+})
+
 -- Set mappings for opening file in split using `MiniFiles`
 local map_split = function(buf_id, lhs, direction)
   local rhs = function()
