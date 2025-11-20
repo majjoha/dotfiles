@@ -267,3 +267,14 @@ vim.api.nvim_create_autocmd("User", {
     map_split(buf_id, "gv", "belowright vertical")
   end,
 })
+
+-- Highlight text on yank
+local highlight_on_yank_group =
+  vim.api.nvim_create_augroup("HighlightOnYank", {})
+vim.api.nvim_create_autocmd("TextYankPost", {
+  pattern = "*",
+  callback = function()
+    vim.highlight.on_yank({ timeout = 150, visual = true })
+  end,
+  group = highlight_on_yank_group,
+})
