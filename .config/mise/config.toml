@@ -10,13 +10,6 @@ disable_backends = ["asdf"]
 [tools]
 "aqua:mattn/efm-langserver" = "latest"
 "aqua:watchexec/watchexec" = "latest"
-"gem:bundler" = "latest"
-"gem:create-ruby-app" = "latest"
-"gem:pry" = "latest"
-"gem:rubocop" = "latest"
-"gem:rubocop-rspec" = "latest"
-"gem:ruby-lsp" = "latest"
-"gem:tmuxinator" = "latest"
 "npm:@anthropic-ai/claude-code" = "latest"
 "npm:bash-language-server" = "latest"
 "npm:trash-cli" = "latest"
