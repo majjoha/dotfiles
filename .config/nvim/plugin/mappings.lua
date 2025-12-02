@@ -69,32 +69,30 @@ vim.keymap.set("n", "<Leader>x", ":sp<CR>", { silent = true })
 -- Git-related mappings
 vim.keymap.set("n", "<Leader>bc", ":FzfLua git_commits<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>gb", ":Git blame<CR>", { silent = true })
-vim.keymap.set("n", "<Leader>gc", ":echo 'Use C-a g c instead!'<CR>")
-vim.keymap.set("n", "<Leader>gcb", ":echo 'Use C-a g n instead!'<Space>")
+vim.keymap.set("n", "<Leader>gc", function()
+  vim.notify("Use C-a g c instead!")
+end)
+vim.keymap.set("n", "<Leader>gcb", function()
+  vim.notify("Use C-a g n instead!")
+end)
 vim.keymap.set(
   "n",
   "<Leader>gco",
   ":FzfLua git_branches<CR>",
   { silent = true }
 )
-vim.keymap.set(
-  "n",
-  "<Leader>gd",
-  ":echo 'Use C-a g d instead!'<CR>",
-  { silent = true }
-)
+vim.keymap.set("n", "<Leader>gd", function()
+  vim.notify("Use C-a g d instead!")
+end, { silent = true })
 vim.keymap.set(
   "n",
   "<Leader>gr",
   ":Git rebase -i origin/main<CR>",
   { silent = true }
 )
-vim.keymap.set(
-  "n",
-  "<Leader>gs",
-  ":echo 'Use C-a g s instead!'<CR>",
-  { silent = true }
-)
+vim.keymap.set("n", "<Leader>gs", function()
+  vim.notify("Use C-a g s instead!")
+end, { silent = true })
 vim.keymap.set("n", "<Leader>gg", ":Git<Space>")
 vim.keymap.set(
   "n",
@@ -102,24 +100,15 @@ vim.keymap.set(
   ":vsp | term<CR>git pr<CR>",
   { silent = true }
 )
-vim.keymap.set(
-  "n",
-  "<Leader>gpp",
-  ":echo 'Use C-a g p instead!'<CR>",
-  { silent = true }
-)
-vim.keymap.set(
-  "n",
-  "<Leader>ga",
-  ":echo 'Use C-a g a instead!'<CR>",
-  { silent = true }
-)
-vim.keymap.set(
-  "n",
-  "<Leader>gl",
-  ":echo 'Use C-a g l instead!'<CR>",
-  { silent = true }
-)
+vim.keymap.set("n", "<Leader>gpp", function()
+  vim.notify("Use C-a g p instead!")
+end, { silent = true })
+vim.keymap.set("n", "<Leader>ga", function()
+  vim.notify("Use C-a g a instead!")
+end, { silent = true })
+vim.keymap.set("n", "<Leader>gl", function()
+  vim.notify("Use C-a g l instead!")
+end, { silent = true })
 
 -- Edit snippets for the current file type
 vim.keymap.set("n", "<Leader>es", ":SnippyEdit<Space>")
