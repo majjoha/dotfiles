@@ -1,2 +1,2 @@
 ;; extends
-("readonly") @readonly
+("readonly") @keyword.readonly
