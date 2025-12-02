@@ -11,6 +11,7 @@ disable_backends = ["asdf"]
 "aqua:mattn/efm-langserver" = "latest"
 "aqua:watchexec/watchexec" = "latest"
 "npm:@anthropic-ai/claude-code" = "latest"
+"npm:@sourcegraph/amp" = "latest"
 "npm:bash-language-server" = "latest"
 "npm:trash-cli" = "latest"
 "npm:typescript-language-server" = "latest"
