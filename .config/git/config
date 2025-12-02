@@ -60,8 +60,6 @@
   web = instaweb
   wip = !git add -u && git commit -m "wip"
   zpush = !"git push -u origin `git branch-name`:majjoha/`git branch-name`"
-[add "interactive"]
-  useBuiltin = false
 [interactive]
   diffFilter = diff-so-fancy --patch
 [delta]
