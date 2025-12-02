@@ -1,4 +1,4 @@
-GIT_PROMPT_PREFIX=" %F{blue}(%F{cyan}"
+GIT_PROMPT_PREFIX=" %F{blue}(%F{blue}"
 GIT_PROMPT_SUFFIX="%F{blue})%f"
 GIT_PROMPT_DIRTY="%F{red}*%f"
 
