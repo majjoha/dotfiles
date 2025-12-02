@@ -17,7 +17,6 @@ function mkcd () {
 alias ....='cd ../../..'
 alias ...='cd ../..'
 alias alac="alac-conversion . && rm *.flac"
-alias bci="brew cask install"
 alias be="bundle exec"
 alias bi="brew install"
 alias bs="brew search"
