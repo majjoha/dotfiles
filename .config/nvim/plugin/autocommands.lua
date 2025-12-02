@@ -278,3 +278,62 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
   group = highlight_on_yank_group,
 })
+
+-- Highlight references under cursor
+local lsp_document_highlight_group =
+  vim.api.nvim_create_augroup("LSPDocumentHighlight", {})
+
+local highlight_node_types = {
+  "constant",
+  "constructor",
+  "declarations",
+  "identifier",
+  "instance_variable",
+  "name",
+  "simple_symbol",
+  "variable",
+}
+
+local function has_document_highlight_support()
+  return vim.iter(vim.lsp.get_clients({ bufnr = 0 })):any(function(client)
+    return client.server_capabilities.documentHighlightProvider
+  end)
+end
+
+local function should_highlight()
+  local node = vim.treesitter.get_node()
+  if not node then
+    return false
+  end
+
+  local node_type = node:type()
+  return vim.iter(highlight_node_types):any(function(t)
+    return node_type:match(t)
+  end)
+end
+
+local function conditional_document_highlight()
+  if not has_document_highlight_support() then
+    return
+  end
+
+  if should_highlight() then
+    vim.lsp.buf.document_highlight()
+  else
+    vim.lsp.buf.clear_references()
+  end
+end
+
+vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+  callback = conditional_document_highlight,
+  group = lsp_document_highlight_group,
+})
+
+vim.api.nvim_create_autocmd("CursorMoved", {
+  callback = function()
+    if has_document_highlight_support() then
+      vim.lsp.buf.clear_references()
+    end
+  end,
+  group = lsp_document_highlight_group,
+})
