@@ -12,10 +12,6 @@ function __tmux-sessions() {
 }
 compdef __tmux-sessions tm
 
-# Tab completion for chruby
-_chruby() { compadd $(chruby | tr -d '* ') }
-compdef _chruby chruby
-
 # Tab completion for opening tmuxinator projects
 _tmuxinator() {
   local commands projects
