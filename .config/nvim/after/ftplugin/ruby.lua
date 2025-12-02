@@ -1,5 +1,5 @@
--- Include `!` and `?` when deleting words
-vim.opt_local.iskeyword = vim.opt_local.iskeyword + "!" + "?"
+-- Include `!`, `?` and `@` when deleting words
+vim.opt_local.iskeyword = vim.opt_local.iskeyword + "!" + "?" + "@"
 
 -- Open `ri` in a terminal
 -- vim.opt_local.keywordprg = ":tabe | term ri"
