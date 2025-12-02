@@ -11,7 +11,7 @@ alias mkdir="mkdir -vp"
 
 # Create a directory and enter it
 function mkcd () {
-  mkdir $1 && cd $1
+  mkdir "$1" && cd "$1"
 }
 
 alias ....='cd ../../..'
