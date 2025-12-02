@@ -62,8 +62,6 @@
   zpush = !"git push -u origin `git branch-name`:majjoha/`git branch-name`"
 [interactive]
   diffFilter = diff-so-fancy --patch
-[delta]
-  syntax-theme = "Solarized (light)"
 [tag]
   sort = version:refname
 [help]
