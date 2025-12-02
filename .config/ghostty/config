@@ -16,6 +16,9 @@ auto-update-channel = tip
 auto-update = download
 
 # Appearance
+## Cell height
+adjust-cell-height = 5%
+
 ## Color scheme
 theme = dark:base16-gruvbox-material-dark-soft,light:base16-equilibrium-light
 
