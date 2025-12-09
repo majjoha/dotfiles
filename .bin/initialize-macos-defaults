@@ -147,9 +147,6 @@ defaults write com.apple.systemuiserver menuExtras -array \
 # Enable subpixel font rendering on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
-# Disable gatekeeper
-sudo spctl --master-disable
-
 # Disable crash reporter dialog
 defaults write com.apple.CrashReporter DialogType none
 
