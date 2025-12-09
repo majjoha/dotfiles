@@ -50,10 +50,10 @@
   httpd = webrick
 [alias]
   branch-name = !"git for-each-ref --format=\"%(refname:short)\" $(git symbolic-ref HEAD)"
-  last-week = shortlog --since='1 week ago' --pretty=format:'%cD: %s' --author=mathias@mjj.io --no-merges
+  last-week = !git shortlog --since='1 week ago' --pretty=format:'%cD: %s' --author="$(git config user.email)" --no-merges
   pr = !"gh pr create --web"
   preview = !"git fetch && git diff ^origin/main"
-  standup = shortlog --since=yesterday --no-merges --author=mathias@mjj.io
+  standup = !git shortlog --since=yesterday --no-merges --author="$(git config user.email)"
   undo = reset --soft HEAD^
   unpushed = log --branches --not --remotes --simplify-by-decoration --decorate --oneline
   unstage = reset HEAD
