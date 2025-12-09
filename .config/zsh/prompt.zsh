@@ -2,18 +2,26 @@ GIT_PROMPT_PREFIX=" %F{blue}(%F{blue}"
 GIT_PROMPT_SUFFIX="%F{blue})%f"
 GIT_PROMPT_DIRTY="%F{red}*%f"
 
-function git_dirty {
-  test -z "$(command git status --porcelain -unormal 2> /dev/null)"
-  (($?)) && printf "%s" "$GIT_PROMPT_DIRTY"
-}
+function git_prompt_info {
+  # Early exit if not in a Git repo
+  git rev-parse --is-inside-work-tree &>/dev/null || return
 
-function git_branch {
-  git branch --no-color 2> /dev/null |\
-    tr -d '()' |\
-    sed -e '/^[^*]/d' \
-      -e "s/* \(.*\)/$GIT_PROMPT_PREFIX\1$(git_dirty)$GIT_PROMPT_SUFFIX/"
+  # Single `git` call to get the branch name
+  local branch
+  branch=$(
+    git symbolic-ref --short HEAD 2>/dev/null ||
+    git rev-parse --short HEAD 2>/dev/null
+  )
+
+  # Fast dirty check using `git status`
+  local dirty=""
+  local status_output
+  status_output=$(git status --porcelain --untracked-files=no 2>/dev/null)
+  [[ -n "$status_output" ]] && dirty="$GIT_PROMPT_DIRTY"
+
+  printf "%s" "$GIT_PROMPT_PREFIX$branch$dirty$GIT_PROMPT_SUFFIX"
 }
 
 precmd() {
-  PS1="%F{blue}%~$(git_branch) %F{yellow}%# %f"
+  PS1="%F{blue}%~$(git_prompt_info) %F{yellow}%# %f"
 }
