@@ -18,10 +18,10 @@
 	url = https://github.com/nvim-treesitter/nvim-treesitter.git
 [submodule ".config/nvim/pack/packages/start/nvim-test"]
 	path = .config/nvim/pack/packages/start/nvim-test
-	url = git@github.com:klen/nvim-test.git
+	url = https://github.com/klen/nvim-test.git
 [submodule ".config/nvim/pack/packages/start/fzf-lua"]
 	path = .config/nvim/pack/packages/start/fzf-lua
-	url = git@github.com:ibhagwan/fzf-lua.git
+	url = https://github.com/ibhagwan/fzf-lua.git
 [submodule ".config/nvim/pack/packages/start/other.nvim"]
 	path = .config/nvim/pack/packages/start/other.nvim
 	url = https://github.com/rgroli/other.nvim.git
@@ -30,10 +30,10 @@
 	url = https://github.com/dbalatero/SkyRocket.spoon
 [submodule ".config/nvim/pack/packages/start/treesj"]
 	path = .config/nvim/pack/packages/start/treesj
-	url = git@github.com:Wansmer/treesj.git
+	url = https://github.com/Wansmer/treesj.git
 [submodule ".bin/projectdo"]
 	path = .bin/projectdo
-	url = git@github.com:paldepind/projectdo.git
+	url = https://github.com/paldepind/projectdo.git
 [submodule ".config/nvim/pack/packages/start/virt-column.nvim"]
 	path = .config/nvim/pack/packages/start/virt-column.nvim
 	url = https://github.com/lukas-reineke/virt-column.nvim.git
