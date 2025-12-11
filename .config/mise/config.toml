@@ -17,6 +17,7 @@ disable_backends = ["asdf"]
 "aqua:jj-vcs/jj" = "latest"
 "aqua:JohnnyMorganz/StyLua" = "latest"
 "aqua:jqlang/jq" = "latest"
+"aqua:Kitware/CMake" = "latest"
 "aqua:koalaman/shellcheck" = "latest"
 "aqua:LuaLS/lua-language-server" = "latest"
 "aqua:mattn/efm-langserver" = "latest"
