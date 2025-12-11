@@ -39,6 +39,7 @@ disable_backends = ["asdf"]
 "npm:typescript-language-server" = "latest"
 "npm:typescript" = "latest"
 "npm:vscode-langservers-extracted" = "latest"
+"pipx:yamllint" = "latest"
 erlang = "latest"
 node = "24.10.0"
 python = "latest"
