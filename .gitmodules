@@ -46,3 +46,6 @@
 [submodule ".config/nvim/pack/packages/start/marginalia.nvim"]
 	path = .config/nvim/pack/packages/start/marginalia.nvim
 	url = https://github.com/majjoha/marginalia.nvim.git
+[submodule ".hammerspoon/Spoons/Spatial.spoon"]
+	path = .hammerspoon/Spoons/Spatial.spoon
+	url = https://github.com/majjoha/Spatial.spoon.git

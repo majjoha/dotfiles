@@ -44,7 +44,6 @@ for plugin, configuration in pairs({
     end,
   },
   Spatial = {
-    repo = "Spatial",
     start = true,
     config = {
       activeSpaceIcon = function()
