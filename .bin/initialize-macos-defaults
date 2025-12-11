@@ -39,6 +39,9 @@ defaults write com.apple.dock show-recents -bool false
 # Disable most recently used spaces reordering
 defaults write com.apple.dock mru-spaces -bool false
 
+# Reduce delay for workspace switching via edges
+defaults write com.apple.dock workspaces-edge-delay -float 0.1
+
 ### Security & Privacy
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -bool true
