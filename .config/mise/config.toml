@@ -20,6 +20,7 @@ disable_backends = ["asdf"]
 "aqua:Kitware/CMake" = "latest"
 "aqua:koalaman/shellcheck" = "latest"
 "aqua:LuaLS/lua-language-server" = "latest"
+"aqua:mas-cli/mas" = "1.8.6"
 "aqua:mattn/efm-langserver" = "latest"
 "aqua:mgdm/htmlq" = "latest"
 "aqua:mikefarah/yq" = "latest"
