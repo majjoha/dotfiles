@@ -112,8 +112,10 @@ defaults write com.apple.finder WarnOnEmptyTrash -bool true
 # Always open windows in icon view
 defaults write com.apple.finder FXPreferredViewStyle -string "icnv"
 
-# Group files in Finder by name
-defaults write com.apple.finder FXPreferredGroupBy -string "Name"
+# Group files in Finder by kind
+defaults write com.apple.finder FXPreferredGroupBy -string "Kind"
+
+# Arrange items within groups alphabetically by name
 defaults write com.apple.finder FXArrangeGroupViewBy -string "Name"
 
 # Keep folders on top when sorting by name
