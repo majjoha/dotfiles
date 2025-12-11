@@ -28,21 +28,12 @@
 [submodule ".config/nvim/pack/packages/start/treesj"]
 	path = .config/nvim/pack/packages/start/treesj
 	url = https://github.com/Wansmer/treesj.git
-[submodule ".bin/projectdo"]
-	path = .bin/projectdo
-	url = https://github.com/paldepind/projectdo.git
 [submodule ".config/nvim/pack/packages/start/virt-column.nvim"]
 	path = .config/nvim/pack/packages/start/virt-column.nvim
 	url = https://github.com/lukas-reineke/virt-column.nvim.git
-[submodule ".config/nvim/pack/packages/start/gp.nvim"]
-	path = .config/nvim/pack/packages/start/gp.nvim
-	url = https://github.com/Robitx/gp.nvim.git
 [submodule ".config/nvim/pack/packages/start/image.nvim"]
 	path = .config/nvim/pack/packages/start/image.nvim
 	url = https://github.com/3rd/image.nvim.git
-[submodule ".config/nvim/pack/packages/start/scnvim"]
-	path = .config/nvim/pack/packages/start/scnvim
-	url = https://github.com/davidgranstrom/scnvim.git
 [submodule ".config/nvim/pack/packages/start/mini.nvim"]
 	path = .config/nvim/pack/packages/start/mini.nvim
 	url = https://github.com/nvim-mini/mini.nvim.git
