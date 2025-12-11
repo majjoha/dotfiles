@@ -43,6 +43,7 @@ disable_backends = ["asdf", "vfox"]
 "npm:typescript-language-server" = "latest"
 "npm:typescript" = "latest"
 "npm:vscode-langservers-extracted" = "latest"
+"npm:diff-so-fancy" = "latest"
 "pipx:yamllint" = "latest"
 "ubi:atanunq/viu" = "latest"
 "ubi:sst/opencode" = "latest"
