@@ -87,6 +87,9 @@ defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 # Enable taps with three fingers
 defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadThreeFingerTapGesture -bool true
 
+# Set trackpad sensitivity
+defaults write NSGlobalDomain com.apple.trackpad.scaling -float 0.5
+
 ### Finder
 # Show external disks, CDs, DVDs, and iPods on the desktop
 defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
