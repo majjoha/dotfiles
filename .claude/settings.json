@@ -67,6 +67,5 @@
       "Bash(yarn:*)"
     ]
   },
-  "alwaysThinkingEnabled": true,
-  "model": "opus"
+  "alwaysThinkingEnabled": false
 }
