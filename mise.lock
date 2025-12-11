@@ -443,6 +443,10 @@ backend = "npm:@sourcegraph/amp"
 version = "5.6.0"
 backend = "npm:bash-language-server"
 
+[[tools."npm:diff-so-fancy"]]
+version = "1.4.3"
+backend = "npm:diff-so-fancy"
+
 [[tools."npm:trash-cli"]]
 version = "7.0.0"
 backend = "npm:trash-cli"
