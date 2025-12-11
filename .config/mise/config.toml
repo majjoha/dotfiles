@@ -31,6 +31,7 @@ disable_backends = ["asdf"]
 "aqua:superfly/flyctl" = "latest"
 "aqua:tree-sitter/tree-sitter" = "latest"
 "aqua:watchexec/watchexec" = "latest"
+"github:containers/podman" = "latest"
 "github:junegunn/fzf" = "latest"
 "npm:@anthropic-ai/claude-code" = "latest"
 "npm:@sourcegraph/amp" = "latest"
