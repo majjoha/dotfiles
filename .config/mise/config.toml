@@ -44,6 +44,7 @@ disable_backends = ["asdf", "vfox"]
 "npm:typescript" = "latest"
 "npm:vscode-langservers-extracted" = "latest"
 "pipx:yamllint" = "latest"
+"ubi:sst/opencode" = "latest"
 erlang = "latest"
 node = "24.10.0"
 python = "latest"
