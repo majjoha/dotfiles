@@ -34,6 +34,7 @@ disable_backends = ["asdf"]
 "github:containers/podman" = "latest"
 "github:jgm/pandoc" = "latest"
 "github:junegunn/fzf" = "latest"
+"github:tekumara/typos-lsp" = "latest"
 "npm:@anthropic-ai/claude-code" = "latest"
 "npm:@sourcegraph/amp" = "latest"
 "npm:bash-language-server" = "latest"
