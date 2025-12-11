@@ -26,6 +26,7 @@ disable_backends = ["asdf"]
 "aqua:mikefarah/yq" = "latest"
 "aqua:mvdan/sh" = "latest"
 "aqua:neovim/neovim" = "latest"
+"aqua:pypa/pipx" = "latest"
 "aqua:sharkdp/bat" = "latest"
 "aqua:superfly/flyctl" = "latest"
 "aqua:tree-sitter/tree-sitter" = "latest"
