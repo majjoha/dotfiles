@@ -1,10 +1,11 @@
 ---
 name: nvim-context
-description: Get the current Neovim context as JSON (cursor position, current
-file, visual selection and diagnostics) to help answer questions about code at
-the current cursor position, visual selections and diagnostics. Use when users
-ask about "this line", "current file", "selection" or need context about their
-Neovim editor state.
+description: >
+  Get the current Neovim context as JSON (cursor position, current file,
+  visual selection and diagnostics) to help answer questions about code at
+  the current cursor position, visual selections and diagnostics. Use when
+  users ask about "this line", "current file", "selection" or need context
+  about their Neovim editor state.
 ---
 
 # Neovim context provider
@@ -25,10 +26,8 @@ context-aware questions about code.
 - "What file am I in?" → Return current file path
 - "Show me all errors" → List all LSP diagnostics
 
-## Technical Details
-The skill runs: `nvim-context`
-
-This provides JSON output like:
+## Technical details
+To use this skill, execute the `nvim-context` CLI command which outputs JSON:
 ```json
 {
   "cursor": {
@@ -40,3 +39,8 @@ This provides JSON output like:
   "diagnostics": []
 }
 ```
+
+## Implementation
+When this skill is loaded, execute `nvim-context` via Bash and parse the JSON
+output to understand the current editor state. Use the returned data to answer
+user questions about their code.
