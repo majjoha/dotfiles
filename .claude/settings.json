@@ -1,6 +1,7 @@
 {
   "permissions": {
     "allow": [
+      "Bash(bd:*)",
       "Bash(bundle exec:*)",
       "Bash(cabal build:*)",
       "Bash(cabal repl:*)",
