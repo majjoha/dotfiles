@@ -435,6 +435,10 @@ backend = "core:node"
 version = "2.0.62"
 backend = "npm:@anthropic-ai/claude-code"
 
+[[tools."npm:@openai/codex"]]
+version = "0.73.0"
+backend = "npm:@openai/codex"
+
 [[tools."npm:@sourcegraph/amp"]]
 version = "0.0.1763352284-ge06d5b"
 backend = "npm:@sourcegraph/amp"
