@@ -96,9 +96,6 @@ vim.keymap.set("n", "<Leader>gpp", ":echo 'Use C-a g p instead!'<CR>")
 vim.keymap.set("n", "<Leader>ga", ":echo 'Use C-a g a instead!'<CR>")
 vim.keymap.set("n", "<Leader>gl", ":echo 'Use C-a g l instead!'<CR>")
 
--- Edit snippets for the current file type
-vim.keymap.set("n", "<Leader>es", ":SnippyEdit<Space>")
-
 -- Open a terminal in a split window
 vim.keymap.set("n", "<Leader>tv", ":vsp | term<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>ts", ":sp | term<CR>", { silent = true })
