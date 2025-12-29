@@ -253,3 +253,5 @@ vim.keymap.set("n", "gK", function()
 end, {})
 
 vim.keymap.set("n", "<Leader>ch", ":helpclose<CR>", { silent = true })
+
+vim.keymap.set("n", "<C-]>", vim.lsp.buf.definition)
