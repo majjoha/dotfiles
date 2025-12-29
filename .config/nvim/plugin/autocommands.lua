@@ -46,14 +46,17 @@ vim.api.nvim_create_autocmd("TermLeave", {
 
 -- Format files on save
 local lsp_mode_group = vim.api.nvim_create_augroup("LSPMode", {})
+local lsp_formatting_group = vim.api.nvim_create_augroup("LSPFormatting", {})
 vim.api.nvim_create_autocmd("LSPAttach", {
   callback = function(args)
     local bufnr = args.buf
     local client = vim.lsp.get_client_by_id(args.data.client_id)
 
     if client.server_capabilities.documentFormattingProvider then
-      local lsp_formatting_group =
-        vim.api.nvim_create_augroup("LSPFormatting", {})
+      vim.api.nvim_clear_autocmds({
+        group = lsp_formatting_group,
+        buffer = bufnr,
+      })
 
       vim.api.nvim_create_autocmd("BufWritePre", {
         buffer = bufnr,
