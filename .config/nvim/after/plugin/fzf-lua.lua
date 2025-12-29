@@ -37,7 +37,8 @@ require("fzf-lua").setup({
     builtin = { ["<S-K>"] = "preview-page-up", ["<S-J>"] = "preview-page-down" },
   },
   files = {
-    rg_opts = "--color=never --files --hidden --no-ignore --follow --glob '!*/**/*.png' --glob '!*/**/.jpg'",
+    rg_opts = "--color=never --files --hidden --no-ignore --follow "
+      .. "--glob '!*/**/*.png' --glob '!*/**/*.jpg' --glob '!*/**/*.jpeg'",
     no_ignore = false,
   },
   lsp = {
