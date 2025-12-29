@@ -337,3 +337,19 @@ vim.api.nvim_create_autocmd("CursorMoved", {
   end,
   group = lsp_document_highlight_group,
 })
+
+-- Highlight comment blocks with background colors
+local comment_block_group =
+  vim.api.nvim_create_augroup("CommentBlockHighlight", {})
+vim.api.nvim_create_autocmd({
+  "BufEnter",
+  "InsertLeave",
+  "TextChanged",
+  "TextChangedI",
+}, {
+  pattern = "*",
+  callback = function(args)
+    require("comment_block").highlight_comment_blocks(args.buf)
+  end,
+  group = comment_block_group,
+})
