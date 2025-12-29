@@ -69,3 +69,6 @@ export SAPF_EXAMPLES="$HOME/sapf-files/sapf-examples.txt"
 export SAPF_README="$HOME/sapf-files/README.txt"
 export SAPF_RECORDINGS="$HOME/sapf-files/recordings"
 export SAPF_SPECTROGRAMS="$HOME/sapf-files/spectrograms"
+
+# Ensure Codex scans configuration files, skills, etc., correctly
+export CODEX_HOME="$HOME/.dotfiles/.codex"
