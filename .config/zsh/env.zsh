@@ -72,3 +72,6 @@ export SAPF_SPECTROGRAMS="$HOME/sapf-files/spectrograms"
 
 # Ensure Codex scans configuration files, skills, etc., correctly
 export CODEX_HOME="$HOME/.dotfiles/.codex"
+
+# Store z.lua database in `XDG_DATA_HOME`
+export _ZL_DATA="${XDG_DATA_HOME:-$HOME/.local/share}/zlua/zlua.txt"
