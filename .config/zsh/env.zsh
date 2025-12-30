@@ -17,7 +17,7 @@ export TERM=xterm-ghostty
 # Save a lot of history
 export HISTSIZE=20000
 export SAVEHIST=20000
-export HISTFILE=$HOME/.zsh_history
+export HISTFILE="${XDG_STATE_HOME:-$HOME/.local/state}/zsh/history"
 setopt INC_APPEND_HISTORY
 
 # Enabling coloring in the command line prompt
