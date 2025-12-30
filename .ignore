@@ -9,3 +9,6 @@ vendor/
 *.ibc
 *.idr~
 .git/
+.config/nvim/pack/packages/start/**
+.hammerspoon/Spoons/**
+.bin/z.lua/**
