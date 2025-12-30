@@ -46,7 +46,7 @@ export HOMEBREW_NO_INSECURE_REDIRECT=1
 export GPG_TTY=$(tty)
 
 # Show hidden files when searching
-export FZF_DEFAULT_COMMAND="rg --hidden"
+export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git/*'"
 
 # Show the prompt at the top with inline info, place a border around FZF and
 # take up only 35 percent of the screen height. Display a preview of the file,
