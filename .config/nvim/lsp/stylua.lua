@@ -2,7 +2,7 @@ return {
   cmd = {
     "stylua",
     "--config-path",
-    vim.fn.expand("~/.dotfiles/.config/stylua/stylua.toml"),
+    vim.fs.normalize(vim.fn.stdpath("config") .. "/../stylua/stylua.toml"),
     "--lsp",
   },
   filetypes = { "lua" },

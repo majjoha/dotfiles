@@ -1,7 +1,6 @@
 -- Use thesaurus
-vim.opt_local.thesaurus = vim.opt_local.thesaurus +
-                            vim.fn
-                              .expand("~/.config/nvim/thesaurus/thesaurus.txt")
+vim.opt_local.thesaurus = vim.opt_local.thesaurus
+  + vim.fn.expand(vim.fn.stdpath("config") .. "/thesaurus/thesaurus.txt")
 
 -- Set text width to 80
 vim.opt_local.textwidth = 80
