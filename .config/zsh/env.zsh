@@ -53,10 +53,10 @@ export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git/*'"
 # and set the colors to match the terminal theme
 export FZF_DEFAULT_OPTS="
   --reverse \
-  --inline-info \
-  --height=35% \
-  --border \
-  --preview='head -$LINES {}'
+  --height=50% \
+  --style minimal \
+  --border sharp \
+  --preview='bat --style=numbers --color=always --line-range :200 {}' \
   --color=bg+:11,bg:0,border:8,spinner:7,hl:8,fg:7,prompt:8,header:8,info:12,pointer:7,marker:7,fg+:7,gutter:0,hl+:12"
 
 # Use Neovim when viewing manual pages
