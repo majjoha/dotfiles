@@ -4,6 +4,6 @@
   "instructions": [],
   "keybinds": {
     "messages_page_up": "ctrl+b",
-    "messages_page_down": "ctrl+f",
+    "messages_page_down": "ctrl+f"
   }
 }
