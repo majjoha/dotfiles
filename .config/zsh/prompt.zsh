@@ -16,7 +16,7 @@ function git_prompt_info {
   # Fast dirty check using `git status`
   local dirty=""
   local status_output
-  status_output=$(git status --porcelain --untracked-files=no 2>/dev/null)
+  status_output=$(git status --porcelain --untracked-files=normal 2>/dev/null)
   [[ -n "$status_output" ]] && dirty="$GIT_PROMPT_DIRTY"
 
   printf "%s" "$GIT_PROMPT_PREFIX$branch$dirty$GIT_PROMPT_SUFFIX"
