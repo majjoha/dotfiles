@@ -1,5 +1,5 @@
 # Enable compdef
-autoload -Uz compinit && compinit
+autoload -Uz compinit && compinit -d "$ZSH_COMPDUMP"
 
 # Add support for Bash completion definitions
 autoload -U +X bashcompinit && bashcompinit

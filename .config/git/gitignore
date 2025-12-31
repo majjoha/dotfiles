@@ -5,7 +5,6 @@
 .config/nvim/undo
 .config/tmuxinator
 !.config/tmuxinator/new.yml
-.config/zsh/.zcompdump
 .hammerspoon/Spoons
 .gnupg
 !.gnupg/gpg-agent.conf

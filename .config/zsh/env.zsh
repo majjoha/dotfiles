@@ -74,3 +74,6 @@ export CODEX_HOME="$HOME/.dotfiles/.codex"
 
 # Store z.lua database in `XDG_DATA_HOME`
 export _ZL_DATA="${XDG_DATA_HOME:-$HOME/.local/share}/zlua/zlua.txt"
+
+# Store Zsh completion cache dump in XDG cache
+export ZSH_COMPDUMP="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdump"
