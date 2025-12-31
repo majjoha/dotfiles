@@ -17,7 +17,6 @@
   gpgSign = true
 [init]
   defaultBranch = main
-  templatedir = ~/.config/git/template
 [credential]
   helper = osxkeychain
 [color]
