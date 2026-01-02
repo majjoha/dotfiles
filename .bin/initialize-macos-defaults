@@ -50,6 +50,9 @@ defaults write com.apple.dock workspaces-swoosh-animation-off -bool true
 defaults write com.apple.screensaver askForPassword -bool true
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
+# Uncheck "Save in Keychain" by default in `pinentry-mac`
+defaults write org.gpgtools.pinentry-mac UseKeychain -bool NO
+
 ### Sound
 ### Keyboard
 # Set key repeat to fast, and delay until repeat to short
