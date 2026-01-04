@@ -95,7 +95,7 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 
 # Enable taps with three fingers (Look Up & Data Detectors)
-defaults write com.apple.AppleMultitouchTrackpad.plist TrackpadThreeFingerTapGesture -int 2
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerTapGesture -int 2
 
 # Set trackpad sensitivity
 defaults write NSGlobalDomain com.apple.trackpad.scaling -float 0.5
