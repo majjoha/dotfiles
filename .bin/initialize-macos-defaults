@@ -104,8 +104,8 @@ defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
 
-# Show the Desktop folder when opening new Finder windows
-defaults write com.apple.finder NewWindowTarget -string "PfDe"
+# Show the Home folder when opening new Finder windows
+defaults write com.apple.finder NewWindowTarget -string "PfHm"
 
 # Show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
