@@ -8,14 +8,11 @@ sudo -v
 # Set the menu bar and Dock to dark
 defaults write NSRequiresAquaSystemAppearance -bool true
 
-# Set accent color to graphite
-defaults write NSGlobalDomain AppleAccentColor -int -1
-
 # Set highlight color to graphite
 defaults write NSGlobalDomain AppleHighlightColor -string "0.847059 0.847059 0.862745"
 
-# Set appearance for buttons, menus, and windows to graphite
-defaults write NSGlobalDomain AppleAquaColorVariant -int 6
+# Set appearance for buttons, menus, and windows to blue
+defaults write NSGlobalDomain AppleAquaColorVariant -int 1
 
 ### Dock
 # Set the Dock size
