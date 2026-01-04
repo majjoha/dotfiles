@@ -54,6 +54,9 @@ defaults write org.gpgtools.pinentry-mac UseKeychain -bool NO
 # Use English language with Danish regional format (en_DK)
 defaults write NSGlobalDomain AppleLocale -string "en_DK"
 
+# Use centimeters for measurement units
+defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
+
 ### Sound
 ### Keyboard
 # Set key repeat to fast, and delay until repeat to short
