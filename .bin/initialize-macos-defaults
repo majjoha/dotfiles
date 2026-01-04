@@ -119,6 +119,9 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool true
 # Show warning before emptying the Trash
 defaults write com.apple.finder WarnOnEmptyTrash -bool true
 
+# Hide preview pane
+defaults write com.apple.finder ShowPreviewPane -bool false
+
 # Always open windows in icon view
 defaults write com.apple.finder FXPreferredViewStyle -string "icnv"
 
