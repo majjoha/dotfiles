@@ -165,15 +165,6 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # Do not offer new disks for Time Machine backup
 defaults write com.apple.TimeMachine "DoNotOfferNewDisksForBackup" -bool "false"
 
-# Set menu bar items
-defaults write com.apple.systemuiserver menuExtras -array \
-  "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
-  "/System/Library/CoreServices/Menu Extras/Battery.menu" \
-  "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
-  "/System/Library/CoreServices/Menu Extras/Clock.menu" \
-  "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
-  "/System/Library/CoreServices/Menu Extras/Volume.menu"
-
 # Enable subpixel font rendering on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
