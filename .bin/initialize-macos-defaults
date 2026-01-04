@@ -148,9 +148,6 @@ defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 # Show the status bar in Finder
 defaults write com.apple.finder ShowStatusBar -bool true
 
-# Empty the trash securely by default
-defaults write com.apple.finder EmptyTrashSecurely -bool true
-
 # Save screenshots to the ~/Desktop
 defaults write com.apple.screencapture location -string "$HOME/Desktop"
 
