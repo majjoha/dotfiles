@@ -49,6 +49,10 @@ alias gcm="git commit -m"
 alias gco="git checkout"
 alias gd="git diff"
 alias gds="git diff --staged"
+function gdu () {
+  git ls-files --others --exclude-standard -z |
+    xargs -0 -r -n1 git diff --no-index -- /dev/null
+}
 alias gi="git init"
 alias gl="git log"
 alias glw="git last-week"
