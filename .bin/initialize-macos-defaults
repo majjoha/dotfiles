@@ -28,7 +28,7 @@ defaults write com.apple.dock largesize -int 50
 defaults write com.apple.dock autohide -bool true
 
 # Set Dock opening delay
-defaults write com.apple.Dock autohide-delay -float 0
+defaults write com.apple.dock autohide-delay -float 0
 
 # Do not show recent applications
 defaults write com.apple.dock show-recents -bool false
