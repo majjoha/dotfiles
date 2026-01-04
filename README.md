@@ -6,8 +6,10 @@ management.
 ## Usage
 ### Install
 ```bash
-% git clone --recursive git@github.com:majjoha/dotfiles.git ~/.dotfiles
-% cd ~/.dotfiles && stow .
+git clone https://github.com/majjoha/dotfiles.git ~/.dotfiles && \
+  cd ~/.dotfiles && \
+  git submodule update --init --recursive && \
+  stow .
 ```
 
 On a new machine, you may also want to run `.bin/initialize-macos-defaults` to
