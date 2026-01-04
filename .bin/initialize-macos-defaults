@@ -50,6 +50,10 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Uncheck "Save in Keychain" by default in `pinentry-mac`
 defaults write org.gpgtools.pinentry-mac UseKeychain -bool NO
 
+### Language & Region
+# Use English language with Danish regional format (en_DK)
+defaults write NSGlobalDomain AppleLocale -string "en_DK"
+
 ### Sound
 ### Keyboard
 # Set key repeat to fast, and delay until repeat to short
