@@ -5,20 +5,29 @@
   project-specific guidelines.
 - Show code examples when describing concepts.
 
+## Workflow
+- Stop commands running longer than 5 minutes and check with the user.
+  Long-running processes may indicate an issue or inefficient approach.
+- Search before proposing solutions. Understand what exists in the codebase
+  before suggesting new implementations.
+
 ## Coding style
 ### Development workflow
-- Use TDD for features and bug fixes unless stated otherwise. Always add tests
-  before refactoring, use red-green-refactor cycle and implement only the
-  minimum code required to make the tests pass.
-- Tidyings (small structural improvements like renaming, extracting methods,
-  reordering, or moving code) are part of the refactor phase and should be
-  covered by existing tests. Only write new tests if existing coverage is
-  insufficient.
+- Use TDD for features and bug fixes unless stated otherwise. Add or adjust
+  tests that define expected behavior before changing implementations, and use
+  a red-green-refactor cycle.
+- For refactors and tidyings, rely on existing coverage. If behavior is not
+  already captured, add or shore up targeted tests before changing code; do not
+  invent new behavior during tidyings.
 - When tidyings touch separate parts of the code and can work in isolation,
   commit them separately. If in doubt, default to separate commits with a green
   test suite.
 
 ### Core principles
+- Think deeply before acting. Consider architecture, existing patterns, and
+  trade-offs before proposing solutions.
+- Fix root causes, not symptoms. Solve problems from first principles rather
+  than applying band-aids.
 - Prefer immutability over mutation, avoid side-effects, and keep actions
   idempotent.
 - Use declarative code when it improves readability. Favor clear, composable
@@ -32,15 +41,9 @@
 - Always write for humans: descriptive variable and function names,
   self-documenting code, and boring over clever. A reader familiar with the
   language should be able to understand "what" from reading the code.
-- Comments should explain "why" instead of "what" and only when the code intent
-  is unclear, for instance, when business rules, non-obvious algorithms,
-  performance trade-offs or other constraints are not evident from the names or
-  types.
 - Keep line length to 80 characters maximum for all files (code, documentation,
   configuration, etc.). This ensures readability across different editors and
   environments.
-- For Markdown files, omit blank lines after headings (h1-h6) and bold text.
-  Content should immediately follow on the next line for compact formatting.
 
 ### Abstraction and design
 - Question complex and premature abstractions and opt for simpler alternatives.
@@ -53,10 +56,8 @@
   abstract only if the pattern is stable. Two instances of similar code are not
   yet a pattern. You may abstract earlier if a third occurrence is imminent AND
   the pattern is clearly stable, but default to waiting.
-- DRY applies after reaching the Rule of Three threshold. Duplication is
-  acceptable and often preferred before that point.
-- Apply SOLID principles to solve current problems and not future hypothetical
-  ones. When SOLID and YAGNI conflict, choose YAGNI.
+- Apply SOLID principles only when they solve a current problem. When SOLID
+  requires speculative abstraction, choose YAGNI.
 - For OOP, opt for composition over inheritance.
 
 ### Project conventions
@@ -72,19 +73,36 @@
 ## Testing
 - Test behavior, not implementation.
 - Unit tests should be fast, isolated and, ideally, require no external
-  dependencies. Test each class in isolation.
+  dependencies. Test each unit in isolation.
 - Include only a single assertion per test when possible. Multiple assertions
   are acceptable when they verify a single behavior, e.g., "user login updates
   last_login_at AND returns success token" is one behavior.
 - Tests are documentation, and a new developer should be able to understand
   behavior by reading the tests.
+- Test edge cases and boundary conditions, including empty inputs, null/nil
+  values, maximum/minimum values, and error states. These tests prevent common
+  bugs and clarify expected behavior at the boundaries.
 
 ## Documentation
-- Document "why" decisions were made, not "what" the code does.
+- Comments should explain "why" instead of "what" and only when the code intent
+  is unclear, for instance, when business rules, non-obvious algorithms,
+  performance trade-offs or other constraints are not evident from the names or
+  types.
 - Prefer self-documenting code such as clear names and types over prose.
 - For type-safe languages, let type signatures carry meaning, and do not
   duplicate types in comments.
 - Document non-obvious constraints and assumptions.
+
+## Language-specific guidance
+### Markdown
+- Omit blank lines after headings (h1-h6) and bold text. Content should
+  immediately follow on the next line for compact formatting.
+
+### TypeScript
+- Never use `any`. Model real shapes with proper types instead of resorting
+  to escape hatches.
+- Avoid `as` type assertions. Trust the type system and fix type issues at
+  their source rather than casting around them.
 
 ## Git
 ### Workflow
@@ -110,3 +128,8 @@ When writing commit messages stick to the following practices:
 - Keep names short but descriptive, e.g., `fix/login-redirect-loop`.
 - Use kebab-case for consistency.
 - Delete branches after merging to keep repository clean.
+
+## Editor context
+- When a user asks about their cursor position, current method, current file,
+selection, or other editor state, automatically invoke `nvim-context` to fetch
+live context before responding.
