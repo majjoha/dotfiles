@@ -24,6 +24,7 @@ for plugin, configuration in pairs({
       r = "Reeder",
       s = "Firefox Developer Edition",
       t = "Ghostty",
+      z = "zoom.us",
     },
   },
   Caffeine = {
