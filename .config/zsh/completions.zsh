@@ -32,8 +32,3 @@ _tmuxinator() {
   return
 }
 compdef _tmuxinator tmuxinator mux
-
-# Tab completion for `stack`
-if type "stack" > /dev/null; then
-  eval "$(stack --bash-completion-script stack)"
-fi
