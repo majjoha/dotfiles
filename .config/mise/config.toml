@@ -42,6 +42,7 @@ disable_backends = ["asdf", "vfox"]
 "npm:@anthropic-ai/claude-code" = "latest"
 "npm:@openai/codex" = "latest"
 "npm:@sourcegraph/amp" = "latest"
+"npm:alex" = "latest"
 "npm:bash-language-server" = "latest"
 "npm:diff-so-fancy" = "latest"
 "npm:trash-cli" = "latest"
