@@ -128,12 +128,6 @@ defaults write com.apple.finder ShowPreviewPane -bool false
 # Always open windows in icon view
 defaults write com.apple.finder FXPreferredViewStyle -string "icnv"
 
-# Group files in Finder by kind
-defaults write com.apple.finder FXPreferredGroupBy -string "Kind"
-
-# Arrange items within groups alphabetically by name
-defaults write com.apple.finder FXArrangeGroupViewBy -string "Name"
-
 # Keep folders on top when sorting by name
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
