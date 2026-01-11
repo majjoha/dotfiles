@@ -8,7 +8,10 @@ local hyper = { "ctrl", "alt" }
 hs.hints.style = "vimperator"
 hs.hints.fontName = "SFPro-Regular"
 hs.hints.fontSize = 20
-hs.hints.windowHints(hs.window.focusedWindow():application():allWindows())
+local focused = hs.window.focusedWindow()
+if focused then
+  hs.hints.windowHints(focused:application():allWindows())
+end
 hs.hotkey.bind(hyper, "Space", hs.hints.windowHints)
 
 -- Load all spoons with their respective settings
