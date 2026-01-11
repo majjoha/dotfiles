@@ -19,7 +19,7 @@ alias ...='cd ../..'
 alias alac="alac-conversion . && rm *.flac"
 alias be="bundle exec"
 alias bi="brew install"
-alias dotf="tmx dotfiles"
+alias dotf="tmuxinator start dotfiles"
 alias n="node"
 alias p="pry"
 alias rm="trash"
@@ -27,7 +27,7 @@ alias tmn="tmuxinator start new"
 alias ups="update-software"
 alias v="nvim"
 alias vim="nvim"
-alias wk="tmx notes"
+alias wk="tmuxinator start notes"
 
 # Git-related aliases
 alias ga="git add"
