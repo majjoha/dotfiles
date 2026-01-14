@@ -2,8 +2,6 @@
 name: <%= File.basename(Dir.getwd).downcase %>
 root: <%= Dir.getwd %>
 
-on_project_start: kitty @ set-tab-title <%= File.basename(Dir.getwd).downcase %>
-
 startup_window: zsh
 
 windows:
