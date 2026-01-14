@@ -91,3 +91,5 @@ function codex () {
   fi
   command codex "$@"
 }
+
+alias mx="mise x"
