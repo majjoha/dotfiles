@@ -2,6 +2,7 @@
 always_keep_download = false
 always_keep_install = false
 color = false
+color_theme = "base16"
 experimental = true
 idiomatic_version_file_enable_tools = ["ruby"]
 lockfile = true
