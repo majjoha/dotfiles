@@ -24,3 +24,6 @@ _darcs
 
 # Dotfiles-related files
 ^/mise\.lock
+
+# Markdown files
+\.md$
