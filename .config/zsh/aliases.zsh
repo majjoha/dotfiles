@@ -70,7 +70,7 @@ alias remove-hidden-files="find . -maxdepth 5 -type f -name '.*' -delete"
 
 function ffsilent { ffmpeg -i "$1" -c copy -an "${1%.*}-nosound.${1#*.}" }
 
-# Rename tmux window for Amp/Claude/Codex when available
+# Rename tmux window for Amp/Claude/Codex/Gemini when available
 function amp () {
   if [[ -n "$TMUX" ]]; then
     tmux rename-window amp
@@ -90,6 +90,13 @@ function codex () {
     tmux rename-window codex
   fi
   command codex "$@"
+}
+
+function gemini () {
+  if [[ -n "$TMUX" ]]; then
+    tmux rename-window gemini
+  fi
+  command gemini "$@"
 }
 
 alias mx="mise x"
