@@ -1,6 +1,12 @@
 return {
   cmd = { "vscode-eslint-language-server", "--stdio" },
-  root_markers = { "tsconfig.json", "jsconfig.json", "package.json", ".git" },
+  root_markers = {
+    "babel.config.js",
+    "tsconfig.json",
+    "jsconfig.json",
+    "package.json",
+    ".git",
+  },
   filetypes = {
     "javascript",
     "javascriptreact",
@@ -38,7 +44,7 @@ return {
     nodePath = "",
     -- Use the workspace folder location or the file location (if no workspace
     -- folder is open) as the working directory
-    workingDirectory = { mode = "location" },
+    workingDirectory = { mode = "auto" },
     codeAction = {
       disableRuleComment = {
         enable = true,
@@ -48,5 +54,5 @@ return {
         enable = true,
       },
     },
-  }
+  },
 }
