@@ -41,6 +41,7 @@ disable_backends = ["asdf", "vfox"]
 "github:tekumara/typos-lsp" = "latest"
 "github:yt-dlp/yt-dlp" = "latest"
 "npm:@anthropic-ai/claude-code" = "latest"
+"npm:@google/gemini-cli" = "latest"
 "npm:@openai/codex" = "latest"
 "npm:@sourcegraph/amp" = "latest"
 "npm:alex" = "latest"
