@@ -868,6 +868,15 @@ for group, settings in pairs({
       italic = true,
     },
   },
+  -- GraphQL
+  ["@punctuation.bracket.graphql"] = {
+    fg = gui02,
+    ctermfg = cterm02,
+  },
+  ["@type.graphql"] = {
+    fg = gui0C,
+    ctermfg = cterm0C,
+  },
   -- Special compatibility for terminal
   Terminal = {
     link = "Normal",
