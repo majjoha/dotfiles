@@ -55,6 +55,7 @@ disable_backends = ["asdf", "vfox"]
 "pipx:yamllint" = "latest"
 "ubi:atanunq/viu" = "latest"
 "ubi:sst/opencode" = "latest"
+bun = "latest"
 erlang = "latest"
 node = "24.10.0"
 python = "latest"
