@@ -47,6 +47,7 @@ disable_backends = ["asdf", "vfox"]
 "npm:alex" = "latest"
 "npm:bash-language-server" = "latest"
 "npm:diff-so-fancy" = "latest"
+"npm:graphql-language-service-cli" = "latest"
 "npm:trash-cli" = "latest"
 "npm:typescript-language-server" = "latest"
 "npm:typescript" = "latest"
