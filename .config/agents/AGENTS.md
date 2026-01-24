@@ -128,6 +128,27 @@ ask the user for help rather than proceeding without it.
   as isolated units instead of multiple components.
 - Never use `--no-verify` without explicit user permission.
 
+### Before pushing
+Before pushing commits, perform a final review:
+1. Re-read the original task requirements
+2. For each commit, verify:
+   - All acceptance criteria are met
+   - Edge cases are handled
+   - Tests cover the changes
+   - No debug code, TODOs, or temporary files remain
+   - No planning artifacts (design docs, code review notes, analysis files)
+     created for user review are included
+3. If you find gaps within the original scope, amend the relevant commit
+4. If you identify potential improvements outside the original scope, ask the
+   user first
+
+The goal is ensuring completeness within scope, not perfection beyond it.
+
+**Note on temporary artifacts**: Files created during planning or analysis
+(design docs, review notes, diagrams) are usually not part of the deliverable.
+Only commit documentation if explicitly requested or if it's standard for the
+project (e.g., ADRs). When in doubt, ask.
+
 ### Commit messages
 When writing commit messages stick to the following practices:
 - Use 50-characters max for the subject line.
