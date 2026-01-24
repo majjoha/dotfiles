@@ -11,6 +11,16 @@
 - Search before proposing solutions. Understand what exists in the codebase
   before suggesting new implementations.
 
+### Quality gates and tooling
+If a quality gate (tests, linters, type checkers, build steps) fails due to
+missing tools:
+1. Install or configure the missing tool
+2. Re-run the quality gate
+3. Fix any issues it reveals
+
+Never skip quality gates due to missing tooling. If you cannot install a tool,
+ask the user for help rather than proceeding without it.
+
 ## Coding style
 ### Development workflow
 - Use TDD for features and bug fixes unless stated otherwise. Add or adjust
