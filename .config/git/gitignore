@@ -52,6 +52,7 @@ ghci_history
 
 # Ignore local Claude settings
 **/.claude/settings.local.json
+CLAUDE.local.md
 
 # Ignore local `mise` configuration files
 mise.local.toml
