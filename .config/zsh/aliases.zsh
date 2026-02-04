@@ -25,7 +25,7 @@ alias p="pry"
 alias rm="trash"
 alias tmn="tmuxinator start new"
 alias ups="update-software"
-alias v="nvim"
+alias v="nvim --listen $(pwd)/nvim-context.sock"
 alias vim="nvim"
 alias wk="tmuxinator start notes"
 
