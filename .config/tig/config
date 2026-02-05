@@ -1,7 +1,7 @@
 set main-view = \
   date:relative \
-  author:width=25 \
   id:yes \
+  author:width=25 \
   commit-title:yes,refs=yes
 
 set vertical-split = horizontal
