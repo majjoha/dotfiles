@@ -7,7 +7,15 @@ set main-view = \
 set vertical-split = horizontal
 set split-view-height = 75%
 
-color cursor black yellow
+color cursor color7 color11
+color cursor-blur color7 color10
+color title-focus color7 color10
+color title-blur color7 color10
+color status color7 default
+color author color7 default
+color date color6 default
+color diff-header color7 default
+color commit color7 default
 
 # Vim-inspired key bindings
 bind generic g  none
