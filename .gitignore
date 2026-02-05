@@ -34,3 +34,4 @@
 .codex/skills/.system/
 .codex/tmp/
 .codex/version.json
+.codex/auth.json
