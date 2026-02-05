@@ -1,58 +1,12 @@
-# dotfiles-related ignores
-.config/configstore
-.config/gh
-.config/nvim/.netrwhist
-.config/nvim/undo
-.config/tmuxinator
-!.config/tmuxinator/new.yml
-.hammerspoon/Spoons
-.gnupg
-!.gnupg/gpg-agent.conf
-.ssh
-!.ssh/config
-
-# Folder view configuration files
+# macOS
 .DS_Store
-Desktop.ini
-Icon
-
-# Thumbnail cache files
 ._*
-Thumbs.db
 
-# Files that might appear on external disks
-.Spotlight-V100
-.Trashes
-
-# Class files and the like
-*.class
-*.out
-
-# Ignore vim history
+# Vim/Neovim
 tags
-vendor/ruby
-dump.rdb
-vendor/cache
-
-# Projectionist configuration
-.projections.json
-
-# Ignore per project .exrc
-.exrc
-.nvimrc
-
-# Ignore byebug history
-.byebug_history
-
-# Ignore session files
 Session.vim
 
-# Ignore ghci history
-ghci_history
-
-# Ignore local Claude settings
+# Local overrides (any project)
 **/.claude/settings.local.json
 CLAUDE.local.md
-
-# Ignore local `mise` configuration files
 mise.local.toml

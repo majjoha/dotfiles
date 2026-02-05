@@ -1,0 +1,35 @@
+# Dotfiles-specific
+.config/configstore
+.config/gh
+.config/tmuxinator
+!.config/tmuxinator/new.yml
+.hammerspoon/Spoons
+.gnupg
+!.gnupg/gpg-agent.conf
+.ssh
+!.ssh/config
+
+# Claude Code
+.claude/.credentials.json
+.claude/cache/
+.claude/debug/
+.claude/file-history/
+.claude/history.jsonl
+.claude/paste-cache/
+.claude/plans/
+.claude/plugins/
+.claude/projects/
+.claude/shell-snapshots/
+.claude/stats-cache.json
+.claude/tasks/
+.claude/todos/
+
+# Codex
+.codex/config.toml
+.codex/history.jsonl
+.codex/log/
+.codex/rules/
+.codex/sessions/
+.codex/skills/.system/
+.codex/tmp/
+.codex/version.json
