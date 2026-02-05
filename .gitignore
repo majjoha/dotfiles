@@ -1,4 +1,5 @@
 # Dotfiles-specific
+.config/acli
 .config/configstore
 .config/gh
 .config/tmuxinator
