@@ -228,6 +228,10 @@ backend = "gem:nvim-context"
 version = "3.3.7"
 backend = "gem:tmuxinator"
 
+[[tools."github:cli/cli"]]
+version = "2.86.0"
+backend = "github:cli/cli"
+
 [[tools."github:containers/podman"]]
 version = "5.7.1"
 backend = "github:containers/podman"
