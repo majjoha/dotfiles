@@ -44,6 +44,7 @@ disable_backends = ["asdf", "vfox"]
 "npm:@google/gemini-cli" = "latest"
 "npm:@openai/codex" = "latest"
 "npm:@sourcegraph/amp" = "latest"
+"npm:@typescript/native-preview" = "7.0.0-dev.20260205.1"
 "npm:alex" = "latest"
 "npm:bash-language-server" = "latest"
 "npm:diff-so-fancy" = "latest"
