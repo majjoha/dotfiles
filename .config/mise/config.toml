@@ -50,7 +50,6 @@ disable_backends = ["asdf", "vfox"]
 "npm:diff-so-fancy" = "latest"
 "npm:graphql-language-service-cli" = "latest"
 "npm:trash-cli" = "latest"
-"npm:typescript-language-server" = "latest"
 "npm:typescript" = "latest"
 "npm:vscode-langservers-extracted" = "latest"
 "pipx:yamllint" = "latest"
