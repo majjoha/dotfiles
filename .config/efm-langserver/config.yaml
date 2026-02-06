@@ -9,19 +9,6 @@ tools:
       - "  %l:%c-%e:%k  %tarning  %m"
     lint-stdin: true
     lint-source: "alex"
-  cabal-fmt: &cabal-fmt
-    format-command: "cabal-fmt --inplace"
-    format-stdin: true
-  eslint: &eslint
-    lint-command: "eslint -f visualstudio --stdin --stdin-filename ${INPUT}"
-    lint-ignore-exit-code: true
-    lint-stdin: true
-    lint-formats:
-      - "%f(%l,%c): %tarning %m"
-      - "%f(%l,%c): %rror %m"
-  gleam: &gleam
-    format-command: "gleam format --stdin"
-    format-stdin: true
   hadolint: &hadolint
     lint-command: "hadolint --no-color"
     lint-formats:
@@ -32,18 +19,6 @@ tools:
   prettier: &prettier
     format-command: "./node_modules/.bin/prettier --stdin-filepath ${INPUT}"
     format-stdin: true
-  shellcheck: &shellcheck
-    lint-command: "shellcheck -f gcc -x -"
-    lint-source: "shellcheck"
-    lint-stdin: true
-    lint-formats:
-      - "%f:%l:%c: %t%*[^:]: %m [SC%n]"
-  shfmt: &shfmt
-    format-command: "shfmt -ln bash -i 2 -bn -ci -sr -kp"
-    format-stdin: true
-  stylish-haskell: &stylish-haskell
-    format-command: "stylish-haskell -i"
-    format-stdin: true
   yamllint: &yamllint
     lint-command: "yamllint --strict --format parsable ${INPUT}"
     lint-stdin: false
@@ -52,28 +27,16 @@ tools:
 
 languages:
   astro:
-    - <<: *eslint
     - <<: *prettier
-  cabal:
-    - <<: *cabal-fmt
-  gleam:
-    - <<: *gleam
   dockerfile:
     - <<: *hadolint
-  haskell:
-    - <<: *stylish-haskell
   javascript:
-    - <<: *eslint
     - <<: *prettier
   json:
     - <<: *jq
   markdown:
     - <<: *alex
-  sh:
-    - <<: *shellcheck
-    - <<: *shfmt
   typescript:
-    - <<: *eslint
     - <<: *prettier
   yaml:
     - <<: *yamllint
