@@ -42,6 +42,7 @@ disable_backends = ["asdf", "vfox"]
 "github:elixir-lsp/elixir-ls" = { version = "latest", exe = "language_server.sh" }
 "github:jgm/pandoc" = "latest"
 "github:junegunn/fzf" = "latest"
+"github:peteretelej/tree" = "latest"
 "github:sharkdp/bat" = "latest"
 "github:sst/opencode" = { version = "latest", no_app = true }
 "github:tekumara/typos-lsp" = "latest"
