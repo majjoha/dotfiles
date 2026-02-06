@@ -1,4 +1,3 @@
--- LuaFormatter off
 vim.opt.statusline = table.concat({
   -- Show the name of the current file
   " %<%f ",
@@ -13,4 +12,3 @@ vim.opt.statusline = table.concat({
   -- Show the percentage through the file
   "  %4.(%p%%%) "
 })
--- LuaFormatter on

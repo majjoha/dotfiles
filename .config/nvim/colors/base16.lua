@@ -38,7 +38,6 @@ vim.cmd([[
 ]])
 vim.g.colors_name = "base16"
 
--- LuaFormatter off
 for group, settings in pairs({
   -- Vim editor colors
   Bold = {
@@ -846,4 +845,3 @@ for group, settings in pairs({
 }) do
   vim.api.nvim_set_hl(0, group, settings)
 end
--- LuaFormatter on
