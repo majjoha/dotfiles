@@ -23,7 +23,6 @@
   status = auto
   ui = auto
 [diff]
-  compactionHeuristic = true
   mnemonicprefix = true
   algorithm = histogram
 [branch]
