@@ -34,12 +34,14 @@ disable_backends = ["asdf", "vfox"]
 "gem:create-ruby-app" = "latest"
 "gem:nvim-context" = "latest"
 "gem:tmuxinator" = "latest"
+"github:atanunq/viu" = { version = "latest", bin = "viu" }
 "github:cli/cli" = "latest"
 "github:containers/podman" = "latest"
 "github:elixir-lsp/elixir-ls" = { version = "latest", exe = "language_server.sh" }
 "github:jgm/pandoc" = "latest"
 "github:junegunn/fzf" = "latest"
 "github:sharkdp/bat" = "latest"
+"github:sst/opencode" = { version = "latest", no_app = true }
 "github:tekumara/typos-lsp" = "latest"
 "github:tmux/tmux-builds" = "latest"
 "github:wez/atomicparsley" = { version = "latest", asset_pattern = "AtomicParsleyMacOS.zip" }
@@ -57,8 +59,6 @@ disable_backends = ["asdf", "vfox"]
 "npm:typescript" = "latest"
 "npm:vscode-langservers-extracted" = "latest"
 "pipx:yamllint" = "latest"
-"ubi:atanunq/viu" = "latest"
-"ubi:sst/opencode" = "latest"
 bun = "latest"
 erlang = "latest"
 node = "24.10.0"
