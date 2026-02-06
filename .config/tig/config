@@ -16,6 +16,7 @@ color author color7 default
 color date color6 default
 color diff-header color7 default
 color commit color7 default
+color "    Co-authored-by:"	color7	default
 
 # Vim-inspired key bindings
 bind generic g  none
