@@ -14,6 +14,7 @@ disable_backends = ["asdf", "vfox"]
 "aqua:BurntSushi/ripgrep" = "latest"
 "aqua:charmbracelet/glow" = "latest"
 "aqua:hadolint/hadolint" = "latest"
+"aqua:ip7z/7zip" = "latest"
 "aqua:jj-vcs/jj" = "latest"
 "aqua:JohnnyMorganz/StyLua" = "latest"
 "aqua:jqlang/jq" = "latest"
