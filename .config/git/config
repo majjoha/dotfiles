@@ -4,8 +4,6 @@
   signingKey = A3CDD4CCFF4E55AC
 [github]
   user = majjoha
-[heroku]
-  account = personal
 [core]
   editor = nvim
   excludesfile = ~/.config/git/gitignore
