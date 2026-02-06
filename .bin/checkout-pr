@@ -4,7 +4,20 @@ set -e
 
 gh pr list | fzf \
   --ansi \
-  --height=100% \
+  --tmux=center,90%,70% \
   --border=sharp \
-  --preview "NO_COLOR=1 GH_FORCE_TTY=$FZF_PREVIEW_COLUMNS gh pr view {1}" \
-  --bind="enter:become(gh pr checkout {1})"
+  --border-label=" Pull requests " \
+  --footer="C-o: Open in browser" \
+  --header-first \
+  --preview="gh pr view {1} | bat --language=md --style=plain --color=always" \
+  --preview-label=" Preview " \
+  --color="fg:#2f2f2d,bg:#f4efe7,hl:#a38a6b,scrollbar:#2f2f2d" \
+  --color="fg+:#2f2f2d,bg+:#e3dbd0,hl+:#a38a6b" \
+  --color="border:#2f2f2d,gutter:#f4efe7,label:#2f2f2d" \
+  --color="header:#2f2f2d,footer:#2f2f2d" \
+  --color="pointer:#2f2f2d,marker:#2f2f2d,prompt:#cbbda9" \
+  --color="spinner:#2f2f2d,info:#a38a6b" \
+  --bind="enter:become(gh pr checkout {1})" \
+  --bind="ctrl-o:execute-silent(gh pr view {1} --web)" \
+  --bind="K:preview-page-up" \
+  --bind="J:preview-page-down"
