@@ -42,6 +42,7 @@ disable_backends = ["asdf", "vfox"]
 "github:sharkdp/bat" = "latest"
 "github:tekumara/typos-lsp" = "latest"
 "github:tmux/tmux-builds" = "latest"
+"github:wez/atomicparsley" = { version = "latest", asset_pattern = "AtomicParsleyMacOS.zip" }
 "github:yt-dlp/yt-dlp" = "latest"
 "npm:@anthropic-ai/claude-code" = "latest"
 "npm:@google/gemini-cli" = "latest"
