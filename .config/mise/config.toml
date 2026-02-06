@@ -6,6 +6,7 @@ color_theme = "base16"
 experimental = true
 idiomatic_version_file_enable_tools = ["ruby"]
 lockfile = true
+env_cache = true
 http_retries = 3
 disable_backends = ["asdf", "vfox"]
 
