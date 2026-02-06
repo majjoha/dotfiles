@@ -58,8 +58,8 @@ for plugin, configuration in pairs({
       )
 
       shoji:start({
-        gap_outer = 5,
-        gap_inner = 5,
+        gap_outer = 10,
+        gap_inner = 10,
         main_ratio = 0.5,
         default_layout = "fullscreen",
         layouts = { CenteredFullscreen },
