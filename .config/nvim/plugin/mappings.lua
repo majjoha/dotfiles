@@ -69,22 +69,22 @@ vim.keymap.set("n", "<Leader>x", ":sp<CR>", { silent = true })
 -- Git-related mappings
 vim.keymap.set("n", "<Leader>bc", ":FzfLua git_commits<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>gb", ":Git blame<CR>", { silent = true })
-vim.keymap.set("n", "<Leader>gc", ":echo 'Use C-a g c instead!'<CR>")
-vim.keymap.set("n", "<Leader>gcb", ":echo 'Use C-a g n instead!'<CR>")
+vim.keymap.set("n", "<Leader>gc", ":echo 'Use C-Space g c instead!'<CR>")
+vim.keymap.set("n", "<Leader>gcb", ":echo 'Use C-Space g n instead!'<CR>")
 vim.keymap.set(
   "n",
   "<Leader>gco",
   ":FzfLua git_branches<CR>",
   { silent = true }
 )
-vim.keymap.set("n", "<Leader>gd", ":echo 'Use C-a g d instead!'<CR>")
+vim.keymap.set("n", "<Leader>gd", ":echo 'Use C-Space g d instead!'<CR>")
 vim.keymap.set(
   "n",
   "<Leader>gr",
   ":Git rebase -i origin/main<CR>",
   { silent = true }
 )
-vim.keymap.set("n", "<Leader>gs", ":echo 'Use C-a g s instead!'<CR>")
+vim.keymap.set("n", "<Leader>gs", ":echo 'Use C-Space g s instead!'<CR>")
 vim.keymap.set("n", "<Leader>gg", ":Git<Space>")
 vim.keymap.set(
   "n",
@@ -92,9 +92,9 @@ vim.keymap.set(
   ":vsp | term<CR>git pr<CR>",
   { silent = true }
 )
-vim.keymap.set("n", "<Leader>gpp", ":echo 'Use C-a g p instead!'<CR>")
-vim.keymap.set("n", "<Leader>ga", ":echo 'Use C-a g a instead!'<CR>")
-vim.keymap.set("n", "<Leader>gl", ":echo 'Use C-a g l instead!'<CR>")
+vim.keymap.set("n", "<Leader>gpp", ":echo 'Use C-Space g p instead!'<CR>")
+vim.keymap.set("n", "<Leader>ga", ":echo 'Use C-Space g a instead!'<CR>")
+vim.keymap.set("n", "<Leader>gl", ":echo 'Use C-Space g l instead!'<CR>")
 
 -- Open a terminal in a split window
 vim.keymap.set("n", "<Leader>tv", ":vsp | term<CR>", { silent = true })
