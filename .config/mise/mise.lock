@@ -83,6 +83,10 @@ backend = "aqua:hadolint/hadolint"
 "platforms.windows-x64" = { checksum = "sha256:8e0ee174f88edb14f207a68430c7a53c2883ed509cdbde9a3a26fffa140fa5e4", url = "https://github.com/hadolint/hadolint/releases/download/v2.14.0/hadolint-windows-x86_64.exe"}
 "platforms.windows-x64-baseline" = { checksum = "sha256:8e0ee174f88edb14f207a68430c7a53c2883ed509cdbde9a3a26fffa140fa5e4", url = "https://github.com/hadolint/hadolint/releases/download/v2.14.0/hadolint-windows-x86_64.exe"}
 
+[[tools."aqua:ip7z/7zip"]]
+version = "25.01"
+backend = "aqua:ip7z/7zip"
+
 [[tools."aqua:jj-vcs/jj"]]
 version = "0.38.0"
 backend = "aqua:jj-vcs/jj"
@@ -211,6 +215,10 @@ backend = "core:bun"
 "platforms.windows-x64" = { checksum = "sha256:4c0a82866424e23d1bdaa9517307ec2f143ed513c15546dba0b859c6c55c47c7", url = "https://github.com/oven-sh/bun/releases/download/bun-v1.3.8/bun-windows-x64.zip"}
 "platforms.windows-x64-baseline" = { checksum = "sha256:74f4dad7b4873ee70f63add9918400334e31acab9ba3fce9ef9906d96646e231", url = "https://github.com/oven-sh/bun/releases/download/bun-v1.3.8/bun-windows-x64-baseline.zip"}
 
+[[tools.elixir]]
+version = "1.19.4-otp-28"
+backend = "core:elixir"
+
 [[tools.erlang]]
 version = "28.3.1"
 backend = "core:erlang"
@@ -228,6 +236,10 @@ backend = "gem:nvim-context"
 version = "3.3.7"
 backend = "gem:tmuxinator"
 
+[[tools."github:atanunq/viu"]]
+version = "1.6.1"
+backend = "github:atanunq/viu"
+
 [[tools."github:cli/cli"]]
 version = "2.86.0"
 backend = "github:cli/cli"
@@ -236,6 +248,10 @@ backend = "github:cli/cli"
 version = "5.7.1"
 backend = "github:containers/podman"
 "platforms.macos-arm64" = { checksum = "sha256:e5eed3ab36c93bec9738241974ff86d173bd1251621a8f2f7aec933c579f4968", url = "https://github.com/containers/podman/releases/download/v5.7.1/podman-remote-release-darwin_arm64.zip", url_api = "https://api.github.com/repos/containers/podman/releases/assets/326959244"}
+
+[[tools."github:elixir-lsp/elixir-ls"]]
+version = "0.30.0"
+backend = "github:elixir-lsp/elixir-ls"
 
 [[tools."github:jgm/pandoc"]]
 version = "3.9"
@@ -272,10 +288,25 @@ backend = "github:sharkdp/bat"
 "platforms.windows-x64" = { checksum = "sha256:0f729b4b6f5f28d395c641eacc2e9ff68d0096b85aa0eec344aa62425144b69b", url = "https://github.com/sharkdp/bat/releases/download/v0.26.1/bat-v0.26.1-x86_64-pc-windows-msvc.zip", url_api = "https://api.github.com/repos/sharkdp/bat/releases/assets/323549116"}
 "platforms.windows-x64-baseline" = { checksum = "sha256:0f729b4b6f5f28d395c641eacc2e9ff68d0096b85aa0eec344aa62425144b69b", url = "https://github.com/sharkdp/bat/releases/download/v0.26.1/bat-v0.26.1-x86_64-pc-windows-msvc.zip", url_api = "https://api.github.com/repos/sharkdp/bat/releases/assets/323549116"}
 
+[[tools."github:sst/opencode"]]
+version = "1.1.53"
+backend = "github:sst/opencode"
+
 [[tools."github:tekumara/typos-lsp"]]
 version = "0.1.48"
 backend = "github:tekumara/typos-lsp"
 "platforms.macos-arm64" = { checksum = "sha256:a6ecb6c7b080e20b1396fc5cb7a87af850aee51eba3273fdd5adcbee1c481975", url = "https://github.com/tekumara/typos-lsp/releases/download/v0.1.48/typos-lsp-v0.1.48-aarch64-apple-darwin.tar.gz", url_api = "https://api.github.com/repos/tekumara/typos-lsp/releases/assets/349968712"}
+
+[[tools."github:tmux/tmux-builds"]]
+version = "3.6a"
+backend = "github:tmux/tmux-builds"
+
+[[tools."github:wez/atomicparsley"]]
+version = "20240608.083822.1ed9031"
+backend = "github:wez/atomicparsley"
+
+[tools."github:wez/atomicparsley".options]
+asset_pattern = "AtomicParsleyMacOS.zip"
 
 [[tools."github:yt-dlp/yt-dlp"]]
 version = "2026.02.04"
@@ -400,3 +431,7 @@ backend = "aqua:yarnpkg/berry"
 "platforms.macos-x64-baseline" = { url = "https://repo.yarnpkg.com/4.12.0/packages/yarnpkg-cli/bin/yarn.js"}
 "platforms.windows-x64" = { url = "https://repo.yarnpkg.com/4.12.0/packages/yarnpkg-cli/bin/yarn.js"}
 "platforms.windows-x64-baseline" = { url = "https://repo.yarnpkg.com/4.12.0/packages/yarnpkg-cli/bin/yarn.js"}
+
+[[tools.zig]]
+version = "0.15.2"
+backend = "core:zig"
