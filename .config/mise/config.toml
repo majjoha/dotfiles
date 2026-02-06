@@ -36,6 +36,7 @@ disable_backends = ["asdf", "vfox"]
 "gem:tmuxinator" = "latest"
 "github:cli/cli" = "latest"
 "github:containers/podman" = "latest"
+"github:elixir-lsp/elixir-ls" = { version = "latest", exe = "language_server.sh" }
 "github:jgm/pandoc" = "latest"
 "github:junegunn/fzf" = "latest"
 "github:sharkdp/bat" = "latest"
