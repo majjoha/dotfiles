@@ -8,7 +8,7 @@ idiomatic_version_file_enable_tools = ["ruby"]
 lockfile = true
 env_cache = true
 http_retries = 3
-disable_backends = ["asdf", "vfox"]
+disable_backends = ["asdf"]
 
 [tools]
 "aqua:artempyanykh/marksman" = "latest"
