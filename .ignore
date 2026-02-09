@@ -2,12 +2,8 @@ node_modules/
 gems/
 tags
 public/assets/
-.sass-cache
 tmp/
 vendor/
-*.beam
-*.ibc
-*.idr~
 .git/
 .config/nvim/pack/packages/start/**
 .hammerspoon/Spoons/**
