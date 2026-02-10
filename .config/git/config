@@ -44,6 +44,17 @@
   enabled = true
 [alias]
   branch-name = !"git for-each-ref --format=\"%(refname:short)\" $(git symbolic-ref HEAD)"
+  cleanup = "!f() { \
+    echo 'Pruning remote-tracking branches...'; \
+    git fetch --prune; \
+    gone=$(git branch -vv | grep ': gone]' | awk '{print $1}'); \
+    if [ -z \"$gone\" ]; then \
+      echo 'No stale branches to delete.'; \
+    else \
+      echo \"Deleting: $gone\"; \
+      echo \"$gone\" | xargs git branch -D; \
+    fi; \
+  }; f"
   last-week = !git shortlog --since='1 week ago' --pretty=format:'%cD: %s' --author="$(git config user.email)" --no-merges
   pr = !"gh pr create --web"
   preview = !"git fetch && git diff ^origin/main"
