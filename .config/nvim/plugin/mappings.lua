@@ -172,9 +172,6 @@ vim.keymap.set("n", "N", "Nzz")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 
--- Open completion menu with C-Space
-vim.keymap.set("i", "<C-Space>", "<C-x><C-o>", { silent = true })
-
 -- Select completion items
 vim.keymap.set("i", "<S-Tab>", function()
   if vim.fn.pumvisible() then
