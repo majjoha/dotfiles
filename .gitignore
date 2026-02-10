@@ -10,6 +10,9 @@
 .ssh
 !.ssh/config
 
+# mise
+.config/mise/config.local.toml
+
 # Claude Code
 .claude/.credentials.json
 .claude/cache/
