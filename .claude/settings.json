@@ -37,6 +37,7 @@
       "Bash(runhaskell:*)",
       "Bash(yq:*)",
       "Glob",
+      "Read",
       "WebFetch(domain:docs.github.com)",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:hackage.haskell.org)",
