@@ -45,6 +45,10 @@
       "WebFetch(domain:stackoverflow.com)",
       "WebSearch"
     ],
+    "deny": [
+      "Bash(ssh:*)",
+      "Bash(sudo:*)"
+    ],
     "ask": [
       "Bash(bundle install:*)",
       "Bash(bundle update:*)",
