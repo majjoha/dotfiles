@@ -77,3 +77,10 @@ export _ZL_DATA="${XDG_DATA_HOME:-$HOME/.local/share}/zlua/zlua.txt"
 
 # Store Zsh completion cache dump in XDG cache
 export ZSH_COMPDUMP="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdump"
+
+# Set foreground color for zsh-autosuggestions
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=11"
+
+# Find a suggestion from history, but if a match cannot be found, find a
+# suggestion from the completion engine instead
+export ZSH_AUTOSUGGEST_STRATEGY=(history completion)

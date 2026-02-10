@@ -49,3 +49,6 @@
 [submodule ".hammerspoon/Spoons/Spatial.spoon"]
 	path = .hammerspoon/Spoons/Spatial.spoon
 	url = https://github.com/majjoha/Spatial.spoon.git
+[submodule ".config/zsh/zsh-autosuggestions"]
+	path = .config/zsh/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git

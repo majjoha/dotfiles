@@ -59,3 +59,6 @@ ctrl-z() {
 
 zle -N ctrl-z
 bindkey '^Z' ctrl-z
+
+# Execute autosuggestions using C-Tab
+bindkey '^[[Z' autosuggest-accept
