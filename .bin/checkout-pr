@@ -4,7 +4,8 @@ set -e
 
 gh pr list | fzf \
   --ansi \
-  --tmux=center,90%,70% \
+  --height=100% \
+  --margin=15%,5% \
   --border=sharp \
   --border-label=" Pull requests " \
   --footer="C-o: Open in browser" \
