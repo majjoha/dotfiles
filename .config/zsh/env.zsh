@@ -59,6 +59,13 @@ export FZF_DEFAULT_OPTS="
 fg:7,prompt:8,header:8,info:12,pointer:7,\
 marker:7,fg+:7,gutter:0,hl+:12"
 
+# Show a bat preview when browsing files with Ctrl-T
+export FZF_CTRL_T_OPTS="
+  --preview='bat \
+    --style=numbers \
+    --color=always \
+    --line-range :200 {}'"
+
 # Use Neovim when viewing manual pages
 export MANPAGER="nvim +Man!"
 
