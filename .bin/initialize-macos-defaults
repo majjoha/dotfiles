@@ -286,3 +286,12 @@ defaults write com.uranusjr.macdown htmlDetectFrontMatter -bool true
 
 # Disable "Tile by dragging windows to screen edges"
 defaults write com.apple.WindowManager EnableTilingByEdgeDrag -int 0
+
+### Flux
+# Set location to Copenhagen
+defaults write org.herf.Flux location -string "55.68,12.57"
+defaults write org.herf.Flux locationTextField -string "Copenhagen"
+defaults write org.herf.Flux locationType -string "L"
+
+# Set wake time
+defaults write org.herf.Flux wakeTime -int 360
