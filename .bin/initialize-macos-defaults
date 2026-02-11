@@ -305,3 +305,22 @@ defaults write com.pointum.hazeover Intensity -float 6.07
 
 # Set fast animation speed
 defaults write com.pointum.hazeover Animation -string "0.05"
+
+### Ice
+# Automatically re-hide the menu bar after showing hidden items
+defaults write com.jordanbaird.Ice AutoRehide -bool true
+
+# Set the re-hide interval to 15 seconds
+defaults write com.jordanbaird.Ice RehideInterval -int 15
+
+# Show hidden menu bar items on click
+defaults write com.jordanbaird.Ice ShowOnClick -bool true
+
+# Do not show hidden menu bar items on hover
+defaults write com.jordanbaird.Ice ShowOnHover -bool false
+
+# Show the Ice icon in the menu bar
+defaults write com.jordanbaird.Ice ShowIceIcon -bool true
+
+# Hide application menus (File, Edit, etc.)
+defaults write com.jordanbaird.Ice HideApplicationMenus -bool true
