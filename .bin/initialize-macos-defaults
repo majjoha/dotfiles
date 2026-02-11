@@ -295,3 +295,13 @@ defaults write org.herf.Flux locationType -string "L"
 
 # Set wake time
 defaults write org.herf.Flux wakeTime -int 360
+
+### HazeOver
+# Enable HazeOver
+defaults write com.pointum.hazeover Enabled -bool true
+
+# Set dimming intensity
+defaults write com.pointum.hazeover Intensity -float 6.07
+
+# Set fast animation speed
+defaults write com.pointum.hazeover Animation -string "0.05"
