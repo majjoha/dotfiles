@@ -324,3 +324,13 @@ defaults write com.jordanbaird.Ice ShowIceIcon -bool true
 
 # Hide application menus (File, Edit, etc.)
 defaults write com.jordanbaird.Ice HideApplicationMenus -bool true
+
+### Hammerspoon
+# Hide Hammerspoon icon in the Dock
+defaults write org.hammerspoon.Hammerspoon MJShowDockIconKey -bool false
+
+# Hide Hammerspoon icon in the menu bar
+defaults write org.hammerspoon.Hammerspoon MJShowMenuIconKey -bool false
+
+# Suppress warning when both dock and menu icons are hidden
+defaults write org.hammerspoon.Hammerspoon MJSkipDockMenuIconProblemAlertKey -bool true
