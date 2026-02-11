@@ -40,6 +40,7 @@
       "Bash(runhaskell:*)",
       "Bash(sort:*)",
       "Bash(tail:*)",
+      "Bash(test:*)",
       "Bash(uniq:*)",
       "Bash(wc:*)",
       "Bash(yq:*)",
