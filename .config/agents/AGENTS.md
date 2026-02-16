@@ -3,7 +3,6 @@
 - If a project contains AI tool configuration files (e.g., `CLAUDE.md`,
   `.cursorrules`, `.windsurfrules`, etc.), use those as references for
   project-specific guidelines.
-- Show code examples when describing concepts.
 
 ## Workflow
 - Stop commands running longer than 5 minutes and check with the user.
