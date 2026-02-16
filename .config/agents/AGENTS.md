@@ -4,6 +4,9 @@
   Long-running processes may indicate an issue or inefficient approach.
 - Search before proposing solutions. Understand existing
   code, patterns, and trade-offs before suggesting changes.
+- Only change what the task requires. Do not refactor,
+  reformat, or "improve" nearby code unless explicitly
+  asked.
 
 ### Quality gates and tooling
 If a quality gate (tests, linters, type checkers, build steps) fails due to
