@@ -1,9 +1,4 @@
 # AGENTS.md
-## General
-- If a project contains AI tool configuration files (e.g., `CLAUDE.md`,
-  `.cursorrules`, `.windsurfrules`, etc.), use those as references for
-  project-specific guidelines.
-
 ## Workflow
 - Stop commands running longer than 5 minutes and check with the user.
   Long-running processes may indicate an issue or inefficient approach.
