@@ -6,6 +6,8 @@
   trade-offs before suggesting changes.
 - Only change what the task requires. Do not refactor, reformat, or "improve"
   nearby code unless explicitly asked.
+- Never claim a task is complete without verifying it works. Run tests, build,
+  or demonstrate the output.
 
 ### Quality gates and tooling
 If a quality gate (tests, linters, type checkers, build steps) fails due to
