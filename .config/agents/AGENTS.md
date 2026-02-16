@@ -15,7 +15,6 @@ missing tools:
 Never skip quality gates due to missing tooling. If you cannot install a tool,
 ask the user for help rather than proceeding without it.
 
-## Coding style
 ### Development workflow
 - Use TDD for features and bug fixes unless stated otherwise. Add or adjust
   tests that define expected behavior before changing implementations, and use
@@ -28,6 +27,7 @@ ask the user for help rather than proceeding without it.
   work in isolation, commit them separately. If in doubt,
   default to separate commits with a green test suite.
 
+## Coding style
 ### Core principles
 - Think deeply before acting. Consider architecture, existing patterns, and
   trade-offs before proposing solutions.
