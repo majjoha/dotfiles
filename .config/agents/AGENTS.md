@@ -2,8 +2,8 @@
 ## Workflow
 - Stop commands running longer than 5 minutes and check with the user.
   Long-running processes may indicate an issue or inefficient approach.
-- Search before proposing solutions. Understand what exists in the codebase
-  before suggesting new implementations.
+- Search before proposing solutions. Understand existing
+  code, patterns, and trade-offs before suggesting changes.
 
 ### Quality gates and tooling
 If a quality gate (tests, linters, type checkers, build steps) fails due to
@@ -29,8 +29,6 @@ ask the user for help rather than proceeding without it.
 
 ## Coding style
 ### Core principles
-- Think deeply before acting. Consider architecture, existing patterns, and
-  trade-offs before proposing solutions.
 - Fix root causes, not symptoms. Solve problems from first principles rather
   than applying band-aids.
 - Prefer immutability over mutation, avoid side-effects, and keep actions
