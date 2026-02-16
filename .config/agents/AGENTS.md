@@ -66,8 +66,6 @@ ask the user for help rather than proceeding without it.
 ### File organization
 - Avoid catch-all directories like `utils/`, `helpers/`, `common/`, or
   `shared/`. These become dumping grounds for unrelated code with no cohesion.
-- Place modules where they belong semantically. A geometry module used only by
-  layouts belongs in `layouts/geometry.lua`, not `utils/geometry.lua`.
 
 ### Project conventions
 - Always ask before introducing third-party libraries, including production
