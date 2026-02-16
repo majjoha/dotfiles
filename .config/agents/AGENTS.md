@@ -100,14 +100,51 @@ ask the user for help rather than proceeding without it.
   bugs and clarify expected behavior at the boundaries.
 
 ## Documentation
-- Comments should explain "why" instead of "what" and only when the code intent
-  is unclear, for instance, when business rules, non-obvious algorithms,
-  performance trade-offs or other constraints are not evident from the names or
-  types.
-- Prefer self-documenting code such as clear names and types over prose.
-- For type-safe languages, let type signatures carry meaning, and do not
-  duplicate types in comments.
-- Document non-obvious constraints and assumptions.
+### Comments
+Write comments that explain "why", not "what". The code itself should
+be self-documenting through clear names and structure.
+
+**When to comment:**
+- Architectural decisions (why this pattern, not alternatives)
+- Non-obvious constraints (timing, race conditions, API limitations)
+- Edge cases and fallback behaviors
+- Performance optimizations (caching strategies, complexity notes)
+- Public API contracts (preconditions, side effects, error behavior)
+
+**When not to comment:**
+- What the code does (assignments, function calls, conditionals)
+- Type information (use the type system instead)
+- Obvious validations or checks
+- Play-by-play descriptions of algorithms
+
+**Examples:**
+
+Bad (explains "what"):
+```lua
+-- Check if window is floating
+if windows.isFloating(window) then
+  return
+end
+
+-- Get all windows from filter
+local allWindows = shoji.windowFilter:getWindows()
+```
+
+Good (explains "why"):
+```lua
+-- Capture insertion point before delays to maintain
+-- natural window ordering
+local focusedBeforeCreation = hs.window.focusedWindow()
+
+-- Periodically validate cache to detect windows moved
+-- between spaces
+local shouldValidateCycle =
+  (now - _lastCacheValidation >= INTERVAL)
+```
+
+**If in doubt:** Prefer clear variable and function names over
+comments. A well-named function like `shouldIgnoreEvents()` is
+better than a comment saying "Check if we should ignore events".
 
 ## Language-specific guidance
 ### Markdown
