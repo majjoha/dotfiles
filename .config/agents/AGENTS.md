@@ -166,6 +166,20 @@ When writing commit messages stick to the following practices:
 - Use kebab-case for consistency.
 - Delete branches after merging to keep repository clean.
 
+## Self-improvement
+When you encounter a situation where:
+- You had to ask a clarifying question that a guideline
+  could have prevented.
+- The user corrected your approach and the correction
+  reflects a general preference, not a one-off.
+- A guideline was ambiguous and you had to interpret it.
+- You discovered a pattern that consistently leads to
+  better outcomes but is not yet documented.
+
+Propose a specific amendment to this file. Present the
+exact diff to the user for approval. Never modify this
+file without explicit consent.
+
 ## Editor context
 - When a user asks about their cursor position, current method, current file,
 selection, or other editor state, automatically invoke `nvim-context` to fetch
