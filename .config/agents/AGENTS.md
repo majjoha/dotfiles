@@ -55,8 +55,6 @@ ask the user for help rather than proceeding without it.
   Avoid indirection that does not reduce coupling or enable variation. When
   considering abstraction, ask "Does this enable variation that I need TODAY?".
   If no, inline it or keep it simple.
-- When encountering over-abstraction, e.g., unnecessary indirection with only
-  one implementation, inline it to remove the complexity.
 - Tolerate duplication until the third occurrence (Rule of Three), then
   abstract only if the pattern is stable. Two instances of similar code are not
   yet a pattern. You may abstract earlier if a third occurrence is imminent AND
