@@ -77,8 +77,8 @@ ask the user for help rather than proceeding without it.
 
 ## Testing
 - Test behavior, not implementation.
-- Unit tests should be fast, isolated and, ideally, require no external
-  dependencies. Test each unit in isolation.
+- Unit tests should be fast, isolated, and free of
+  external dependencies when possible.
 - Include only a single assertion per test when possible. Multiple assertions
   are acceptable when they verify a single behavior, e.g., "user login updates
   last_login_at AND returns success token" is one behavior.
