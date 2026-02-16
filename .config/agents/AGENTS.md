@@ -26,12 +26,13 @@ ask the user for help rather than proceeding without it.
 - Use TDD for features and bug fixes unless stated otherwise. Add or adjust
   tests that define expected behavior before changing implementations, and use
   a red-green-refactor cycle.
-- For refactors and tidyings, rely on existing coverage. If behavior is not
-  already captured, add or shore up targeted tests before changing code; do not
-  invent new behavior during tidyings.
-- When tidyings touch separate parts of the code and can work in isolation,
-  commit them separately. If in doubt, default to separate commits with a green
-  test suite.
+- For refactors that preserve existing behavior, rely on
+  existing coverage. If behavior is not already captured,
+  add or shore up targeted tests before changing code; do
+  not invent new behavior during refactors.
+- When refactors touch separate parts of the code and can
+  work in isolation, commit them separately. If in doubt,
+  default to separate commits with a green test suite.
 
 ### Core principles
 - Think deeply before acting. Consider architecture, existing patterns, and
