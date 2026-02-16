@@ -2,11 +2,10 @@
 ## Workflow
 - Stop commands running longer than 5 minutes and check with the user.
   Long-running processes may indicate an issue or inefficient approach.
-- Search before proposing solutions. Understand existing
-  code, patterns, and trade-offs before suggesting changes.
-- Only change what the task requires. Do not refactor,
-  reformat, or "improve" nearby code unless explicitly
-  asked.
+- Search before proposing solutions. Understand existing code, patterns, and
+  trade-offs before suggesting changes.
+- Only change what the task requires. Do not refactor, reformat, or "improve"
+  nearby code unless explicitly asked.
 
 ### Quality gates and tooling
 If a quality gate (tests, linters, type checkers, build steps) fails due to
@@ -22,13 +21,12 @@ ask the user for help rather than proceeding without it.
 - Use TDD for features and bug fixes unless stated otherwise. Add or adjust
   tests that define expected behavior before changing implementations, and use
   a red-green-refactor cycle.
-- For refactors that preserve existing behavior, rely on
-  existing coverage. If behavior is not already captured,
-  add or shore up targeted tests before changing code; do
-  not invent new behavior during refactors.
-- When refactors touch separate parts of the code and can
-  work in isolation, commit them separately. If in doubt,
-  default to separate commits with a green test suite.
+- For refactors that preserve existing behavior, rely on existing coverage. If
+  behavior is not already captured, add or shore up targeted tests before
+  changing code; do not invent new behavior during refactors.
+- When refactors touch separate parts of the code and can work in isolation,
+  commit them separately. If in doubt, default to separate commits with a green
+  test suite.
 
 ## Coding style
 ### Core principles
@@ -80,8 +78,8 @@ ask the user for help rather than proceeding without it.
 
 ## Testing
 - Test behavior, not implementation.
-- Unit tests should be fast, isolated, and free of
-  external dependencies when possible.
+- Unit tests should be fast, isolated, and free of external dependencies when
+  possible.
 - Include only a single assertion per test when possible. Multiple assertions
   are acceptable when they verify a single behavior, e.g., "user login updates
   last_login_at AND returns success token" is one behavior.
@@ -165,10 +163,9 @@ Before pushing commits, perform a final review:
    - Edge cases are handled
    - Tests cover the changes
    - No debug code, TODOs, or temporary files remain
-   - No planning artifacts (design docs, code review
-     notes, analysis files) created during the task are
-     included — only commit documentation if explicitly
-     requested or standard for the project (e.g., ADRs)
+   - No planning artifacts (design docs, code review notes, analysis files)
+     created during the task are included — only commit documentation if
+     explicitly requested or standard for the project (e.g., ADRs)
 3. Verify all commits ahead of the remote are GPG-signed:
    ```sh
    git log --format='%H %G?' @{u}..HEAD
@@ -183,8 +180,7 @@ Before pushing commits, perform a final review:
 5. If you identify potential improvements outside the original scope, ask the
    user first
 
-The goal is ensuring completeness within scope, not
-perfection beyond it.
+The goal is ensuring completeness within scope, not perfection beyond it.
 
 ### Commit messages
 When writing commit messages stick to the following practices:
@@ -205,17 +201,15 @@ When writing commit messages stick to the following practices:
 
 ## Self-improvement
 When you encounter a situation where:
-- You had to ask a clarifying question that a guideline
-  could have prevented.
-- The user corrected your approach and the correction
-  reflects a general preference, not a one-off.
+- You had to ask a clarifying question that a guideline could have prevented.
+- The user corrected your approach and the correction reflects a general
+  preference, not a one-off.
 - A guideline was ambiguous and you had to interpret it.
-- You discovered a pattern that consistently leads to
-  better outcomes but is not yet documented.
+- You discovered a pattern that consistently leads to better outcomes but is not
+  yet documented.
 
-Propose a specific amendment to this file. Present the
-exact diff to the user for approval. Never modify this
-file without explicit consent.
+Propose a specific amendment to this file. Present the exact diff to the user
+for approval. Never modify this file without explicit consent.
 
 ## Editor context
 - When a user asks about their cursor position, current method, current file,
