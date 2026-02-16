@@ -9,7 +9,7 @@
   excludesfile = ~/.config/git/gitignore
   untrackedCache = true
   whitespace = space-before-tab,-indent-with-non-tab,trailing-space
-  pager = diff-so-fancy | less --tabs=4 -RFX
+  pager = delta
 [commit]
   template = ~/.config/git/message
   gpgSign = true
@@ -65,7 +65,29 @@
   wip = !git add -u && git commit -m "wip"
   zpush = !"git push -u origin `git branch-name`:majjoha/`git branch-name`"
 [interactive]
-  diffFilter = diff-so-fancy --patch
+  diffFilter = delta --color-only
+[delta]
+  navigate = true
+  line-numbers = true
+  side-by-side = true
+  light = true
+  syntax-theme = none
+  file-style = "#2f2f2d"
+  file-decoration-style = none
+  file-modified-label = "[modified]"
+  file-added-label = "[added]"
+  file-removed-label = "[removed]"
+  file-renamed-label = "[renamed]"
+  file-copied-label = "[copied]"
+  minus-style = "#2f2f2d" "#e6cdc3"
+  minus-emph-style = "#2f2f2d" "#d4a794"
+  plus-style = "#2f2f2d" "#d6dabe"
+  plus-emph-style = "#2f2f2d" "#bcc48e"
+  hunk-header-style = "#6f6359" italic
+  hunk-header-decoration-style = "#cbbda9" ul
+  line-numbers-minus-style = "#9f5032"
+  line-numbers-plus-style = "#7c7e44"
+  line-numbers-zero-style = "#cbbda9"
 [tag]
   sort = version:refname
 [help]
