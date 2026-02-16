@@ -173,8 +173,10 @@ Before pushing commits, perform a final review:
    - Edge cases are handled
    - Tests cover the changes
    - No debug code, TODOs, or temporary files remain
-   - No planning artifacts (design docs, code review notes, analysis files)
-     created for user review are included
+   - No planning artifacts (design docs, code review
+     notes, analysis files) created during the task are
+     included — only commit documentation if explicitly
+     requested or standard for the project (e.g., ADRs)
 3. Verify all commits ahead of the remote are GPG-signed:
    ```sh
    git log --format='%H %G?' @{u}..HEAD
@@ -189,12 +191,8 @@ Before pushing commits, perform a final review:
 5. If you identify potential improvements outside the original scope, ask the
    user first
 
-The goal is ensuring completeness within scope, not perfection beyond it.
-
-**Note on temporary artifacts**: Files created during planning or analysis
-(design docs, review notes, diagrams) are usually not part of the deliverable.
-Only commit documentation if explicitly requested or if it's standard for the
-project (e.g., ADRs). When in doubt, ask.
+The goal is ensuring completeness within scope, not
+perfection beyond it.
 
 ### Commit messages
 When writing commit messages stick to the following practices:
