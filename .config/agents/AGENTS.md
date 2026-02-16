@@ -138,8 +138,18 @@ Before pushing commits, perform a final review:
    - No debug code, TODOs, or temporary files remain
    - No planning artifacts (design docs, code review notes, analysis files)
      created for user review are included
-3. If you find gaps within the original scope, amend the relevant commit
-4. If you identify potential improvements outside the original scope, ask the
+3. Verify all commits ahead of the remote are GPG-signed:
+   ```sh
+   git log --format='%H %G?' @{u}..HEAD
+   ```
+   Any commit showing `N` (no signature) must be signed. To
+   sign all unsigned commits from the fork point onward:
+   ```sh
+   git rebase --exec 'git commit --amend --no-edit -S' @{u}
+   ```
+   After signing, push with `--force-with-lease`.
+4. If you find gaps within the original scope, amend the relevant commit
+5. If you identify potential improvements outside the original scope, ask the
    user first
 
 The goal is ensuring completeness within scope, not perfection beyond it.
