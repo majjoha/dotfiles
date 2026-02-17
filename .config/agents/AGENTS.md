@@ -37,6 +37,9 @@ ask the user for help rather than proceeding without it.
 - When refactors touch separate parts of the code and can work in isolation,
   commit them separately. If in doubt, default to separate commits with a green
   test suite.
+- Commit after each logically complete change rather than accumulating
+  uncommitted work across multiple steps. Every commit must pass quality
+  gates before being created.
 
 ## Coding style
 ### Core principles
