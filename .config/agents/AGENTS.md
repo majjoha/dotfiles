@@ -1,5 +1,14 @@
 # AGENTS.md
 ## Workflow
+- Never `git add` planning artifacts (review files, analysis docs, design notes)
+  created during a task. These are disposable working documents. Delete them
+  before committing or place them outside the repository, so they are kept but
+  not tracked. The "before pushing" checklist is a safety net, not the primary
+  defense.
+- For long-form output (reviews, plans, analyses exceeding ~100 lines), write to
+  a Markdown file in the project directory and tell the user the path. This
+  preserves context window tokens and gives the user a persistent, reviewable
+  artifact.
 - Stop commands running longer than 5 minutes and check with the user.
   Long-running processes may indicate an issue or inefficient approach.
 - Search before proposing solutions. Understand existing code, patterns, and
