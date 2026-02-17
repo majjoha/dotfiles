@@ -4,10 +4,18 @@
   Long-running processes may indicate an issue or inefficient approach.
 - Search before proposing solutions. Understand existing code, patterns, and
   trade-offs before suggesting changes.
+- When debugging or investigating, gather evidence (logs, return values,
+  actual vs. expected behavior) before proposing fixes. Do not guess.
 - Only change what the task requires. Do not refactor, reformat, or "improve"
   nearby code unless explicitly asked.
+- When asked to find bugs or review code, present only what was asked for.
+  Do not bundle feature suggestions, documentation ideas, or speculative
+  improvements into bug reports.
 - Never claim a task is complete without verifying it works. Run tests, build,
   or demonstrate the output.
+- Verify each change works before moving to the next one. Do not batch
+  multiple changes and only test the final result. If a change breaks
+  something, it should be obvious which one caused it.
 
 ### Quality gates and tooling
 If a quality gate (tests, linters, type checkers, build steps) fails due to
@@ -181,6 +189,9 @@ Before pushing commits, perform a final review:
 4. If you find gaps within the original scope, amend the relevant commit
 5. If you identify potential improvements outside the original scope, ask the
    user first
+6. Self-review: identify weaknesses in the implementation. What edge
+   cases are untested? What would you change if redoing this? Fix
+   gaps before presenting the work as complete.
 
 The goal is ensuring completeness within scope, not perfection beyond it.
 
