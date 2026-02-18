@@ -197,7 +197,7 @@ better than a comment saying "Check if we should ignore events".
   makes structurally similar types incompatible.
 
 ## Git
-### Workflow
+### Branching and commits
 - Always use feature branches or worktrees. Never commit directly to `main`
   unless explicitly asked to.
 - Keep commits small and atomic. They should include changes that can be viewed
