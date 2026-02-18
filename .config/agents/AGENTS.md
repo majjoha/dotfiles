@@ -88,6 +88,27 @@ ask the user for help rather than proceeding without it.
 - Avoid catch-all directories like `utils/`, `helpers/`, `common/`, or
   `shared/`. These become dumping grounds for unrelated code with no cohesion.
 
+### Type discipline
+- Never use escape hatches (`any`, `unknown` in TypeScript; `any`, `@cast` in
+  Lua annotations). If a type cannot be expressed, redesign the API rather than
+  silencing the type checker.
+- Model domain concepts as distinct types, not bare primitives. A `WindowID`
+  and a `SpaceID` are both integers but are not interchangeable — make them
+  nominally distinct so the type checker rejects accidental interchange.
+- Represent closed sets as union types, not strings. A hook type that accepts
+  `"window_created"` or `"layout_changed"` is safer than one that accepts
+  `string`.
+- Use the narrowest type that matches runtime behavior. If a function
+  guarantees a value is present, the return type must not include
+  `nil`/`undefined`/`null`. Overly permissive types force callers into dead
+  defensive code and hide real bugs.
+- Prefer typed structures over generic containers (`Map<string, number>` over
+  `object`; `table<string, number>` over `table`).
+- Prefer explicit callback signatures over generic function types.
+  `(id: WindowID, floating: boolean) => void` is safer than `Function` in
+  TypeScript; `fun(id: WindowID, floating: boolean)` is safer than `function`
+  in Lua annotations.
+
 ### Project conventions
 - Always ask before introducing third-party libraries, including production
   dependencies, development dependencies (test frameworks, linters, formatters),
