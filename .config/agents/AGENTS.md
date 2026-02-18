@@ -193,6 +193,10 @@ better than a comment saying "Check if we should ignore events".
 ### TypeScript
 - Avoid `as` type assertions. Trust the type system and fix type issues at
   their source rather than casting around them.
+- Use branded types to enforce domain type distinctions at compile time. Plain
+  type aliases (`type WindowID = number`) are structurally identical to their
+  base type and provide no safety. Branded types add a phantom property that
+  makes structurally similar types incompatible.
 
 ## Git
 ### Workflow
