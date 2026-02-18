@@ -191,8 +191,6 @@ better than a comment saying "Check if we should ignore events".
   immediately follow on the next line for compact formatting.
 
 ### TypeScript
-- Never use `any`. Model real shapes with proper types instead of resorting
-  to escape hatches.
 - Avoid `as` type assertions. Trust the type system and fix type issues at
   their source rather than casting around them.
 
