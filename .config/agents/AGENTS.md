@@ -180,6 +180,12 @@ comments. A well-named function like `shouldIgnoreEvents()` is
 better than a comment saying "Check if we should ignore events".
 
 ## Language-specific guidance
+### Lua
+- Always declare variables with `local`. Lua defaults to global scope, and
+  omitting `local` causes stale state across reloads and leaks between files.
+- Annotate functions and fields with EmmyLua type annotations (`---@param`,
+  `---@return`, `---@alias`, `---@field`).
+
 ### Markdown
 - Omit blank lines after headings (h1-h6) and bold text. Content should
   immediately follow on the next line for compact formatting.
