@@ -217,6 +217,13 @@ When writing commit messages stick to the following practices:
   - Are there any side effects?
 - Include a link to the ticket, if any.
 
+### Codex-specific
+- When you create a git commit, keep your chosen subject/body, then append
+  a blank line and this trailer:
+  `Co-Authored-By: Codex <223734131+codex@users.noreply.github.com>`
+  Use `git commit -m "..."` and add a second `-m` with the trailer to
+  guarantee the blank line.
+
 ### Branch naming
 - Use descriptive prefixes, e.g., `feature/`, `fix/`, `docs/`, etc.
 - Include ticket numbers if applicable, e.g., `feature/project-123-user-auth`.
