@@ -70,6 +70,12 @@ ask the user for help rather than proceeding without it.
 - Keep line length to 80 characters maximum for all files (code, documentation,
   configuration, etc.). This ensures readability across different editors and
   environments.
+- When writing prose (documentation, Markdown, comments), fill lines to 80
+  characters by breaking at word boundaries. Lines should reach 80 characters
+  before wrapping; only the final line of a paragraph may be shorter. Do not
+  wrap conservatively at 65-70 characters — 80 is a target to fill to, not
+  just a ceiling to stay under. Exception: Git commit message subjects
+  (50 chars) and bodies (72 chars) have their own limits.
 
 ### Abstraction and design
 - Question complex and premature abstractions and opt for simpler alternatives.
