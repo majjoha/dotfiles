@@ -196,6 +196,13 @@ saying "Check if we should ignore events".
 - Omit blank lines after headings (h1-h6) and bold text. Content should
   immediately follow on the next line for compact formatting.
 
+### Ruby
+- Favor FP over OOP but don't be dogmatic. Prefer immutability, pure methods and
+  declarative pipelines (`select`/`map`/`reduce`) while following Ruby community
+  conventions.
+- Follow Rubocop rules configured for the project. Do not disable cops without
+  explicit permission.
+
 ### TypeScript
 - Use branded types to enforce domain type distinctions at compile time. Plain
   type aliases (`type WindowID = number`) are structurally identical to their
