@@ -15,10 +15,13 @@
 
 # Claude Code
 .claude/.credentials.json
+.claude/backups/
 .claude/cache/
 .claude/debug/
 .claude/file-history/
 .claude/history.jsonl
+.claude/hooks/
+.claude/mcp-needs-auth-cache.json
 .claude/paste-cache/
 .claude/plans/
 .claude/plugins/
@@ -26,6 +29,7 @@
 .claude/shell-snapshots/
 .claude/stats-cache.json
 .claude/tasks/
+.claude/teams/
 .claude/todos/
 
 # Codex
