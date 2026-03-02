@@ -33,12 +33,19 @@
 .claude/todos/
 
 # Codex
+.codex/.codex-global-state.json
+.codex/.personality_migration
+.codex/auth.json
 .codex/config.toml
 .codex/history.jsonl
 .codex/log/
 .codex/rules/
 .codex/sessions/
+.codex/shell_snapshots/
 .codex/skills/.system/
+.codex/sqlite/
+.codex/state_5.sqlite*
 .codex/tmp/
+.codex/vendor_imports/skills-curated-cache.json
 .codex/version.json
 .codex/auth.json
