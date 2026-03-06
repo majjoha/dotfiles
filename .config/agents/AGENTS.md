@@ -200,6 +200,11 @@ saying "Check if we should ignore events".
 - Favor FP over OOP but don't be dogmatic. Prefer immutability, pure methods and
   declarative pipelines (`select`/`map`/`reduce`) while following Ruby community
   conventions.
+- Prefer the endless method shorthand (`def method_name(args) = expr`) for
+  single-expression methods. Parentheses around arguments are mandatory with
+  this syntax.
+- Prefer `Data.define` over `Struct` for value objects that should be immutable.
+  Use `Struct` only when mutability is needed.
 - Follow Rubocop rules configured for the project. Do not disable cops without
   explicit permission.
 
