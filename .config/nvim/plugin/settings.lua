@@ -52,9 +52,6 @@ vim.opt.lazyredraw = true
 -- Disable the intro message
 vim.opt.shortmess = vim.o.shortmess .. "I"
 
--- Delete the comment character when joining commented lines
-vim.opt.formatoptions = vim.o.formatoptions .. "j"
-
 -- Show spell suggestions in a smaller window
 vim.opt.spellsuggest = "15"
 
