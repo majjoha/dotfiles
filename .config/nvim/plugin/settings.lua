@@ -80,3 +80,6 @@ vim.opt.spelllang = "en_us"
 
 -- Set `updatetime` to reduce waiting time for diagnostic floating windows
 vim.opt.updatetime = 50
+
+-- Automatically reload files changed outside of Neovim
+vim.opt.autoread = true
