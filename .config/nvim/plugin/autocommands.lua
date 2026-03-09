@@ -196,3 +196,11 @@ vim.api.nvim_create_autocmd({
   end,
   group = comment_block_group,
 })
+
+-- Enable `MiniCompletion` only for TypeScript files
+vim.api.nvim_create_autocmd("Filetype", {
+  pattern = "typescript",
+  callback = function(args)
+    vim.b[args.buf].minicompletion_disable = false
+  end,
+})
