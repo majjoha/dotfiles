@@ -60,7 +60,7 @@ alias gss="git stash --keep-index && git stash push"
 alias gsu="git submodule update --remote --jobs=4"
 alias gri="git rebase -i"
 alias grc="git rebase --continue"
-alias git-cleanup='git branch --merged | egrep -v "(^\*|master|main|dev)" | xargs git branch -d'
+alias git-cleanup='git branch --merged | grep -Ev "(^\*|master|main|dev)" | xargs git branch -d'
 alias gprc="checkout-pr"
 
 # Rebuild Spotlight index
