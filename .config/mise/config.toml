@@ -37,6 +37,7 @@ disable_backends = ["asdf"]
 "gem:create-ruby-app" = "latest"
 "gem:nvim-context" = "latest"
 "gem:tmuxinator" = "latest"
+"github:ajeetdsouza/zoxide" = "latest"
 "github:atanunq/viu" = { version = "latest", bin = "viu" }
 "github:cli/cli" = "latest"
 "github:containers/podman" = "latest"
