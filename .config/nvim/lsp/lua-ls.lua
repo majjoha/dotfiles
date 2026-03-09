@@ -16,6 +16,7 @@ return {
   settings = {
     Lua = {
       runtime = { version = "LuaJIT" },
+      format = { enable = false },
       diagnostics = {
         -- Get the language server to recognize the `vim` and `hs` globals
         globals = { "vim", "hs" },
