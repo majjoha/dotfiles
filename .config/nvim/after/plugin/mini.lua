@@ -43,3 +43,6 @@ require("mini.surround").setup({
     ["<"] = { output = { left = "< ", right = " >" } },
   },
 })
+
+require("mini.completion").setup()
+vim.g.minicompletion_disable = true
