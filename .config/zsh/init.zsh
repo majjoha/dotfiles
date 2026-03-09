@@ -1,5 +1,10 @@
 # Enable compdef
-autoload -Uz compinit && compinit -d "$ZSH_COMPDUMP"
+autoload -Uz compinit
+if [[ -n "$ZSH_COMPDUMP"(#qN.mh+24) ]]; then
+  compinit -d "$ZSH_COMPDUMP"
+else
+  compinit -C -d "$ZSH_COMPDUMP"
+fi
 
 # Add support for Bash completion definitions
 autoload -U +X bashcompinit && bashcompinit
