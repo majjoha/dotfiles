@@ -68,7 +68,7 @@ disable_backends = ["asdf"]
 bun = "latest"
 elixir = "latest"
 erlang = "latest"
-node = "24.10.0"
+node = { version = "25.8.0", postinstall = "npm install -g corepack && corepack enable" }
 python = "latest"
 ruby = "3.4.7"
 rust = "latest"
