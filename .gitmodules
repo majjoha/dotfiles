@@ -13,6 +13,7 @@
 [submodule ".config/nvim/pack/packages/start/nvim-treesitter"]
 	path = .config/nvim/pack/packages/start/nvim-treesitter
 	url = https://github.com/nvim-treesitter/nvim-treesitter.git
+	branch = main
 [submodule ".config/nvim/pack/packages/start/nvim-test"]
 	path = .config/nvim/pack/packages/start/nvim-test
 	url = https://github.com/klen/nvim-test.git

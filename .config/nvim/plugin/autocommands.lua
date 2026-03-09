@@ -204,3 +204,34 @@ vim.api.nvim_create_autocmd("Filetype", {
     vim.b[args.buf].minicompletion_disable = false
   end,
 })
+
+-- Enable Treesitter highlighting for all filetypes
+local treesitter_highlight_group =
+  vim.api.nvim_create_augroup("TreesitterHighlight", {})
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "*",
+  callback = function()
+    pcall(vim.treesitter.start)
+  end,
+  group = treesitter_highlight_group,
+})
+
+-- Auto-install parsers on `FileType`
+local treesitter_autoinstall_group =
+  vim.api.nvim_create_augroup("TreesitterAutoInstall", {})
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "*",
+  callback = function()
+    local filetype = vim.bo.filetype
+    if filetype ~= "" then
+      return
+    end
+
+    local language = vim.treesitter.language.get_lang(filetype) or filetype
+    local available = require("nvim-treesitter").get_available()
+    if vim.tbl_contains(available, language) then
+      require("nvim-treesitter").install({ language })
+    end
+  end,
+  group = treesitter_autoinstall_group,
+})
