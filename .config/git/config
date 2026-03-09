@@ -25,6 +25,8 @@
 [diff]
   mnemonicprefix = true
   algorithm = histogram
+[fetch]
+  writeCommitGraph = true
 [branch]
   autosetupmerge = true
   sort = -committerdate
