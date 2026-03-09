@@ -44,6 +44,8 @@
   rebase = true
 [rerere]
   enabled = true
+[rebase]
+  autoSquash = true
 [alias]
   branch-name = !"git for-each-ref --format=\"%(refname:short)\" $(git symbolic-ref HEAD)"
   cleanup = "!f() { \
