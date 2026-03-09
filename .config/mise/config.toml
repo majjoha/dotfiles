@@ -72,5 +72,4 @@ node = { version = "25.8.0", postinstall = "npm install -g corepack && corepack 
 python = "latest"
 ruby = "3.4.7"
 rust = "latest"
-yarn = "latest"
 zig = "latest"
