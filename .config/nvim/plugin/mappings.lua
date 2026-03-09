@@ -174,7 +174,7 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 
 -- Select completion items
 vim.keymap.set("i", "<S-Tab>", function()
-  if vim.fn.pumvisible() then
+  if vim.fn.pumvisible() ~= 0 then
     return "<C-y>"
   else
     return "<S-Tab>"
@@ -182,7 +182,7 @@ vim.keymap.set("i", "<S-Tab>", function()
 end, { expr = true, replace_keycodes = true })
 
 vim.keymap.set("i", "<C-j>", function()
-  if vim.fn.pumvisible() then
+  if vim.fn.pumvisible() ~= 0 then
     return "<C-n>"
   else
     return "<C-j>"
@@ -190,7 +190,7 @@ vim.keymap.set("i", "<C-j>", function()
 end, { expr = true, replace_keycodes = true })
 
 vim.keymap.set("i", "<C-k>", function()
-  if vim.fn.pumvisible() then
+  if vim.fn.pumvisible() ~= 0 then
     return "<C-p>"
   else
     return "<C-k>"
