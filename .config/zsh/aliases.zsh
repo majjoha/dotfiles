@@ -63,6 +63,17 @@ alias grc="git rebase --continue"
 alias git-cleanup='git branch --merged | grep -Ev "(^\*|master|main|dev)" | xargs git branch -d'
 alias gprc="checkout-pr"
 
+gdm() {
+  if git show-ref --verify --quiet refs/remotes/origin/main; then
+    git diff origin/main HEAD
+  elif git show-ref --verify --quiet refs/remotes/origin/master; then
+    git diff origin/master HEAD
+  else
+    echo "Neither origin/main nor origin/master exists."
+    return 1
+  fi
+}
+
 # Rebuild Spotlight index
 alias reindex-spotlight="sudo mdutil -i on /"
 
