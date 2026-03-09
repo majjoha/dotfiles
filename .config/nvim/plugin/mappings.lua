@@ -77,7 +77,7 @@ vim.keymap.set(
   ":FzfLua git_branches<CR>",
   { silent = true }
 )
-vim.keymap.set("n", "<Leader>gd", ":echo 'Use C-Space g d instead!'<CR>")
+vim.keymap.set("n", "<Leader>gd", ":Gvdiffsplit<CR>", { silent = true })
 vim.keymap.set(
   "n",
   "<Leader>gr",
