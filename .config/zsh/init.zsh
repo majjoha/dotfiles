@@ -33,6 +33,9 @@ setopt complete_in_word
 # Strip extra whitespace from history entries
 setopt HIST_REDUCE_BLANKS
 
+# Save timestamp and duration for each command
+setopt EXTENDED_HISTORY
+
 # Enable menu-style completion
 zstyle ':completion:*' menu select
 
