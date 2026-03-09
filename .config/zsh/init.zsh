@@ -30,6 +30,9 @@ setopt always_to_end
 # Allow completion from within a word/phrase
 setopt complete_in_word
 
+# Strip extra whitespace from history entries
+setopt HIST_REDUCE_BLANKS
+
 # Enable menu-style completion
 zstyle ':completion:*' menu select
 
