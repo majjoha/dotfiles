@@ -62,7 +62,7 @@
   }; f"
   last-week = !git shortlog --since='1 week ago' --pretty=format:'%cD: %s' --author="$(git config user.email)" --no-merges
   pr = !"gh pr create --web"
-  preview = !"git fetch && git diff ^origin/main"
+  preview = !"git fetch && git diff origin/main...HEAD"
   standup = !git shortlog --since=yesterday --no-merges --author="$(git config user.email)"
   undo = reset --soft HEAD^
   unpushed = log --branches --not --remotes --simplify-by-decoration --decorate --oneline
