@@ -11,6 +11,7 @@ http_retries = 3
 disable_backends = ["asdf"]
 
 [tools]
+"aqua:ajeetdsouza/zoxide" = "latest"
 "aqua:artempyanykh/marksman" = "latest"
 "aqua:Automattic/harper/harper-ls" = "latest"
 "aqua:BurntSushi/ripgrep" = "latest"

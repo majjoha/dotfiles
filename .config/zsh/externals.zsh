@@ -1,8 +1,3 @@
-# Use z.lua
-if command -v lua >/dev/null 2>&1 && [ -f "$HOME/.bin/z.lua/z.lua" ]; then
-  eval "$(lua "$HOME"/.bin/z.lua/z.lua --init zsh)"
-fi
-
 # ghcup-env
 [ -f "$HOME/.ghcup/env" ] && source "$HOME"/.ghcup/env
 
@@ -12,6 +7,11 @@ fi
 # Use mise
 if command -v mise >/dev/null 2>&1; then
   eval "$(mise activate zsh)"
+fi
+
+# Use zoxide for fast directory jumping
+if command -v zoxide >/dev/null 2>&1; then
+  eval "$(zoxide init zsh)"
 fi
 
 # Use FZF
