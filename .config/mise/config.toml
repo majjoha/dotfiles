@@ -16,7 +16,6 @@ disable_backends = ["asdf"]
 "aqua:Automattic/harper/harper-ls" = "latest"
 "aqua:BurntSushi/ripgrep" = "latest"
 "aqua:charmbracelet/glow" = "latest"
-"aqua:dandavison/delta"  = "latest"
 "aqua:hadolint/hadolint" = "latest"
 "aqua:ip7z/7zip" = "latest"
 "aqua:jj-vcs/jj" = "latest"
@@ -41,6 +40,7 @@ disable_backends = ["asdf"]
 "github:atanunq/viu" = { version = "latest", bin = "viu" }
 "github:cli/cli" = "latest"
 "github:containers/podman" = "latest"
+"github:dandavison/delta" = "latest"
 "github:elixir-lsp/elixir-ls" = { version = "latest", exe = "language_server.sh" }
 "github:jgm/pandoc" = "latest"
 "github:junegunn/fzf" = "latest"
