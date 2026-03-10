@@ -71,6 +71,7 @@ for plugin, configuration in pairs({
         },
         filter_mode = "allowlist",
         filter_apps = {
+          "app.cyan.markedit",
           "br.com.marcosatanaka.music-harbor",
           "ch.protonvpn.mac",
           "com.agilebits.onepassword7",
