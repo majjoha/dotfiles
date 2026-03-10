@@ -55,7 +55,12 @@ for plugin, configuration in pairs({
       local CenteredMonocle = Modifiers.chain(
         Monocle,
         Modifiers.Gaps.create({ outer = 0 }),
-        Modifiers.Centered.ratio(0.9)
+        Modifiers.Centered.ratio(0.9),
+        {
+          name = "centered-monocle",
+          displayName = "Centered monocle",
+          description = "All windows stacked full-size; only focused visible",
+        }
       )
 
       shoji:start({
