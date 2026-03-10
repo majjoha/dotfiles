@@ -51,6 +51,9 @@ vim.api.nvim_create_autocmd("LSPAttach", {
   callback = function(args)
     local bufnr = args.buf
     local client = vim.lsp.get_client_by_id(args.data.client_id)
+    if not client then
+      return
+    end
 
     if client.server_capabilities.documentFormattingProvider then
       vim.api.nvim_clear_autocmds({
