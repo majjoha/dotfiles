@@ -71,8 +71,8 @@ vim.opt.grepformat = "%f:%l:%c:%m"
 -- Enable dialog menus for confirmations
 vim.opt.confirm = true
 
--- Always spell check files
-vim.opt.spell = true
+-- Spell checking is enabled per filetype in after/ftplugin/ for prose buffers
+-- only.
 vim.opt.spelllang = "en_us"
 
 -- Set `updatetime` to reduce waiting time for diagnostic floating windows

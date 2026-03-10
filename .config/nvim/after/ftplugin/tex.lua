@@ -1,3 +1,6 @@
+vim.opt_local.spell = true
+vim.opt_local.spelllang = "en_us"
+
 -- Use thesaurus
 vim.opt_local.thesaurus = vim.opt_local.thesaurus
   + vim.fn.expand(vim.fn.stdpath("config") .. "/thesaurus/thesaurus.txt")
