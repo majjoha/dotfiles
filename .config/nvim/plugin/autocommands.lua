@@ -223,7 +223,7 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = "*",
   callback = function()
     local filetype = vim.bo.filetype
-    if filetype ~= "" then
+    if filetype == "" then
       return
     end
 
