@@ -201,11 +201,16 @@ vim.api.nvim_create_autocmd({
 })
 
 -- Enable `MiniCompletion` only for TypeScript files
-vim.api.nvim_create_autocmd("Filetype", {
-  pattern = "typescript",
+local mini_completion_toggle_group =
+  vim.api.nvim_create_augroup("MiniCompletionToggle", {})
+vim.api.nvim_create_autocmd("FileType", {
   callback = function(args)
-    vim.b[args.buf].minicompletion_disable = false
+    local completion_filetypes = { typescript = true, typescriptreact = true }
+
+    vim.b[args.buf].minicompletion_disable =
+      not completion_filetypes[vim.bo[args.buf].filetype]
   end,
+  group = mini_completion_toggle_group,
 })
 
 -- Enable Treesitter highlighting for all filetypes

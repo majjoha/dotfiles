@@ -45,4 +45,3 @@ require("mini.surround").setup({
 })
 
 require("mini.completion").setup()
-vim.g.minicompletion_disable = true
