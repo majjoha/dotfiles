@@ -74,9 +74,9 @@ vim.api.nvim_create_autocmd("LSPAttach", {
 })
 
 vim.api.nvim_create_autocmd("LSPDetach", {
-  callback = function(_)
-    vim.opt_local.tagfunc = nil
-    vim.opt_local.omnifunc = nil
+  callback = function(args)
+    vim.bo[args.buf].tagfunc = nil
+    vim.bo[args.buf].omnifunc = nil
   end,
   group = lsp_mode_group,
 })
