@@ -208,27 +208,32 @@ vim.keymap.set("t", "<C-j>", "<C-w><C-j>")
 vim.keymap.set("t", "<C-k>", "<C-w><C-k>")
 
 -- Move between implementation and tests
-vim.keymap.set("n", "<Tab>", require("other-nvim").open)
+vim.keymap.set("n", "<Tab>", function()
+  require("other-nvim").open()
+end)
 
 -- Expand and jump to snippets using <Tab> and <S-Tab>
-local ls = require("luasnip")
 vim.keymap.set({ "i", "s" }, "<Tab>", function()
+  local ls = require("luasnip")
   if ls.expand_or_jumpable() then
     ls.expand_or_jump(1)
   else
     vim.api.nvim_feedkeys(
-      vim.api.nvim_replace_termcodes("<Tab>", true, false, true),
+      vim.api.nvim_replace_termcodes(
+        "<Tab>", true, false, true),
       "n",
       false
     )
   end
 end, { silent = true })
 vim.keymap.set({ "i", "s" }, "<S-Tab>", function()
+  local ls = require("luasnip")
   if ls.expand_or_jumpable() then
     ls.jump(-1)
   else
     vim.api.nvim_feedkeys(
-      vim.api.nvim_replace_termcodes("<Tab>", true, false, true),
+      vim.api.nvim_replace_termcodes(
+        "<Tab>", true, false, true),
       "n",
       false
     )
