@@ -69,10 +69,6 @@ for plugin, configuration in pairs({
           "tall",
           "fullscreen+gaps+centered",
         },
-        retile_on_focus = true,
-        drag_swap = true,
-        drag_min_distance = 25,
-        drag_swap_sensitivity = 0.8,
         filter_mode = "allowlist",
         filter_apps = {
           "br.com.marcosatanaka.music-harbor",
