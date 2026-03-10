@@ -50,9 +50,10 @@ for plugin, configuration in pairs({
   Shoji = {
     fn = function(shoji)
       local Modifiers = require("layouts.modifiers")
-      local Fullscreen = require("layouts.fullscreen")
-      local CenteredFullscreen = Modifiers.chain(
-        Fullscreen,
+      local Monocle = require("layouts.monocle")
+
+      local CenteredMonocle = Modifiers.chain(
+        Monocle,
         Modifiers.Gaps.create({ outer = 0 }),
         Modifiers.Centered.ratio(0.9)
       )
@@ -61,13 +62,13 @@ for plugin, configuration in pairs({
         gap_outer = 10,
         gap_inner = 10,
         main_ratio = 0.5,
-        default_layout = "fullscreen",
-        layouts = { CenteredFullscreen },
+        default_layout = "monocle",
+        layouts = { CenteredMonocle },
         alert_duration = 1,
         enabled_layouts = {
-          "fullscreen",
+          "monocle",
           "tall",
-          "fullscreen+gaps+centered",
+          "centered-monocle",
         },
         filter_mode = "allowlist",
         filter_apps = {
