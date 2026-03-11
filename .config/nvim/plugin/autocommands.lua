@@ -126,9 +126,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 -- Highlight references under cursor
-local lsp_document_highlight_group =
-  vim.api.nvim_create_augroup("LSPDocumentHighlight", {})
-
 local highlight_node_types = {
   "constant",
   "constructor",
@@ -140,48 +137,86 @@ local highlight_node_types = {
   "variable",
 }
 
-local function has_document_highlight_support()
-  return vim.iter(vim.lsp.get_clients({ bufnr = 0 })):any(function(client)
-    return client.server_capabilities.documentHighlightProvider
-  end)
-end
-
 local function should_highlight()
-  local node = vim.treesitter.get_node()
-  if not node then
+  local ok, node = pcall(vim.treesitter.get_node)
+  if not ok or node == nil then
     return false
   end
 
   local node_type = node:type()
-  return vim.iter(highlight_node_types):any(function(t)
-    return node_type:match(t)
-  end)
-end
-
-local function conditional_document_highlight()
-  if not has_document_highlight_support() then
-    return
+  for _, allowed in ipairs(highlight_node_types) do
+    if node_type:find(allowed, 1, true) then
+      return true
+    end
   end
 
-  if should_highlight() then
-    vim.lsp.buf.document_highlight()
-  else
-    vim.lsp.buf.clear_references()
-  end
+  return false
 end
 
-vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
-  callback = conditional_document_highlight,
-  group = lsp_document_highlight_group,
+local document_highlight_group =
+  vim.api.nvim_create_augroup("LSPDocumentHighlight", {})
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(args)
+    local bufnr = args.buf
+
+    if
+      not next(vim.lsp.get_clients({
+        bufnr = bufnr,
+        method = vim.lsp.protocol.Methods.textDocument_documentHighlight,
+      }))
+    then
+      return
+    end
+
+    vim.api.nvim_clear_autocmds({
+      group = document_highlight_group,
+      buffer = bufnr,
+    })
+
+    vim.api.nvim_create_autocmd("CursorHold", {
+      buffer = bufnr,
+      callback = function()
+        if should_highlight() then
+          vim.lsp.buf.document_highlight()
+        else
+          vim.lsp.buf.clear_references()
+        end
+      end,
+      group = document_highlight_group,
+    })
+
+    vim.api.nvim_create_autocmd({ "CursorMoved", "BufLeave" }, {
+      buffer = bufnr,
+      callback = vim.lsp.buf.clear_references,
+      group = document_highlight_group,
+    })
+  end,
+  group = lsp_mode_group,
 })
 
-vim.api.nvim_create_autocmd("CursorMoved", {
-  callback = function()
-    if has_document_highlight_support() then
-      vim.lsp.buf.clear_references()
+vim.api.nvim_create_autocmd("LspDetach", {
+  callback = function(args)
+    local bufnr = args.buf
+    local clients = vim.lsp.get_clients({
+      bufnr = bufnr,
+      method = vim.lsp.protocol.Methods.textDocument_documentHighlight,
+    })
+
+    local has_other_highlight_client = vim.iter(clients):any(function(client)
+      return client.id ~= args.data.client_id
+    end)
+
+    if has_other_highlight_client then
+      return
     end
+
+    vim.api.nvim_buf_call(bufnr, vim.lsp.buf.clear_references)
+    vim.api.nvim_clear_autocmds({
+      group = document_highlight_group,
+      buffer = bufnr,
+    })
   end,
-  group = lsp_document_highlight_group,
+  group = lsp_mode_group,
 })
 
 -- Highlight comment blocks with background colors
