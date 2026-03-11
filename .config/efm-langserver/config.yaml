@@ -13,9 +13,6 @@ tools:
     lint-command: "hadolint --no-color"
     lint-formats:
       - "%f:%l %m"
-  jq: &jq
-    format-command: "jq ."
-    format-stdin: true
   prettier: &prettier
     format-command: "./node_modules/.bin/prettier --stdin-filepath ${INPUT}"
     format-stdin: true
@@ -32,8 +29,6 @@ languages:
     - <<: *hadolint
   javascript:
     - <<: *prettier
-  json:
-    - <<: *jq
   markdown:
     - <<: *alex
   typescript:
