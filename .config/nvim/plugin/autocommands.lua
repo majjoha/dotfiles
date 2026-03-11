@@ -18,8 +18,8 @@ local clean_fugitive_buffers_group =
   vim.api.nvim_create_augroup("CleanFugitiveBuffers", {})
 vim.api.nvim_create_autocmd("BufReadPost", {
   pattern = "fugitive://*",
-  callback = function()
-    vim.opt.bufhidden = "delete"
+  callback = function(args)
+    vim.bo[args.buf].bufhidden = "delete"
   end,
   group = clean_fugitive_buffers_group,
 })
@@ -38,8 +38,8 @@ vim.api.nvim_create_autocmd("TermOpen", {
 })
 vim.api.nvim_create_autocmd("TermLeave", {
   pattern = "term://*",
-  callback = function()
-    vim.opt.bufhidden = "delete"
+  callback = function(args)
+    vim.bo[args.buf].bufhidden = "delete"
   end,
   group = terminal_mode_group,
 })
