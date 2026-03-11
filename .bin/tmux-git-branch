@@ -2,8 +2,23 @@
 
 set -e
 
-if [ "$(git rev-parse --is-inside-work-tree)" ]; then
-  printf "%s" "$(git branch --no-color | tr -d '()' | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1/") #[fg=colour11]｜ #[default]"
-else
-  printf ""
+readonly MAX_LENGTH=28
+readonly ELLIPSIS="…"
+
+if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+  exit 0
 fi
+
+branch=$(git symbolic-ref --quiet --short HEAD 2>/dev/null) ||
+  branch=$(git rev-parse --short HEAD 2>/dev/null)
+
+if [ ${#branch} -gt "$MAX_LENGTH" ]; then
+  visible_length=$((MAX_LENGTH - ${#ELLIPSIS}))
+  head_length=$((visible_length / 2))
+  tail_length=$((visible_length - head_length))
+  head=$(printf "%s" "$branch" | cut -c1-"$head_length")
+  tail=$(printf "%s" "$branch" | rev | cut -c1-"$tail_length" | rev)
+  branch="${head}${ELLIPSIS}${tail}"
+fi
+
+printf "%s #[fg=colour11]｜ #[default]" "$branch"
