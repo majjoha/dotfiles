@@ -171,15 +171,6 @@ vim.keymap.set("n", "N", "Nzz")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 
--- Select completion items
-vim.keymap.set("i", "<S-Tab>", function()
-  if vim.fn.pumvisible() ~= 0 then
-    return "<C-y>"
-  else
-    return "<S-Tab>"
-  end
-end, { expr = true, replace_keycodes = true })
-
 vim.keymap.set("i", "<C-j>", function()
   if vim.fn.pumvisible() ~= 0 then
     return "<C-n>"
@@ -218,8 +209,7 @@ vim.keymap.set({ "i", "s" }, "<Tab>", function()
     ls.expand_or_jump(1)
   else
     vim.api.nvim_feedkeys(
-      vim.api.nvim_replace_termcodes(
-        "<Tab>", true, false, true),
+      vim.api.nvim_replace_termcodes("<Tab>", true, false, true),
       "n",
       false
     )
@@ -227,12 +217,17 @@ vim.keymap.set({ "i", "s" }, "<Tab>", function()
 end, { silent = true })
 vim.keymap.set({ "i", "s" }, "<S-Tab>", function()
   local ls = require("luasnip")
-  if ls.expand_or_jumpable() then
+  if vim.fn.pumvisible() ~= 0 then
+    vim.api.nvim_feedkeys(
+      vim.api.nvim_replace_termcodes("<C-y>", true, false, true),
+      "n",
+      false
+    )
+  elseif ls.jumpable(-1) then
     ls.jump(-1)
   else
     vim.api.nvim_feedkeys(
-      vim.api.nvim_replace_termcodes(
-        "<Tab>", true, false, true),
+      vim.api.nvim_replace_termcodes("<S-Tab>", true, false, true),
       "n",
       false
     )
