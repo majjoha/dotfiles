@@ -1,7 +1,16 @@
 # Tab completion for tmux sessions
 function tm() {
   [[ -z "$1" ]] && { echo "usage: tm <session>" >&2; return 1; }
-  tmux has -t "$1" && tmux attach -t "$1" || tmux new -s "$1"
+
+  if tmux has-session -t "$1" 2>/dev/null; then
+    if [[ -n "$TMUX" ]]; then
+      tmux switch-client -t "$1"
+    else
+      tmux attach-session -t "$1"
+    fi
+  else
+    tmux new-session -s "$1"
+  fi
 }
 
 function __tmux-sessions() {
