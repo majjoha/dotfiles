@@ -45,6 +45,7 @@
 [rerere]
   enabled = true
 [rebase]
+  autoStash = true
   autoSquash = true
   updateRefs = true
 [alias]
