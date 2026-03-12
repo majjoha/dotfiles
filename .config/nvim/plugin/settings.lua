@@ -50,13 +50,13 @@ vim.opt.fileignorecase = true
 vim.opt.lazyredraw = true
 
 -- Disable the intro message
-vim.opt.shortmess = vim.o.shortmess .. "I"
+vim.opt.shortmess:append("I")
 
 -- Show spell suggestions in a smaller window
 vim.opt.spellsuggest = "15"
 
 -- Look for tags in `.git/tags`
-vim.opt.tags = vim.o.tags .. ",.git/tags"
+vim.opt.tags:append(".git/tags")
 
 -- Allow the cursor to move where there is no text in visual select mode
 vim.opt.virtualedit = "block"
