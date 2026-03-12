@@ -34,6 +34,7 @@ disable_backends = ["asdf"]
 "aqua:watchexec/watchexec" = "latest"
 "conda:luarocks" = "latest"
 "conda:pkgconf" = "latest"
+"conda:tig" = "latest"
 "github:mvdan/sh" = { version = "latest", bin = "shfmt" }
 "gem:create-ruby-app" = "latest"
 "gem:nvim-control" = "latest"
