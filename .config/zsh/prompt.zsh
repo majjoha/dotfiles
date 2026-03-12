@@ -3,21 +3,43 @@ GIT_PROMPT_SUFFIX="%F{blue})%f"
 GIT_PROMPT_DIRTY="%F{red}*%f"
 
 function git_prompt_info {
-  # Early exit if not in a Git repo
-  git rev-parse --is-inside-work-tree &>/dev/null || return
-
-  # Single `git` call to get the branch name
-  local branch
-  branch=$(
-    git symbolic-ref --short HEAD 2>/dev/null ||
-    git rev-parse --short HEAD 2>/dev/null
-  )
-
-  # Fast dirty check using `git status`
-  local dirty=""
+  # Ignore dirty submodule worktrees so prompts stay responsive in repos that
+  # vendor dependencies as submodules.
   local status_output
-  status_output=$(git status --porcelain --untracked-files=normal 2>/dev/null)
-  [[ -n "$status_output" ]] && dirty="$GIT_PROMPT_DIRTY"
+  status_output=$(
+    git status \
+      --porcelain=v2 \
+      --branch \
+      --untracked-files=normal \
+      --ignore-submodules=dirty \
+      2>/dev/null
+  ) || return
+
+  local branch
+  local oid=""
+  local dirty=""
+  local line
+
+  while IFS= read -r line; do
+    case "$line" in
+      "# branch.head "*)
+        branch=${line#\# branch.head }
+        ;;
+      "# branch.oid "*)
+        oid=${line#\# branch.oid }
+        ;;
+      "# "*)
+        ;;
+      *)
+        dirty="$GIT_PROMPT_DIRTY"
+        break
+        ;;
+    esac
+  done <<< "$status_output"
+
+  if [[ "$branch" == "(detached)" ]]; then
+    branch=${oid[1,7]}
+  fi
 
   printf "%s" "$GIT_PROMPT_PREFIX$branch$dirty$GIT_PROMPT_SUFFIX"
 }
