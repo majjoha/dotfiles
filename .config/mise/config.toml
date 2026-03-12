@@ -32,6 +32,7 @@ disable_backends = ["asdf"]
 "aqua:superfly/flyctl" = "latest"
 "aqua:tree-sitter/tree-sitter" = "latest"
 "aqua:watchexec/watchexec" = "latest"
+"conda:luarocks" = "latest"
 "github:mvdan/sh" = { version = "latest", bin = "shfmt" }
 "gem:create-ruby-app" = "latest"
 "gem:nvim-control" = "latest"
