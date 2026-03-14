@@ -1,3 +1,6 @@
+# Required for the glob qualifier (#qN.mh+24) used in the compinit check below
+setopt extendedglob
+
 # Enable compdef
 autoload -Uz compinit
 if [[ -n "$ZSH_COMPDUMP"(#qN.mh+24) ]]; then
