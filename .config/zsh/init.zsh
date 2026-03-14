@@ -42,6 +42,12 @@ setopt EXTENDED_HISTORY
 # Enable menu-style completion
 zstyle ':completion:*' menu select
 
+zstyle ':completion:*' special-dirs true
+
+# Use Emacs-style key bindings for zsh — must come before custom bindings
+# so those bindings are set in the emacs keymap and survive
+bindkey -e
+
 # Search with arrow keys
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
@@ -54,11 +60,6 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey "^x^x" edit-command-line
-
-zstyle ':completion:*' special-dirs true
-
-# Use Emacs-style key bindings for zsh
-bindkey -e
 
 # Click ^Z to bring a background job to the foreground if any is running
 ctrl-z() {
