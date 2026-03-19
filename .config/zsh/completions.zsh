@@ -21,23 +21,30 @@ function __tmux-sessions() {
 }
 compdef __tmux-sessions tm
 
-# Tab completion for opening tmuxinator projects
-_tmuxinator() {
-  local commands projects
-  commands=(${(f)"$(tmuxinator commands zsh)"})
-  projects=(${(f)"$(tmuxinator completions start)"})
+# Create a tmux session with an editor and shell window, or attach if it already
+# exists.
+function start-tmux-session() {
+  local name="${1:-$(basename "$PWD")}"
+  name="${name//[.:]/-}"
+  local root="${2:-$PWD}"
 
-  if (( CURRENT == 2 )); then
-    _describe -t commands "tmuxinator subcommands" commands
-    _describe -t projects "tmuxinator projects" projects
-  elif (( CURRENT == 3)); then
-    case $words[2] in
-      copy|debug|delete|open|start)
-        _arguments '*:projects:($projects)'
-      ;;
-    esac
+  if tmux has-session -t "$name" 2>/dev/null; then
+    if [[ -n "$TMUX" ]]; then
+      tmux switch-client -t "$name"
+    else
+      tmux attach-session -t "$name"
+    fi
+    return
   fi
 
-  return
+  tmux new-session -d -s "$name" -c "$root"
+  tmux send-keys -t "$name" \
+    'nvim -c ":FzfLua files"' Enter
+  tmux new-window -t "$name" -c "$root"
+  tmux select-window -t "$name":1
+  if [[ -n "$TMUX" ]]; then
+    tmux switch-client -t "$name"
+  else
+    tmux attach-session -t "$name"
+  fi
 }
-compdef _tmuxinator tmuxinator mux

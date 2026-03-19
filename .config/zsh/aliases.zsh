@@ -19,15 +19,15 @@ alias ...='cd ../..'
 alias alac="alac-conversion . && rm *.flac"
 alias be="bundle exec"
 alias bi="brew install"
-alias dotf="tmuxinator start dotfiles"
+alias dotf="start-tmux-session dotfiles ~/.dotfiles"
 alias n="node"
 alias p="irb"
 alias rm="trash"
-alias tmn="tmuxinator start new"
+alias tmn="start-tmux-session"
 alias ups="update-software"
 alias v='nvim --listen $(pwd)/nvim-context.sock'
 alias vim="nvim"
-alias wk="tmuxinator start notes"
+alias wk="start-tmux-session notes ~/Dropbox/Tekstdokumenter/Wiki/notes"
 
 # Git-related aliases
 alias ga="git add"
