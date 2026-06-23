@@ -260,6 +260,8 @@ When writing commit messages stick to the following practices:
   - How does it address the problem?
   - Are there any side effects?
 - Include a link to the ticket, if any.
+- Never use literal "\n" for new lines in commit messages instead of real line
+  breaks.
 
 ### Branch naming
 - Use descriptive prefixes, e.g., `feature/`, `fix/`, `docs/`, etc.
