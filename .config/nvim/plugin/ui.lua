@@ -1,7 +1,7 @@
 -- Set theme
 vim.cmd.colorscheme("majjoha")
 vim.opt.background = "dark"
-vim.opt.termguicolors = false
+vim.opt.termguicolors = true
 
 -- Enable relative line numbers
 vim.opt.number = true

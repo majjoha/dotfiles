@@ -1,36 +1,19 @@
-local gui00 = "#f4efe7"
-local gui01 = "#9f5032"
-local gui02 = "#7c7e44"
-local gui03 = "#a38a6b"
-local gui04 = "#58657e"
-local gui05 = "#9f8665"
-local gui06 = "#7c5f47"
-local gui07 = "#2f2f2d"
-local gui08 = "#2f2f2d"
-local gui09 = "#966d5d"
-local gui0A = "#e3dbd0"
-local gui0B = "#cbbda9"
-local gui0C = "#555a64"
-local gui0D = "#2b2722"
-local gui0E = "#6f6359"
-local gui0F = "#141310"
-
-local cterm00 = 00
-local cterm01 = 10
-local cterm02 = 11
-local cterm03 = 08
-local cterm04 = 12
-local cterm05 = 07
-local cterm06 = 13
-local cterm07 = 15
-local cterm08 = 01
-local cterm09 = 09
-local cterm0A = 03
-local cterm0B = 02
-local cterm0C = 06
-local cterm0D = 04
-local cterm0E = 05
-local cterm0F = 14
+local gui00 = "#f4efe7" -- palette 0
+local gui01 = "#e3dbd0" -- palette 10
+local gui02 = "#cbbda9" -- palette 11
+local gui03 = "#2f2f2d" -- palette 8
+local gui04 = "#555a63" -- palette 12
+local gui05 = "#2f2f2d" -- palette 7
+local gui06 = "#2b2722" -- palette 13
+local gui07 = "#141310" -- palette 15
+local gui08 = "#9f5032" -- palette 1
+local gui09 = "#966d5d" -- palette 9
+local gui0A = "#a38a6b" -- palette 3
+local gui0B = "#7c7e44" -- palette 2
+local gui0C = "#755943" -- palette 6
+local gui0D = "#58657e" -- palette 4
+local gui0E = "#9f8665" -- palette 5
+local gui0F = "#6f6359" -- palette 14
 
 vim.cmd([[
   highlight clear
@@ -44,57 +27,48 @@ for group, settings in pairs({
   Normal = {
     fg = gui05,
     bg = gui00,
-    ctermfg = cterm05,
-    ctermbg = cterm00,
   },
   NormalNC = {},
   Cursor = {
     fg = gui00,
     bg = gui05,
-    ctermfg = cterm00,
-    ctermbg = cterm05,
   },
   CursorLine = {},
   CursorColumn = {
     bg = gui01,
-    ctermbg = cterm01,
   },
   CursorLineNr = {
-    ctermfg = cterm05,
+    fg = gui05,
   },
   LineNr = {
-    ctermfg = cterm04,
+    fg = gui04,
   },
   lCursor = {},
   CursorIM = {},
   TermCursor = {},
   TermCursorNC = {},
   SignColumn = {
-    ctermbg = cterm00,
+    bg = gui00,
   },
   ColorColumn = {
     bg = gui01,
-    ctermbg = cterm01,
   },
   MatchParen = {
     bg = gui03,
-    ctermbg = cterm03,
   },
   Conceal = {
     fg = gui0D,
     bg = gui00,
-    ctermfg = cterm0D,
-    ctermbg = cterm00,
   },
   -- Editor interface
   -- Statuslines and tabs
   StatusLine = {
-    ctermbg = cterm01,
-    ctermfg = cterm05,
+    bg = gui01,
+    fg = gui05,
   },
   StatusLineNC = {
-    ctermbg = cterm01,
-    ctermfg = cterm03,
+    bg = gui01,
+    fg = gui03,
   },
   StatusLineTerm = {
     link = "StatusLine",
@@ -105,23 +79,17 @@ for group, settings in pairs({
   TabLine = {
     fg = gui0F,
     bg = gui01,
-    ctermfg = cterm0F,
-    ctermbg = cterm01,
   },
   TabLineFill = {
     fg = gui0F,
     bg = gui01,
-    ctermfg = cterm0F,
-    ctermbg = cterm01,
   },
   TabLineSel = {
     fg = gui05,
-    bg = gui01,
-    ctermfg = cterm05,
-    ctermbg = cterm02,
+    bg = gui02,
   },
   WinSeparator = {
-    ctermfg = cterm01,
+    fg = gui01,
   },
   WinBar = {},
   WinBarNC = {},
@@ -129,52 +97,36 @@ for group, settings in pairs({
   Pmenu = {
     fg = gui05,
     bg = gui01,
-    ctermfg = cterm05,
-    ctermbg = cterm01,
   },
   PmenuSel = {
     fg = gui05,
     bg = gui02,
-    ctermfg = cterm05,
-    ctermbg = cterm02,
   },
   PmenuMatch = {
-    cterm = {
-      bold = true,
-    },
+    bold = true,
   },
   PmenuMatchSel = {
     fg = gui05,
     bg = gui02,
-    ctermfg = cterm05,
-    ctermbg = cterm02,
   },
   PmenuExtra = {},
   PmenuExtraSel = {
     fg = gui05,
     bg = gui02,
-    ctermfg = cterm05,
-    ctermbg = cterm02,
   },
   PmenuKind = {
-    cterm = {
-      italic = true,
-    },
+    italic = true,
   },
   PmenuKindSel = {
     fg = gui05,
     bg = gui02,
-    ctermfg = cterm05,
-    ctermbg = cterm02,
-    cterm = {
-      italic = true,
-    },
+    italic = true,
   },
   PmenuSbar = {},
   PmenuThumb = {},
   PmenuBorder = {
-    ctermbg = cterm05,
-    ctermfg = cterm05,
+    fg = gui05,
+    bg = gui00,
   },
   PmenuShadow = {},
   PmenuShadowThrough = {},
@@ -184,67 +136,54 @@ for group, settings in pairs({
   ComplHintMore = {},
   -- Floating windows
   FloatBorder = {
-    ctermfg = cterm05,
-    ctermbg = cterm00,
+    fg = gui05,
+    bg = gui00,
   },
   NormalFloat = {
-    ctermbg = cterm00,
+    bg = gui00,
   },
   FloatTitle = {},
   FloatFooter = {},
   -- Other interface elements
   Directory = {
     fg = gui0D,
-    ctermfg = cterm0D,
   },
   Title = {
     fg = gui0D,
-    ctermfg = cterm0D,
   },
   Question = {
     fg = gui0D,
-    ctermfg = cterm0D,
   },
   QuickFixLine = {
     bg = gui01,
-    ctermbg = cterm01,
   },
   EndOfBuffer = {},
   -- Message and status indicators
   ModeMsg = {
-    ctermfg = cterm03,
+    fg = gui03,
   },
   MoreMsg = {
     fg = gui0B,
-    ctermfg = cterm0B,
   },
   ErrorMsg = {
     fg = gui08,
     bg = gui00,
-    ctermfg = cterm08,
-    ctermbg = cterm00,
   },
   WarningMsg = {
     fg = gui08,
-    ctermfg = cterm08,
   },
   Error = {
     fg = gui00,
     bg = gui08,
-    ctermfg = cterm00,
-    ctermbg = cterm08,
   },
   Debug = {
     fg = gui08,
-    ctermfg = cterm08,
   },
   Exception = {
     fg = gui08,
-    ctermfg = cterm08,
   },
   Macro = {
     fg = gui08,
-    ctermfg = cterm08,
   },
   OkMsg = {},
   StderrMsg = {},
@@ -258,279 +197,230 @@ for group, settings in pairs({
   Italic = {},
   Underlined = {
     fg = gui08,
-    ctermfg = cterm08,
   },
   SpecialKey = {
     fg = gui03,
-    ctermfg = cterm03,
   },
   NonText = {
-    ctermfg = cterm01,
+    fg = gui01,
   },
   Whitespace = {},
   Substitute = {
     fg = gui01,
     bg = gui0A,
-    ctermfg = cterm01,
-    ctermbg = cterm0A,
   },
   IncSearch = {
     fg = gui05,
     bg = gui02,
-    ctermfg = cterm05,
-    ctermbg = cterm02,
   },
   CurSearch = {
     fg = gui05,
     bg = gui02,
-    ctermfg = cterm05,
-    ctermbg = cterm02,
   },
   Search = {
     bg = gui01,
-    ctermbg = cterm01,
   },
   TooLong = {
     fg = gui08,
-    ctermfg = cterm08,
   },
   WildMenu = {
     fg = gui08,
-    bg = gui0A,
-    ctermfg = cterm08,
   },
   -- Folding and regions
   Folded = {
     fg = gui03,
-    bg = gui01,
-    ctermfg = cterm03,
-    ctermbg = cterm00,
-    cterm = { italic = true },
+    bg = gui00,
+    italic = true,
   },
   FoldColumn = {
     link = "Normal",
   },
   Visual = {
-    bg = gui02,
-    ctermbg = cterm01,
+    bg = gui01,
   },
   VisualNOS = {
     fg = gui08,
-    ctermfg = cterm08,
   },
   -- Standard syntax highlighting
   Comment = {
     fg = gui05,
-    ctermfg = cterm05,
-    cterm = { italic = true },
+    italic = true,
   },
   CommentBlock = {
     bg = gui01,
-    ctermbg = cterm01,
   },
   CommentBlockMarker = {
     fg = gui03,
     bg = gui01,
-    ctermfg = cterm03,
-    ctermbg = cterm01,
   },
   String = {
     fg = gui05,
-    ctermfg = cterm05,
   },
   Number = {
     fg = gui05,
-    ctermfg = cterm05,
   },
   Boolean = {
     fg = gui05,
-    ctermfg = cterm05,
   },
   Constant = {
     fg = gui05,
-    ctermfg = cterm05,
   },
   Character = {
     fg = gui05,
-    ctermfg = cterm05,
   },
   Float = {
     fg = gui05,
-    ctermfg = cterm05,
   },
   Identifier = {
     fg = gui05,
-    ctermfg = cterm05,
   },
   Function = {
     fg = gui05,
-    ctermfg = cterm05,
   },
   Keyword = {
     fg = gui03,
-    ctermfg = cterm03,
   },
   Statement = {
     fg = gui05,
-    ctermfg = cterm05,
   },
   Conditional = {
     fg = gui05,
-    ctermfg = cterm05,
   },
   Repeat = {
     fg = gui05,
-    ctermfg = cterm05,
   },
   Label = {
     fg = gui05,
-    ctermfg = cterm05,
   },
   Include = {
     fg = gui05,
-    ctermfg = cterm05,
   },
   Define = {
     fg = gui05,
-    ctermfg = cterm05,
   },
   PreProc = {
     fg = gui05,
-    ctermfg = cterm05,
   },
   Type = {
     fg = gui0E,
-    ctermfg = cterm0E,
   },
   Typedef = {
     fg = gui0D,
-    ctermfg = cterm0D,
   },
   Structure = {
     fg = gui0E,
-    ctermfg = cterm0E,
   },
   Delimiter = {
     fg = gui0A,
-    ctermfg = cterm0A,
   },
   Operator = {
     fg = gui03,
-    ctermfg = cterm03,
   },
   Special = {
     fg = gui05,
-    ctermfg = cterm05,
   },
   SpecialChar = {
     fg = gui05,
-    ctermfg = cterm05,
   },
   Tag = {
     fg = gui05,
-    ctermfg = cterm05,
   },
   Todo = {
     fg = gui0A,
     bg = gui01,
-    ctermfg = cterm0A,
-    ctermbg = cterm01,
   },
   StorageClass = {
     fg = gui05,
-    ctermfg = cterm05,
   },
   Ignore = {},
   -- Spelling
   SpellBad = {
-    ctermfg = cterm08,
+    fg = gui08,
     undercurl = true,
   },
   SpellLocal = {
     bg = gui00,
-    ctermbg = cterm00,
     undercurl = true,
   },
   SpellCap = {
-    ctermfg = cterm08,
+    fg = gui08,
     undercurl = true,
   },
   SpellRare = {
     bg = gui00,
-    ctermbg = cterm00,
     undercurl = true,
   },
   -- Diagnostics
   DiagnosticSignError = {
-    ctermfg = cterm08,
-    ctermbg = cterm00,
+    fg = gui08,
+    bg = gui00,
   },
   DiagnosticSignWarn = {
-    ctermfg = cterm0A,
-    ctermbg = cterm00,
+    fg = gui0A,
+    bg = gui00,
   },
   DiagnosticSignHint = {
-    ctermfg = cterm05,
-    ctermbg = cterm00,
+    fg = gui05,
+    bg = gui00,
   },
   DiagnosticSignInfo = {
-    ctermfg = cterm05,
-    ctermbg = cterm00,
+    fg = gui05,
+    bg = gui00,
   },
   DiagnosticVirtualLinesError = {
-    ctermfg = cterm03,
-    ctermbg = cterm00,
+    fg = gui03,
+    bg = gui00,
   },
   DiagnosticVirtualLinesWarn = {
-    ctermfg = cterm03,
-    ctermbg = cterm00,
+    fg = gui03,
+    bg = gui00,
   },
   DiagnosticVirtualLinesHint = {
-    ctermfg = cterm03,
-    ctermbg = cterm00,
+    fg = gui03,
+    bg = gui00,
   },
   DiagnosticVirtualLinesInfo = {
-    ctermfg = cterm03,
-    ctermbg = cterm00,
+    fg = gui03,
+    bg = gui00,
   },
   DiagnosticVirtualLinesOk = {
-    ctermfg = cterm03,
-    ctermbg = cterm00,
+    fg = gui03,
+    bg = gui00,
   },
   DiagnosticFloatingError = {
-    ctermfg = cterm03,
-    ctermbg = cterm00,
+    fg = gui03,
+    bg = gui00,
   },
   DiagnosticFloatingWarn = {
-    ctermfg = cterm03,
-    ctermbg = cterm00,
+    fg = gui03,
+    bg = gui00,
   },
   DiagnosticFloatingHint = {
-    ctermfg = cterm03,
-    ctermbg = cterm00,
+    fg = gui03,
+    bg = gui00,
   },
   DiagnosticFloatingInfo = {
-    ctermfg = cterm03,
-    ctermbg = cterm00,
+    fg = gui03,
+    bg = gui00,
   },
   DiagnosticFloatingOk = {
-    ctermfg = cterm03,
-    ctermbg = cterm00,
+    fg = gui03,
+    bg = gui00,
   },
   DiagnosticUnderlineError = {
-    cterm = { undercurl = true },
+    undercurl = true,
   },
   DiagnosticUnderlineWarn = {
-    cterm = { undercurl = true },
+    undercurl = true,
   },
   DiagnosticUnderlineHint = {
-    cterm = { undercurl = true },
+    undercurl = true,
   },
   DiagnosticUnderlineInfo = {
-    cterm = { undercurl = true },
+    undercurl = true,
   },
   DiagnosticUnderlineOk = {
-    cterm = { undercurl = true },
+    undercurl = true,
   },
   DiagnosticError = {},
   DiagnosticWarn = {},
@@ -541,56 +431,38 @@ for group, settings in pairs({
   DiffAdd = {
     fg = gui0B,
     bg = gui01,
-    ctermfg = cterm0B,
-    ctermbg = cterm01,
   },
   DiffChange = {
     fg = gui03,
     bg = gui01,
-    ctermfg = cterm03,
-    ctermbg = cterm01,
   },
   DiffDelete = {
     fg = gui08,
     bg = gui01,
-    ctermfg = cterm08,
-    ctermbg = cterm01,
   },
   DiffText = {
     fg = gui0D,
     bg = gui01,
-    ctermfg = cterm0D,
-    ctermbg = cterm01,
   },
   DiffAdded = {
     fg = gui0B,
     bg = gui00,
-    ctermfg = cterm0B,
-    ctermbg = cterm00,
   },
   DiffFile = {
     fg = gui08,
     bg = gui00,
-    ctermfg = cterm08,
-    ctermbg = cterm00,
   },
   DiffNewFile = {
     fg = gui0B,
     bg = gui00,
-    ctermfg = cterm0B,
-    ctermbg = cterm00,
   },
   DiffLine = {
     fg = gui0D,
     bg = gui00,
-    ctermfg = cterm0D,
-    ctermbg = cterm00,
   },
   DiffRemoved = {
     fg = gui08,
     bg = gui00,
-    ctermfg = cterm08,
-    ctermbg = cterm00,
   },
   Added = {},
   Changed = {},
@@ -598,106 +470,81 @@ for group, settings in pairs({
   ["@text.diff.delete"] = {
     fg = gui08,
     bg = gui00,
-    ctermfg = cterm08,
-    ctermbg = cterm00,
   },
   ["@text.diff.add"] = {
     fg = gui0B,
     bg = gui00,
-    ctermfg = cterm0B,
-    ctermbg = cterm00,
   },
   ["@diff.plus.diff"] = {
     fg = gui0B,
     bg = gui00,
-    ctermfg = cterm0B,
-    ctermbg = cterm00,
   },
   ["@diff.minus.diff"] = {
     fg = gui08,
     bg = gui00,
-    ctermfg = cterm08,
-    ctermbg = cterm00,
   },
   ["jjAdded"] = {
     fg = gui0B,
     bg = gui00,
-    ctermfg = cterm0B,
-    ctermbg = cterm00,
   },
   gitcommitOverflow = {
     fg = gui08,
-    ctermfg = cterm08,
   },
   gitcommitSummary = {
     fg = gui0B,
-    ctermfg = cterm0B,
   },
   gitcommitComment = {
     fg = gui03,
-    ctermfg = cterm03,
   },
   gitcommitUntracked = {
     fg = gui03,
-    ctermfg = cterm03,
   },
   gitcommitDiscarded = {
     fg = gui03,
-    ctermfg = cterm03,
   },
   gitcommitSelected = {
     fg = gui03,
-    ctermfg = cterm03,
   },
   gitcommitHeader = {
     fg = gui0E,
-    ctermfg = cterm0E,
   },
   gitcommitSelectedType = {
     fg = gui0D,
-    ctermfg = cterm0D,
   },
   gitcommitUnmergedType = {
     fg = gui0D,
-    ctermfg = cterm0D,
   },
   gitcommitDiscardedType = {
     fg = gui0D,
-    ctermfg = cterm0D,
   },
   gitcommitBranch = {
     fg = gui09,
-    ctermfg = cterm09,
     bold = true,
   },
   gitcommitUntrackedFile = {
     fg = gui0A,
-    ctermfg = cterm0A,
   },
   gitcommitUnmergedFile = {
     fg = gui08,
-    ctermfg = cterm08,
     bold = true,
   },
   gitcommitDiscardedFile = {
     fg = gui08,
-    ctermfg = cterm08,
     bold = true,
   },
   gitcommitSelectedFile = {
     fg = gui0B,
-    ctermfg = cterm0B,
     bold = true,
   },
   -- Plugin-specific highlighting
   MiniFilesBorder = {
-    ctermfg = cterm01,
+    fg = gui01,
   },
   OtherSelector = {
-    ctermfg = cterm01,
+    fg = gui01,
   },
   OtherUnderlined = {
-    ctermfg = cterm05,
+    fg = gui05,
   },
   -- Treesitter/LSP
   LspReferenceText = {
@@ -786,96 +633,74 @@ for group, settings in pairs({
   ["@function.call.haskell"] = {},
   ["@constructor.haskell"] = {
     fg = gui0C,
-    ctermfg = cterm0C,
   },
   -- Lua
   ["@lsp.mod.global.lua"] = {
     fg = gui0E,
-    ctermfg = cterm0E,
   },
   ["@lsp.type.property.lua"] = {
     fg = gui0C,
-    ctermfg = cterm0C,
   },
   ["@constant.lua"] = {
     fg = gui0C,
-    ctermfg = cterm0C,
   },
   ["@keyword.return.lua"] = {
     fg = gui0C,
-    ctermfg = cterm0C,
   },
   -- Ruby
   ["@lsp.typemod.namespace.declaration.ruby"] = {
     fg = gui0E,
-    ctermfg = cterm0E,
   },
   ["@lsp.typemod.class.declaration.ruby"] = {
     fg = gui0C,
-    ctermfg = cterm0C,
   },
   ["@comment.frozen.ruby"] = {
     fg = gui02,
-    ctermfg = cterm02,
   },
   ["@constant.builtin.nil.ruby"] = {},
   ["@keyword.modifier.private.ruby"] = {
-    cterm = { bold = true },
+    bold = true,
   },
   ["@string.ruby"] = {
     fg = gui0A,
-    ctermfg = cterm0A,
   },
   ["@string_content.ruby"] = {
     fg = gui05,
-    ctermfg = cterm05,
   },
   -- TypeScript
   ["@lsp.typemod.type.declaration.typescript"] = {
     fg = gui0C,
-    ctermfg = cterm0C,
   },
   ["@lsp.type.type.typescript"] = {
     fg = gui0C,
-    ctermfg = cterm0C,
   },
   ["@type.typescript"] = {
     fg = gui0C,
-    ctermfg = cterm0C,
   },
   ["@lsp.type.interface.typescript"] = {
     fg = gui0C,
-    ctermfg = cterm0C,
   },
   ["@lsp.type.class.typescript"] = {
     fg = gui0C,
-    ctermfg = cterm0C,
   },
   ["@lsp.typemod.typeParameter.declaration.typescript"] = {
     fg = gui0E,
-    ctermfg = cterm0E,
   },
   ["@punctuation.bracket.typescript"] = {
     fg = gui02,
-    ctermfg = cterm02,
   },
   ["@punctuation.delimiter.typescript"] = {
     fg = gui02,
-    ctermfg = cterm02,
   },
   ["@keyword.readonly.typescript"] = {
-    cterm = {
-      italic = true,
-    },
+    italic = true,
   },
   -- GraphQL
   ["@punctuation.bracket.graphql"] = {
     fg = gui02,
-    ctermfg = cterm02,
   },
   ["@type.graphql"] = {
     fg = gui0C,
-    ctermfg = cterm0C,
   },
   -- Special compatibility for terminal
   Terminal = {
