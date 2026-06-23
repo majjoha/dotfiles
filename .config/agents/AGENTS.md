@@ -20,8 +20,10 @@
 - When asked to find bugs or review code, present only what was asked for.
   Do not bundle feature suggestions, documentation ideas, or speculative
   improvements into bug reports.
-- Never claim a task is complete without verifying it works. Run tests, build,
-  or demonstrate the output.
+- Never claim a task is complete without verifying it works end-to-end from the
+  user's perspective. Run tests, build, or demonstrate the output. Verifying an
+  intermediate step (e.g., a binary exists) is not sufficient, verify the final
+  outcome (e.g., the tool actually runs in its target environment).
 - Verify each change works before moving to the next one. Do not batch
   multiple changes and only test the final result. If a change breaks
   something, it should be obvious which one caused it.
