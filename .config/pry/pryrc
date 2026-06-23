@@ -1,0 +1,14 @@
+require "pry"
+require "reline"
+
+Pry.config.input = Reline
+
+# Pry defaults history to XDG_DATA_HOME; relocate it to XDG_STATE_HOME
+# to match zsh and IRB, where regenerable history belongs per the spec.
+Pry.config.history_file = File.join(
+  ENV.fetch("XDG_STATE_HOME", "#{Dir.home}/.local/state"),
+  "pry",
+  "history"
+)
+
+load File.join(ENV.fetch("XDG_CONFIG_HOME", "#{Dir.home}/.config"), "reline", "face.rb")

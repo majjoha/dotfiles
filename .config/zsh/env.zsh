@@ -81,6 +81,9 @@ export SAPF_SPECTROGRAMS="$HOME/sapf-files/spectrograms"
 export CODEX_HOME="$HOME/.dotfiles/.codex"
 export CODEX_SQLITE_HOME="${XDG_STATE_HOME:-$HOME/.local/state}/codex/sqlite"
 
+# Pry has no native XDG support; point it at the XDG config path
+export PRYRC="${XDG_CONFIG_HOME:-$HOME/.config}/pry/pryrc"
+
 # Store Zsh completion cache dump in XDG cache
 export ZSH_COMPDUMP="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdump"
 
