@@ -290,5 +290,5 @@ for approval. Never modify this file without explicit consent.
 
 ## Editor context
 - When a user asks about their cursor position, current method, current file,
-  selection, or other editor state, automatically invoke `nvim-context` to fetch
+  selection, or other editor state, automatically invoke `nvim-control` to fetch
   live context before responding.
