@@ -38,7 +38,12 @@
 .codex/auth.json
 .codex/config.toml
 .codex/history.jsonl
+.codex/goals_*.sqlite*
+.codex/installation_id
 .codex/log/
+.codex/logs_*
+.codex/memories/
+.codex/memories_*.sqlite*
 .codex/rules/
 .codex/sessions/
 .codex/shell_snapshots/
@@ -46,6 +51,7 @@
 .codex/sqlite/
 .codex/state_5.sqlite*
 .codex/tmp/
+.codex/.tmp/
 .codex/vendor_imports/skills-curated-cache.json
 .codex/version.json
 .codex/auth.json
