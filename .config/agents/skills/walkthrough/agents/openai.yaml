@@ -1,0 +1,5 @@
+# Codex-only sidecar (Claude Code ignores it). Mirrors the Claude frontmatter
+# `disable-model-invocation: true`: a walkthrough moves the user's cursor, so
+# Codex must not auto-invoke it. Explicit `$walkthrough` still works.
+policy:
+  allow_implicit_invocation: false
