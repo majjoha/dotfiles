@@ -79,6 +79,7 @@ export SAPF_SPECTROGRAMS="$HOME/sapf-files/spectrograms"
 
 # Ensure Codex scans configuration files, skills, etc., correctly
 export CODEX_HOME="$HOME/.dotfiles/.codex"
+export CODEX_SQLITE_HOME="${XDG_STATE_HOME:-$HOME/.local/state}/codex/sqlite"
 
 # Store Zsh completion cache dump in XDG cache
 export ZSH_COMPDUMP="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdump"
