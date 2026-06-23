@@ -80,12 +80,22 @@
       "Bash(git tag:*)",
       "Bash(npm install:*)",
       "Bash(npm:*)",
-      "Bash(rm:*)",
       "Bash(yarn install:*)",
       "Bash(yarn:*)"
     ]
   },
   "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/trash-enforce.sh"
+          }
+        ]
+      }
+    ],
     "Stop": [
       {
         "hooks": [
