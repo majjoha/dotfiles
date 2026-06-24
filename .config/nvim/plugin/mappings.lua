@@ -251,5 +251,3 @@ vim.keymap.set("n", "gS", ":TSJSplit<CR>", { silent = true })
 vim.keymap.set("n", "gJ", ":TSJJoin<CR>", { silent = true })
 
 vim.keymap.set("n", "<Leader>ch", ":helpclose<CR>", { silent = true })
-
-vim.keymap.set("n", "<C-]>", vim.lsp.buf.definition)
