@@ -164,6 +164,10 @@ vim.keymap.set(
 -- dumping them into the location list
 vim.keymap.set("n", "grr", ":FzfLua lsp_references<CR>", { silent = true })
 
+-- Route LSP implementation lookups through `fzf-lua` for a consistent picker
+-- similar to `gra`
+vim.keymap.set("n", "gri", ":FzfLua lsp_implementations<CR>", { silent = true })
+
 -- Reselect pasted text
 vim.keymap.set("n", "gp", "`[v`]")
 
