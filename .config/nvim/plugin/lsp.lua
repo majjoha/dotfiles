@@ -23,6 +23,7 @@ vim.diagnostic.config({
   severity_sort = true,
   underline = false,
   virtual_text = false,
+  virtual_lines = false,
 })
 
 local configurations = {}
