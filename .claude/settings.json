@@ -119,7 +119,8 @@
   },
   "enabledPlugins": {
     "typescript-lsp@claude-plugins-official": true,
-    "lua-lsp@claude-plugins-official": true
+    "lua-lsp@claude-plugins-official": true,
+    "ruby-lsp@claude-plugins-official": true
   },
   "alwaysThinkingEnabled": false,
   "skipDangerousModePermissionPrompt": true
