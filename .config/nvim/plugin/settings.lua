@@ -22,12 +22,14 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 
 -- Show the popup menu even if there is only one match, leave the text as
--- typed instead of auto-inserting, and prefer the nearest match
+-- typed instead of auto-inserting, prefer the nearest match, and show extra
+-- item info in a side popup
 vim.opt.completeopt = {
   "fuzzy",
   "menuone",
   "noinsert",
   "nearest",
+  "popup",
 }
 
 -- Allow per project `.vimrc`
