@@ -21,9 +21,14 @@ vim.opt.swapfile = false
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
--- Show the popup menu even if there is only one match and select the first
--- option in the menu
-vim.opt.completeopt = { "fuzzy", "menuone", "noinsert" }
+-- Show the popup menu even if there is only one match, leave the text as
+-- typed instead of auto-inserting, and prefer the nearest match
+vim.opt.completeopt = {
+  "fuzzy",
+  "menuone",
+  "noinsert",
+  "nearest",
+}
 
 -- Allow per project `.vimrc`
 vim.opt.exrc = true
