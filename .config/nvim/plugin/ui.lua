@@ -35,6 +35,9 @@ vim.opt.signcolumn = "yes:1"
 -- Use single line borders for floating windows
 vim.opt.winborder = "single"
 
+-- Use single line borders for the completion popup menus
+vim.opt.pumborder = "single"
+
 -- Set status column to show signs and then right-aligned numbers followed by a
 -- separator
 vim.opt.statuscolumn = "%s%=%l %#WinSeparator#│ "
