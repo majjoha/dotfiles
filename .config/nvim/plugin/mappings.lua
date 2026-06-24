@@ -160,6 +160,10 @@ vim.keymap.set(
   { silent = true }
 )
 
+-- Route references through `fzf-lua` to match the `gra` picker style instead of
+-- dumping them into the location list
+vim.keymap.set("n", "grr", ":FzfLua lsp_references<CR>", { silent = true })
+
 -- Reselect pasted text
 vim.keymap.set("n", "gp", "`[v`]")
 
