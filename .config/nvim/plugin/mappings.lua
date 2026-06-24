@@ -168,6 +168,10 @@ vim.keymap.set("n", "grr", ":FzfLua lsp_references<CR>", { silent = true })
 -- similar to `gra`
 vim.keymap.set("n", "gri", ":FzfLua lsp_implementations<CR>", { silent = true })
 
+-- Expose signature help in normal mode under the `gr` prefix. The built-in
+-- default only maps it to <C-s> in insert and select mode
+vim.keymap.set("n", "grs", vim.lsp.buf.signature_help, { silent = true })
+
 -- Reselect pasted text
 vim.keymap.set("n", "gp", "`[v`]")
 
