@@ -120,7 +120,7 @@ local highlight_on_yank_group =
 vim.api.nvim_create_autocmd("TextYankPost", {
   pattern = "*",
   callback = function()
-    vim.highlight.on_yank({ timeout = 150, visual = true })
+    vim.hl.on_yank({ timeout = 150, visual = true })
   end,
   group = highlight_on_yank_group,
 })
