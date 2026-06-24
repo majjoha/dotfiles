@@ -53,9 +53,6 @@ vim.opt.infercase = true
 -- Ignore case sensitivity for files in `:cd`
 vim.opt.fileignorecase = true
 
--- Do not redraw while executing macros
-vim.opt.lazyredraw = true
-
 -- Disable the intro message
 vim.opt.shortmess:append("I")
 
