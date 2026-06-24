@@ -1,0 +1,14 @@
+# IRB has no XDG_STATE_HOME support; history defaults next to this
+# rc file. Redirect it to the XDG-compliant state directory. The
+# directory is created by the setup script's XDG bootstrap.
+IRB.conf[:HISTORY_FILE] = File.join(
+  ENV.fetch("XDG_STATE_HOME", "#{Dir.home}/.local/state"),
+  "irb",
+  "history"
+)
+
+load File.join(
+  ENV.fetch("XDG_CONFIG_HOME", "#{Dir.home}/.config"),
+  "reline",
+  "face.rb"
+)
