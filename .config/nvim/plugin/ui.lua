@@ -38,6 +38,9 @@ vim.opt.winborder = "single"
 -- Use single line borders for the completion popup menus
 vim.opt.pumborder = "single"
 
+-- Cap popup width so long type signatures do not stretch the window
+vim.opt.pummaxwidth = 60
+
 -- Set status column to show signs and then right-aligned numbers followed by a
 -- separator
 vim.opt.statuscolumn = "%s%=%l %#WinSeparator#│ "
