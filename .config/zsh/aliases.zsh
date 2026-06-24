@@ -25,7 +25,7 @@ alias p="irb"
 alias rm="trash"
 alias tmn="start-tmux-session"
 alias ups="update-software"
-alias v='nvim --listen $(pwd)/nvim-context.sock'
+alias v='nvim --listen $(pwd)/nvim-control.sock'
 alias vim="nvim"
 alias wk="start-tmux-session notes ~/Dropbox/Tekstdokumenter/Wiki/notes"
 
