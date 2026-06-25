@@ -137,6 +137,25 @@ ask the user for help rather than proceeding without it.
   values, maximum/minimum values, and error states. These tests prevent common
   bugs and clarify expected behavior at the boundaries.
 
+## Prose and writing
+These conventions apply to all prose: documentation, code comments, commit
+messages, and pull request text.
+- Do not use em-dashes. Join clauses with a colon, semicolon, or parentheses.
+- End a list item or table cell with a period only when it is a complete
+  sentence; omit it for a fragment, label, or noun phrase.
+- Spell words out in full in prose: "configuration" not "config", "environment"
+  not "env", "repository" not "repo". This holds even for code-common clips like
+  "async" or "regex". Initialisms read letter-by-letter (XDG, API, GPG) stay
+  as-is. A short form is allowed only as a backticked literal token (`.config`,
+  `ENV`, `rebase.autoSquash`).
+- Backtick literal tokens: commands, executables, packages, flags, paths,
+  environment variables, configuration keys, identifiers, and language literals
+  (`nil`, `true`). Name a tool or project as a plain proper noun (Neovim, Zsh,
+  Git), but use its backticked lowercase command form (`git`, `delta`, `tmux`)
+  when you mean the binary; `tmux` is lowercase either way. Backtick a value
+  only inside a literal expression (`tabSize = 2`), not as a bare number.
+- Reword to avoid starting a sentence with a lowercase backticked token.
+
 ## Documentation
 ### Comments
 Write comments that explain "why", not "what". The code itself should
