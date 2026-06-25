@@ -1,7 +1,7 @@
 # AGENTS.md
 ## Workflow
-- Never `git add` planning artifacts (review files, analysis docs, design notes)
-  created during a task. These are disposable working documents. Delete them
+- Never `git add` planning artifacts (review files, analysis documents, design
+  notes) created during a task. These are disposable working documents. Delete them
   before committing or place them outside the repository, so they are kept but
   not tracked. The "before pushing" checklist is a safety net, not the primary
   defense.
@@ -248,8 +248,8 @@ Before pushing commits, perform a final review:
    - Edge cases are handled.
    - Tests cover the changes.
    - No debug code, TODOs, or temporary files remain.
-   - No planning artifacts (design docs, code review notes, analysis files)
-     created during the task are included; only commit documentation if
+   - No planning artifacts (design documents, code review notes, analysis
+     files) created during the task are included; only commit documentation if
      explicitly requested or standard for the project (e.g., ADRs).
 3. Verify all commits ahead of the remote are GPG-signed:
    ```sh
