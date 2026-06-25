@@ -175,7 +175,6 @@ be self-documenting through clear names and structure.
 - Play-by-play descriptions of algorithms
 
 **Examples:**
-
 Bad (explains "what"):
 ```lua
 -- Check if window is floating
