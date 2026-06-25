@@ -98,7 +98,7 @@ ask the user for help rather than proceeding without it.
   Lua annotations). If a type cannot be expressed, redesign the API rather than
   silencing the type checker.
 - Model domain concepts as distinct types, not bare primitives. A `WindowID`
-  and a `SpaceID` are both integers but are not interchangeable — make them
+  and a `SpaceID` are both integers but are not interchangeable; make them
   nominally distinct so the type checker rejects accidental interchange.
 - Represent closed sets as union types, not strings. A hook type that accepts
   `"window_created"` or `"layout_changed"` is safer than one that accepts
@@ -249,7 +249,7 @@ Before pushing commits, perform a final review:
    - Tests cover the changes.
    - No debug code, TODOs, or temporary files remain.
    - No planning artifacts (design docs, code review notes, analysis files)
-     created during the task are included — only commit documentation if
+     created during the task are included; only commit documentation if
      explicitly requested or standard for the project (e.g., ADRs).
 3. Verify all commits ahead of the remote are GPG-signed:
    ```sh
