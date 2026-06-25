@@ -31,9 +31,9 @@
 ### Quality gates and tooling
 If a quality gate (tests, linters, type checkers, build steps) fails due to
 missing tools:
-1. Install or configure the missing tool
-2. Re-run the quality gate
-3. Fix any issues it reveals
+1. Install or configure the missing tool.
+2. Re-run the quality gate.
+3. Fix any issues it reveals.
 
 Never skip quality gates due to missing tooling. If you cannot install a tool,
 ask the user for help rather than proceeding without it.
@@ -242,15 +242,15 @@ saying "Check if we should ignore events".
 
 ### Before pushing
 Before pushing commits, perform a final review:
-1. Re-read the original task requirements
+1. Re-read the original task requirements.
 2. For each commit, verify:
-   - All acceptance criteria are met
-   - Edge cases are handled
-   - Tests cover the changes
-   - No debug code, TODOs, or temporary files remain
+   - All acceptance criteria are met.
+   - Edge cases are handled.
+   - Tests cover the changes.
+   - No debug code, TODOs, or temporary files remain.
    - No planning artifacts (design docs, code review notes, analysis files)
      created during the task are included — only commit documentation if
-     explicitly requested or standard for the project (e.g., ADRs)
+     explicitly requested or standard for the project (e.g., ADRs).
 3. Verify all commits ahead of the remote are GPG-signed:
    ```sh
    git log --format='%H %G?' @{u}..HEAD
@@ -261,9 +261,9 @@ Before pushing commits, perform a final review:
    git rebase --exec 'git commit --amend --no-edit -S' @{u}
    ```
    After signing, push with `--force-with-lease`.
-4. If you find gaps within the original scope, amend the relevant commit
+4. If you find gaps within the original scope, amend the relevant commit.
 5. If you identify potential improvements outside the original scope, ask the
-   user first
+   user first.
 6. Self-review: identify weaknesses in the implementation. What edge
    cases are untested? What would you change if redoing this? Fix
    gaps before presenting the work as complete.
