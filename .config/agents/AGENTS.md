@@ -300,8 +300,3 @@ When you encounter a situation where:
 
 Propose a specific amendment to this file. Present the exact diff to the user
 for approval. Never modify this file without explicit consent.
-
-## Editor context
-- When a user asks about their cursor position, current method, current file,
-  selection, or other editor state, automatically invoke `nvim-control` to fetch
-  live context before responding.
