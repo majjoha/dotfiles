@@ -1,10 +1,10 @@
 # AGENTS.md
 ## Workflow
 - Never `git add` planning artifacts (review files, analysis documents, design
-  notes) created during a task. These are disposable working documents. Delete them
-  before committing or place them outside the repository, so they are kept but
-  not tracked. The "before pushing" checklist is a safety net, not the primary
-  defense.
+  notes) created during a task. These are disposable working documents. Delete
+  them before committing or place them outside the repository, so they are kept
+  but not tracked. The "before pushing" checklist is a safety net, not the
+  primary defense.
 - For long-form output (reviews, plans, analyses exceeding ~100 lines), write to
   a Markdown file in the project directory and tell the user the path. This
   preserves context window tokens and gives the user a persistent, reviewable
@@ -13,20 +13,20 @@
   Long-running processes may indicate an issue or inefficient approach.
 - Search before proposing solutions. Understand existing code, patterns, and
   trade-offs before suggesting changes.
-- When debugging or investigating, gather evidence (logs, return values,
-  actual vs. expected behavior) before proposing fixes. Do not guess.
+- When debugging or investigating, gather evidence (logs, return values, actual
+  vs. expected behavior) before proposing fixes. Do not guess.
 - Only change what the task requires. Do not refactor, reformat, or "improve"
   nearby code unless explicitly asked.
-- When asked to find bugs or review code, present only what was asked for.
-  Do not bundle feature suggestions, documentation ideas, or speculative
+- When asked to find bugs or review code, present only what was asked for. Do
+  not bundle feature suggestions, documentation ideas, or speculative
   improvements into bug reports.
 - Never claim a task is complete without verifying it works end-to-end from the
   user's perspective. Run tests, build, or demonstrate the output. Verifying an
   intermediate step (e.g., a binary exists) is not sufficient, verify the final
   outcome (e.g., the tool actually runs in its target environment).
-- Verify each change works before moving to the next one. Do not batch
-  multiple changes and only test the final result. If a change breaks
-  something, it should be obvious which one caused it.
+- Verify each change works before moving to the next one. Do not batch multiple
+  changes and only test the final result. If a change breaks something, it
+  should be obvious which one caused it.
 
 ### Quality gates and tooling
 If a quality gate (tests, linters, type checkers, build steps) fails due to
@@ -40,8 +40,8 @@ ask the user for help rather than proceeding without it.
 
 ### Development workflow
 - Use TDD for features and bug fixes unless stated otherwise. Add or adjust
-  tests that define expected behavior before changing implementations, and use
-  a red-green-refactor cycle.
+  tests that define expected behavior before changing implementations, and use a
+  red-green-refactor cycle.
 - For refactors that preserve existing behavior, rely on existing coverage. If
   behavior is not already captured, add or shore up targeted tests before
   changing code; do not invent new behavior during refactors.
@@ -49,8 +49,8 @@ ask the user for help rather than proceeding without it.
   commit them separately. If in doubt, default to separate commits with a green
   test suite.
 - Commit after each logically complete change rather than accumulating
-  uncommitted work across multiple steps. Every commit must pass quality
-  gates before being created.
+  uncommitted work across multiple steps. Every commit must pass quality gates
+  before being created.
 
 ## Coding style
 ### Core principles
@@ -81,10 +81,10 @@ ask the user for help rather than proceeding without it.
   Avoid indirection that does not reduce coupling or enable variation. When
   considering abstraction, ask "Does this enable variation that I need TODAY?".
   If no, inline it or keep it simple.
-- Tolerate duplication until the third occurrence (Rule of Three), then
-  abstract only if the pattern is stable. Two instances of similar code are not
-  yet a pattern. You may abstract earlier if a third occurrence is imminent AND
-  the pattern is clearly stable, but default to waiting.
+- Tolerate duplication until the third occurrence (Rule of Three), then abstract
+  only if the pattern is stable. Two instances of similar code are not yet a
+  pattern. You may abstract earlier if a third occurrence is imminent AND the
+  pattern is clearly stable, but default to waiting.
 - Apply SOLID principles only when they solve a current problem. When SOLID
   requires speculative abstraction, choose YAGNI.
 - For OOP, opt for composition over inheritance.
@@ -97,22 +97,22 @@ ask the user for help rather than proceeding without it.
 - Never use escape hatches (`any`, `unknown` in TypeScript; `any`, `@cast` in
   Lua annotations). If a type cannot be expressed, redesign the API rather than
   silencing the type checker.
-- Model domain concepts as distinct types, not bare primitives. A `WindowID`
-  and a `SpaceID` are both integers but are not interchangeable; make them
-  nominally distinct so the type checker rejects accidental interchange.
+- Model domain concepts as distinct types, not bare primitives. A `WindowID` and
+  a `SpaceID` are both integers but are not interchangeable; make them nominally
+  distinct so the type checker rejects accidental interchange.
 - Represent closed sets as union types, not strings. A hook type that accepts
   `"window_created"` or `"layout_changed"` is safer than one that accepts
   `string`.
-- Use the narrowest type that matches runtime behavior. If a function
-  guarantees a value is present, the return type must not include
-  `nil`/`undefined`/`null`. Overly permissive types force callers into dead
-  defensive code and hide real bugs.
+- Use the narrowest type that matches runtime behavior. If a function guarantees
+  a value is present, the return type must not include `nil`/`undefined`/`null`.
+  Overly permissive types force callers into dead defensive code and hide real
+  bugs.
 - Prefer typed structures over generic containers (`Map<string, number>` over
   `object`; `table<string, number>` over `table`).
-- Prefer explicit callback signatures over generic function types.
-  `(id: WindowID, floating: boolean) => void` is safer than `Function` in
-  TypeScript; `fun(id: WindowID, floating: boolean)` is safer than `function`
-  in Lua annotations.
+- Prefer explicit callback signatures over generic function types. `(id:
+  WindowID, floating: boolean) => void` is safer than `Function` in TypeScript;
+  `fun(id: WindowID, floating: boolean)` is safer than `function` in Lua
+  annotations.
 
 ### Project conventions
 - Always ask before introducing third-party libraries, including production
@@ -158,8 +158,8 @@ messages, and pull request text.
 
 ## Documentation
 ### Comments
-Write comments that explain "why", not "what". The code itself should
-be self-documenting through clear names and structure.
+Write comments that explain "why", not "what". The code itself should be
+self-documenting through clear names and structure.
 
 **When to comment:**
 - Architectural decisions (why this pattern, not alternatives)
@@ -199,8 +199,8 @@ local shouldValidateCycle =
 ```
 
 **If in doubt:** Prefer clear variable and function names over comments. A
-well-named function like `shouldIgnoreEvents()` is better than a comment
-saying "Check if we should ignore events".
+well-named function like `shouldIgnoreEvents()` is better than a comment saying
+"Check if we should ignore events".
 
 ## Language-specific guidance
 ### Lua
@@ -247,15 +247,15 @@ Before pushing commits, perform a final review:
    - Edge cases are handled.
    - Tests cover the changes.
    - No debug code, TODOs, or temporary files remain.
-   - No planning artifacts (design documents, code review notes, analysis
-     files) created during the task are included; only commit documentation if
+   - No planning artifacts (design documents, code review notes, analysis files)
+     created during the task are included; only commit documentation if
      explicitly requested or standard for the project (e.g., ADRs).
 3. Verify all commits ahead of the remote are GPG-signed:
    ```sh
    git log --format='%H %G?' @{u}..HEAD
    ```
-   Any commit showing `N` (no signature) must be signed. To
-   sign all unsigned commits from the fork point onward:
+   Any commit showing `N` (no signature) must be signed. To sign all unsigned
+   commits from the fork point onward:
    ```sh
    git rebase --exec 'git commit --amend --no-edit -S' @{u}
    ```
@@ -263,9 +263,9 @@ Before pushing commits, perform a final review:
 4. If you find gaps within the original scope, amend the relevant commit.
 5. If you identify potential improvements outside the original scope, ask the
    user first.
-6. Self-review: identify weaknesses in the implementation. What edge
-   cases are untested? What would you change if redoing this? Fix
-   gaps before presenting the work as complete.
+6. Self-review: identify weaknesses in the implementation. What edge cases are
+   untested? What would you change if redoing this? Fix gaps before presenting
+   the work as complete.
 
 The goal is ensuring completeness within scope, not perfection beyond it.
 
