@@ -36,4 +36,5 @@
 !.codex/AGENTS.md
 !.codex/skills/
 .codex/skills/*
-!.codex/skills/nvim-context
+!.codex/skills/nvim-read
+!.codex/skills/nvim-control
