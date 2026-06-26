@@ -43,10 +43,7 @@ alias gcm="git commit -m"
 alias gco="git checkout"
 alias gd="git diff"
 alias gds="git diff --staged"
-function gdu () {
-  git ls-files --others --exclude-standard -z |
-    xargs -0 -n1 git diff --no-index -- /dev/null
-}
+alias gdu="git diff-untracked"
 alias gi="git init"
 alias gl="git log"
 alias glw="git last-week"
@@ -60,19 +57,9 @@ alias gss="git stash --keep-index && git stash push"
 alias gsu="git submodule update --remote --jobs=4"
 alias gri="git rebase -i"
 alias grc="git rebase --continue"
-alias git-cleanup='git branch --merged | grep -Ev "(^\*|master|main|dev)" | xargs git branch -d'
+alias gprune="git cleanup"
 alias gprc="checkout-pr"
-
-gdm() {
-  if git show-ref --verify --quiet refs/remotes/origin/main; then
-    git diff origin/main HEAD
-  elif git show-ref --verify --quiet refs/remotes/origin/master; then
-    git diff origin/master HEAD
-  else
-    echo "Neither origin/main nor origin/master exists."
-    return 1
-  fi
-}
+alias gdm="git preview"
 
 # Rebuild Spotlight index
 alias reindex-spotlight="sudo mdutil -i on /"
