@@ -14,6 +14,13 @@ set ignore-space = some
 set tab-size = 2
 set line-graphics = utf-8
 
+color diff-add            color2 default
+color diff-del            color1 default
+color diff-add-highlight  color2 color10
+color diff-del-highlight  color1 color10
+color diff-chunk          color14 default
+color diff-stat           color2  default
+
 color cursor color7 color11
 color cursor-blur color7 color10
 color title-focus color7 color10
