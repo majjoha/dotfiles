@@ -85,12 +85,6 @@ vim.keymap.set(
 )
 vim.keymap.set("n", "<Leader>gs", ":echo 'Use C-Space g s instead!'<CR>")
 vim.keymap.set("n", "<Leader>gg", ":Git<Space>")
-vim.keymap.set(
-  "n",
-  "<Leader>gpr",
-  ":vsp | term<CR>git pr<CR>",
-  { silent = true }
-)
 vim.keymap.set("n", "<Leader>gpp", ":echo 'Use C-Space g p instead!'<CR>")
 vim.keymap.set("n", "<Leader>ga", ":echo 'Use C-Space g a instead!'<CR>")
 vim.keymap.set("n", "<Leader>gl", ":echo 'Use C-Space g l instead!'<CR>")
