@@ -31,6 +31,8 @@
   conflictStyle = zdiff3
 [fetch]
   writeCommitGraph = true
+  prune = true
+  pruneTags = true
 [branch]
   autosetupmerge = true
   sort = -committerdate
