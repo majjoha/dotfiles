@@ -56,6 +56,8 @@
   updateRefs = true
 [alias]
   branch-name = !"git for-each-ref --format=\"%(refname:short)\" $(git symbolic-ref HEAD)"
+  diff-untracked = "!git ls-files --others --exclude-standard -z | \
+    xargs -0 -n1 git diff --no-index -- /dev/null"
   cleanup = "!f() { \
     echo 'Pruning remote-tracking branches...'; \
     git fetch --prune; \
@@ -69,7 +71,17 @@
   }; f"
   last-week = !git shortlog --since='1 week ago' --pretty=format:'%cD: %s' --author="$(git config user.email)" --no-merges
   pr = !"gh pr create --web"
-  preview = !"git fetch && git diff origin/main...HEAD"
+  preview = "!f() { \
+    git fetch; \
+    if git show-ref --verify --quiet refs/remotes/origin/main; then \
+      git diff origin/main...HEAD; \
+    elif git show-ref --verify --quiet refs/remotes/origin/master; then \
+      git diff origin/master...HEAD; \
+    else \
+      echo 'Neither origin/main nor origin/master exists.' >&2; \
+      return 1; \
+    fi; \
+  }; f"
   standup = !git shortlog --since=yesterday --no-merges --author="$(git config user.email)"
   undo = reset --soft HEAD^
   unpushed = log --branches --not --remotes --simplify-by-decoration --decorate --oneline
