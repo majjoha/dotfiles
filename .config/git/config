@@ -69,8 +69,6 @@
       echo \"$gone\" | xargs git branch -D; \
     fi; \
   }; f"
-  last-week = !git shortlog --since='1 week ago' --pretty=format:'%cD: %s' --author="$(git config user.email)" --no-merges
-  pr = !"gh pr create --web"
   preview = "!f() { \
     git fetch; \
     if git show-ref --verify --quiet refs/remotes/origin/main; then \
@@ -82,7 +80,6 @@
       return 1; \
     fi; \
   }; f"
-  standup = !git shortlog --since=yesterday --no-merges --author="$(git config user.email)"
   undo = reset --soft HEAD^
   unpushed = log --branches --not --remotes --simplify-by-decoration --decorate --oneline
   unstage = reset HEAD
