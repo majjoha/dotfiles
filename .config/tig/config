@@ -7,6 +7,13 @@ set main-view = \
 set vertical-split = horizontal
 set split-view-height = 75%
 
+# Absolute path because diff-highlight is not on PATH (so `= true` fails).
+set diff-highlight = /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight
+set diff-options = -m --first-parent
+set ignore-space = some
+set tab-size = 2
+set line-graphics = utf-8
+
 color cursor color7 color11
 color cursor-blur color7 color10
 color title-focus color7 color10
