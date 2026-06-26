@@ -246,13 +246,6 @@ for group, settings in pairs({
     fg = gui05,
     italic = true,
   },
-  CommentBlock = {
-    bg = gui01,
-  },
-  CommentBlockMarker = {
-    fg = gui03,
-    bg = gui01,
-  },
   String = {
     fg = gui05,
   },
