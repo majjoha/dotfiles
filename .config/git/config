@@ -27,6 +27,8 @@
 [diff]
   mnemonicprefix = true
   algorithm = histogram
+[merge]
+  conflictStyle = zdiff3
 [fetch]
   writeCommitGraph = true
 [branch]
