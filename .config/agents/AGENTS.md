@@ -272,6 +272,13 @@ The goal is ensuring completeness within scope, not perfection beyond it.
 ### Commit messages
 When writing commit messages stick to the following practices:
 - Use 50-characters max for the subject line.
+- End the subject line with a period.
+- The "Prose and writing" conventions apply in full to commit subjects and
+  bodies. In particular: spell words out ("pull request" not "PR"), backtick
+  literal tokens (`<Leader>gpr`, `git cleanup`), and never use em-dashes.
+- Your commits should read in a single, consistent voice. When the rules leave
+  a stylistic choice open, resolve it the way your previous commits did, not
+  the way other contributors or automated commits did.
 - Keep longer descriptions wrapped at 72 characters. The descriptions should
   answer:
   - Why was this change necessary?
