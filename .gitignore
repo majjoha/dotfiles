@@ -31,3 +31,4 @@
 .codex/skills/*
 !.codex/skills/nvim-read
 !.codex/skills/nvim-control
+!.codex/skills/walkthrough
