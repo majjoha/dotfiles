@@ -549,7 +549,7 @@ for group, settings in pairs({
   ["@lsp.type.class"] = { link = "@type", default = true },
   ["@lsp.type.enum"] = { link = "@type", default = true },
   ["@lsp.type.interface"] = { link = "@type", default = true },
-  ["@lsp.type.struct"] = { link = "@structure", default = true },
+  ["@lsp.type.struct"] = { link = "@struct", default = true },
   ["@lsp.type.parameter"] = { link = "@parameter", default = true },
   ["@lsp.type.typeParameter"] = { link = "@type", default = true },
   ["@lsp.type.variable"] = { link = "@variable", default = true },
