@@ -40,7 +40,6 @@ minimum_release_age_excludes = [
 "aqua:LuaLS/lua-language-server" = "latest"
 "aqua:mas-cli/mas" = "6.0.0"
 "aqua:mikefarah/yq" = "latest"
-"aqua:neovim/neovim" = "latest"
 "aqua:pypa/pipx" = "latest"
 "aqua:sharkdp/bat" = "latest"
 "aqua:superfly/flyctl" = "latest"
@@ -79,6 +78,7 @@ minimum_release_age_excludes = [
 bun = "latest"
 elixir = "latest"
 erlang = "latest"
+neovim = "latest"
 node = { version = "25.8.0", postinstall = "npm install -g corepack && corepack enable" }
 python = "latest"
 ruby = "latest"
