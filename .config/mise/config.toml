@@ -67,7 +67,7 @@ minimum_release_age_excludes = [
 "npm:@anthropic-ai/claude-code" = { version = "latest", postinstall = "mise x node -- node \"$MISE_TOOL_INSTALL_PATH/lib/node_modules/@anthropic-ai/claude-code/install.cjs\"" }
 "npm:@google/gemini-cli" = "latest"
 "npm:@openai/codex" = "latest"
-"npm:@typescript/native-preview" = "7.0.0-dev.20260309.1"
+"npm:@typescript/native-preview" = "latest"
 "npm:alex" = "latest"
 "npm:bash-language-server" = "latest"
 "npm:diff-so-fancy" = "latest"
