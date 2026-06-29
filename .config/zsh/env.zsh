@@ -87,6 +87,9 @@ export PRYRC="${XDG_CONFIG_HOME:-$HOME/.config}/pry/pryrc"
 # Store Zsh completion cache dump in XDG cache
 export ZSH_COMPDUMP="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdump"
 
+# Store Node REPL history under XDG state
+export NODE_REPL_HISTORY="$XDG_STATE_HOME/node_repl_history"
+
 # Set foreground color for zsh-autosuggestions
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=11"
 
