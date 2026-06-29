@@ -39,7 +39,6 @@ minimum_release_age_excludes = [
 "aqua:koalaman/shellcheck" = "latest"
 "aqua:LuaLS/lua-language-server" = "latest"
 "aqua:mas-cli/mas" = "6.0.0"
-"aqua:mattn/efm-langserver" = "latest"
 "aqua:mikefarah/yq" = "latest"
 "aqua:neovim/neovim" = "latest"
 "aqua:pypa/pipx" = "latest"
@@ -56,6 +55,7 @@ minimum_release_age_excludes = [
 "github:atanunq/viu" = { version = "latest", bin = "viu" }
 "github:containers/podman" = "latest"
 "github:elixir-lsp/elixir-ls" = { version = "latest", exe = "language_server.sh" }
+"github:mattn/efm-langserver" = "latest"
 "github:mvdan/sh" = { version = "latest", bin = "shfmt" }
 "github:peteretelej/tree" = "latest"
 "github:sst/opencode" = { version = "latest", no_app = true }
