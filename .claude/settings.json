@@ -124,7 +124,8 @@
     "swift-lsp@claude-plugins-official": true,
     "chrome-devtools-mcp@claude-plugins-official": true,
     "clangd-lsp@claude-plugins-official": true,
-    "rust-analyzer-lsp@claude-plugins-official": true
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "skill-creator@claude-plugins-official": true
   },
   "alwaysThinkingEnabled": false,
   "skipDangerousModePermissionPrompt": true
