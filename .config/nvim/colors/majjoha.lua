@@ -557,7 +557,7 @@ for group, settings in pairs({
   ["@lsp.type.enumMember"] = { link = "@constant", default = true },
   ["@lsp.type.function"] = { link = "@function", default = true },
   ["@lsp.type.method"] = { link = "@method", default = true },
-  ["@lsp.type.macro"] = { link = "@macro", default = true },
+  ["@lsp.type.macro"] = { link = "Macro", default = true },
   ["@lsp.type.decorator"] = { link = "@function", default = true },
   -- Treesitter highlights (linked to standard syntax groups)
   ["@comment"] = { link = "Comment" },
