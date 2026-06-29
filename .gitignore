@@ -18,6 +18,7 @@
 .claude/hooks/*
 !.claude/CLAUDE.md
 !.claude/settings.json
+!.claude/statusline.sh
 !.claude/agents/
 !.claude/commands/
 !.claude/skills
