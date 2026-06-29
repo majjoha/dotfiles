@@ -51,7 +51,6 @@ minimum_release_age_excludes = [
 "conda:tig" = "latest"
 "gem:create-ruby-app" = "latest"
 "gem:nvim-control" = "latest"
-"github:ajeetdsouza/zoxide" = "latest"
 "github:atanunq/viu" = { version = "latest", bin = "viu" }
 "github:containers/podman" = "latest"
 "github:elixir-lsp/elixir-ls" = { version = "latest", exe = "language_server.sh" }
