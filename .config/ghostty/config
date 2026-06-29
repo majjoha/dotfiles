@@ -46,3 +46,4 @@ keybind = global:super+shift+grave_accent=toggle_quick_terminal
 keybind = super+shift+t=prompt_surface_title
 keybind = shift+enter=text:\x1b\r
 keybind = cmd+f=start_search
+keybind = cmd+q=unbind
