@@ -63,7 +63,7 @@ minimum_release_age_excludes = [
 "github:WhatsApp/erlang-language-platform" = "latest"
 "github:yt-dlp/yt-dlp" = "latest"
 "npm:@ampcode/cli" = { version = "latest", postinstall = "mise x node -- node \"$MISE_TOOL_INSTALL_PATH/lib/node_modules/@ampcode/cli/install.cjs\"" }
-"npm:@anthropic-ai/claude-code" = "latest"
+"npm:@anthropic-ai/claude-code" = { version = "latest", postinstall = "mise x node -- node \"$MISE_TOOL_INSTALL_PATH/lib/node_modules/@anthropic-ai/claude-code/install.cjs\"" }
 "npm:@google/gemini-cli" = "latest"
 "npm:@openai/codex" = "latest"
 "npm:@typescript/native-preview" = "7.0.0-dev.20260309.1"
