@@ -1,10 +1,13 @@
 # AGENTS.md
 ## Workflow
-- Never `git add` planning artifacts (review files, analysis documents, design
-  notes) created during a task. These are disposable working documents. Delete
-  them before committing or place them outside the repository, so they are kept
-  but not tracked. The "before pushing" checklist is a safety net, not the
-  primary defense.
+- Never `git add` disposable task scratch (review files, analysis documents, and
+  design notes you create to reason through a single task). Delete them before
+  committing or place them outside the repository, so they are kept but not
+  tracked. The "before pushing" checklist is a safety net, not the primary
+  defense. This does not apply to durable project documentation that the
+  repository tracks by design: a committed planning pack, ADRs, specs, or
+  READMEs. When unsure whether a document is scratch or part of the design
+  record, ask; do not assume all documents are disposable.
 - For long-form output (reviews, plans, analyses exceeding ~100 lines), write to
   a Markdown file in the project directory and tell the user the path. This
   preserves context window tokens and gives the user a persistent, reviewable
