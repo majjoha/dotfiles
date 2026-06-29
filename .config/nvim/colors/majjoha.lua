@@ -545,10 +545,7 @@ for group, settings in pairs({
     sp = "#a28752",
   },
   ["@lsp.type.namespace"] = { link = "@namespace", default = true },
-  -- ["@lsp.type.type"] = {
-  --   fg = gui0E,
-  --   ctermfg = cterm0E,
-  -- },
+  ["@lsp.type.type"] = { link = "@type", default = true },
   ["@lsp.type.class"] = { link = "@type", default = true },
   ["@lsp.type.enum"] = { link = "@type", default = true },
   ["@lsp.type.interface"] = { link = "@type", default = true },
