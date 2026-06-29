@@ -22,6 +22,9 @@ _darcs
 ^/LICENSE.*
 ^/COPYING
 
+# macOS metadata
+\.DS_Store
+
 # Dotfiles-related files
 ^/mise\.lock
 
