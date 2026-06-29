@@ -11,6 +11,14 @@ http_retries = 3
 disable_backends = ["asdf"]
 lockfile_platforms = ["macos-arm64"]
 minimum_release_age = "7d"
+minimum_release_age_excludes = [
+  "gem:nvim-control",
+  "node",
+  "npm:@ampcode/cli",
+  "npm:@anthropic-ai/claude-code",
+  "npm:@openai/codex",
+  "npm:@typescript/native-preview",
+]
 
 [tools]
 "aqua:ajeetdsouza/zoxide" = "latest"
