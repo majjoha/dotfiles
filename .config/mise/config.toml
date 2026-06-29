@@ -9,6 +9,7 @@ lockfile = true
 env_cache = true
 http_retries = 3
 disable_backends = ["asdf"]
+lockfile_platforms = ["macos-arm64"]
 
 [tools]
 "aqua:ajeetdsouza/zoxide" = "latest"
