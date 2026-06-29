@@ -637,6 +637,13 @@ for group, settings in pairs({
   ["@keyword.return.lua"] = {
     fg = gui0C,
   },
+  -- Elixir
+  ["@module.elixir"] = {
+    fg = gui0E,
+  },
+  ["@type.elixir"] = {
+    fg = gui0E,
+  },
   -- Ruby
   ["@lsp.typemod.namespace.declaration.ruby"] = {
     fg = gui0E,
