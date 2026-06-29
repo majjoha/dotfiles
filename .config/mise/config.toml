@@ -45,7 +45,6 @@ minimum_release_age_excludes = [
 "conda:luarocks" = "latest"
 "conda:pkgconf" = "latest"
 "conda:tig" = "latest"
-"github:mvdan/sh" = { version = "latest", bin = "shfmt" }
 "gem:create-ruby-app" = "latest"
 "gem:nvim-control" = "latest"
 "github:ajeetdsouza/zoxide" = "latest"
@@ -54,6 +53,7 @@ minimum_release_age_excludes = [
 "github:containers/podman" = "latest"
 "github:dandavison/delta" = "latest"
 "github:elixir-lsp/elixir-ls" = { version = "latest", exe = "language_server.sh" }
+"github:mvdan/sh" = { version = "latest", bin = "shfmt" }
 "github:jgm/pandoc" = "latest"
 "github:junegunn/fzf" = "latest"
 "github:peteretelej/tree" = "latest"
