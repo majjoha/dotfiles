@@ -28,6 +28,7 @@ minimum_release_age_excludes = [
 "aqua:charmbracelet/glow" = "latest"
 "aqua:cli/cli" = "latest"
 "aqua:dandavison/delta" = "latest"
+"aqua:dolthub/dolt" = "latest"
 "aqua:hadolint/hadolint" = "latest"
 "aqua:ip7z/7zip" = "latest"
 "aqua:jgm/pandoc" = "latest"
