@@ -250,9 +250,10 @@ Before pushing commits, perform a final review:
    - Edge cases are handled.
    - Tests cover the changes.
    - No debug code, TODOs, or temporary files remain.
-   - No planning artifacts (design documents, code review notes, analysis files)
-     created during the task are included; only commit documentation if
-     explicitly requested or standard for the project (e.g., ADRs).
+   - No disposable task scratch (one-off code review notes, analysis files
+     created to reason through this task) is included. Durable project
+     documentation the repository tracks by design (planning packs, ADRs, specs,
+     READMEs) is fine to commit and often expected.
 3. Verify all commits ahead of the remote are GPG-signed:
    ```sh
    git log --format='%H %G?' @{u}..HEAD
